@@ -1,4 +1,4 @@
-@mixin number-120 {
+.number-120 {
   font-weight: 500;
   font-size: size(120px);
   line-height: size(120px);
@@ -15,8 +15,8 @@
   }
 }
 
-@mixin heading-72 {
-  font-weight: 400;
+.heading-72 {
+  font-weight: 500;
   font-size: size(72px);
   line-height: size(90px);
   text-transform: uppercase;
@@ -32,7 +32,7 @@
   }
 }
 
-@mixin heading-1-caps {
+.heading-1-caps {
   font-weight: 400;
   font-size: size(48px);
   line-height: size(64px);
@@ -49,7 +49,7 @@
   }
 }
 
-@mixin heading-2-caps {
+.heading-2-caps {
   font-weight: 400;
   font-size: size(34px);
   line-height: size(44px);
@@ -66,7 +66,7 @@
   }
 }
 
-@mixin heading-2 {
+.heading-2 {
   font-weight: 400;
   font-size: size(34px);
   line-height: size(44px);
@@ -82,7 +82,7 @@
   }
 }
 
-@mixin heading-3-caps {
+.heading-3-caps {
   font-weight: 400;
   font-size: size(24px);
   line-height: size(34px);
@@ -99,7 +99,7 @@
   }
 }
 
-@mixin heading-3 {
+.heading-3 {
   font-weight: 400;
   font-size: size(24px);
   line-height: size(34px);
@@ -115,7 +115,7 @@
   }
 }
 
-@mixin heading-4 {
+.heading-4 {
   font-weight: 400;
   font-size: size(18px);
   line-height: size(24px);
@@ -131,7 +131,7 @@
   }
 }
 
-@mixin text-18 {
+.text-18 {
   font-weight: 400;
   font-size: size(18px);
   line-height: size(28px);
@@ -142,7 +142,7 @@
   }
 }
 
-@mixin heading-5 {
+.heading-5 {
   font-weight: 400;
   font-size: size(16px);
   line-height: size(22px);
@@ -153,7 +153,7 @@
   }
 }
 
-@mixin text-14 {
+.text-14 {
   font-weight: 400;
   font-size: size(14px);
   line-height: size(22px);
@@ -164,7 +164,7 @@
   }
 }
 
-@mixin caps-12 {
+.caps-12 {
   font-weight: 400;
   font-size: size(12px);
   line-height: size(18px);
