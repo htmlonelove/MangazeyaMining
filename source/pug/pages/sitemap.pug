@@ -15,22 +15,26 @@ block main
       line-height: 28px;
     }
 
-    a {
-      color: rgb(10, 10, 175);
-    }
-
     li {
       font-size: 18px;
       line-height: 22px;
       margin-bottom: 7px;
     }
 
+    .container div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 224px;
+      height: 88px;
+      margin-bottom: 40px;
+      background-color: #17214A;
+    }
+
     img {
-      width: 100%;
-      max-width: 300px;
+      max-width: 224px;
       height: auto;
       display: block;
-      margin-bottom: 40px;
     }
 
     @media (max-width: 768px) {
@@ -62,7 +66,8 @@ block main
 
   main
     .container
-      img(src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта")
+      div
+        img(src="img/svg/logo.svg" width="128" height="40" alt="Логотип Мангазея Майнинг")
       h1 Список страниц
       ol
         each page in pages

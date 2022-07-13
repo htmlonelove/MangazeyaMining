@@ -1,0 +1,6 @@
+mixin modal-feedback-success(data)
+  .modal-feedback-success
+    +section-title(data.title)
+    p.modal-feedback-success__text!=data.text
+    +btn({type: "button", text: "Закрыть окно"})(data-close-modal).btn--white.modal-feedback-success__btn
+

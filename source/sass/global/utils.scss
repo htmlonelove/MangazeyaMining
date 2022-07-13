@@ -65,3 +65,13 @@
   /* stylelint-disable-next-line */
   transition: none !important;
 }
+
+[class*="ymaps-2"][class*="-ground-pane"]{
+  filter: invert(90%) grayscale(100%) sepia(1) brightness(120%) hue-rotate(184deg) saturate(250%);
+}
+
+[class*="ymaps-2"] {
+  @include vp-767 {
+    touch-action: auto;
+  }
+}

@@ -1,3 +1,89 @@
 mixin footer(footerMods)
+
+  -
+    const navigationList = [
+      {
+        title: 'о группе',
+        link: 'about.html',
+      },
+      {
+        title: 'Бизнесы',
+        link: '#',
+        list: [
+          {
+            title: 'Мангазея Майнинг',
+            link: 'business-mining.html',
+          },
+          {
+            title: 'Мангазея Девелопмент',
+            link: 'business-development.html',
+          },
+          {
+            title: 'Мангазея Агро',
+            link: 'business-agro.html',
+          },
+          {
+            title: 'Мангазея Газ',
+            link: 'business-gas.html',
+          },
+          {
+            title: 'Мангазея Технолоджи',
+            link: 'business-mtec.html',
+          },
+        ],
+      },
+      {
+        title: 'Социальная ответственность',
+        link: 'social.html',
+      },
+      //- {
+      //-   title: 'Новости',
+      //-   link: 'news.html',
+      //- },
+      {
+        title: 'контакты',
+        link: 'contacts.html',
+      },
+    ]
+
   footer.footer(class=footerMods)
-    .container
+    .footer__top
+      .container
+        .footer__left
+          .footer__contacts
+            a.footer__tel.footer__link(href='tel:+74956475555', aria-label='Позвонить в ГК Мангазея') +7 495 647 55 55
+            a.footer__email.footer__link(href='mailto:inbox@mangazeya.ru', aria-label='Отправить письмо по электронной почте') inbox@mangazeya.ru
+          .footer__contacts
+            p.footer__contacts-title Линия безопасности
+            a.footer__tel.footer__link(href='tel:88002228770', aria-label='Позвонить в ГК Мангазея') 8 800 222 87 70
+            a.footer__email.footer__link(href='mailto:trust@mangazeya.ru', aria-label='Отправить письмо по электронной почте') trust@mangazeya.ru
+        .footer__middle
+          ul.footer__navigation
+            each item in navigationList
+              if item.list
+                li.footer__navigation-item.footer__navigation-item--sub
+                  span.footer__navigation-link!=item.title
+                  ul.footer__sub-navigation
+                    each it in item.list
+                      li.footer__sub-navigation-item
+                        a.footer__sub-navigation-link.footer__link(href!=it.link, aria-label=`Перейти на страницу ${it.title}`)!=it.title
+              else
+                li.footer__navigation-item
+                  a.footer__navigation-link.footer__link(href!=item.link, aria-label=`Перейти на страницу ${item.title}`)!=item.title
+        .footer__right
+          .footer__documents
+            +link-download({name:"скачать презентацию", href: "./pdf/MangazeyaGroup.pdf", size: "2.29 MB", ext: "pdf"})
+          .footer__documents
+            +link-download({name:"скачать логотип", href: "./pdf/MangazeyaLogo.pdf", size: "25.4 KB", ext: "pdf"})
+    .footer__bottom
+      .container
+        p.footer__copyright ©2022 ГК Мангазея
+        .footer__social-link
+          a.footer__link(href="https://vk.com/gkmangazeya", target="_blank", aria-label="Перейти на страницу ГК Мангазея в Вконтакте")
+            img(src="img/content/vk.svg", width="111", height="25", alt="VK")
+          a.footer__link(href="https://t.me/gk_mangazeya", target="_blank", aria-label="Перейти в канал ГК Мангазея в Телеграме")
+            img(src="img/content/tg.svg", width="93", height="25", alt="Telegram")
+        .footer__development
+          span.footer__development-text Дизайн и разработка —
+          a.footer__link.footer__development-link(href="https://greencow.ru/", target="_blank", aria-label="Перейти на страницу компании Greencow") Greencow
+

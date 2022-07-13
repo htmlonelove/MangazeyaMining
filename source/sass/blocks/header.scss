@@ -1,13 +1,170 @@
 .header {
-  padding: 28px 0;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
 
-  background-color: $color-neon-blue;
+  transform: translateY(-100%);
+  transition: transform 0.7s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: size(1px);
+    background: $color-default-white-15;
+
+    @include vp-1439 {
+      height: 1px;
+    }
+  }
+
+  &::after {
+    z-index: -1;
+    height: auto;
+    top: 0;
+    background: $color-midnight-express;
+    transform: scale(1, 0);
+    transform-origin: center bottom;
+    transition: transform 0.2s;
+
+    @include vp-1439 {
+      height: auto;
+    }
+
+    @include vp-767 {
+      transform-origin: center top;
+    }
+  }
+
+  &.is-fixed {
+    &::after {
+      transform: scale(1, 1);
+    }
+  }
+
+  &--has-bg {
+    background: $color-midnight-express;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &--top {
+    transform: translateY(0);
+  }
+
+  .is-open-popup & {
+    transform: translateY(-100%);
+  }
 
   .container {
     display: flex;
+    align-items: center;
+    padding-right: 0;
+    position: relative;
   }
 
   &__logo {
-    color: $color-default-white;
+    padding: size(20px) 0;
+    position: relative;
+    width: size(149px);
+    z-index: 2;
+
+    @include vp-1439 {
+      padding: 20px 0;
+      width: 149px;
+    }
+
+    @include vp-1023 {
+      width: 106px;
+    }
+
+    @include vp-767 {
+      padding: 16px 0;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    align-self: stretch;
+
+    padding: size(20px) size(38px);
+    border-left: 1px solid $color-default-white-15;
+
+    position: relative;
+    z-index: 2;
+
+    @include vp-1439 {
+      padding: 20px 38px;
+    }
+
+    @include vp-1279 {
+      padding: 20px 25px;
+    }
+
+    @include vp-1023 {
+      padding: 20px 5px;
+    }
+
+    @include vp-767 {
+      padding: 15px;
+      border-left: none;
+      margin-left: auto;
+    }
+  }
+
+  &__link {
+    padding: size(10px);
+
+    @include vp-1439 {
+      padding: 10px;
+    }
+  }
+
+  &__menu {
+    margin-left: auto;
+    margin-right: size(38px);
+
+    @include vp-1439 {
+      margin-right: 38px;
+    }
+
+    @include vp-1279 {
+      margin-right: 25px;
+    }
+
+    @include vp-1023 {
+      margin-right: 15px;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+      order: 3;
+      margin-left: 0;
+      align-self: stretch;
+      flex-shrink: 0;
+    }
+  }
+
+  &.is-hidden {
+    @include vp-767 {
+      transform: translateY(-100%);
+      pointer-events: none;
+    }
   }
 }
