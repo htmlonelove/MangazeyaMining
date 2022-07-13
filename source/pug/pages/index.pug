@@ -4,7 +4,7 @@ block variables
   - const title = "Главная - Мангазея Майнинг" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
-  - const headerMods = "header--main"
+  - const headerMods = ""
   - const hasFooter = true
   - const footerMods = "footer--no-border"
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
@@ -13,6 +13,7 @@ block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +intro()
+    h1.visually-hidden Компания Мангазея Майнинг
+    +intro(indexIntro)
 
 block modals

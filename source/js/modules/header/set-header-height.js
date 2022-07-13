@@ -11,14 +11,14 @@ const setHeaderHeight = () => {
 
   let headerHeight = header.offsetHeight;
 
-  body.style.setProperty('--headerHeight', headerHeight + 'px');
+  body.style.setProperty('--header-height', headerHeight + 'px');
 
   const ro = new ResizeObserverCurrent((entries) => {
     for (let entry of entries) {
       let newHeight = entry.contentRect ? entry.contentRect.height : entry.contentBoxSize.blockSize;
 
       if (headerHeight !== newHeight) {
-        body.style.setProperty('--headerHeight', newHeight + 'px');
+        body.style.setProperty('--header-height', newHeight + 'px');
         headerHeight = newHeight;
       }
     }

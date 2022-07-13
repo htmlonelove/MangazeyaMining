@@ -1,12 +1,15 @@
 .header {
+  $root: &;
+
   position: fixed;
   z-index: 100;
   left: 0;
   right: 0;
   top: 0;
-
   transform: translateY(-100%);
-  transition: transform 0.7s;
+  display: flex;
+  align-items: center;
+  transition: transform $trans-600;
 
   &::before,
   &::after {
@@ -18,6 +21,7 @@
     bottom: 0;
     height: size(1px);
     background: $color-default-white-15;
+    transition: background 0.2s;
 
     @include vp-1439 {
       height: 1px;
@@ -28,7 +32,7 @@
     z-index: -1;
     height: auto;
     top: 0;
-    background: $color-midnight-express;
+    background: $color-bridal-heath;
     transform: scale(1, 0);
     transform-origin: center bottom;
     transition: transform 0.2s;
@@ -43,16 +47,30 @@
   }
 
   &.is-fixed {
+    &::before {
+      background: $color-nero-10;
+    }
+
     &::after {
       transform: scale(1, 1);
+    }
+
+    #{$root}__logo {
+      &::after {
+        transform: scale(1, 1);
+      }
     }
   }
 
   &--has-bg {
-    background: $color-midnight-express;
+    background: $color-bridal-heath;
 
     &::after {
       display: none;
+    }
+
+    #{$root}__logo {
+      background-color: $color-midnight-express;
     }
   }
 
@@ -60,34 +78,57 @@
     transform: translateY(0);
   }
 
-  .is-open-popup & {
-    transform: translateY(-100%);
-  }
-
-  .container {
-    display: flex;
-    align-items: center;
-    padding-right: 0;
-    position: relative;
-  }
-
   &__logo {
-    padding: size(20px) 0;
     position: relative;
-    width: size(149px);
-    z-index: 2;
+    z-index: 1;
+    width: size(224px);
+    padding: size(24px) size(48px);
 
     @include vp-1439 {
-      padding: 20px 0;
-      width: 149px;
+      width: 224px;
+      padding: 24px 48px;
     }
 
     @include vp-1023 {
-      width: 106px;
+      width: 176px;
+      padding: 24px;
     }
 
     @include vp-767 {
-      padding: 16px 0;
+      padding: 16px;
+      width: 160px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: size(1px);
+      background: $color-default-white-15;
+
+      @include vp-1439 {
+        width: 1px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $color-midnight-express;
+      transform: scale(1, 0);
+      transform-origin: center bottom;
+      transition: transform $trans-200;
+
+      @include vp-767 {
+        transform-origin: center top;
+      }
     }
 
     img {
@@ -103,7 +144,7 @@
 
     align-self: stretch;
 
-    padding: size(20px) size(38px);
+    // padding: size(20px) size(38px);
     border-left: 1px solid $color-default-white-15;
 
     position: relative;
