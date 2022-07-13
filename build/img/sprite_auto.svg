@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-download" viewBox="0 0 20 20">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-left" viewBox="0 0 24 24">
+<path d="M3 12L7 16M3 12L7 8M3 12L22 12" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="arrow-right" viewBox="0 0 24 24">
+<path d="M21 12L17 8M21 12L17 16M21 12L2 12" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-download" viewBox="0 0 20 20">
 <path d="M9.99984 14.1668L13.3332 10.8335M9.99984 14.1668L6.6665 10.8335M9.99984 14.1668L9.99983 0.833496" stroke="currentColor" stroke-linecap="round"/>
 <line x1="5.5" y1="17.8335" x2="14.5" y2="17.8335" stroke="currentColor" stroke-linecap="round"/>
 </symbol></svg>
