@@ -1,0 +1,7 @@
+mixin slider-controls
+  .slider-controls&attributes(attributes)
+    button.slider-controls__btn.slider-controls__btn--next(type="button", aria-label="Следующий слайд", data-next-btn)
+      +icon("arrow-right", 24, 24)
+
+    button.slider-controls__btn.slider-controls__btn--prev(type="button", aria-label="Предыдущий слайд", data-prev-btn)
+      +icon("arrow-left", 24, 24)

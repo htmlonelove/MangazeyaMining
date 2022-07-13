@@ -1,0 +1,22 @@
+.slider-tools {
+  display: flex;
+  align-items: center;
+
+  border-top: size(1px) solid $color-default-white-15;
+
+  @include vp-1439 {
+    border-top: 1px solid $color-default-white-15;
+  }
+
+  &__pagination {
+    padding: size(38px) size(48px);
+
+    @include vp-1439 {
+      padding: 38px 48px;
+    }
+
+    @include vp-767 {
+      padding: 22px 16px ;
+    }
+  }
+}

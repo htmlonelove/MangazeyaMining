@@ -25,46 +25,16 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-download" viewBox="0 0 20 20">
+    <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-left" viewBox="0 0 24 24">
+<path d="M3 12L7 16M3 12L7 8M3 12L22 12" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="arrow-right" viewBox="0 0 24 24">
+<path d="M21 12L17 8M21 12L17 16M21 12L2 12" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-download" viewBox="0 0 20 20">
 <path d="M9.99984 14.1668L13.3332 10.8335M9.99984 14.1668L6.6665 10.8335M9.99984 14.1668L9.99983 0.833496" stroke="currentColor" stroke-linecap="round"/>
 <line x1="5.5" y1="17.8335" x2="14.5" y2="17.8335" stroke="currentColor" stroke-linecap="round"/>
 </symbol></svg>
     </div>
     <div class="wrapper">
-      <header class="header header--main" data-fix-block>
-        <div class="container"><span class="header__logo"><img src="img/svg/logo.svg" width="128" height="40" alt="Логотип Мангазея Майнинг"></span>
-          <nav class="main-nav header__menu">
-            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"></button>
-            <div class="main-nav__wrapper">
-              <div class="main-nav__inner">
-                <ul class="main-nav__list">
-                  <li class="main-nav__item"><a class="main-nav__link link" href="about.html">О группе</a>
-                  </li>
-                  <li class="main-nav__item main-nav__item--has-sublist"><a class="main-nav__link link" href="#">Бизнесы</a>
-                    <ul class="main-nav__sublist">
-                      <li class="main-nav__subitem"></li>
-                      <li class="main-nav__subitem"></li>
-                      <li class="main-nav__subitem"></li>
-                      <li class="main-nav__subitem"></li>
-                      <li class="main-nav__subitem"></li>
-                    </ul>
-                  </li>
-                  <li class="main-nav__item"><a class="main-nav__link link" href="social.html">Социальная ответственность</a>
-                  </li>
-                  <li class="main-nav__item"><a class="main-nav__link link" href="contacts.html">Контакты</a>
-                  </li>
-                </ul>
-                <div class="main-nav__download-link"><a class="link-download" href="./pdf/MangazeyaGroup.pdf" download><span class="link-download__icon">
-                      <svg width="20" height="20" aria-hidden="true">
-                        <use xlink:href="#icon-download"></use>
-                      </svg></span><span class="link-download__text"><span class="link-download__name">Скачать презентацию</span><span class="link-download__info">pdf, 2.29 MB</span></span></a>
-                </div>
-              </div>
-            </div>
-          </nav>
-          <div class="header__lang"><a class="header__link link" href="#">En</a></div>
-        </div>
-      </header>
       <main>
         <div class="intro">
           <div class="container">
@@ -75,53 +45,6 @@
           </div>
         </div>
       </main>
-      <footer class="footer footer--no-border">
-        <div class="footer__top">
-          <div class="container">
-            <div class="footer__left">
-              <div class="footer__contacts"><a class="footer__tel footer__link" href="tel:+74956475555" aria-label="Позвонить в ГК Мангазея">+7 495 647 55 55</a><a class="footer__email footer__link" href="mailto:inbox@mangazeya.ru" aria-label="Отправить письмо по электронной почте">inbox@mangazeya.ru</a></div>
-              <div class="footer__contacts">
-                <p class="footer__contacts-title">Линия безопасности</p><a class="footer__tel footer__link" href="tel:88002228770" aria-label="Позвонить в ГК Мангазея">8 800 222 87 70</a><a class="footer__email footer__link" href="mailto:trust@mangazeya.ru" aria-label="Отправить письмо по электронной почте">trust@mangazeya.ru</a>
-              </div>
-            </div>
-            <div class="footer__middle">
-              <ul class="footer__navigation">
-                <li class="footer__navigation-item"><a class="footer__navigation-link footer__link" href="about.html" aria-label="Перейти на страницу о группе">о группе</a></li>
-                <li class="footer__navigation-item footer__navigation-item--sub"><span class="footer__navigation-link">Бизнесы</span>
-                  <ul class="footer__sub-navigation">
-                    <li class="footer__sub-navigation-item"><a class="footer__sub-navigation-link footer__link" href="business-mining.html" aria-label="Перейти на страницу Мангазея Майнинг">Мангазея Майнинг</a></li>
-                    <li class="footer__sub-navigation-item"><a class="footer__sub-navigation-link footer__link" href="business-development.html" aria-label="Перейти на страницу Мангазея Девелопмент">Мангазея Девелопмент</a></li>
-                    <li class="footer__sub-navigation-item"><a class="footer__sub-navigation-link footer__link" href="business-agro.html" aria-label="Перейти на страницу Мангазея Агро">Мангазея Агро</a></li>
-                    <li class="footer__sub-navigation-item"><a class="footer__sub-navigation-link footer__link" href="business-gas.html" aria-label="Перейти на страницу Мангазея Газ">Мангазея Газ</a></li>
-                    <li class="footer__sub-navigation-item"><a class="footer__sub-navigation-link footer__link" href="business-mtec.html" aria-label="Перейти на страницу Мангазея Технолоджи">Мангазея Технолоджи</a></li>
-                  </ul>
-                </li>
-                <li class="footer__navigation-item"><a class="footer__navigation-link footer__link" href="social.html" aria-label="Перейти на страницу Социальная ответственность">Социальная ответственность</a></li>
-                <li class="footer__navigation-item"><a class="footer__navigation-link footer__link" href="contacts.html" aria-label="Перейти на страницу контакты">контакты</a></li>
-              </ul>
-            </div>
-            <div class="footer__right">
-              <div class="footer__documents"><a class="link-download" href="./pdf/MangazeyaGroup.pdf" download><span class="link-download__icon">
-                    <svg width="20" height="20" aria-hidden="true">
-                      <use xlink:href="#icon-download"></use>
-                    </svg></span><span class="link-download__text"><span class="link-download__name">скачать презентацию</span><span class="link-download__info">pdf, 2.29 MB</span></span></a>
-              </div>
-              <div class="footer__documents"><a class="link-download" href="./pdf/MangazeyaLogo.pdf" download><span class="link-download__icon">
-                    <svg width="20" height="20" aria-hidden="true">
-                      <use xlink:href="#icon-download"></use>
-                    </svg></span><span class="link-download__text"><span class="link-download__name">скачать логотип</span><span class="link-download__info">pdf, 25.4 KB</span></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <div class="container">
-            <p class="footer__copyright">©2022 ГК Мангазея</p>
-            <div class="footer__social-link"><a class="footer__link" href="https://vk.com/gkmangazeya" target="_blank" aria-label="Перейти на страницу ГК Мангазея в Вконтакте"><img src="img/content/vk.svg" width="111" height="25" alt="VK"></a><a class="footer__link" href="https://t.me/gk_mangazeya" target="_blank" aria-label="Перейти в канал ГК Мангазея в Телеграме"><img src="img/content/tg.svg" width="93" height="25" alt="Telegram"></a></div>
-            <div class="footer__development"><span class="footer__development-text">Дизайн и разработка —</span><a class="footer__link footer__development-link" href="https://greencow.ru/" target="_blank" aria-label="Перейти на страницу компании Greencow">Greencow</a></div>
-          </div>
-        </div>
-      </footer>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
