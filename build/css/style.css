@@ -3706,6 +3706,81 @@ button,
   color: #262626;
 }
 
+.mission {
+  border-bottom: 1px solid rgba(38, 38, 38, 0.1);
+}
+
+.mission .container {
+  padding-left: 0;
+}
+
+.mission__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mission__img-wrapper {
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: calc(50% + 24px);
+  aspect-ratio: 720 / 480;
+}
+
+.mission__img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.mission__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 3rem;
+  padding-top: 2.5rem;
+  padding-right: 0;
+  padding-bottom: 2.5rem;
+}
+
+.mission__title {
+  margin: 0;
+  margin-bottom: 2.5rem;
+}
+
+.mission__desc-wrp {
+  margin-bottom: auto;
+}
+
+.mission__desc-wrp p {
+  margin-top: 0;
+}
+
+.mission__desc-wrp p:last-child {
+  margin-bottom: 0;
+}
+
+.mission__name {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.mission__position {
+  margin-top: 8px;
+  margin-bottom: 0;
+  color: rgba(38, 38, 38, 0.5);
+}
+
+.mission__position--mob {
+  display: none;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -4149,6 +4224,20 @@ button,
   .fact-item__description .mob-hidden {
     display: none;
   }
+
+  .mission__info {
+    padding-left: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .mission__position--desc {
+    display: none;
+  }
+
+  .mission__position--mob {
+    display: block;
+  }
 }
 
 @media (max-width: 767px) {
@@ -4356,6 +4445,56 @@ button,
     display: flex;
     font-size: 12px;
     line-height: 18px;
+  }
+
+  .mission .container {
+    padding-left: 16px;
+    background-color: #17214a;
+  }
+
+  .mission {
+    border: none;
+  }
+
+  .mission__inner {
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 40px;
+  }
+
+  .mission__img-wrapper {
+    width: 100%;
+    aspect-ratio: 343 / 277;
+  }
+
+  .mission__info {
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  .mission__title {
+    color: #ffffff;
+    margin-bottom: 24px;
+  }
+
+  .mission__desc-wrp {
+    color: #ffffff;
+    margin-bottom: 96px;
+  }
+
+  .mission__desc-wrp p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 0;
+  }
+
+  .mission__name {
+    color: #ffffff;
+    margin-top: 0;
+  }
+
+  .mission__position--mob {
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 

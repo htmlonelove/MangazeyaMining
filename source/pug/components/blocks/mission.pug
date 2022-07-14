@@ -1,0 +1,30 @@
+-
+  const dataMission = {
+    title: "Наша миссия",
+    mission: "Успешно создаём и масштабируем бизнес-проекты в традиционных секторах экономики и при любых обстоятельствах выполняет свои обязательства, реализуя исключительно честный, доверительный и ответственный подход при ведении бизнеса для достижения высоких результатов.",
+    name: "Гусев<br>Михаил Михайлович",
+    position: "Генеральный директор Мангазея Майнинг",
+    positionMob: "Генеральный директор<br>Мангазея Майнинг",
+    img: ['content/mission', 'mission-photo', 'jpg', 720, 480, 'Гусев Михаил Михайлович'],
+    video: [],
+  }
+
+
+mixin mission(data)
+  section.mission
+    .container
+     .mission__inner
+       if data.img
+        .mission__img-wrapper
+          +picture(...data.img)
+       else if data.video
+         .mission__video-wrapper
+           video
+       if(data.title && data.mission)
+        .mission__info
+          h2.mission__title.caps-12!=data.title
+          .mission__desc-wrp
+            p.mission__desc.text-18!=data.mission
+          p.mission__name.heading-5!=data.name
+          p.mission__position.mission__position--desc.text-14!=data.position
+          p.mission__position.mission__position--mob.text-14!=data.positionMob

@@ -1,0 +1,131 @@
+.mission {
+  border-bottom: 1px solid $color-nero-10;
+
+  .container {
+    padding-left: 0;
+
+    @include vp-767 {
+      padding-left: 16px;
+      background-color: $color-midnight-express;
+    }
+  }
+
+  @include vp-767 {
+    border: none;
+  }
+
+  &__inner {
+    display: flex;
+
+    @include vp-767 {
+      display: block;
+      padding-top: 16px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: calc(50% + 24px);
+    aspect-ratio: 720 / 480;
+
+    @include vp-767 {
+      width: 100%;
+      aspect-ratio: 343 / 277;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding-left: size(48px);
+    padding-top: size(40px);
+    padding-right: 0;
+    padding-bottom: size(40px);
+
+    @include vp-1023 {
+      padding-left: 24px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      padding-top: 40px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: size(40px);
+
+    @include vp-767 {
+      color: $color-default-white;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__desc-wrp {
+    margin-bottom: auto;
+
+    & p {
+      margin-top: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include vp-767 {
+      color: $color-default-white;
+      margin-bottom: 96px;
+
+      & p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__name {
+    margin-top: size(48px);
+    margin-bottom: 0;
+
+    @include vp-767 {
+      color: $color-default-white;
+      margin-top: 0;
+    }
+  }
+
+  &__position {
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: $color-nero-50;
+
+    &--desc {
+      @include vp-1023 {
+        display: none;
+      }
+    }
+
+    &--mob {
+      display: none;
+
+      @include vp-1023 {
+        display: block;
+      }
+
+      @include vp-767 {
+        color: $color-default-white-50;
+      }
+    }
+  }
+}
