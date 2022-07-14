@@ -48,6 +48,19 @@
       }
     }
 
+    .is-fixed & {
+      @include has-hover {
+        #{$root}__toggle-title {
+          color: $color-nero-50;
+        }
+
+        &::before,
+        &::after {
+          background: $color-nero-50;
+        }
+      }
+    }
+
     &::before,
     &::after {
       --offset: #{size(-4px)};

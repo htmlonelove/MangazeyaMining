@@ -167,7 +167,7 @@
     }
   }
 
-  &__link {
+  &__link.link {
     padding: size(6px);
     color: $color-default-white;
 
@@ -175,8 +175,16 @@
       padding: 6px;
     }
 
+    @include has-hover {
+      color: $color-default-white-50;
+    }
+
     .is-fixed & {
       color: $color-nero;
+
+      @include has-hover {
+        color: $color-nero-50;
+      }
     }
   }
 
@@ -224,6 +232,14 @@
     @include has-hover {
       #{$root}__quotes-title {
         color: $color-default-white-50;
+      }
+    }
+
+    .is-fixed & {
+      @include has-hover {
+        #{$root}__quotes-title {
+          color: $color-nero-50;
+        }
       }
     }
   }
