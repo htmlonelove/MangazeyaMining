@@ -13,6 +13,7 @@
       {
         total: '182&nbsp;355 унций',
         details: 'объем добычи золота на&nbsp;месторождениях компании с&nbsp;2019&nbsp;года',
+        mod: 'statistic',
         statisticData: [
           {
             property: '2021',
@@ -35,6 +36,7 @@
       {
         total: '215%',
         details: 'рост EBITDA за&nbsp;период с&nbsp;2019&nbsp;по&nbsp;2021&nbsp;годы',
+        mod: 'statistic',
         statisticData: [
           {
             property: '2021',
@@ -87,35 +89,13 @@ mixin about-facts(props)
         .about-facts__slider.swiper(data-facts-slider)
           .swiper-wrapper
             .swiper-slide.about-facts__item
-              .fact-item.fact-item--statistic
-                p.heading-2-caps.fact-item__title !{props.factsList[0].total}
-                p.text-14.fact-item__description !{props.factsList[0].details}
-                ul.fact-item__statistic
-                  each stat in props.factsList[0].statisticData
-                    li.statistic-item
-                      span.caps-12.statistic-item__property !{stat.property}
-                      span.caps-12.statistic-item__value !{stat.value}
-                      span.statistic-item__indication(class=stat.indicator)
+              +fact-item(props.factsList[0])
             .swiper-slide.about-facts__item
-              .fact-item.fact-item--statistic
-                p.heading-2-caps.fact-item__title !{props.factsList[1].total}
-                p.text-14.fact-item__description !{props.factsList[1].details}
-                ul.fact-item__statistic
-                  each stat in props.factsList[1].statisticData
-                    li.statistic-item
-                      span.caps-12.statistic-item__property !{stat.property}
-                      span.caps-12.statistic-item__value !{stat.value}
-                      span.statistic-item__indication(class=stat.indicator)
+              +fact-item(props.factsList[1])
             .swiper-slide.about-facts__item
-              .fact-item
-                p.heading-2-caps.fact-item__title !{props.factsList[2].total}
-                p.text-14.fact-item__description !{props.factsList[2].details}
-              .fact-item
-                p.heading-2-caps.fact-item__title !{props.factsList[3].total}
-                p.text-14.fact-item__description !{props.factsList[3].details}
-              .fact-item
-                p.heading-2-caps.fact-item__title !{props.factsList[4].total}
-                p.text-14.fact-item__description !{props.factsList[4].details}
+              +fact-item(props.factsList[2])
+              +fact-item(props.factsList[3])
+              +fact-item(props.factsList[4])
           +slider-tools({
             controlsMod: 'slider-controls--transparent',
           })
