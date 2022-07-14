@@ -1,0 +1,78 @@
+.statistic-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: size(24px);
+  padding-bottom: size(16px);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @include vp-1439 {
+    margin-top: 24px;
+    padding-bottom: 16px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__indication {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: size(4px);
+    background-color: $color-nero-10;
+
+    @include vp-1439 {
+      height: 4px;
+    }
+
+    @include vp-767 {
+      top: 0;
+      bottom: auto;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background-color: $color-mariner;
+    }
+
+    &.width-50 {
+      &::after {
+        max-width: 50%;
+
+        @include vp-767 {
+          max-width: 75.3%;
+        }
+      }
+    }
+
+    &.width-35 {
+      &::after {
+        max-width: 35%;
+
+        @include vp-767 {
+          max-width: 43.2%;
+        }
+      }
+    }
+  }
+}

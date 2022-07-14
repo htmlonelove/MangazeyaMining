@@ -1,0 +1,107 @@
+.section-header {
+  .container {
+    padding-right: size(226px);
+    padding-left: size(336px);
+
+    @include vp-1439 {
+      padding-right: 226px;
+      padding-left: 336px;
+    }
+
+    @include vp-1279 {
+      padding-right: 48px;
+      padding-left: 226px;
+    }
+
+    @include vp-1023 {
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+
+    @include vp-767 {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+
+  position: relative;
+  padding-bottom: size(64px);
+  border-bottom: size(1px) solid $color-nero-10;
+
+  @include vp-1439 {
+    padding-bottom: 64px;
+    border-bottom: 1px solid $color-nero-10;
+  }
+
+  @include vp-1023 {
+    padding-bottom: 48px;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: size(48px);
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include vp-1439 {
+      left: 48px;
+    }
+
+    @include vp-1023 {
+      position: static;
+      flex-direction: row;
+      margin-bottom: 24px;
+    }
+
+    @include vp-767 {
+      .second {
+        display: none;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .second {
+      display: none;
+    }
+
+    @include vp-1023 {
+      .second {
+        display: inline-block;
+      }
+
+      .mob-hidden {
+        display: none;
+      }
+    }
+  }
+
+  &__description {
+    margin-top: size(24px);
+    margin-bottom: 0;
+
+    color: $color-nero-50;
+
+    @include vp-1439 {
+      margin-top: 24px;
+    }
+
+    @include vp-1023 {
+      .mob-hidden {
+        display: none;
+      }
+    }
+
+    @include vp-767 {
+      margin-top: 16px;
+    }
+  }
+}

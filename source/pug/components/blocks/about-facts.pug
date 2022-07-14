@@ -1,0 +1,126 @@
+-
+  const aboutFactsData = {
+    title: {
+      main: 'Ключевые факты',
+      second: ' о компании',
+    },
+    subtitle: {
+      main: `Ежегодно увеличиваем темпы&nbsp;роста ${`<span class="mob-hidden">золотодобычи</span>`}`,
+      second: ' добычи',
+    },
+    description: `Создаём мощный горноперерабатывающий кластер и&nbsp;ежегодно увеличиваем рост объёмов ${`<span class="mob-hidden"> добычи</span>`}  и&nbsp;производства ценных металлов${`<span class="mob-hidden"> в&nbsp;действующих месторождениях</span>`}.`,
+    factsList: [
+      {
+        total: '182&nbsp;355 унций',
+        details: 'объем добычи золота на&nbsp;месторождениях компании с&nbsp;2019&nbsp;года',
+        statisticData: [
+          {
+            property: '2021',
+            value: '86 430',
+          },
+          {
+            property: '2020',
+            value: '51 562',
+            indicator: 'width-50',
+
+          },
+          {
+            property: '2019',
+            value: '44 363',
+            indicator: 'width-35',
+          },
+        ],
+        statistic: true,
+      },
+      {
+        total: '215%',
+        details: 'рост EBITDA за&nbsp;период с&nbsp;2019&nbsp;по&nbsp;2021&nbsp;годы',
+        statisticData: [
+          {
+            property: '2021',
+            value: '$94 000 000',
+          },
+          {
+            property: '2020',
+            value: '$44 000 000',
+            indicator: 'width-50',
+          },
+          {
+            property: '2019',
+            value: '$20 000 000',
+            indicator: 'width-35',
+          },
+        ],
+        statistic: true,
+      },
+      {
+        total: '1,89&nbsp;г/т',
+        details: 'содержание золота в&nbsp;ресурсах месторождений компании',
+        statistic: false,
+      },
+      {
+        total: '280&nbsp;тонн',
+        details: 'суммарные ресурсы золота на&nbsp;всех месторождениях компании (M&amp;I&amp;I)',
+        statistic: false,
+      },
+      {
+        total: '2&nbsp;млн тонн',
+        details: `руды в&nbsp;год&nbsp;&mdash; производственная мощность предприятий ${`<span class="mob-hidden">по&nbsp;состоянию</span>`} на&nbsp;2021 год`,
+        statistic: false,
+      },
+    ],
+  }
+
+mixin about-facts(props)
+  if props
+    section.about-facts
+      .section-header
+        .container
+          h2.caps-12.section-header__title !{props.title.main}
+            if props.title.second
+              span.second !{props.title.second}
+          p.heading-2-caps.section-header__subtitle !{props.subtitle.main}
+            if props.subtitle.second
+              span.second !{props.subtitle.second}
+          p.text-14.section-header__description !{props.description}
+      .about-facts__body(data-facts-slider-container)
+        .about-facts__slider.swiper(data-facts-slider)
+          .swiper-wrapper
+            .swiper-slide.about-facts__item
+              .fact-item.fact-item--statistic
+                p.heading-2-caps.fact-item__title !{props.factsList[0].total}
+                p.text-14.fact-item__description !{props.factsList[0].details}
+                ul.fact-item__statistic
+                  each stat in props.factsList[0].statisticData
+                    li.statistic-item
+                      span.caps-12.statistic-item__property !{stat.property}
+                      span.caps-12.statistic-item__value !{stat.value}
+                      span.statistic-item__indication(class=stat.indicator)
+            .swiper-slide.about-facts__item
+              .fact-item.fact-item--statistic
+                p.heading-2-caps.fact-item__title !{props.factsList[1].total}
+                p.text-14.fact-item__description !{props.factsList[1].details}
+                ul.fact-item__statistic
+                  each stat in props.factsList[1].statisticData
+                    li.statistic-item
+                      span.caps-12.statistic-item__property !{stat.property}
+                      span.caps-12.statistic-item__value !{stat.value}
+                      span.statistic-item__indication(class=stat.indicator)
+            .swiper-slide.about-facts__item
+              .fact-item
+                p.heading-2-caps.fact-item__title !{props.factsList[2].total}
+                p.text-14.fact-item__description !{props.factsList[2].details}
+              .fact-item
+                p.heading-2-caps.fact-item__title !{props.factsList[3].total}
+                p.text-14.fact-item__description !{props.factsList[3].details}
+              .fact-item
+                p.heading-2-caps.fact-item__title !{props.factsList[4].total}
+                p.text-14.fact-item__description !{props.factsList[4].details}
+          +slider-tools({
+            controlsMod: 'slider-controls--transparent',
+          })
+
+
+
+
+

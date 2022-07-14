@@ -1,0 +1,15 @@
+.nav-count {
+  font-weight: 500;
+  color: $color-nero-50;
+  letter-spacing: 0.03em;
+
+  &__current {
+    color: $color-nero;
+  }
+
+  @include vp-767 {
+    display: flex;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
