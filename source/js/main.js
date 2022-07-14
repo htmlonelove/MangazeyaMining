@@ -5,6 +5,7 @@ import {initFormValidate} from './modules/form/init-form-validate';
 
 import {initHeader} from './modules/header/init-header';
 import {setHeaderHeight} from './modules/header/set-header-height';
+import {initFactsSlider} from './modules/sliders/init-facts-slider';
 
 // ---------------------------------
 
@@ -26,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCustomSelect();
     initFormValidate();
+    initFactsSlider();
   });
 });
 

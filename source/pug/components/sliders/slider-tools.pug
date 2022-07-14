@@ -1,5 +1,9 @@
-mixin slider-tools
-  .slider-tools&attributes(attributes)
-    .slider-tools__pagination.nav-count(data-pagination)
+mixin slider-tools(options = {})
+  - const paginationMod = options.paginationMod ? options.paginationMod : false
+  - const controlsMod = options.controlsMod ? options.controlsMod : false
 
-    +slider-controls().slider-controls--white
+
+  .slider-tools&attributes(attributes)
+    .slider-tools__pagination.nav-count(class=paginationMod, data-pagination)
+
+    +slider-controls()(class=controlsMod)
