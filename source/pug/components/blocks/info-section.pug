@@ -1,0 +1,22 @@
+-
+  const indexFactsSection = {
+    header: "Ключевые факты<br>о&nbsp;компании",
+    title: "Ежегодно увеличиваем<br>темпы роста золотодобычи",
+    text: "Создаём мощный горноперерабатывающий кластер и&nbsp;ежегодно увеличиваем рост объёмов добычи и&nbsp;производства ценных металлов в&nbsp;действующих месторождениях.",
+  }
+
+  const indexGeographySection = {
+    header: "География<br>деятельности",
+    title: "<span class='info-section__blue-word'>Разрабатываем месторождения</span><br>Наседкино, Итакинское и&nbsp;Кочковское",
+    text: "Программа развития компании предусматривает развитие четырёх действующих объектов и&nbsp;введение в&nbsp;промышленную эксплуатацию новых месторождений в&nbsp;Забайкальском крае.",
+  }
+
+mixin info-section(data)
+  section.info-section&attributes(attributes)
+    .container
+      .info-section__header-wrp
+        h2.caps-12.info-section__header!=data.header
+      .info-section__title-wrp
+        h3.heading-2-caps.info-section__title(data-sal="slide-up" data-words-animation)
+          span.info-section__title-text!=data.title
+        p.text-14.info-section__text!=data.text

@@ -6,13 +6,10 @@
   outline: none;
 
   @include has-hover {
-    // &:hover,
-    // &:focus {
-      #{$root}__icon {
-        background-color: $color-mariner;
-        color: $color-default-white;
-      }
-    // }
+    #{$root}__icon {
+      background-color: $color-default-white;
+      color: $color-nero;
+    }
   }
 
   &__icon {
@@ -20,17 +17,13 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-
     width: size(48px);
     height: size(48px);
-
-    background: $color-default-white;
+    background: $color-midnight-express;
     border-radius: 50%;
-
-    transition: $trans-default;
-    transition-property: background-color, color;
-    color: $color-nero;
-
+    transition: background-color $trans-default,
+      color $trans-default;
+    color: $color-default-white;
     margin-right: size(12px);
 
     @include vp-1439 {
@@ -56,18 +49,7 @@
     flex-direction: column;
   }
 
-  &__name {
-    // @include text-caps;
-  }
-
   &__info {
-    font-size: size(14px);
-    line-height: size(22px);
-    color: $color-default-white-50;
-
-    @include vp-1439 {
-      font-size: 14px;
-      line-height: 22px;
-    }
+    color: $color-nero-50;
   }
 }

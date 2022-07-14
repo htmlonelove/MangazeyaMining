@@ -75,16 +75,7 @@
 
 mixin about-facts(props)
   if props
-    section.about-facts
-      .section-header
-        .container
-          h2.caps-12.section-header__title !{props.title.main}
-            if props.title.second
-              span.second !{props.title.second}
-          p.heading-2-caps.section-header__subtitle !{props.subtitle.main}
-            if props.subtitle.second
-              span.second !{props.subtitle.second}
-          p.text-14.section-header__description !{props.description}
+    section.about-facts&attributes(attributes)
       .about-facts__body(data-facts-slider-container)
         .about-facts__slider.swiper(data-facts-slider)
           .swiper-wrapper

@@ -1,0 +1,66 @@
+.info-section {
+  $root: &;
+
+  padding: calc(var(--header-height) + #{size(94px)}) 0 size(64px);
+  background-color: $color-bridal-heath;
+
+  @include vp-1439 {
+    padding: calc(var(--header-height) + 94px) 0 64px;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  &__header-wrp {
+    flex-shrink: 0;
+    width: 25%;
+    padding: size(6px) size(48px) 0 0;
+
+    @include vp-1439 {
+      padding: 6px 48px 0 0;
+    }
+  }
+
+  &__header {
+    margin: 0;
+  }
+
+  &__title {
+    margin: 0 0 size(26px);
+
+    @include vp-1439 {
+      margin: 0 0 26px;
+    }
+  }
+
+  &__text {
+    max-width: size(600px);
+    margin: 0;
+    color: $color-nero-50;
+
+    @include vp-1439 {
+      max-width: 600px;
+    }
+  }
+
+  &--blue {
+    background-color: $color-midnight-express;
+
+    #{$root}__header {
+      color: $color-default-white;
+    }
+
+    #{$root}__title {
+      color: $color-default-white;
+    }
+
+    #{$root}__text {
+      color: $color-default-white-50;
+    }
+  }
+
+  &__blue-word {
+    color: $color-mariner;
+  }
+}
