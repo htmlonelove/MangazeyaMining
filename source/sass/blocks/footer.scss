@@ -1,476 +1,143 @@
 .footer {
-  padding-top: size(160px);
-
-  @include vp-1439 {
-    padding-top: 160px;
-  }
-
-  // background-color: $color-midnight-express;
-
-  @include vp-767 {
-    padding-top: 76px;
-  }
-
-  &__top {
-    border-bottom: size(1px) solid rgba($color-default-white, 0.15);
-
-    @include vp-1439 {
-      border-bottom: 1px solid rgba($color-default-white, 0.15);
-    }
-
-    @include vp-767 {
-      border-top: 1px solid rgba($color-default-white, 0.15);
-      border-bottom: 1px solid rgba($color-default-white, 0);
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns:  size(235px) 1fr  size(244px);
-      column-gap:  size(32px);
-      padding-bottom: size(90px);
-
-      @include vp-1439 {
-        grid-template-columns: 235px 1fr 244px;
-        column-gap: 32px;
-        padding-bottom: 90px;
-      }
-
-      @include vp-1023 {
-        grid-template-columns: 230px 1fr 244px;
-        column-gap: 16px;
-      }
-
-      @include vp-767 {
-        grid-template-columns: 1fr;
-        padding-bottom: 0;
-      }
-    }
-  }
-
-  &__left {
+  &__inner {
     display: flex;
-    flex-direction: column;
+  }
 
-    @include vp-767 {
-      position: relative;
-    }
+  &__img-wrp {
+    position: relative;
+    flex-shrink: 0;
+    width: 25%;
+    aspect-ratio: 361 / 295;
 
-    &::before {
-      @include vp-767 {
-        position: absolute;
-        top: 0;
-        left: -16px;
-        content: "";
-        height: 1px;
-        width: calc(100% + #{32px});
-        background-color: rgba($color-default-white, 0.15);
-      }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
-  &__middle {
-    padding-bottom: size(6px);
+  &__img-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: size(84px);
+    height: size(118px);
 
     @include vp-1439 {
-      padding-bottom: 6px;
-    }
-
-    @include vp-767 {
-      display: none;
+      width: 84px;
+      height: 118px;
     }
   }
 
-  &__right {
+  &__info {
+    flex-grow: 2;
+  }
 
+  &__nav {
+    padding: size(48px) 0;
+    border-bottom: size(1px) solid $color-nero-10;
 
-    @include vp-767 {
-      grid-row: 1/-1;
-      padding-top: 25px;
-      padding-bottom: 25px;
+    @include vp-1439 {
+      padding: 48px 0;
+      border-bottom-width: 1px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: size(-6px) size(-12px) size(-10px) size(-6px);
+    padding: 0;
+    list-style: none;
+
+    @include vp-1439 {
+      margin: 6px -12px 10px 6px;
+    }
+  }
+
+  &__item {
+    margin: 0 size(12px) size(10px) 0;
+
+    @include vp-1439 {
+      margin: 0 12px 10px 0;
+    }
+  }
+
+  &__nav-link {
+    padding: size(6px);
+
+    @include vp-1439 {
+      padding: 6px;
     }
   }
 
   &__contacts {
+    padding: size(48px) 0;
+    border-bottom: size(1px) solid $color-nero-10;
+
+    @include vp-1439 {
+      padding: 48px 0;
+      border-bottom-width: 1px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .link-download {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &__contact {
     display: flex;
     flex-direction: column;
-
-    @include vp-767 {
-      display: none;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: size(48px);
-
-      @include vp-1439 {
-        margin-bottom: 48px;
-      }
-    }
+    justify-content: space-between;
+    flex-shrink: 0;
+    margin: 0 7% 0 0;
   }
 
-  &__contacts-title {
-    margin-top: 0;
-    margin-bottom: size(16px);
-    font-size: size(14px);
-    line-height: size(22px);
-    color:rgba($color-default-white, 0.5);
-
-    @include vp-1439 {
-      margin-bottom: 16px;
-      font-size: 14px;
-      line-height: 22px;
-    }
+  &__contact-title {
+    color: $color-nero-50;
   }
 
-  &__tel {
-    margin-bottom: size(4px);
+  &__contact-link {
     font-weight: 500;
-    font-size: size(18px);
-    line-height: size(28px);
-
-    @include vp-1439 {
-      margin-bottom: 4px;
-      font-size: 18px;
-      line-height: 28px;
-    }
-  }
-
-  &__email {
-    font-size: size(14px);
-    line-height: size(22px);
-
-    @include vp-1439 {
-      font-size: 14px;
-      line-height: 22px;
-    }
-  }
-
-  &__link {
-    display: block;
-    opacity: 1;
-    transition: opacity $trans-default;
-
-    @include has-hover {
-      &:hover {
-        opacity: 0.5;
-      }
-    }
-  }
-
-  &__social-link {
-    display: flex;
-    padding: 0;
-    width: size(300px);
-    margin: 0 auto size(-20px);
-    flex-wrap: wrap;
-
-    .footer__link {
-      flex-shrink: 0;
-      max-width: size(132px);
-      margin-right: size(36px);
-      margin-bottom: size(20px);
-
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
-    }
-
-    img {
-      width: auto;
-      height: size(25px);
-    }
-
-    @include vp-1439 {
-      width: 300px;
-
-      img {
-        height: 25px;
-      }
-
-      .footer__link {
-        max-width: 132px;
-        margin-right: 36px;
-        margin-bottom: 20px;
-
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
-      }
-    }
-
-    @include vp-1023 {
-      width: 200px;
-    }
-
-    @media (max-width: 900px) {
-      flex-direction: column;
-      margin: 0;
-
-      .footer__link {
-        margin-right: 0;
-        margin-bottom: 20px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    @include vp-767 {
-      position: relative;
-      // margin: 0 -16px;
-      display: flex;
-      width: calc(100% + 32px);
-      order: -1;
-      flex-direction: row;
-      margin: 0 -16px;
-
-      .footer__link {
-        display: flex;
-        justify-content: center;
-        width: 50%;
-        max-width: 50%;
-        margin: 0;
-        position: relative;
-        padding: 20px 0;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 1px;
-          height: 100%;
-          background-color: rgba($color-default-white, 0.15);
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          height: 1px;
-          width: 200%;
-          background-color: rgba($color-default-white, 0.15);
-          bottom: 0;
-          left: 0;
-        }
-
-        &:nth-child(2n) {
-          &::before,
-          &::after {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
-  &__social-link-icon {
-    &--vk {
-      width: size(115px);
-      height: size(20px);
-
-      @include vp-1439 {
-        width: 115px;
-        height: 20px;
-      }
-    }
-
-    &--tg {
-      width: size(93px);
-      height: size(22px);
-
-      @include vp-1439 {
-        width: 93px;
-        height: 22px;
-      }
-    }
-  }
-
-  &__navigation {
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-    width: size(300px);
-    font-size: size(12px);
-    line-height: size(18px);
-    text-transform: uppercase;
-
-    @include vp-1439 {
-      width: 300px;
-      font-size: 12px;
-      line-height: 18px;
-    }
-
-    @include vp-1023 {
-      width: 200px;
-    }
-  }
-
-  &__navigation-item {
-    &:not(:last-child) {
-      margin-bottom: size(16px);
-
-      @include vp-1439 {
-        margin-bottom: 16px;
-      }
-    }
-
-    &--sub {
-      margin-top: size(32px);
-
-      @include vp-1439 {
-        margin-top: 32px;
-      }
-
-      &:not(:last-child) {
-        margin-bottom: size(32px);
-
-        @include vp-1439 {
-          margin-bottom: 32px;
-        }
-      }
-    }
-  }
-
-  &__sub-navigation {
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
-  }
-
-  &__sub-navigation-item {
-    font-size: size(14px);
-    line-height: size(22px);
-    text-transform: none;
-
-    @include vp-1439 {
-      font-size: 14px;
-      line-height: 22px;
-    }
-
-    &:first-child {
-      margin-top: size(12px);
-
-      @include vp-1439 {
-        margin-top: 12px;
-      }
-    }
-
-    &:not(:last-child) {
-      margin-bottom: size(8px);
-
-      @include vp-1439 {
-        margin-bottom: 8px;
-      }
-    }
-  }
-
-  &__navigation-link {
-    // @include text-caps;
-
-    &--current {
-      color: rgba($color-default-white, 0.5);
-    }
   }
 
   &__bottom {
+    padding: size(32px) 0;
+
+    @include vp-1439 {
+      padding: 32px 0;
+    }
+
     .container {
-      display: grid;
-      grid-template-columns: size(271px) 1fr  size(280px);
-      column-gap:  size(32px);
-      padding-top: size(32px);
-      padding-bottom: size(32px);
-
-      @include vp-1439 {
-        grid-template-columns: 271px 1fr 280px;
-        column-gap: 32px;
-        padding-top: 32px;
-        padding-bottom: 32px;
-      }
-
-      @include vp-1023 {
-        grid-template-columns: 230px 1fr 244px;
-        column-gap: 16px;
-      }
-
-      @include vp-767 {
-        grid-template-columns: 1fr;
-        padding-top: 0;
-        padding-bottom: 24px;
-      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 
   &__copyright {
-    margin: 0;
-    font-size: size(14px);
-    line-height: size(22px);
-    color: rgba($color-default-white, 0.5);
-
-    @include vp-1439 {
-      font-size: 14px;
-      line-height: 22px;
-    }
-
-    @include vp-767 {
-      padding-top: 21px;
-    }
+    display: block;
+    margin: 0 5% 0 0;
+    color: $color-nero-50;
   }
 
   &__development {
-    font-size: size(14px);
-    line-height: size(22px);
-
-    @include vp-1439 {
-      font-size: 14px;
-      line-height: 22px;
-    }
+    display: flex;
   }
 
   &__development-text {
     margin-right: size(4px);
-    color: rgba($color-default-white, 0.5);
+    color: $color-nero-50;
 
     @include vp-1439 {
       margin-right: 4px;
-    }
-  }
-
-  &--no-border {
-    .footer__top {
-      @include vp-767 {
-        border-top: none;
-      }
-    }
-  }
-
-  &--no-padding {
-    @include vp-767 {
-      padding-top: 0;
-    }
-  }
-
-  &__documents {
-    &:not(:last-child) {
-      margin: 0 0 size(32px);
-
-      @include vp-1439 {
-        margin: 0 0 32px;
-      }
-
-      @include vp-767 {
-        position: relative;
-        margin: 0 0 48px;
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -26px;
-          left: -16px;
-          width: 100vw;
-          height: 1px;
-          background-color: rgba($color-default-white, 0.15);
-        }
-      }
     }
   }
 

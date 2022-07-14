@@ -29,6 +29,9 @@
 <path d="M3 12L7 16M3 12L7 8M3 12L22 12" stroke="currentColor" stroke-linecap="round"/>
 </symbol><symbol id="arrow-right" viewBox="0 0 24 24">
 <path d="M21 12L17 8M21 12L17 16M21 12L2 12" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="footer-icon" viewBox="0 0 84 118">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M51.7561 68.5421H61.0902V95.2799H56.2506V72.6957H54.9448L44.6866 95.2799H39.1183L28.8601 72.6957H27.5939V95.2799H22.7523V68.5421H32.0894L41.9996 90.4709L51.7561 68.5421Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 118H84V0H0V118ZM4.8019 113.191H79.1981V4.80897H4.8019V113.191Z" fill="white"/>
 </symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-download" viewBox="0 0 20 20">
 <path d="M9.99984 14.1668L13.3332 10.8335M9.99984 14.1668L6.6665 10.8335M9.99984 14.1668L9.99983 0.833496" stroke="currentColor" stroke-linecap="round"/>
 <line x1="5.5" y1="17.8335" x2="14.5" y2="17.8335" stroke="currentColor" stroke-linecap="round"/>
@@ -36,6 +39,15 @@
     </div>
     <div class="wrapper">
       <header class="header" data-fix-block><span class="header__logo"><img src="img/svg/logo.svg" width="128" height="40" alt="Логотип Мангазея Майнинг"></span>
+        <div class="header__menu-wrp">
+          <div class="header__quotes-wrp">
+            <button class="header__quotes" type="button" aria-pressed="false"><span class="caps-12 header__quotes-title">Котировки</span></button>
+          </div>
+          <div class="header__lang"><a class="caps-12 header__link link" href="#">En</a></div>
+          <nav class="main-nav header__menu">
+            <button class="main-nav__toggle btn-reset" type="button" aria-pressed="false"><span class="caps-12 main-nav__toggle-title">Меню</span></button>
+          </nav>
+        </div>
       </header>
       <main>
         <h1 class="visually-hidden">Компания Мангазея Майнинг</h1>
@@ -47,16 +59,88 @@
               </picture>
             </div>
             <div class="intro__inner">
-              <p class="text-14 intro__title intro__title--desc">Разрабатываем перспективные месторождения Забайкальского края</p>
-              <p class="text-14 intro__title intro__title--mob">Разрабатываем перспективные месторождения</p>
-              <div class="intro__header-wrp">
-                <p class="heading-72 intro__header intro__header--desc">ДОБЫВАЕМ ЗОЛОТО С&nbsp;2011 года</p>
-                <p class="heading-72 intro__header intro__header--mob">ДОБЫВАЕМ ЗОЛОТО на&nbsp;месторождениях забайкальского края С&nbsp;2011 года</p>
+              <p class="text-14 intro__title intro__title--desc">Разрабатываем перспективные<br>месторождения Забайкальского края</p>
+              <p class="text-14 intro__title intro__title--mob">Разрабатываем<br>перспективные месторождения</p>
+              <p class="intro__header-wrp" data-sal="slide-up" data-words-animation><span class="heading-72 intro__header intro__header--desc">ДОБЫВАЕМ ЗОЛОТО<br>С&nbsp;2011 года</span><span class="heading-72 intro__header intro__header--mob">ДОБЫВАЕМ ЗОЛОТО на&nbsp;месторождениях забайкальского края С&nbsp;2011 года</span></p>
+            </div>
+          </div>
+        </div>
+        <section class="info-section after-sticky-intro">
+          <div class="container">
+            <div class="info-section__header-wrp">
+              <h2 class="caps-12 info-section__header">Ключевые факты<br>о&nbsp;компании</h2>
+            </div>
+            <div class="info-section__title-wrp">
+              <h3 class="heading-2-caps info-section__title" data-sal="slide-up" data-words-animation><span class="info-section__title-text">Ежегодно увеличиваем<br>темпы роста золотодобычи</span></h3>
+              <p class="text-14 info-section__text">Создаём мощный горноперерабатывающий кластер и&nbsp;ежегодно увеличиваем рост объёмов добычи и&nbsp;производства ценных металлов в&nbsp;действующих месторождениях.</p>
+            </div>
+          </div>
+        </section>
+        <section class="info-section info-section--blue after-sticky-intro">
+          <div class="container">
+            <div class="info-section__header-wrp">
+              <h2 class="caps-12 info-section__header">География<br>деятельности</h2>
+            </div>
+            <div class="info-section__title-wrp">
+              <h3 class="heading-2-caps info-section__title" data-sal="slide-up" data-words-animation><span class="info-section__title-text"><span class='info-section__blue-word'>Разрабатываем месторождения</span><br>Наседкино, Итакинское и&nbsp;Кочковское</span></h3>
+              <p class="text-14 info-section__text">Программа развития компании предусматривает развитие четырёх действующих объектов и&nbsp;введение в&nbsp;промышленную эксплуатацию новых месторождений в&nbsp;Забайкальском крае.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__img-wrp">
+            <picture>
+              <source type="image/webp" srcset="img/content/footer.webp, img/content/footer@2x.webp 2x"><img src="img/content/footer.jpg" srcset="img/content/footer@2x.jpg 2x" width="361" height="295" alt="Процесс отливки золота">
+            </picture>
+            <svg class="footer__img-icon" width="84" height="118" aria-hidden="true">
+              <use xlink:href="#footer-icon"></use>
+            </svg>
+          </div>
+          <div class="footer__info">
+            <div class="footer__nav">
+              <div class="container">
+                <ul class="footer__list">
+                  <li class="footer__item"><a class="caps-12 link link--disabled footer__nav-link" href="index.html">Главная</a>
+                  </li>
+                  <li class="footer__item"><a class="caps-12 link footer__nav-link" href="#">Компания</a>
+                  </li>
+                  <li class="footer__item"><a class="caps-12 link footer__nav-link" href="#">Активы</a>
+                  </li>
+                  <li class="footer__item"><a class="caps-12 link footer__nav-link" href="#">Устойчивое развитие</a>
+                  </li>
+                  <li class="footer__item"><a class="caps-12 link footer__nav-link" href="#">Поставщикам</a>
+                  </li>
+                  <li class="footer__item"><a class="caps-12 link footer__nav-link" href="#">карьера</a>
+                  </li>
+                  <li class="footer__item"><a class="caps-12 link footer__nav-link" href="#">производственная система</a>
+                  </li>
+                  <li class="footer__item"><a class="caps-12 link footer__nav-link" href="#">новости</a>
+                  </li>
+                  <li class="footer__item"><a class="caps-12 link footer__nav-link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__contacts">
+              <div class="container">
+                <div class="footer__contact"><span class="text-14 footer__contact-title">Телефон в&nbsp;Москве</span><a class="link footer__contact-link" href="tel:+74956475555" aria-label="Позвонить в Мангазея Майнинг">+7 495 647 55 55</a></div>
+                <div class="footer__contact"><span class="text-14 footer__contact-title">Email</span><a class="link footer__contact-link" href="mailto:mining@mangazeya.ru" aria-label="Отправить письмо по электронной почте">mining@mangazeya.ru</a></div><a class="link-download" href="./pdf/MangazeyaGroup.pdf" download><span class="link-download__icon">
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use xlink:href="#icon-download"></use>
+                    </svg></span><span class="link-download__text"><span class="caps-12 link-download__name">скачать презентацию</span><span class="text-14 link-download__info">pdf, 340 kb</span></span></a>
               </div>
             </div>
           </div>
         </div>
-      </main>
+        <div class="footer__bottom">
+          <div class="container">
+            <p class="text-14 footer__copyright">©2022 Мангазея Майнинг</p>
+            <div class="footer__development"><span class="text-14 footer__development-text">Дизайн, разработка сайта, создание контента &mdash;</span><a class="text-14 link footer__development-link" href="https://greencow.ru/" target="_blank" rel="nofollow noopener noreferrer" aria-label="Перейти на страницу компании Greencow">Greencow</a></div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

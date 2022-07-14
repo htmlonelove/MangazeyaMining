@@ -1,27 +1,126 @@
 .main-nav {
-  &__list {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
+  $root: &;
 
-    list-style: none;
-  }
+  // &__list {
+  //   display: flex;
+  //   margin: 0;
+  //   margin-right: 20px;
+  //   margin-left: 60px;
+  //   padding: 0;
 
-  &__item {
-    margin-right: 20px;
-  }
+  //   list-style: none;
+  // }
 
-  &__link {
-    color: $color-default-white;
+  // &__item {
+  //   margin-right: 20px;
+  // }
 
-    &.is-active {
-      opacity: 0.6;
-    }
-  }
+  // &__link {
+  //   color: $color-default-white;
+
+  //   &.is-active {
+  //     opacity: 0.6;
+  //   }
+  // }
 
   &__toggle {
-    display: none;
+    position: relative;
+    margin: 0;
+    padding: size(6px) size(6px) size(6px) size(56px);
+    background: none;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    @include vp-1439 {
+      padding: 6px 6px 6px 56px;
+    }
+
+    @include has-hover {
+      #{$root}__toggle-title {
+        color: $color-default-white-50;
+      }
+
+      &::before,
+      &::after {
+        background: $color-default-white-50;
+      }
+    }
+
+    &::before,
+    &::after {
+      --offset: #{size(-4px)};
+      --rotate: 45deg;
+
+      content: "";
+      position: absolute;
+      left: size(6px);
+      top: 50%;
+      transform: translate(0, calc(-50% + var(--offset)));
+      z-index: 1;
+      width: size(34px);
+      height: size(1px);
+      background: $color-default-white;
+      transition: background $trans-default;
+      //animation: burger-line-hide 1s forwards;
+
+      @include vp-1439 {
+        --offset: -4px;
+
+        left: 6px;
+        width: 34px;
+        height: 1px;
+      }
+    }
+
+    &::after {
+      --offset: #{size(4px)};
+      --rotate: -45deg;
+
+      @include vp-1439 {
+        --offset: 4px;
+      }
+    }
+
+    .is-fixed & {
+      &::after,
+      &::before {
+        background: $color-nero;
+      }
+    }
+
+    // .is-active & {
+    //   &::before,
+    //   &::after {
+    //     animation: burger-line-show 1s forwards;
+    //   }
+    // }
+  }
+
+  &__toggle-title {
+    color: $color-default-white;
+    transition: color $trans-default;
+
+    @include vp-767 {
+      position: absolute;
+
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+
+      white-space: nowrap;
+
+      border: 0;
+
+      clip: rect(0 0 0 0);
+      clip-path: inset(100%);
+    }
+
+    .is-fixed & {
+      color: $color-nero;
+    }
   }
 }

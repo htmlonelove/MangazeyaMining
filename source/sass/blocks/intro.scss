@@ -1,5 +1,5 @@
 .intro {
-  // position: sticky;
+  position: sticky;
   z-index: 1;
   top: 0;
   transform: translateZ(0) translateY(-1px);
@@ -47,12 +47,19 @@
 
   &__title {
     margin: 0 0 size(32px);
-    max-width: size(380px);
     color: $color-default-white;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity $trans-600,
+      transform $trans-600;
 
     @include vp-1439 {
-      max-width: 380px;
       margin: 0 0 32px;
+    }
+
+    .is-loaded & {
+      opacity: 1;
+      transform: translateY(0%);
     }
 
     &--desc {
@@ -71,11 +78,7 @@
   }
 
   &__header-wrp {
-    max-width: size(910px);
-
-    @include vp-1439 {
-      max-width: 910px;
-    }
+    margin: 0;
   }
 
   &__header {

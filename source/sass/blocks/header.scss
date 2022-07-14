@@ -8,8 +8,10 @@
   top: 0;
   transform: translateY(-100%);
   display: flex;
-  align-items: center;
-  transition: transform $trans-600;
+  align-items: stretch;
+  opacity: 0;
+  transition: opacity $trans-600,
+    transform $trans-600;
 
   &::before,
   &::after {
@@ -54,12 +56,6 @@
     &::after {
       transform: scale(1, 1);
     }
-
-    #{$root}__logo {
-      &::after {
-        transform: scale(1, 1);
-      }
-    }
   }
 
   &--has-bg {
@@ -75,6 +71,7 @@
   }
 
   &--top {
+    opacity: 1;
     transform: translateY(0);
   }
 
@@ -135,77 +132,115 @@
       width: 100%;
       object-fit: cover;
     }
+
+    .is-fixed & {
+      &::after {
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  &__menu-wrp {
+    display: flex;
+    margin: 0 0 0 auto;
+    padding: 0 0 0 size(48px);
+
+    @include vp-1439 {
+      padding: 0 0 0 48px;
+    }
   }
 
   &__lang {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    align-self: stretch;
-
-    // padding: size(20px) size(38px);
-    border-left: 1px solid $color-default-white-15;
-
-    position: relative;
-    z-index: 2;
+    padding: 0 size(42px);
+    border-left: size(1px) solid $color-default-white-15;
 
     @include vp-1439 {
-      padding: 20px 38px;
+      padding: 0 42px;
+      border-left-width: 1px;
     }
 
-    @include vp-1279 {
-      padding: 20px 25px;
-    }
-
-    @include vp-1023 {
-      padding: 20px 5px;
-    }
-
-    @include vp-767 {
-      padding: 15px;
-      border-left: none;
-      margin-left: auto;
+    .is-fixed & {
+      border-left-color: $color-nero-10;
     }
   }
 
   &__link {
-    padding: size(10px);
+    padding: size(6px);
+    color: $color-default-white;
 
     @include vp-1439 {
-      padding: 10px;
+      padding: 6px;
+    }
+
+    .is-fixed & {
+      color: $color-nero;
     }
   }
 
   &__menu {
-    margin-left: auto;
-    margin-right: size(38px);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 size(42px);
+    border-left: size(1px) solid $color-default-white-15;
 
     @include vp-1439 {
-      margin-right: 38px;
+      padding: 0 42px;
+      border-left-width: 1px;
     }
 
-    @include vp-1279 {
-      margin-right: 25px;
-    }
-
-    @include vp-1023 {
-      margin-right: 15px;
-    }
-
-    @include vp-767 {
-      margin-right: 0;
-      order: 3;
-      margin-left: 0;
-      align-self: stretch;
-      flex-shrink: 0;
+    .is-fixed & {
+      border-left-color: $color-nero-10;
     }
   }
 
-  &.is-hidden {
-    @include vp-767 {
-      transform: translateY(-100%);
-      pointer-events: none;
+  &__quotes-wrp {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 size(42px);
+
+    @include vp-1439 {
+      padding: 0 42px;
     }
   }
+
+  &__quotes {
+    margin: 0;
+    padding: size(6px);
+    background: none;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    @include vp-1439 {
+      padding: 6px;
+    }
+
+    @include has-hover {
+      #{$root}__quotes-title {
+        color: $color-default-white-50;
+      }
+    }
+  }
+
+  &__quotes-title {
+    color: $color-default-white;
+    transition: color $trans-default;
+
+    .is-fixed & {
+      color: $color-nero;
+    }
+  }
+
+  // &.is-hidden {
+  //   @include vp-767 {
+  //     transform: translateY(-100%);
+  //     pointer-events: none;
+  //   }
+  // }
 }

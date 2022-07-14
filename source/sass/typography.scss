@@ -50,7 +50,7 @@
 }
 
 .heading-2-caps {
-  font-weight: 400;
+  font-weight: 500;
   font-size: size(34px);
   line-height: size(44px);
   text-transform: uppercase;
@@ -165,9 +165,11 @@
 }
 
 .caps-12 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: size(12px);
   line-height: size(18px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
   @include vp-1439 {
     font-size: 12px;

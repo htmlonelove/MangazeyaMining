@@ -46,35 +46,41 @@ mixin header(headerMods, currentUrl)
     ]
 
   header.header(class=headerMods, data-fix-block)
-    if(currentUrl === "index.html")
+    if (currentUrl === "index.html")
       //- lighthouse снимает 10 баллов SEO за <a> без href
       span.header__logo
         img(src="img/svg/logo.svg", width="128", height="40", alt="Логотип Мангазея Майнинг")
     else
       a.header__logo(href="index.html", aria-label="Переход на главную")
         img(src="img/svg/logo.svg", width="128", height="40", alt="Логотип Мангазея Майнинг")
-      //- nav.main-nav.header__menu
-      //-   button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-      //-   .main-nav__wrapper
-      //-     .main-nav__inner
-      //-       ul.main-nav__list
-      //-         each item in headerItems
-      //-           - const activeState = currentUrl === item.href
-      //-           li.main-nav__item(class=item.items ? 'main-nav__item--has-sublist' : '')
-      //-             if(activeState)
-      //-               span.main-nav__link.link.is-active=item.text
-      //-             else
-      //-               a.main-nav__link.link(href=item.href)=item.text
+    .header__menu-wrp
+      .header__quotes-wrp
+        button.header__quotes(type="button", aria-pressed="false")
+          span.caps-12.header__quotes-title Котировки
 
-      //-             if item.items
-      //-               ul.main-nav__sublist
-      //-                 each subitem in item.items
-      //-                   li.main-nav__subitem
-      //-                     //- +card-businesses(subitem)
+      .header__lang
+        a.caps-12.header__link.link(href="#") En
 
-      //-       .main-nav__download-link
-      //-         +link-download({name: "Скачать презентацию", href: "./pdf/MangazeyaGroup.pdf", ext: "pdf", size: "2.29 MB"})
+      nav.main-nav.header__menu
+        button.main-nav__toggle.btn-reset(type="button", aria-pressed="false")
+          span.caps-12.main-nav__toggle-title Меню
+        //- .main-nav__wrapper
+        //-   .main-nav__inner
+        //-     ul.main-nav__list
+        //-       each item in headerItems
+        //-         - const activeState = currentUrl === item.href
+        //-         li.main-nav__item(class=item.items ? 'main-nav__item--has-sublist' : '')
+        //-           if(activeState)
+        //-             span.main-nav__link.link.is-active=item.text
+        //-           else
+        //-             a.main-nav__link.link(href=item.href)=item.text
 
-      //- .header__lang
-      //-   a.header__link.link(href="#") En
+        //-           if item.items
+        //-             ul.main-nav__sublist
+        //-               each subitem in item.items
+        //-                 li.main-nav__subitem
+        //-                   //- +card-businesses(subitem)
+
+        //-     .main-nav__download-link
+        //-       +link-download({name: "Скачать презентацию", href: "./pdf/MangazeyaGroup.pdf", ext: "pdf", size: "2.29 MB"})
 

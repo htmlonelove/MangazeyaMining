@@ -6,6 +6,9 @@ import {initFormValidate} from './modules/form/init-form-validate';
 import {initHeader} from './modules/header/init-header';
 import {setHeaderHeight} from './modules/header/set-header-height';
 
+import {initFirstLoad} from './modules/init-first-load';
+import {initTextSplitWordsAnimation} from './modules/text-split-animation-words';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -22,10 +25,17 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    initFirstLoad();
     initHeader();
+    initTextSplitWordsAnimation();
     initModals();
     initCustomSelect();
     initFormValidate();
+
+    window.sal({
+      once: true,
+      threshold: 0.5,
+    });
   });
 });
 

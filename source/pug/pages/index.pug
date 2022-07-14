@@ -6,7 +6,7 @@ block variables
   - const hasHeader = true
   - const headerMods = ""
   - const hasFooter = true
-  - const footerMods = "footer--no-border"
+  - const footerMods = ""
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 block main
@@ -15,5 +15,7 @@ block main
     //- все блоки вставляются из папки pug/components/blocks
     h1.visually-hidden Компания Мангазея Майнинг
     +intro(indexIntro)
+    +info-section(indexFactsSection).after-sticky-intro
+    +info-section(indexGeographySection).info-section--blue.after-sticky-intro
 
 block modals
