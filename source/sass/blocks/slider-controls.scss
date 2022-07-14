@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: column;
 
-  @include vp-767 {
-    flex-direction: row-reverse;
-  }
+  // @include vp-767 {
+  //   flex-direction: row-reverse;
+  // }
 
   &__btn {
     padding: 0;
@@ -50,20 +50,34 @@
       }
     }
 
-    @include has-hover {
-      &--next:hover svg {
-        transform: translateX(size(10px));
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &--next {
+      @include has-hover {
+        svg {
+          transform: translateX(size(10px));
+        }
 
         @include vp-1439 {
-          transform: translateX(10px);
+          svg {
+            transform: translateX(10px);
+          }
         }
       }
+    }
 
-      &--prev:hover svg {
-        transform: translateX(size(-10px));
+    &--prev {
+      @include has-hover {
+        svg {
+          transform: translateX(size(-10px));
+        }
 
         @include vp-1439 {
-          transform: translateX(-10px);
+          svg {
+            transform: translateX(-10px);
+          }
         }
       }
     }
@@ -74,14 +88,13 @@
       &:last-child {
         border-bottom: 1px solid $color-nero-10;
       }
-
     }
   }
 
   &--white {
     flex-direction: row-reverse;
 
-    #{$root}__btn {
+    &__btn {
       background: $color-lucky-point;
       color: $color-default-white;
       border: none;
@@ -95,6 +108,20 @@
 
       @include vp-767 {
         padding: 19px 20px;
+      }
+    }
+  }
+
+  &--transparent {
+    flex-direction: row;
+
+    .slider-controls__btn {
+      background-color: $color-transparent;
+      border-bottom: none;
+      border-right: none;
+
+      @include vp-767 {
+        border-bottom: none;
       }
     }
   }

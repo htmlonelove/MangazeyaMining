@@ -1,0 +1,13 @@
+mixin fact-item(props)
+  - const mod = props.mod ? props.mod : false
+
+  .fact-item&attributes(attributes)(class=`fact-item--${mod}`)
+    p.heading-2-caps.fact-item__title !{props.total}
+    p.text-14.fact-item__description !{props.details}
+    if props.statisticData
+      ul.fact-item__statistic
+        each stat in props.statisticData
+          li.statistic-item
+            span.caps-12.statistic-item__property !{stat.property}
+            span.caps-12.statistic-item__value !{stat.value}
+            span.statistic-item__indication(class=stat.indicator)
