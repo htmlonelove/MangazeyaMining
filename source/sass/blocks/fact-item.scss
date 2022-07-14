@@ -5,7 +5,7 @@
   width: 100%;
 
   @include vp-1439 {
-    padding: 40px 48px;
+    padding: 40px 48px 48px;
   }
 
   @include vp-1279 {
@@ -117,6 +117,12 @@
   }
 
   &--statistic {
+    padding-bottom: size(49px);
+
+    @include vp-1439 {
+      padding-bottom: 49px;
+    }
+
     .fact-item__title {
       max-width: size(352px);
 

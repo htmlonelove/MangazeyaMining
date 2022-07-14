@@ -1,11 +1,11 @@
 .section-header {
   .container {
     padding-right: size(226px);
-    padding-left: size(336px);
+    padding-left: size(384px);
 
-    @include vp-1439 {
+    @include vp-1919 {
       padding-right: 226px;
-      padding-left: 336px;
+      padding-left: 384px;
     }
 
     @include vp-1279 {
@@ -39,7 +39,7 @@
 
   &__title {
     position: absolute;
-    top: 0;
+    top: size(7px);
     left: size(48px);
 
     display: flex;
@@ -49,6 +49,7 @@
     margin-bottom: 0;
 
     @include vp-1439 {
+      top: 7px;
       left: 48px;
     }
 
@@ -85,13 +86,17 @@
   }
 
   &__description {
-    margin-top: size(24px);
+    margin-top: size(28px);
     margin-bottom: 0;
+
+    max-width: size(572px);
 
     color: $color-nero-50;
 
-    @include vp-1439 {
-      margin-top: 24px;
+    @include vp-1919 {
+      margin-top: 28px;
+      max-width: 572px;
+
     }
 
     @include vp-1023 {
