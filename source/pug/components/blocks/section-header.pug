@@ -1,13 +1,16 @@
 -
   const indexFactsSection = {
-    header: "Ключевые факты<br>о&nbsp;компании",
-    title: "Ежегодно увеличиваем<br>темпы роста золотодобычи",
-    text: "Создаём мощный горноперерабатывающий кластер и&nbsp;ежегодно увеличиваем рост объёмов добычи и&nbsp;производства ценных металлов в&nbsp;действующих месторождениях.",
+    headerDesc: "Ключевые факты <br>о<span>&nbsp;</span>компании",
+    headerMob: "Ключевые факты",
+    titleDesc: "Ежегодно увеличиваем <br>темпы роста золотодобычи",
+    titleMob: "Ежегодно увеличиваем <br>темпы роста добычи",
+    textDesc: "Создаём мощный горноперерабатывающий кластер и&nbsp;ежегодно увеличиваем рост объёмов добычи и&nbsp;производства ценных металлов в&nbsp;действующих месторождениях.",
+    textMob: "Создаём мощный горноперерабатывающий кластер и&nbsp;ежегодно увеличиваем рост объёмов и&nbsp;производства ценных металлов.",
   }
 
   const indexGeographySection = {
-    header: "География<br>деятельности",
-    title: "<span class='section-header__blue-word'>Разрабатываем месторождения</span><br>Наседкино, Итакинское и&nbsp;Кочковское",
+    header: "География <br>деятельности",
+    title: "<span class='section-header__blue-word'>Разрабатываем месторождения</span> <br>Наседкино, Итакинское и<span>&nbsp;</span>Кочковское",
     text: "Программа развития компании предусматривает развитие четырёх действующих объектов и&nbsp;введение в&nbsp;промышленную эксплуатацию новых месторождений в&nbsp;Забайкальском крае.",
   }
 
@@ -15,8 +18,25 @@ mixin section-header(data)
   .section-header&attributes(attributes)
     .container
       .section-header__header-wrp
-        h2.caps-12.section-header__header!=data.header
+        if (data.headerDesc && data.headerMob)
+          h2.caps-12.section-header__header.section-header__header--desc!=data.headerDesc
+          h2.caps-12.section-header__header.section-header__header--mob!=data.headerMob
+        else if data.header
+          h2.caps-12.section-header__header!=data.header
+
       .section-header__title-wrp
-        h3.heading-2-caps.section-header__title(data-sal="slide-up" data-words-animation)
-          span.section-header__title-text!=data.title
-        p.text-14.section-header__text!=data.text
+        if (data.titleDesc && data.titleMob)
+          h3.heading-2-caps.section-header__title.section-header__title--desc(data-sal="slide-up" data-words-animation)
+            span.section-header__title-text!=data.titleDesc
+          h3.heading-2-caps.section-header__title.section-header__title--mob(data-sal="slide-up" data-words-animation)
+            span.section-header__title-text!=data.titleMob
+        else if data.title
+          h3.heading-2-caps.section-header__title(data-sal="slide-up" data-words-animation)
+            span.section-header__title-text!=data.title
+
+        if (data.textDesc && data.textMob)
+          p.text-14.section-header__text.section-header__text--desc!=data.textDesc
+          p.text-14.section-header__text.section-header__text--mob!=data.textMob
+        else if data.text
+          p.text-14.section-header__text!=data.text
+
