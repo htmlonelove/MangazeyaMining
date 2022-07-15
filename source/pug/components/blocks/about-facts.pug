@@ -76,6 +76,7 @@
 mixin about-facts(props)
   if props
     section.about-facts&attributes(attributes)
+      +section-header(indexFactsSection)
       .about-facts__body(data-facts-slider-container)
         .about-facts__slider.swiper(data-facts-slider)
           .swiper-wrapper

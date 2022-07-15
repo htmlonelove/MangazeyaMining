@@ -1,11 +1,11 @@
-.info-section {
+.section-header {
   $root: &;
 
-  padding: calc(var(--header-height) + #{size(94px)}) 0 size(64px);
+  padding: size(94px) 0 size(64px);
   background-color: $color-bridal-heath;
 
   @include vp-1439 {
-    padding: calc(var(--header-height) + 94px) 0 64px;
+    padding: 94px 0 64px;
   }
 
   .container {
