@@ -38,9 +38,8 @@ mixin contacts(data)
   section.contacts(class!=attributes.class)
     +section-header(suppliersContactsSection)
     +big-text(bigTextMailData)
-    .container
-      .contacts__inner
-        ul.contacts-list
-          each item, index in data
-            +contacts-card(item)
+    .contacts__inner
+      ul.contacts-list
+        each item, index in data
+          +contacts-card(item)
 

@@ -3810,6 +3810,20 @@ button,
 }
 
 .contacts-card {
+  position: relative;
+}
+
+.contacts-card::before {
+  content: "";
+  border-bottom: 0.0625rem solid rgba(38, 38, 38, 0.1);
+  position: absolute;
+  top: -24px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.contacts-card__inner {
   margin-bottom: 4.1875rem;
   display: -ms-grid;
   display: grid;
@@ -3819,7 +3833,7 @@ button,
   width: 100%;
 }
 
-.contacts-card:first-child {
+.contacts-card__inner:first-child {
   margin-bottom: 3.0625rem;
 }
 
@@ -3871,6 +3885,17 @@ button,
   font-size: 7.5rem;
   line-height: 7.5rem;
   letter-spacing: 1.3px;
+  position: relative;
+}
+
+.big-text::before {
+  content: "";
+  border-bottom: 0.0625rem solid rgba(38, 38, 38, 0.1);
+  position: absolute;
+  top: 0.75rem;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -4335,6 +4360,77 @@ button,
   .mission__position--mob {
     display: block;
   }
+
+  .contacts__inner {
+    margin-top: 26px;
+  }
+
+  .contacts .section-header {
+    padding-bottom: 40px;
+  }
+
+  .contacts .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .contacts .section-header__title {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .contacts .section-header__header-wrp {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .contacts-card__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .contacts-card__inner:not(:last-child) {
+    margin-bottom: 49px;
+  }
+
+  .contacts-card__name-wrapper {
+    margin-bottom: 4px;
+  }
+
+  .contacts-card__position-wrapper {
+    margin-bottom: 40px;
+    padding-right: 38px;
+  }
+
+  .contacts-card__city-wrapper {
+    margin-bottom: 24px;
+  }
+
+  .contacts-card__position-wrapper {
+    margin-left: 0;
+  }
+
+  .contacts-card__phone-wrapper {
+    margin-left: 0;
+  }
+
+  .big-text {
+    letter-spacing: 0;
+  }
+
+  .big-text::before {
+    top: 2px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -4625,7 +4721,7 @@ button,
 }
 
 @media (min-width: 1024px) and (max-width: 1150px) {
-  .contacts-card {
+  .contacts-card__inner {
     -ms-grid-columns: 228px 1fr 1fr 1fr;
     grid-template-columns: 228px 1fr 1fr 1fr;
     grid-column-gap: 30px;
