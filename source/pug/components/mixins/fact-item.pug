@@ -3,11 +3,11 @@ mixin fact-item(props)
 
   .fact-item&attributes(attributes)(class=mod)
     p.heading-2-caps.fact-item__title(data-sal="slide-up", data-words-animation) !{props.total}
-    p.text-14.fact-item__description !{props.details}
+    p.text-14.fact-item__description(data-sal="fade") !{props.details}
     if props.statisticData
       ul.fact-item__statistic
         each stat in props.statisticData
           li.statistic-item
             span.caps-12.statistic-item__property !{stat.property}
             span.caps-12.statistic-item__value !{stat.value}
-            span.statistic-item__indication(class=stat.indicator)
+            span.statistic-item__indication(class=stat.indicator, data-sal="scale-right")
