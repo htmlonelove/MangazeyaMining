@@ -133,6 +133,10 @@
     max-width: 50%;
     width: 100%;
 
+    @include vp-767 {
+      max-width: 100%;
+    }
+
     .text-14 {
       margin-top: 0;
       margin-bottom: 0;

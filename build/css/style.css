@@ -5201,6 +5201,10 @@ button,
     flex-direction: column;
   }
 
+  .info-block__right-col {
+    max-width: 100%;
+  }
+
   .info-block__right-col .user-card {
     display: none;
   }
