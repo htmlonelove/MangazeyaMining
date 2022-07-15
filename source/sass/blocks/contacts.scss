@@ -4,10 +4,25 @@
 
 .contacts__inner {
   margin-top: size(24px);
+
+  @include vp-1023 {
+    margin-top: 26px;
+  }
 }
 
 .contacts .section-header {
   padding-bottom: size(31px);
+
+  @include vp-1023 {
+    padding-bottom: 40px;
+  }
+}
+
+.contacts .container {
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .contacts .section-header__title-wrp {
@@ -17,4 +32,16 @@
 .contacts .section-header__title {
   margin-top: size(4px);
   padding-left: size(4px);
+
+  @include vp-1023 {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.contacts .section-header__header-wrp {
+  @include vp-1023 {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
 }
