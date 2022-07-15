@@ -78,6 +78,7 @@
   &__logo {
     position: relative;
     z-index: 1;
+    flex-shrink: 0;
     width: size(224px);
     padding: size(24px) size(48px);
 
@@ -107,6 +108,10 @@
 
       @include vp-1439 {
         width: 1px;
+      }
+
+      @include vp-767 {
+        display: none;
       }
     }
 
@@ -148,6 +153,10 @@
     @include vp-1439 {
       padding: 0 0 0 48px;
     }
+
+    @include vp-1023 {
+      padding: 0 0 0 24px;
+    }
   }
 
   &__lang {
@@ -160,6 +169,11 @@
     @include vp-1439 {
       padding: 0 42px;
       border-left-width: 1px;
+    }
+
+    @include vp-767 {
+      padding: 0 16px;
+      border-left: none;
     }
 
     .is-fixed & {
@@ -200,6 +214,10 @@
       border-left-width: 1px;
     }
 
+    @include vp-767 {
+      padding: 0 16px;
+    }
+
     .is-fixed & {
       border-left-color: $color-nero-10;
     }
@@ -213,6 +231,10 @@
 
     @include vp-1439 {
       padding: 0 42px;
+    }
+
+    @include vp-767 {
+      display: none;
     }
   }
 

@@ -1,0 +1,38 @@
+.big-text {
+  padding-top: size(48px);
+  padding-bottom: size(60px);
+  font-size: size(120px);
+  line-height: size(120px);
+  letter-spacing: 1.3px;
+  position: relative;
+
+  @include vp-1439 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  @include vp-1023 {
+    letter-spacing: 0;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.big-text::before {
+  content: "";
+  border-bottom: size(1px) solid $color-nero-10;
+  position: absolute;
+  top: size(12px);
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  @include vp-1023 {
+    top: 2px;
+  }
+}

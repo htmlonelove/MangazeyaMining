@@ -15,9 +15,10 @@ block main
     //- все блоки вставляются из папки pug/components/blocks
     h1.visually-hidden Компания Мангазея Майнинг
     +intro(indexIntro)
-    +info-section(indexFactsSection).after-sticky-intro
     +about-facts(aboutFactsData).after-sticky-intro
-    +info-section(indexGeographySection).info-section--blue.after-sticky-intro
+    +section-header(indexGeographySection).info-section--blue.after-sticky-intro
     +info-block(miningData).after-sticky-intro.info-block--accent
     +info-block(jobData).after-sticky-intro
+    //- +section-header(indexGeographySection).section-header--blue
+
 block modals

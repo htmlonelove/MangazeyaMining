@@ -1,0 +1,126 @@
+.contacts-card {
+  position: relative;
+}
+
+.contacts-card::before {
+  content: "";
+  border-bottom: size(1px) solid $color-nero-10;
+  position: absolute;
+  top: -24px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.contacts-card__inner {
+  margin-bottom: size(67px);
+  display: grid;
+  grid-template-columns: size(228px) size(339px) size(132px) size(200px);
+  grid-column-gap: size(54px);
+  width: 100%;
+
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contacts-card__inner:not(:last-child) {
+  @include vp-1023 {
+    margin-bottom: 49px;
+  }
+}
+
+.contacts-card__inner:first-child {
+  margin-bottom: size(49px);
+}
+
+.contacts-card__name-wrapper {
+  @include vp-1023 {
+    margin-bottom: 4px;
+  }
+}
+
+.contacts-card__position-wrapper {
+  @include vp-1023 {
+    margin-bottom: 40px;
+    padding-right: 38px;
+  }
+}
+
+.contacts-card__city-wrapper {
+  @include vp-1023 {
+    margin-bottom: 24px;
+  }
+}
+
+
+.contacts-card__name,
+.contacts-card__surname,
+.contacts-card__position,
+.contacts-card__city,
+.contacts-card__add {
+  margin: 0;
+}
+
+.contacts-card__position-wrapper {
+  margin-left: size(54px);
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+}
+
+.contacts-card__phone-wrapper {
+  margin-left: size(35px);
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+}
+
+.contacts-card__add {
+  margin-top: size(2px);
+}
+
+@media (min-width: 1024px) and (max-width: 1150px) {
+  .contacts-card__inner {
+    grid-template-columns: 228px 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+
+  .contacts-card__position-wrapper {
+    margin-left: 0;
+  }
+
+  .contacts-card__phone-wrapper {
+    margin-left: 0;
+  }
+}
+
+.contacts-card__name,
+.contacts-card__surname {
+  font-size: size(18px);
+  line-height: size(24px);
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.contacts-card__position,
+.contacts-card__city,
+.contacts-card__add {
+  font-size: size(14px);
+  line-height: size(22px);
+}
+
+.contacts-card__position {
+  color: $color-nero-50;
+}
+
+.contacts-card__phone {
+  font-size: size(16px);
+  line-height: size(22px);
+}

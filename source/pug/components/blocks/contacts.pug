@@ -1,0 +1,45 @@
+-
+  const contactsCardData = [
+    {
+      name: "Фурцев",
+      surname: "Алексей Петрович",
+      position: "Заместитель генерального директора по&nbsp;закупкам и&nbsp;управлению цепочками поставок",
+      city: "Москва",
+      href: "tel:+74956475555",
+      phone: "+7 495 647 55 55",
+      add: "доб. 2042",
+    },
+    {
+      name: "Федорова",
+      surname: "Ольга Васильевна",
+      position: "Начальник отдела закупок",
+      city: "Москва",
+      href: "tel:+74956475555",
+      phone: "+7 495 647 55 55",
+      add: "доб. 2059",
+    },
+    {
+      name: "Перминова",
+      surname: "Екатерина Сергеевна",
+      position: "Начальник управления материально-технического обеспечения",
+      city: "Чита (+6 от Мск)",
+      href: "tel:+74956475555",
+      phone: "+7 495 647 55 55",
+      add: "доб. 2889",
+    },
+  ]
+
+  const bigTextMailData = {
+    href: "mailto:mto@mangazeya.ru",
+    text: "mto@mangazeya.ru"
+  }
+
+mixin contacts(data)
+  section.contacts(class!=attributes.class)
+    +section-header(suppliersContactsSection)
+    +big-text(bigTextMailData)
+    .contacts__inner
+      ul.contacts-list
+        each item, index in data
+          +contacts-card(item)
+

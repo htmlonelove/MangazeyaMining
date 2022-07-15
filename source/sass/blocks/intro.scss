@@ -43,6 +43,10 @@
     @include vp-1439 {
       padding-top: calc(var(--header-height) + 106px);
     }
+
+    @include vp-767 {
+      padding-top: calc(var(--header-height) + 110px);
+    }
   }
 
   &__title {
@@ -55,6 +59,10 @@
 
     @include vp-1439 {
       margin: 0 0 32px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 22px;
     }
 
     .is-loaded & {
