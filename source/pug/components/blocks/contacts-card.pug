@@ -1,13 +1,15 @@
 mixin contacts-card(data)
   li.contacts-card
-    .contacts-card__name-wrapper
-      p.contacts-card__name!=data.name
-      p.contacts-card__surname!=data.surname
-    .contacts-card__position-wrapper
-      p.contacts-card__position!=data.position
-    .contacts-card__city-wrapper
-      p.contacts-card__city!=data.city
-    .contacts-card__phone-wrapper
-      a(href=data.href).link.contacts-card__phone!=data.phone
-      p.contacts-card__add!=data.add
+    .container
+      .contacts-card__inner
+        .contacts-card__name-wrapper
+          p.contacts-card__name!=data.name
+          p.contacts-card__surname!=data.surname
+        .contacts-card__position-wrapper
+          p.contacts-card__position!=data.position
+        .contacts-card__city-wrapper
+          p.contacts-card__city!=data.city
+        .contacts-card__phone-wrapper
+          a(href=data.href).link.contacts-card__phone!=data.phone
+          p.contacts-card__add!=data.add
 
