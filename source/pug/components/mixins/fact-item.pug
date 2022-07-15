@@ -1,8 +1,8 @@
 mixin fact-item(props)
-  - const mod = props.mod ? props.mod : false
+  - const mod = props.mod ? props.mod : false;
 
-  .fact-item&attributes(attributes)(class=`fact-item--${mod}`)
-    p.heading-2-caps.fact-item__title !{props.total}
+  .fact-item&attributes(attributes)(class=mod)
+    p.heading-2-caps.fact-item__title(data-sal="slide-up", data-words-animation) !{props.total}
     p.text-14.fact-item__description !{props.details}
     if props.statisticData
       ul.fact-item__statistic
