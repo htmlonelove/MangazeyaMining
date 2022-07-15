@@ -1,0 +1,7 @@
+mixin link-arrow(props)
+  a.link-arrow&attributes(attributes)(class=props.mod, href=props.href, ariaLabel=props.ariaLabel)
+    if props.text
+      span.link-arrow__text.caps-12 !{props.text}
+    span.link-arrow__icon
+      +icon("arrow-right", 20, 20)
+
