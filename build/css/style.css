@@ -1686,6 +1686,25 @@ body.sal-disabled [data-sal|='slide'] {
   transform: none;
 }
 
+[data-sal|='scale-right'].sal-animate,
+body.sal-disabled [data-sal|='scale-right'] {
+  -webkit-transform: scaleX(100%);
+  -ms-transform: scaleX(100%);
+  transform: scaleX(100%);
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+}
+
+[data-sal='scale-right'] {
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+}
+
 .number-120 {
   font-weight: 500;
   font-size: 7.5rem;
@@ -3866,6 +3885,38 @@ button,
 
 .statistic-item__indication.width-35::after {
   max-width: 35%;
+}
+
+@-webkit-keyframes scaleX {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+  }
+
+  100% {
+    -webkit-transform: scaleX(100%);
+    transform: scaleX(100%);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+  }
+}
+
+@keyframes scaleX {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+  }
+
+  100% {
+    -webkit-transform: scaleX(100%);
+    transform: scaleX(100%);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+  }
 }
 
 .slider-controls {

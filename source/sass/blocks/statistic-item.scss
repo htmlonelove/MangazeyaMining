@@ -35,6 +35,8 @@
     height: size(4px);
     background-color: $color-nero-10;
 
+    // animation: scaleX 2s infinite ease-in-out;
+
     @include vp-1439 {
       height: 4px;
     }
@@ -74,5 +76,18 @@
         }
       }
     }
+  }
+}
+
+
+@keyframes scaleX {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  100% {
+    transform: scaleX(100%);
+    transform-origin: left;
   }
 }

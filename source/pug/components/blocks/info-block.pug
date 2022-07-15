@@ -60,10 +60,10 @@ mixin info-block(props)
   .info-block&attributes(attributes)
     .container
       if props.title.secondText
-        p.text-18.info-block__top-text.info-block__top-text--des !{props.title.text}
-        p.text-18.info-block__top-text.info-block__top-text--mob !{props.title.secondText}
+        p.text-18.info-block__top-text.info-block__top-text--des(data-sal="fade") !{props.title.text}
+        p.text-18.info-block__top-text.info-block__top-text--mob(data-sal="fade") !{props.title.secondText}
       else
-        p.text-18.info-block__top-text !{props.title.text}
+        p.text-18.info-block__top-text(data-sal="fade") !{props.title.text}
       .info-block__accent
         if props.accent.secondText
           p.info-block__accent-text.info-block__accent-text--des.number-120(data-sal="slide-up", data-words-animation) !{props.accent.text}
@@ -77,16 +77,16 @@ mixin info-block(props)
       .info-block__footer
         .info-block__left-col
           if props.leftBlock.link
-            a.text-18(href=props.leftBlock.link.href) !{props.leftBlock.link.text}
+            a.text-18(href=props.leftBlock.link.href, data-sal="fade") !{props.leftBlock.link.text}
           if props.leftBlock.title
-            p.text-18 !{props.leftBlock.title}
-          p.text-14 !{props.leftBlock.text}
+            p.text-18(data-sal="fade") !{props.leftBlock.title}
+          p.text-14(data-sal="fade") !{props.leftBlock.text}
         .info-block__right-col
-          p.text-14.is-hidden-mob !{props.rightBlock.text}
+          p.text-14.is-hidden-mob(data-sal="fade") !{props.rightBlock.text}
           if props.rightBlock.user
-            +user-card(props.rightBlock.user)
+            +user-card(props.rightBlock.user)(data-sal="fade")
           if props.rightBlock.link
-            +link-arrow(props.rightBlock.link)
+            +link-arrow(props.rightBlock.link)(data-sal="fade")
 
 
 
