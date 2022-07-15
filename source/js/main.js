@@ -9,6 +9,9 @@ import {setHeaderHeight} from './modules/header/set-header-height';
 import {initFactsSlider} from './modules/sliders/init-facts-slider';
 
 import {initFirstLoad} from './modules/init-first-load';
+import {initScrollBtn} from './modules/init-scroll-btn';
+import {loadVideo} from './modules/lazy-video-load';
+import {setMobIntroHeight} from './modules/set-mob-intro-height';
 import {initTextSplitWordsAnimation} from './modules/text-split-animation-words';
 
 // ---------------------------------
@@ -30,6 +33,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initFirstLoad();
     initHeader();
     initTextSplitWordsAnimation();
+    loadVideo();
+    initScrollBtn();
+    setMobIntroHeight();
     initModals();
     initCustomSelect();
     initFormValidate();

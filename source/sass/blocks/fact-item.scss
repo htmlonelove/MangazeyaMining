@@ -1,4 +1,6 @@
 .fact-item {
+  $root: &;
+
   position: relative;
 
   padding: size(40px) size(48px);
@@ -141,6 +143,14 @@
       @include vp-767 {
         margin-top: 12px;
       }
+    }
+  }
+
+  &--white {
+    color: $color-default-white;
+
+    #{$root}__description {
+      color: $color-default-white;
     }
   }
 }

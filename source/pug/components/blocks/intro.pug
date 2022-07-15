@@ -5,6 +5,20 @@
     headerDesc: "ДОБЫВАЕМ ЗОЛОТО <br>С<span>&nbsp;</span>2011 года",
     headerMob: "ДОБЫВАЕМ ЗОЛОТО на месторождениях забайкальского края С<span>&nbsp;</span>2011 года",
     img: ['content/intro', 'index-intro', 'jpg', 1440, 900, 'Процесс отливки золота'],
+    id: "facts",
+    factsList: [
+      {
+        totalMini: '86&nbsp;430 унций',
+        details: 'объем производства золота в&nbsp;2021 году',
+        statistic: false,
+      },
+      {
+        totalMini: 'Ведущий работодатель',
+        details: 'Вносим вклад в&nbsp;развитие благополучия жителей региона, гарантируя сотрудникам одни из&nbsp;лучших условий труда, финансовую стабильность и&nbsp;карьерный рост.',
+        statistic: false,
+      },
+    ],
+    video: "mining",
   }
 
 mixin intro(data)
@@ -14,15 +28,26 @@ mixin intro(data)
         .intro__img-wrp
           +picture(...data.img)
       .intro__inner
-        if (data.titleDesc && data.titleMob)
-          p.text-14.intro__title.intro__title--desc!=data.titleDesc
-          p.text-14.intro__title.intro__title--mob!=data.titleMob
-        else if data.title
-          p.text-14.intro__title!=data.title
+        .intro__titles-wrp
+          if (data.titleDesc && data.titleMob)
+            h2.text-14.intro__title.intro__title--desc!=data.titleDesc
+            h2.text-14.intro__title.intro__title--mob!=data.titleMob
+          else if data.title
+            h2.text-14.intro__title!=data.title
 
-        if (data.headerDesc && data.headerMob)
-          p.intro__header-wrp(data-sal="slide-up" data-words-animation)
-            span.heading-72.intro__header.intro__header--desc!=data.headerDesc
-            span.heading-72.intro__header.intro__header--mob!=data.headerMob
-        else if data.header
-          p.heading-72.intro__header!=data.header
+          if (data.headerDesc && data.headerMob)
+            p.intro__header-wrp(data-sal="slide-up" data-words-animation)
+              span.heading-72.intro__header.intro__header--desc!=data.headerDesc
+              span.heading-72.intro__header.intro__header--mob!=data.headerMob
+          else if data.header
+            p.heading-72.intro__header!=data.header
+
+        if data.factsList
+          .intro__info
+            +fact-item(data.factsList[0]).fact-item--white
+            +fact-item(data.factsList[1]).fact-item--white
+            .intro__video-wrp
+              video(preload="auto", muted, playsinline, loop, data-src=`video/${data.video}.mp4`)
+              +video-btn({title: "видео о компании"})(data-open-modal="video").intro__video-btn
+
+        +scroll-btn().intro__scroll-btn(data-target=`#${data.id}`)

@@ -1,0 +1,33 @@
+.employer {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+    padding: 48px 0;
+    background-color: $color-bridal-heath;
+  }
+
+  &__video-wrp {
+    position: relative;
+    height: 51.5vw;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__video-btn {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+  }
+
+  &__title {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    color: $color-default-white;
+  }
+}
