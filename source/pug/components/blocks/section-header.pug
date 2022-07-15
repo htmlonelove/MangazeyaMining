@@ -8,6 +8,12 @@
     textMob: "Создаём мощный горноперерабатывающий кластер и&nbsp;ежегодно увеличиваем рост объёмов и&nbsp;производства ценных металлов.",
   }
 
+  const employerSection = {
+    header: "Ведущий работодатель",
+    title: "Вносим вклад в <br>развитие благополучия <br>жителей региона",
+    text: "Гарантируем сотрудникам одни из&nbsp;лучших условий труда, финансовую стабильность и&nbsp;карьерный рост.",
+  }
+
   const indexGeographySection = {
     header: "География <br>деятельности",
     title: "<span class='section-header__blue-word'>Разрабатываем месторождения</span> <br>Наседкино, Итакинское и<span>&nbsp;</span>Кочковское",
@@ -25,10 +31,10 @@ mixin section-header(data)
     .container
       .section-header__header-wrp
         if (data.headerDesc && data.headerMob)
-          h2.caps-12.section-header__header.section-header__header--desc!=data.headerDesc
-          h2.caps-12.section-header__header.section-header__header--mob!=data.headerMob
+          h2.caps-12.section-header__header.section-header__header--desc(data-sal="fade")!=data.headerDesc
+          h2.caps-12.section-header__header.section-header__header--mob(data-sal="fade")!=data.headerMob
         else if data.header
-          h2.caps-12.section-header__header!=data.header
+          h2.caps-12.section-header__header(data-sal="fade")!=data.header
 
       .section-header__title-wrp
         if (data.titleDesc && data.titleMob)
@@ -41,8 +47,8 @@ mixin section-header(data)
             span.section-header__title-text!=data.title
 
         if (data.textDesc && data.textMob)
-          p.text-14.section-header__text.section-header__text--desc!=data.textDesc
-          p.text-14.section-header__text.section-header__text--mob!=data.textMob
+          p.text-14.section-header__text.section-header__text--desc(data-sal="fade")!=data.textDesc
+          p.text-14.section-header__text.section-header__text--mob(data-sal="fade")!=data.textMob
         else if data.text
-          p.text-14.section-header__text!=data.text
+          p.text-14.section-header__text(data-sal="fade")!=data.text
 

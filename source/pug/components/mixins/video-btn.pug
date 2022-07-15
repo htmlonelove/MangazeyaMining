@@ -1,0 +1,7 @@
+mixin video-btn(data)
+  button.caps-12.video-btn&attributes(attributes)(type="button")
+    span.video-btn__icon
+      +icon("play-icon", 20, 20)
+
+    if data.title
+      span.video-btn__title!=data.title
