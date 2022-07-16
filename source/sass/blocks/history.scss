@@ -1,0 +1,157 @@
+.history {
+  & .section-header {
+    padding: size(124px) 0 size(64px);
+
+    @include vp-767 {
+      padding: size(96px) 0 size(24px);
+
+      & br {
+        display: none;
+      }
+    }
+
+    & ~ .container {
+      padding-right: 0;
+    }
+  }
+
+  & .section-header__header-wrp {
+    @include vp-767 {
+      margin-bottom: 24px;
+    }
+  }
+
+  & .section-header__text {
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__slider-container {
+    position: relative;
+    margin-left: -83px;
+
+    @include vp-1023 {
+      margin-left: -65px;
+    }
+
+    @include vp-767 {
+      margin-left: -30px;
+    }
+  }
+
+  &__slider {
+    max-width: calc(100% - 165px);
+
+    @include vp-1023 {
+      max-width: calc(100% - 151px);
+    }
+
+    @include vp-767 {
+      max-width: calc(100% - 60px);
+    }
+  }
+
+  & .swiper-wrapper {
+    min-height: size(439px);
+
+    @include vp-767 {
+      min-height: 359px;
+    }
+  }
+
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    padding-top: size(40px);
+    padding-right: 8.5%;
+    padding-bottom: size(40px);
+    text-align: left;
+
+    @include vp-767 {
+      padding-top: 28px;
+      padding-bottom: 32px;
+      padding-right: 12%;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: $color-nero-10;
+      top: 0;
+      right: size(34px);
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    & h3 {
+      margin-top: 0;
+      margin-bottom: size(58px);
+
+      @include vp-767 {
+        font-size: 38px;
+        line-height: 38px;
+        margin-bottom: 35px;
+      }
+    }
+
+    & p {
+      margin-top: 0;
+      color: $color-nero-50;
+      margin-bottom: size(24px);
+
+      & br {
+        display: none;
+      }
+
+      @include vp-767 {
+        max-width: 90%;
+      }
+    }
+
+    & .nav-count {
+      padding: 0;
+      margin-top: auto;
+    }
+  }
+
+  &__tools {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    flex-shrink: 0;
+    width: size(117px);
+  }
+
+  & .slider-controls {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .slider-controls__btn {
+    background: $color-bridal-heath;
+
+    &:disabled {
+      opacity: 1;
+
+      & svg {
+        opacity: 0.5;
+      }
+    }
+  }
+}
