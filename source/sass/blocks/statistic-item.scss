@@ -26,6 +26,14 @@
     }
   }
 
+  &__property {
+    margin-right: size(12px);
+
+    @include vp-1439 {
+      margin-right: 12px;
+    }
+  }
+
   &__indication {
     position: absolute;
     left: 0;
@@ -76,18 +84,5 @@
         }
       }
     }
-  }
-}
-
-
-@keyframes scaleX {
-  0% {
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-
-  100% {
-    transform: scaleX(100%);
-    transform-origin: left;
   }
 }

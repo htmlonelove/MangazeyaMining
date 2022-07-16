@@ -73,7 +73,7 @@ mixin info-block(props)
         else
           p.info-block__accent-text.number-120(data-sal="slide-up", data-words-animation) !{props.accent.text}
           if props.accent.link
-            +link-arrow(props.accent.link).link-arrow--big.link-arrow--accent
+            +link-arrow(props.accent.link).link-arrow--big.link-arrow--accent(data-sal="fade", style="--sal-delay: 0.5s;")
       .info-block__footer
         .info-block__left-col
           if props.leftBlock.link
