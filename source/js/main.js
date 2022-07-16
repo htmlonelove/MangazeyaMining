@@ -7,6 +7,8 @@ import {initHeader} from './modules/header/init-header';
 import {setHeaderHeight} from './modules/header/set-header-height';
 
 import {initFactsSlider} from './modules/sliders/init-facts-slider';
+import {initValuesSlider} from './modules/sliders/init-values-slider';
+import {initHistorySlider} from './modules/sliders/init-history-slider';
 
 import {initFirstLoad} from './modules/init-first-load';
 import {initScrollBtn} from './modules/init-scroll-btn';
@@ -40,6 +42,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initCustomSelect();
     initFormValidate();
     initFactsSlider();
+    initValuesSlider();
+    initHistorySlider();
 
     window.sal({
       once: true,

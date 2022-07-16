@@ -3,7 +3,7 @@ extends ../components/base/layout
 block variables
   - const title = "Мангазея Майнинг" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
-  - const hasHeader = false
+  - const hasHeader = true
   - const headerMods = ""
   - const hasFooter = true
   - const footerMods = ""
@@ -11,6 +11,9 @@ block variables
 
 block main
   main
+    +section-intro(companyIntroSection)
+    +values(valuesSectionData)
     +mission(dataMission)
+    +history(historySectionData)
 
 block modals
