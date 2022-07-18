@@ -25,13 +25,13 @@
   }
 }
 
-.contacts-card__inner:not(:last-child) {
+.contacts-card:not(:last-child) .contacts-card__inner {
   @include vp-1023 {
     margin-bottom: 49px;
   }
 }
 
-.contacts-card__inner:first-child {
+.contacts-card:first-child .contacts-card__inner {
   margin-bottom: size(49px);
 }
 
@@ -53,7 +53,6 @@
     margin-bottom: 24px;
   }
 }
-
 
 .contacts-card__name,
 .contacts-card__surname,

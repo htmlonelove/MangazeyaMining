@@ -1,0 +1,74 @@
+-
+  const documentsCardData = [
+    {
+      title: "Список документов <br> для участия в&nbsp;закупках",
+      name: "",
+      href: "",
+      size: " 16 Kb",
+      ext: "Docx",
+    },
+     {
+      title: "Форма договора поставки с&nbsp;ценой договора <br> до&nbsp;500 тысяч рублей",
+      name: "",
+      href: "",
+      size: " 97 Kb",
+      ext: "Doc",
+    },
+     {
+      title: "Форма договора поставки с&nbsp;суммой более 500 тысяч рублей",
+      name: "",
+      href: "",
+      size: " 77 Kb",
+      ext: "Docx",
+    },
+     {
+      title: "Договор с&nbsp;базисами поставки инкотермс 2020",
+      name: "",
+      href: "",
+      size: " 83 Kb",
+      ext: "Docx",
+    },
+     {
+      title: "Форма договора поставки с&nbsp;услугами ПНР и&nbsp;ШМР",
+      name: "",
+      href: "",
+      size: " 105 Kb",
+      ext: "Docx",
+    },
+     {
+      title: "Карточка основных сведений по&nbsp;компании <br>ООО &laquo;Дальцветмет&raquo;",
+      name: "",
+      href: "",
+      size: " 21 Kb",
+      ext: "Docx",
+    },
+     {
+      title: "Карточка основных сведений по&nbsp;компании <br> ООО &laquo;Корякмайнинг&raquo;",
+      name: "",
+      href: "",
+      size: " 22 Kb",
+      ext: "Docx",
+    },
+     {
+      title: "Карточка основных сведений по&nbsp;компании <br> ООО &laquo;Мангазея Майнинг&raquo;",
+      name: "",
+      href: "",
+      size: " 21 Kb",
+      ext: "Docx",
+    },
+  ]
+
+  const suppliersDocumentsSection = {
+    header: "Документы",
+    title: "текст заголовка <br> сейчас находится <br> в&nbsp;разработке",
+    text: "Создаём мощный горноперерабатывающий кластер и&nbsp;ежегодно увеличиваем рост объёмов добычи и&nbsp;производства ценных металлов в&nbsp;действующих месторождениях.",
+  }
+
+mixin documents(data)
+  section.documents(class!=attributes.class)
+    +section-header(suppliersDocumentsSection)
+    .documents__inner
+      .container
+        ul.documents-list
+          each item, index in data
+            +document-card(item)
