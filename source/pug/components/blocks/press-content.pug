@@ -1,0 +1,43 @@
+mixin press-content (data, mod)
+  section.press-content(class=`press-content--${mod}`)
+    h2.visually-hidden!=data.title
+    ul.press-content__list
+      each it in data.items
+        if it.columns
+          each item, i in it.columns
+            li.press-content__item(class=`${i === 0?'press-content__item--left-column':'press-content__item--right-column'}`)
+              a.press-content__link(href=item.link, aria-label="Перейти на страницу новости")
+                .press-content__text-container
+                  .press-content__text-wrapper
+                    h3.press-content__title!=item.title
+                  .press-content__date
+                    span.press-content__date-number!=item.dateNumber
+                    .press-content__date-text
+                      span!=item.dateMonth
+                      span!=item.dateYear
+        else
+          li.press-content__item.press-content__item--grid
+            a.press-content__link(href=it.link, aria-label="Перейти на страницу новости")
+              if it.img
+                if it.img.format==="svg"
+                  .press-content__logo-container
+                    img(src=`img/svg/${it.img.name}.svg`, width=`${it.img.width}`, height=`${it.img.height}`, alt=it.img.alt)
+                else
+                  .press-content__img-container
+                    +picture(it.img.path, it.img.name, it.img.format, it.img.width, it.img.height, it.img.alt)
+              .press-content__text-container(class=it.img?"":"press-content__text-container--no-img")
+                .press-content__text-wrapper
+                  h3.press-content__title!=it.title
+                  if it.text
+                    p.press-content__text!=it.text
+                  if it.source
+                    .press-content__source-block
+                      +icon('icon-source-article', 16, 16).press-content__source-icon
+                      span.press-content__source!=it.source
+                .press-content__date
+                  span.press-content__date-number!=it.dateNumber
+                  .press-content__date-text
+                    span!=it.dateMonth
+                    span!=it.dateYear
+
+    +btn-load-more().press-content__load-btn

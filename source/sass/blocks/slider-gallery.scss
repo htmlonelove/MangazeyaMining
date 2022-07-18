@@ -1,0 +1,235 @@
+.slider-gallery  {
+  &__container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    margin: 0;
+    padding-left: 0;
+    width: 100%;
+    list-style: none;
+
+    @include vp-767 {
+      position: relative;
+    }
+  }
+
+  &__img-content {
+    overflow: hidden;
+    height: size(720px);
+
+    @include vp-1439 {
+      height: 720px;
+    }
+
+      @include vp-1023 {
+        height: 500px;
+      }
+
+      @include vp-767 {
+        height: 375px;
+      }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__control-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: size(245px);
+    height: size(64px);
+    background-color: $color-default-white;
+    z-index: 2;
+
+    @include vp-1439 {
+      width: 245px;
+      height: 64px;
+    }
+
+    @include vp-767 {
+      position: static;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      background-color: $color-transparent;
+      border-bottom: 1px solid $color-default-white-15;
+    }
+
+    .slider-controls {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+
+      @include vp-767 {
+        width: 128px;
+      }
+    }
+
+    .slider-controls__btn {
+      padding-left: size(20px);
+      padding-right: size(20px);
+      width: size(64px);
+      flex-grow: 0;
+      border: none;
+
+      @include vp-1439 {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 64px;
+      }
+
+      @include vp-767 {
+        background-color: inherit;
+        color: $color-default-white;
+        border-color: $color-default-white-15;
+      }
+
+      &[aria-disabled="true"] {
+        color: rgba($color-nero, 0.5);
+
+        @include has-hover {
+          &:hover svg {
+            transform: none;
+          }
+        }
+
+        @include vp-767 {
+          color: $color-default-white-50;
+        }
+      }
+
+      &--next {
+        order: 2;
+        border-left: size(1px) solid $color-nero-10;
+        border-bottom: none;
+
+        @include vp-1439 {
+          border-left: 1px solid $color-nero-10;
+        }
+
+        @include vp-767 {
+          border-bottom: 0;
+          border-color: $color-default-white-15;
+        }
+      }
+
+      &--prev {
+        border-right: size(1px) solid $color-nero-10;
+
+        @include vp-1439 {
+          border-right: 1px solid $color-nero-10;
+        }
+
+        @include vp-767 {
+          border-right: none;
+          border-left: 1px solid $color-default-white-15;
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__pagination {
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: size(115px);
+    height: 100%;
+    left: size(65px);
+    top: 0;
+    color: rgba($color-nero, 0.4);
+
+    @include vp-1439 {
+      width: 115px;
+      left: 65px;
+    }
+
+    @include vp-767 {
+      position: static;
+      order: -1;
+      justify-content: flex-start;
+      padding-left: 20px;
+      color: rgba($color-default-white, 0.4);
+    }
+
+    .swiper-pagination-current {
+      margin-right: size(2px);
+      color: $color-nero;
+
+      @include vp-1439 {
+        margin-right: 2px;
+      }
+
+      @include vp-767 {
+        color: $color-default-white;
+      }
+    }
+
+    .swiper-pagination-total {
+      margin-left: size(5px);
+
+      @include vp-1439 {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &--new {
+    @include vp-767 {
+      position: relative;
+      --padding: 16px;
+      top: 0;
+      right: var(--padding);
+      width: calc(100% + 2*var(--padding));
+    }
+
+    .slider-gallery__img-content {
+      width: 100%;
+      height: size(720px);
+
+      @include vp-1439 {
+        height: 720px;
+      }
+
+      @include vp-1023 {
+        height: 500px;
+      }
+
+      @include vp-767 {
+        height: 375px;
+      }
+    }
+  }
+
+  .swiper-slide {
+    transition: clip-path 2s;
+  }
+
+  .swiper-slide-prev {
+    z-index: 3;
+    clip-path: polygon(0 0,0 0,0 100%,0 100%);
+  }
+
+  .swiper-slide-active {
+    z-index: 2;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  }
+
+  .swiper-slide-next {
+    z-index: 1;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  }
+}

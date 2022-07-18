@@ -1,4 +1,8 @@
 .footer {
+  background-color: $color-bridal-heath;
+  transform: translateX(0);
+  transition: transform $trans-600;
+
   &__inner {
     display: flex;
     align-items: stretch;

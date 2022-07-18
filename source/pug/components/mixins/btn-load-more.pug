@@ -1,0 +1,5 @@
+mixin btn-load-more()
+  .btn-load-more&attributes(attributes)
+    .btn-load-more__icon
+      +icon("icon-load-more", 20, 20)
+    +btn({tag: "button", type: "button", text: "Показать больше новостей"}).btn-load-more__btn

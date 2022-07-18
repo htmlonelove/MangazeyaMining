@@ -29,6 +29,7 @@ block main
       height: 88px;
       margin-bottom: 40px;
       background-color: #17214A;
+      color: #ffffff;
     }
 
     img {
@@ -74,12 +75,20 @@ block main
         name: "Операции — operations.html",
         src: "operations.html"
       },
+      {
+        name: "Новости — news.html",
+        src: "news.html"
+      },
+      {
+        name: "Новость — new.html",
+        src: "new.html"
+      },
     ]
 
   main
     .container
       div
-        img(src="img/svg/logo.svg" width="128" height="40" alt="Логотип Мангазея Майнинг")
+        +icon('logo', 128, 40, true)(role="img" aria-label="Логотип Мангазея Майнинг")
       h1 Список страниц
       ol
         each page in pages

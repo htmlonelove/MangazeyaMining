@@ -1,0 +1,23 @@
+mixin map-business(markers)
+  .map-business&attributes(attributes)(data-markers=markers)
+    .map-business__inner#map
+
+    button.map-business__open-btn.circle-icon.circle-icon--white(type="button", aria-label="Закрыть попап", data-open-map-popup)
+      +icon("icon-camera", 24, 24)
+
+    .map-business__popup-wrp
+      .map-business__popup.is-active(data-map-popup)
+        .map-business__popup-slider.swiper-container(data-business-popup-slider)
+          .swiper-wrapper
+
+      .map-business__slider
+        .swiper-container(data-map-slider)
+          .swiper-wrapper
+
+          +slider-tools().map-business__slider-controls
+
+      button.map-business__close-btn.circle-icon.circle-icon--white(type="button", aria-label="Закрыть попап", data-close-map-popup)
+        +icon("icon-marker", 24, 24).map-business__close-btn-open-icon
+        +icon("icon-camera", 24, 24).map-business__close-btn-close-icon
+
+      button.map-business__close.btn.btn--white(type="button", aria-label="Закрыть попап",) Закрыть окно

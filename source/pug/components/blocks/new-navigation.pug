@@ -1,0 +1,15 @@
+mixin new-navigation()
+   .new-navigation
+    .container
+      a.new-navigation__link.new-navigation__link--prev(href="#", aria-label="Перейти на страницу предыдущей новости")
+        +icon("icon-arrow-left", 24, 24)
+        span Предыдущая
+      a.new-navigation__link.new-navigation__link--all(href="news.html", aria-label="Перейти на страницу Новости")
+        span Вернуться к списку новостей
+        .new-navigation__mobile-link
+          .new-navigation__link-icon
+            +icon("icon-arrow-left", 24, 24)
+          span назад к списку новостей
+      a.new-navigation__link.new-navigation__link--next(href="#", aria-label="Перейти на страницу следующей новости")
+        span следующая
+        +icon("icon-arrow-right", 24, 24)
