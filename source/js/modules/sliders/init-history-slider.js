@@ -1,9 +1,7 @@
-import {renderFraction} from './render-slider-fraction';
 
 const historySlider = document.querySelector('[data-history-slider]');
 
 
-let pagination;
 let prevButton;
 let nextButton;
 
@@ -11,7 +9,6 @@ let nextButton;
 const enableSwiper = (slider) => {
   prevButton = slider.closest('[data-history-slider-container]').querySelector('[data-btn-prev]');
   nextButton = slider.closest('[data-history-slider-container]').querySelector('[data-btn-next]');
-  pagination = slider.closest('[data-history-slider-container]').querySelector('[data-pagination]');
 
   let mySwiper = new Swiper (slider, {
     speed: 600,
@@ -39,7 +36,9 @@ const enableSwiper = (slider) => {
 };
 
 const initHistorySlider = () => {
-  enableSwiper(historySlider);
+  if (historySlider) {
+    enableSwiper(historySlider);
+  }
 };
 
 export {initHistorySlider};
