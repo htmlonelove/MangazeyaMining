@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Мангазея Майнинг</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Мангазея Майнинг">
+    <meta name="keywords" content="Мангазея Майнинг">
+    <meta name="og:title" content="Мангазея Майнинг">
+    <meta name="og:description" content="Мангазея Майнинг">
+    <meta name="og:url" content="">
+    <meta name="og:site_name" content="Мангазея Майнинг">
+    <meta name="og:locale" content="ru_RU">
+    <meta name="og:type" content="website">
+    <meta name="application-name" content="Мангазея Майнинг">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/grandis-extended-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-left" viewBox="0 0 24 24">
+<path d="M3 12L7 16M3 12L7 8M3 12L22 12" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="arrow-right" viewBox="0 0 24 24">
+<path d="M21 12L17 8M21 12L17 16M21 12L2 12" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="footer-icon" viewBox="0 0 84 118">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M51.7561 68.5421H61.0902V95.2799H56.2506V72.6957H54.9448L44.6866 95.2799H39.1183L28.8601 72.6957H27.5939V95.2799H22.7523V68.5421H32.0894L41.9996 90.4709L51.7561 68.5421Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 118H84V0H0V118ZM4.8019 113.191H79.1981V4.80897H4.8019V113.191Z" fill="white"/>
+</symbol><symbol id="icon-arrow-down" viewBox="0 0 24 24">
+<path d="M12 21L16 17M12 21L8 17M12 21L12 2" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="icon-close-modal" viewBox="0 0 20 20">
+<path d="M15.4045 15.4045L4.5957 4.5957" stroke="currentColor" stroke-linecap="round"/>
+<path d="M15.4045 4.5955L4.5957 15.4043" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-download" viewBox="0 0 20 20">
+<path d="M9.99984 14.1668L13.3332 10.8335M9.99984 14.1668L6.6665 10.8335M9.99984 14.1668L9.99983 0.833496" stroke="currentColor" stroke-linecap="round"/>
+<line x1="5.5" y1="17.8335" x2="14.5" y2="17.8335" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="icon-minus" viewBox="0 0 20 20">
+<path d="M3.33301 10H16.6663" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="icon-plus" viewBox="0 0 20 20">
+<path d="M3.33301 10H16.6663" stroke="currentColor" stroke-linecap="round"/>
+<path d="M10 16.6663L10 3.33301" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="play-icon" viewBox="0 0 20 20">
+<path d="M7.5 4.16669V15.8334L16.6667 10L7.5 4.16669Z" fill="currentColor"/>
+</symbol></svg>
+    </div>
+    <div class="wrapper">
+      <main>
+        <section class="resources">
+          <h2 class="visually-hidden">Ресурсы компании</h2>
+          <ul class="resources__places">
+            <li class="resources__item" data-toggle-item>
+              <div class="resources__place">
+                <h3 class="heading-2 resources__title">Наседкино</h3>
+                <button class="resources__toggle" type="button" data-toggle>
+                  <svg class="resources__open" width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg>
+                  <svg class="resources__close" width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-minus"></use>
+                  </svg>
+                </button>
+              </div>
+              <table class="table table--desc">
+                <tr>
+                  <th class="heading-5 empty"></th>
+                  <th class="heading-5"></th>
+                  <th class="heading-5">Тонн, тыс. т</th>
+                  <th class="heading-5">Содержание Au, г/т</th>
+                  <th class="heading-5">Au, т</th>
+                  <th class="heading-5">Au, тыс. унций</th>
+                </tr>
+                <tr>
+                  <td class="heading-5 no-border text text--left">Ресурсы</td>
+                  <td class="empty"></td>
+                  <td class="heading-5">38648</td>
+                  <td class="heading-5">1,23</td>
+                  <td class="heading-5">48</td>
+                  <td class="heading-5 col-4">1676</td>
+                </tr>
+                <tr>
+                  <td class="empty" rowspan="3"></td>
+                  <td class="text-14 text text--left text--categories">Предполагаемые</td>
+                  <td class="text-14">16849</td>
+                  <td class="text-14">1,11</td>
+                  <td class="text-14">19</td>
+                  <td class="text-14 col-4">659</td>
+                </tr>
+                <tr>
+                  <td class="text-14 text text--left text--categories">Указанные</td>
+                  <td class="text-14">20153</td>
+                  <td class="text-14">1,26</td>
+                  <td class="text-14">25</td>
+                  <td class="text-14 col-4">899</td>
+                </tr>
+                <tr>
+                  <td class="text-14 text text--left text--categories">Измеренные</td>
+                  <td class="text-14">1646</td>
+                  <td class="text-14">2,04</td>
+                  <td class="text-14">3</td>
+                  <td class="text-14 col-4">118</td>
+                </tr>
+                <tr>
+                  <td class="heading-5 no-border text text--left">Запасы</td>
+                  <td class="empty"></td>
+                  <td class="heading-5">16145</td>
+                  <td class="heading-5">1,36</td>
+                  <td class="heading-5">22</td>
+                  <td class="heading-5 col-4">774</td>
+                </tr>
+                <tr>
+                  <td class="no-border empty" rowspan="2"></td>
+                  <td class="text-14 text text--left text--categories">Подтвержденные</td>
+                  <td class="text-14">1857</td>
+                  <td class="text-14">1,83</td>
+                  <td class="text-14">3</td>
+                  <td class="text-14 col-4">120</td>
+                </tr>
+                <tr>
+                  <td class="text-14 text text--left text--categories">Вероятные</td>
+                  <td class="text-14">14288</td>
+                  <td class="text-14">1,30</td>
+                  <td class="text-14">19</td>
+                  <td class="text-14 col-4">655</td>
+                </tr>
+              </table>
+              <table class="table table--mob">
+                <tr class="category">
+                  <th class="heading-4">Ресурсы</th>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="heading-5">38648</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="heading-5">1,23</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="heading-5">48</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="heading-5">1676</td>
+                </tr>
+                <tr class="category">
+                  <td class="caps-12">Предполагаемые</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="text-14">16849</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="text-14">1,11</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="text-14">19</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="text-14">659</td>
+                </tr>
+                <tr class="category">
+                  <td class="caps-12">Указанные</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="text-14">20153</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="text-14">1,26</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="text-14">25</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="text-14">899</td>
+                </tr>
+                <tr class="category">
+                  <td class="caps-12">Измеренные</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="text-14">1646</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="text-14">2,04</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="text-14">3</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="text-14">118</td>
+                </tr>
+                <tr class="category">
+                  <th class="heading-4">Запасы</th>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="heading-5">16145</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="heading-5">1,36</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="heading-5">22</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="heading-5">774</td>
+                </tr>
+                <tr class="category">
+                  <td class="caps-12">Подтвержденные</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="text-14">1857</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="text-14">1,83</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="text-14">3</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="text-14">120</td>
+                </tr>
+                <tr class="category">
+                  <td class="caps-12">Вероятные</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="text-14">14288</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="text-14">1,30</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="text-14">19</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="text-14">655</td>
+                </tr>
+              </table>
+            </li>
+            <li class="resources__item" data-toggle-item>
+              <div class="resources__place">
+                <h3 class="heading-2 resources__title">Кочковское</h3>
+                <button class="resources__toggle" type="button" data-toggle>
+                  <svg class="resources__open" width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg>
+                  <svg class="resources__close" width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-minus"></use>
+                  </svg>
+                </button>
+              </div>
+              <table class="table table--desc">
+                <tr>
+                  <th class="heading-5 empty"></th>
+                  <th class="heading-5"></th>
+                  <th class="heading-5">Тонн, тыс. т</th>
+                  <th class="heading-5">Содержание Au, г/т</th>
+                  <th class="heading-5">Au, т</th>
+                  <th class="heading-5">Au, тыс. унций</th>
+                </tr>
+                <tr>
+                  <td class="heading-5 no-border text text--left">Ресурсы</td>
+                  <td class="empty"></td>
+                  <td class="heading-5">49890</td>
+                  <td class="heading-5">1,73</td>
+                  <td class="heading-5">86</td>
+                  <td class="heading-5 col-4">3044</td>
+                </tr>
+                <tr>
+                  <td class="no-border empty" rowspan="3"></td>
+                  <td class="text-14 text text--left text--categories">Предполагаемые</td>
+                  <td class="text-14">29050</td>
+                  <td class="text-14">1,79</td>
+                  <td class="text-14">52</td>
+                  <td class="text-14 col-4">1836</td>
+                </tr>
+                <tr>
+                  <td class="text-14 text text--left text--categories">Указанные</td>
+                  <td class="text-14">20840</td>
+                  <td class="text-14">1,65</td>
+                  <td class="text-14">34</td>
+                  <td class="text-14 col-4">1209</td>
+                </tr>
+              </table>
+              <table class="table table--mob">
+                <tr class="category">
+                  <th class="heading-4">Ресурсы</th>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="heading-5">49890</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="heading-5">1,73</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="heading-5">86</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="heading-5">3044</td>
+                </tr>
+                <tr class="category">
+                  <td class="caps-12">Предполагаемые</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="text-14">29050</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="text-14">1,79</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="text-14">52</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="text-14">1836</td>
+                </tr>
+                <tr class="category">
+                  <td class="caps-12">Указанные</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="text-14">20840</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="text-14">1,65</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="text-14">34</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="text-14">1209</td>
+                </tr>
+              </table>
+            </li>
+            <li class="resources__item" data-toggle-item>
+              <div class="resources__place">
+                <h3 class="heading-2 resources__title">Итакинское</h3>
+                <button class="resources__toggle" type="button" data-toggle>
+                  <svg class="resources__open" width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg>
+                  <svg class="resources__close" width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-minus"></use>
+                  </svg>
+                </button>
+              </div>
+              <table class="table table--desc">
+                <tr>
+                  <th class="heading-5 empty"></th>
+                  <th class="heading-5"></th>
+                  <th class="heading-5">Тонн, тыс. т</th>
+                  <th class="heading-5">Содержание Au, г/т</th>
+                  <th class="heading-5">Au, т</th>
+                  <th class="heading-5">Au, тыс. унций</th>
+                </tr>
+                <tr>
+                  <td class="heading-5 no-border text text--left">Ресурсы</td>
+                  <td class="empty"></td>
+                  <td class="heading-5">59829</td>
+                  <td class="heading-5">2,45</td>
+                  <td class="heading-5">147</td>
+                  <td class="heading-5 col-4">5168</td>
+                </tr>
+                <tr>
+                  <td class="no-border empty" rowspan="3"></td>
+                  <td class="text-14 text text--left text--categories">Предполагаемые</td>
+                  <td class="text-14">30167</td>
+                  <td class="text-14">2,19</td>
+                  <td class="text-14">66</td>
+                  <td class="text-14 col-4">2329</td>
+                </tr>
+                <tr>
+                  <td class="text-14 text text--left text--categories">Указанные</td>
+                  <td class="text-14">25779</td>
+                  <td class="text-14">2,54</td>
+                  <td class="text-14">65</td>
+                  <td class="text-14 col-4">2308</td>
+                </tr>
+                <tr>
+                  <td class="text-14 text text--left text--categories">Измеренные</td>
+                  <td class="text-14">3883</td>
+                  <td class="text-14">3,88</td>
+                  <td class="text-14">15</td>
+                  <td class="text-14 col-4">531</td>
+                </tr>
+              </table>
+              <table class="table table--mob">
+                <tr class="category">
+                  <th class="heading-4">Ресурсы</th>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="heading-5">59829</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="heading-5">2,45</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="heading-5">147</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="heading-5">5168</td>
+                </tr>
+                <tr class="category">
+                  <td class="caps-12">Предполагаемые</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="text-14">30167</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="text-14">2,19</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="text-14">66</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="text-14">2329</td>
+                </tr>
+                <tr class="category">
+                  <td class="caps-12">Указанные</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="text-14">25779</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="text-14">2,54</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="text-14">65</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="text-14">2308</td>
+                </tr>
+                <tr class="category">
+                  <td class="caps-12">Измеренные</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Тонн, тыс. т</td>
+                  <td class="text-14">3883</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Содержание Au, г/т</td>
+                  <td class="text-14">3,88</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, т</td>
+                  <td class="text-14">15</td>
+                </tr>
+                <tr>
+                  <td class="text-14">Au, тыс. унций</td>
+                  <td class="text-14">531</td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
