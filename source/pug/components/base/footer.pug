@@ -40,7 +40,7 @@ mixin footer(footerMods, currentUrl)
       },
     ]
 
-  footer.footer(class=footerMods)
+  footer.footer(class=footerMods)&attributes(attributes)
     .footer__inner
       .footer__img-wrp
         +picture("content", "footer", "jpg", 361, 295, "Процесс отливки золота")

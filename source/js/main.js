@@ -4,6 +4,7 @@ import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
 
 import {initHeader} from './modules/header/init-header';
+import {initMenu} from './modules/header/init-menu';
 import {setHeaderHeight} from './modules/header/set-header-height';
 
 import {initFactsSlider} from './modules/sliders/init-facts-slider';
@@ -38,6 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initFirstLoad();
     initHeader();
+    initMenu();
     initTextSplitWordsAnimation();
     loadVideo();
     initScrollBtn();

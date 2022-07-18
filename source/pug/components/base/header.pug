@@ -1,86 +1,77 @@
-mixin header(headerMods, currentUrl)
+mixin header(headerMods, currentUrl, headerActivePage)
   -
     const headerItems = [
       {
-        href: "about.html",
-        text: "О группе"
+        href: "#",
+        text: "Компания"
       },
       {
         href: "#",
-        text: "Бизнесы",
-        items: [
-          {
-            href: "business-mining.html",
-            text: "Мангазея <br> Майнинг"
-          },
-          {
-            href: "business-development.html",
-            text: "Мангазея <br> Девелопмент"
-          },
-          {
-            href: "business-agro.html",
-            text: "Мангазея <br> Агро"
-          },
-          {
-            href: "business-gas.html",
-            text: "Мангазея <br> Газ"
-          },
-          {
-            href: "business-mtec.html",
-            text: "Мангазея <br> Технолоджи"
-          },
-        ]
+        text: "Активы",
       },
       {
-        href: "social.html",
-        text: "Социальная ответственность"
+        href: "#",
+        text: "Устойчивое развитие"
       },
-      //- {
-      //-   href: "news.html",
-      //-   text: "Новости"
-      //- },
       {
-        href: "contacts.html",
+        href: "#",
+        text: "Поставщикам"
+      },
+      {
+        href: "#",
+        text: "карьера"
+      },
+      {
+        href: "#",
+        text: "Новости"
+      },
+      {
+        href: "#",
         text: "Контакты"
       }
     ]
 
-  header.header(class=headerMods, data-fix-block)
-    if (currentUrl === "index.html")
-      //- lighthouse снимает 10 баллов SEO за <a> без href
-      span.header__logo
-        img(src="img/svg/logo.svg", width="128", height="40", alt="Логотип Мангазея Майнинг")
-    else
-      a.header__logo(href="index.html", aria-label="Переход на главную")
-        img(src="img/svg/logo.svg", width="128", height="40", alt="Логотип Мангазея Майнинг")
-    .header__menu-wrp
-      .header__quotes-wrp
-        button.header__quotes(type="button", aria-pressed="false")
-          span.caps-12.header__quotes-title Котировки
+  header.header(class=headerMods)
+    .header__inner
+      if (currentUrl === "index.html")
+        //- lighthouse снимает 10 баллов SEO за <a> без href
+        span.header__logo
+          +icon('logo', 128, 40, true)(role="img" aria-label="Логотип Мангазея Майнинг")
+          //- img(src="img/svg/logo.svg", width="128", height="40", alt="Логотип Мангазея Майнинг")
+      else
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +icon('logo', 128, 40, true)(role="img" aria-label="Логотип Мангазея Майнинг")
+          //- img(src="img/svg/logo.svg", width="128", height="40", alt="Логотип Мангазея Майнинг")
 
-      .header__lang
-        a.caps-12.header__link.link(href="#") En
+      if headerActivePage
+        .header__active
+          +icon('arrow-right', 24, 24)
+          span.caps-12.header__active-title!=headerActivePage
 
-      nav.main-nav.header__menu
-        button.main-nav__toggle.btn-reset(type="button", aria-pressed="false")
-          span.caps-12.main-nav__toggle-title Меню
-        //- .main-nav__wrapper
-        //-   .main-nav__inner
-        //-     ul.main-nav__list
-        //-       each item in headerItems
-        //-         - const activeState = currentUrl === item.href
-        //-         li.main-nav__item(class=item.items ? 'main-nav__item--has-sublist' : '')
-        //-           if(activeState)
-        //-             span.main-nav__link.link.is-active=item.text
-        //-           else
-        //-             a.main-nav__link.link(href=item.href)=item.text
+      .header__menu-wrp
+        .header__quotes-wrp
+          button.header__quotes(type="button", aria-pressed="false")
+            span.caps-12.header__quotes-title Котировки
 
-        //-           if item.items
-        //-             ul.main-nav__sublist
-        //-               each subitem in item.items
-        //-                 li.main-nav__subitem
-        //-                   //- +card-businesses(subitem)
+        .header__lang
+          a.caps-12.header__link.link(href="#") En
 
-        //-     .main-nav__download-link
-        //-       +link-download({name: "Скачать презентацию", href: "./pdf/MangazeyaGroup.pdf", ext: "pdf", size: "2.29 MB"})
+        .header__menu-toggle-wrp
+          button.header__menu-toggle.btn-reset(type="button", aria-pressed="false" data-menu-btn)
+            span.caps-12.header__toggle-title Меню
+
+    nav.main-nav.header__menu
+      .main-nav__wrapper
+        .container
+          ul.main-nav__list
+            each item in headerItems
+              - const activeState = currentUrl === item.href
+              li.heading-3-caps.main-nav__item
+                if(activeState)
+                  span.main-nav__link.link.is-active=item.text
+                else
+                  a.main-nav__link.link(href=item.href)=item.text
+
+          .main-nav__download-link
+            +link-download({name: "Скачать презентацию", href: "./pdf/MangazeyaGroup.pdf", ext: "pdf", size: "340 kb"})
 
