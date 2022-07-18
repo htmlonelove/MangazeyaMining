@@ -182,7 +182,6 @@
   }
 }
 
-
 @keyframes maskDown {
   0% {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -221,5 +220,11 @@
 
   100% {
     transform: translateY(-100%);
+  }
+}
+
+@keyframes progress-ring {
+  100% {
+    stroke-dasharray: 265, 269;
   }
 }

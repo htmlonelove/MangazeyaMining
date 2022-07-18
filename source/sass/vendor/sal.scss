@@ -94,3 +94,14 @@ body.sal-disabled [data-sal|='scale-right'] {
   transform: scaleX(0);
   transform-origin: left;
 }
+
+[data-sal|='scale-right-reverse'].sal-animate,
+body.sal-disabled [data-sal|='cale-right-reverse'] {
+  transform: scaleX(0%);
+  transform-origin: right;
+}
+
+[data-sal='scale-right-reverse'] {
+  transform: scaleX(100%);
+  transform-origin: right;
+}

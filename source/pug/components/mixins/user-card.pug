@@ -8,8 +8,9 @@ mixin user-card(props)
         p.text-14.user-card__position !{props.position}
   else
     .user-card&attributes(attributes)
-      .user-card__avatar
-        +picture(...props.img)
+      if props.img
+        .user-card__avatar
+          +picture(...props.img)
       .user-card__text
         p.heading-5.user-card__name !{props.name}
         p.text-14.user-card__position !{props.position}

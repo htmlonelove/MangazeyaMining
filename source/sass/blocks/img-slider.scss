@@ -1,0 +1,69 @@
+.img-slider {
+  position: relative;
+
+  .overlay-animate {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: $color-bridal-heath;
+  }
+
+  @include vp-767 {
+    border-bottom: 2px solid $color-nero-15;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+
+    top: size(48px);
+    left: size(48px);
+
+    color: $color-default-white;
+
+    @include vp-1439 {
+      top: 48px;
+      left: 48px;
+    }
+
+    @include vp-1023 {
+      top: 40px;
+      left: 24px;
+    }
+
+    @include vp-767 {
+      top: 38px;
+      left: 16px;
+    }
+  }
+
+  .img-pagination {
+    position: absolute;
+    z-index: 2;
+    left: auto;
+    right: size(48px);
+    bottom: size(48px);
+
+    width: auto;
+
+    @include vp-1439 {
+      right: 48px;
+      bottom: 48px;
+    }
+
+    @include vp-1023 {
+      right: 24px;
+    }
+
+    @include vp-767 {
+      right: 16px;
+      top: 311px;
+      bottom: auto;
+    }
+  }
+}

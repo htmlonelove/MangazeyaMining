@@ -7,6 +7,7 @@ import {initHeader} from './modules/header/init-header';
 import {setHeaderHeight} from './modules/header/set-header-height';
 
 import {initFactsSlider} from './modules/sliders/init-facts-slider';
+import {initJobSlider} from './modules/sliders/init-job-slider';
 import {initValuesSlider} from './modules/sliders/init-values-slider';
 import {initHistorySlider} from './modules/sliders/init-history-slider';
 
@@ -46,6 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initValuesSlider();
     initHistorySlider();
     initToggleItems();
+    initJobSlider();
 
     window.sal({
       once: true,
