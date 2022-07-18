@@ -3,6 +3,17 @@
   padding-bottom: size(96px);
   background-color: $color-bridal-heath;
 
+  @include vp-1439 {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+
   &__top-text {
     margin-top: 0;
     margin: 0;
@@ -66,6 +77,11 @@
       line-height: 80px;
     }
 
+    @include vp-767 {
+      margin-top: 21px;
+      margin-bottom: 19px;
+    }
+
     &--des {
       @include vp-1023 {
         display: none;
@@ -91,6 +107,7 @@
 
     @include vp-767 {
       flex-direction: column;
+      min-height: 239px;
     }
   }
 
@@ -104,44 +121,16 @@
     @include vp-1023 {
       margin-right: 20px;
     }
-
-    .text-18 {
-      margin-top: 0;
-      margin-bottom: 0;
-
-      &[href] {
-        font-weight: 500;
-      }
-    }
-
-    .text-14 {
-      margin-top: size(8px);
-      margin-bottom: 0;
-
-      color: $color-nero-50;
-
-      @include vp-1439 {
-        margin-top: 8px;
-      }
-    }
   }
 
   &__right-col {
     flex-shrink: 0;
     margin-left: auto;
-    padding-left: size(8px);
     max-width: 50%;
     width: 100%;
 
     @include vp-767 {
       max-width: 100%;
-    }
-
-    .text-14 {
-      margin-top: 0;
-      margin-bottom: 0;
-
-      color: $color-nero-50;
     }
 
     .user-card {
@@ -152,13 +141,8 @@
       }
 
       @include vp-767 {
-        display: none;
-      }
-    }
-
-    @include vp-767 {
-      .is-hidden-mob {
-        display: none;
+        margin-top: 33px;
+        margin-bottom: 50px;
       }
     }
 
@@ -168,11 +152,18 @@
       @include vp-1439 {
         margin-top: 48px;
       }
+
+      @include vp-767 {
+        margin-top: auto;
+      }
     }
   }
 
   &--accent {
     background-color: $color-midnight-express;
+
+    @include vp-767 {
+    }
 
     .info-block__top-text {
       color: $color-default-white;

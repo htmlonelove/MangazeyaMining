@@ -1,6 +1,13 @@
 .user-card {
   display: flex;
 
+  &[href] {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
   &__avatar {
     width: size(72px);
     height: size(72px);
@@ -18,6 +25,11 @@
       width: 72px;
       height: 72px;
     }
+
+    @include vp-767 {
+      width: 64px;
+      height: 64px;
+    }
   }
 
   &__text {
@@ -31,6 +43,14 @@
   &__name {
     margin-top: 0;
     margin-bottom: 0;
+
+    font-size: size(18px);
+    line-height: size(24px);
+
+    @include vp-1439 {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   &__position {

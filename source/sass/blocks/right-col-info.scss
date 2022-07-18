@@ -1,0 +1,12 @@
+.right-col-info {
+  &__text {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: $color-nero-50;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
