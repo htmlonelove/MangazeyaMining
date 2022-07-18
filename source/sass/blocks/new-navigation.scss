@@ -1,0 +1,130 @@
+.new-navigation {
+  border-top: size(1px) solid $color-default-white-15;
+  border-bottom: size(1px) solid $color-default-white-15;
+
+  @include vp-1439 {
+    border-top: 1px solid $color-default-white-15;
+    border-bottom: 1px solid $color-default-white-15;
+  }
+
+  @include vp-767 {
+    border: none
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @include vp-767 {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__link {
+
+    display: flex;
+    align-items: center;
+    padding-top: size(21px);
+    padding-bottom: size(21px);
+    color: $color-default-white;
+    opacity: 1;
+    transition: opacity $trans-default;
+
+    @include vp-1439 {
+      padding-top: 21px;
+      padding-bottom: 21px;
+    }
+
+    @include vp-767 {
+      padding-top: 6px;
+
+      @include has-hover {
+        &:hover {
+          opacity: 1;
+
+          .new-navigation__link-icon {
+            border-color: $color-default-white;
+            background-color: $color-transparent;
+            color: $color-default-white;
+          }
+        }
+      }
+    }
+
+    &--prev {
+      @include vp-767 {
+        display: none;
+      }
+
+      svg {
+        margin-right: size(15px);
+
+        @include vp-1439 {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    &--next {
+      @include vp-767 {
+        display: none;
+      }
+
+      span {
+        margin-right: size(11px);
+
+        @include vp-1439 {
+          margin-right: 11px;
+        }
+      }
+    }
+
+    &--all {
+      span {
+        @include vp-767 {
+          display: none;
+        }
+      }
+    }
+
+    @include has-hover {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__mobile-link {
+    display: none;
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    span {
+      @include vp-767 {
+        display: block;
+      }
+    }
+  }
+
+  &__link-icon {
+    @include vp-767 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: $color-default-white;
+      color: $color-nero;
+      border: 1px solid $color-transparent;
+      transition: border-color, background-color, color $trans-default;
+    }
+  }
+}

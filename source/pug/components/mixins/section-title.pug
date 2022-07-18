@@ -1,0 +1,17 @@
+mixin section-title(data)
+  .section-title&attributes(attributes)
+    if data.pageHeader
+      h1.section-title__header(data-sal="slide-up")!=data.pageHeader
+    if data.header
+      if data.header.desk
+        h2.section-title__header(data-sal="slide-up")
+          span.section-title__mobile-hidden!=data.header.desk
+          span.section-title__desktop-hidden!=data.header.mob
+      else
+        h2.section-title__header(data-sal="slide-up")!=data.header
+    p.section-title__info(data-sal="slide-up" data-words-animation)
+      each item in data.textList
+        if item.class
+          span(class=item.class)!=item.text
+        else
+          span!= item.text

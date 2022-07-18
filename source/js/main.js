@@ -10,6 +10,9 @@ import {initFactsSlider} from './modules/sliders/init-facts-slider';
 import {initValuesSlider} from './modules/sliders/init-values-slider';
 import {initHistorySlider} from './modules/sliders/init-history-slider';
 
+import {initMap} from './modules/map/init-map';
+import {initMapBusiness} from './modules/map/init-map-business';
+
 import {initFirstLoad} from './modules/init-first-load';
 import {initScrollBtn} from './modules/init-scroll-btn';
 import {loadVideo} from './modules/lazy-video-load';
@@ -46,6 +49,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initValuesSlider();
     initHistorySlider();
     initToggleItems();
+    initMap();
+    initMapBusiness();
 
     window.sal({
       once: true,

@@ -34,12 +34,24 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 118H84V0H0V118ZM4.8019 113.191H79.1981V4.80897H4.8019V113.191Z" fill="white"/>
 </symbol><symbol id="icon-arrow-down" viewBox="0 0 24 24">
 <path d="M12 21L16 17M12 21L8 17M12 21L12 2" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="icon-arrow-left" viewBox="0 0 24 24">
+<path d="M3 12L7 16M3 12L7 8M3 12L22 12" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="icon-arrow-right" viewBox="0 0 16 16">
+<path d="M13.9999 8.00008L11.3333 5.33341M13.9999 8.00008L11.3333 10.6667M13.9999 8.00008L1.33325 8.00008" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="icon-camera" viewBox="0 0 24 24">
+<path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" fill="currentColor"/>
+<path d="M20 4H16.83L15.59 2.65C15.22 2.24 14.68 2 14.12 2H9.88C9.32 2 8.78 2.24 8.4 2.65L7.17 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z" fill="currentColor"/>
 </symbol><symbol id="icon-close-modal" viewBox="0 0 20 20">
 <path d="M15.4045 15.4045L4.5957 4.5957" stroke="currentColor" stroke-linecap="round"/>
 <path d="M15.4045 4.5955L4.5957 15.4043" stroke="currentColor" stroke-linecap="round"/>
 </symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-download" viewBox="0 0 20 20">
 <path d="M9.99984 14.1668L13.3332 10.8335M9.99984 14.1668L6.6665 10.8335M9.99984 14.1668L9.99983 0.833496" stroke="currentColor" stroke-linecap="round"/>
 <line x1="5.5" y1="17.8335" x2="14.5" y2="17.8335" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol id="icon-load-more" viewBox="0 0 20 20">
+<path d="M10.0007 4.16675C11.3192 4.16675 12.6081 4.55774 13.7045 5.29028C14.8008 6.02283 15.6553 7.06402 16.1598 8.28219C16.6644 9.50037 16.7965 10.8408 16.5392 12.134C16.282 13.4272 15.647 14.6151 14.7147 15.5475C13.7823 16.4798 12.5945 17.1147 11.3013 17.372C10.008 17.6292 8.6676 17.4972 7.44943 16.9926C6.23125 16.488 5.19006 15.6335 4.45752 14.5372C3.72498 13.4409 3.33398 12.152 3.33398 10.8334" stroke="currentColor" fill="none" stroke-linecap="round"/>
+<path d="M7.01957 4.52014C6.82431 4.32488 6.82431 4.00829 7.01957 3.81303L9.1458 1.68681C9.46078 1.37182 9.99935 1.59491 9.99935 2.04036V6.29281C9.99935 6.73827 9.46078 6.96135 9.1458 6.64637L7.01957 4.52014Z" fill="currentColor"/>
+</symbol><symbol id="icon-marker" viewBox="0 0 24 24">
+<path d="M12 12C13.1 12 14 11.1 14 10C14 8.9 13.1 8 12 8C10.9 8 10 8.9 10 10C10 11.1 10.9 12 12 12ZM12 2C16.2 2 20 5.22 20 10.2C20 13.38 17.55 17.12 12.66 21.43C12.28 21.76 11.71 21.76 11.33 21.43C6.45 17.12 4 13.38 4 10.2C4 5.22 7.8 2 12 2Z" fill="currentColor"/>
 </symbol><symbol id="icon-minus" viewBox="0 0 20 20">
 <path d="M3.33301 10H16.6663" stroke="currentColor" stroke-linecap="round"/>
 </symbol><symbol id="icon-plus" viewBox="0 0 20 20">
@@ -245,6 +257,12 @@
                 <button class="btn" type="reset">Сбросить форму</button>
                 <button class="btn" type="submit">Отправить форму</button>
               </form>
+            </div>
+          </section>
+          <section>
+            <h2>Map</h2>
+            <div class="map">
+              <div class="map__inner" data-icon-pin="img/svg/custom-marker.svg" data-map-place-cords="55.737527, 37.505166" data-map></div>
             </div>
           </section>
         </div>
@@ -567,6 +585,7 @@ navigationChanger.init();
         </div>
       </div>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=a01f8dd2-d0ce-4dd5-a1b6-745f3a207777"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
