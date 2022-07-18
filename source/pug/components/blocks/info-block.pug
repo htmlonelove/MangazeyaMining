@@ -44,9 +44,10 @@
     rightBlock: {
       text: `Программа развития компании предусматривает<br> рост объемов производства металла на&nbsp;действующем<br> производстве и&nbsp;введение в&nbsp;эксплуатацию.`,
       user: {
-        name: `Константин<br> Константинопольский`,
-        position: 'HR-директор',
-        img: ['content/users', 'user-1', 'jpg', 72, 72, 'Фотография сотрудника'],
+        href: '#',
+        name: `hh.ru`,
+        position: `Профиль Мангазея Майнинг<br> на Headhunter`,
+        img: ['content/users', 'hh-logo-min', 'jpg', 72, 72, 'Фотография профиля'],
       },
       link: {
         text: 'Подробнее о&nbsp;карьере',
@@ -75,14 +76,14 @@ mixin info-block(props)
           if props.accent.link
             +link-arrow(props.accent.link).link-arrow--big.link-arrow--accent(data-sal="fade", style="--sal-delay: 0.5s;")
       .info-block__footer
-        .info-block__left-col
+        .info-block__left-col.left-col-info
           if props.leftBlock.link
-            a.text-18(href=props.leftBlock.link.href, data-sal="fade") !{props.leftBlock.link.text}
+            a.text-18.left-col-info__title(href=props.leftBlock.link.href, data-sal="fade") !{props.leftBlock.link.text}
           if props.leftBlock.title
-            p.text-18(data-sal="fade") !{props.leftBlock.title}
-          p.text-14(data-sal="fade") !{props.leftBlock.text}
-        .info-block__right-col
-          p.text-14.is-hidden-mob(data-sal="fade") !{props.rightBlock.text}
+            p.text-18.left-col-info__title(data-sal="fade") !{props.leftBlock.title}
+          p.left-col-info__text.text-14(data-sal="fade") !{props.leftBlock.text}
+        .info-block__right-col.right-col-info
+          p.text-14.right-col-info__text(data-sal="fade") !{props.rightBlock.text}
           if props.rightBlock.user
             +user-card(props.rightBlock.user)(data-sal="fade")
           if props.rightBlock.link
