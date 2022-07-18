@@ -1,0 +1,57 @@
+.documents {
+  margin-bottom: size(28px);
+
+  @include vp-1023 {
+    margin-bottom: 49px;
+  }
+}
+
+.documents .section-header__title {
+  margin-top: size(4px);
+  margin-bottom: size(28px);
+  padding-left: size(4px);
+
+  @include vp-1023 {
+    padding-left: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.documents__inner {
+  position: relative;
+  border-top: size(1px) solid $color-nero-10;
+}
+
+.documents__inner .container {
+  padding: 0;
+}
+
+.documents .section-header__text {
+  padding-left: size(4px);
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.documents .section-header__header-wrp {
+  @include vp-1023 {
+    margin-bottom: 19px;
+  }
+}
+
+.documents .section-header {
+  @include vp-1023 {
+    padding-top: 48px;
+    padding-bottom: 17px;
+  }
+}
+
+.documents .link-download__info {
+  text-transform: uppercase;
+
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

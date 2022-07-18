@@ -1,0 +1,116 @@
+.document-card {
+  padding: size(40px) size(48px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: size(322px);
+  transition: background-color, $trans-default;
+  transition: color, $trans-default;
+  border-bottom: size(1px) solid $color-nero-10;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      background-color: $color-lucky-point;
+      color: $color-default-white;
+    }
+
+    &:hover .document-card__title,
+    &:focus .document-card__title {
+      color: $color-default-white;
+    }
+
+    &:hover .link-download__icon,
+    &:focus .link-download__icon {
+      background-color: $color-default-white;
+      color: $color-nero;
+    }
+
+    &:hover .link-download__info,
+    &:focus .link-download__info {
+      color: $color-default-white-50;
+    }
+  }
+
+  @include vp-1439 {
+    padding: 40px 48px;
+  }
+
+  @include vp-1023 {
+    min-height: 188px;
+    padding: 24px 16px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+  .document-card {
+    padding: 15px 20px;
+  }
+}
+
+.document-card:last-child {
+  @include vp-1023 {
+    min-height: 210px;
+  }
+}
+
+.document-card__title {
+  margin: 0;
+  font-size: size(16px);
+  line-height: size(22px);
+  color: $color-nero;
+  transition: color, $trans-default;
+  max-width: size(264px);
+
+  @include vp-1023 {
+    max-width: 100%;
+    letter-spacing: 0.2px;
+  }
+}
+
+.document-card__title br {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.document-card:not(:nth-child(4n)) {
+  border-right: size(1px) solid $color-nero-10;
+
+  @include vp-1023 {
+    border-right: unset;
+  }
+}
+
+.document-card .link-download {
+  margin-top: auto;
+
+  @include vp-1023 {
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+  }
+}
+
+.document-card .link-download__icon {
+  transition: background-color, $trans-default;
+  transition: color, $trans-default;
+
+  @include vp-1023 {
+    margin-left: 18px;
+    margin-right: 0;
+  }
+}
+
+.document-card .link-download__info {
+  transition: color, $trans-default;
+}
+
+.document-card__link {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
