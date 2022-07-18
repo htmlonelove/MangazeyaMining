@@ -1,0 +1,29 @@
+mixin new-content (data)
+  - const {intro, content} = data
+
+  section.new-content
+    .container
+      .new-content__top
+        .new-content__date
+          span.new-content__date-number!=intro.dateNumber
+          .new-content__date-text
+            span!=intro.dateMonth
+            span!=intro.dateYear
+        .new-content__text-container
+          h1.new-content__title!=intro.title
+          p.new-content__intro-text!=intro.text
+      .new-content__main
+        each item in content
+          .new-content__block(class=`new-content__block--${item.type}`)
+            if item.type === "slider"
+              +gallery-slider(item.slides, "new")
+            if item.type === "text"
+              .text-content !{ item.content }
+            if item.type === "video"
+              .new-content__video.video(data-yt-video=item.video)
+                .video__iframe(id=item.video)
+                .video__cover(data-yt-video-cover)
+                  img(src=item.videoCover, alt="Обложка")
+
+                  button.video__btn.circle-icon.circle-icon--white(type="button", aria-label="Запустить видео", data-yt-video-play)
+                    +icon("icon-play", 24, 24)

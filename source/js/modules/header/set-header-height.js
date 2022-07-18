@@ -2,7 +2,7 @@ import {ResizeObserver as ResizeObserverPolyffiled} from '../../vendor/resize-ob
 const ResizeObserverCurrent = window.ResizeObserver ? window.ResizeObserver : ResizeObserverPolyffiled;
 
 const body = document.querySelector('body');
-const header = document.querySelector('.header');
+const header = document.querySelector('.header__inner');
 
 const setHeaderHeight = () => {
   if (!header) {

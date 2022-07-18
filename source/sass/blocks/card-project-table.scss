@@ -1,0 +1,196 @@
+.card-project-table {
+  padding: size(48px);
+
+  font-size: size(14px);
+  line-height: size(22px);
+
+  height: auto;
+
+  @include vp-1439 {
+    padding: 48px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @include vp-1279 {
+    padding: 32px;
+  }
+
+  @include vp-1023 {
+    padding: 24px 16px;
+
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__inner {
+    @include fadeDownSlider;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  &__name {
+    // @include h2;
+
+    margin: 0 0 size(40px);
+
+    font-weight: 500;
+
+    @include vp-1439 {
+      margin: 0 0 40px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__type,
+  &__name-mobile {
+    // @include h2;
+
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &__type {
+    color: $color-mariner;
+  }
+
+  &__name-mobile {
+    margin-bottom: 40px;
+  }
+
+  &__address {
+    margin-top: 0;
+    margin-bottom: size(32px);
+
+    @include vp-1439 {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__table {
+    margin-bottom: size(30px);
+
+    @include vp-1439 {
+      margin-bottom: 30px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    padding: size(16px) 0;
+
+    border-top: size(1px) solid $color-default-white-15;
+
+    @include vp-1439 {
+      padding: 16px 0;
+
+      border-top: 1px solid $color-default-white-15;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      border: none;
+
+      flex-direction: column;
+      align-items: stretch;
+
+      margin-bottom: 16px;
+    }
+
+    &:last-child {
+      border-bottom: size(1px) solid $color-default-white-15;
+
+      @include vp-1439 {
+        border-bottom: 1px solid $color-default-white-15;
+      }
+
+      @include vp-767 {
+        border: none;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__row-title,
+  &__row-value {
+    width: 50%;
+
+    @include vp-767 {
+      width: auto;
+    }
+  }
+
+  &__row-title {
+    padding-right: size(20px);
+
+    @include vp-1439 {
+      padding-right: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 22px;
+      color: $color-default-white-50;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__row-value {
+    font-size: size(16px);
+    line-height: size(22px);
+    font-weight: 500;
+
+    @include vp-1439 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @include vp-1023 {
+      font-size: 14px;
+    }
+
+    @include vp-767 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__factoids {
+    margin-top: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: size(32px);
+
+    @include vp-1439 {
+      gap: 32px;
+    }
+
+    .factoid {
+      max-width: size(250px);
+
+      @include vp-1439 {
+        max-width: 250px;
+      }
+    }
+  }
+}

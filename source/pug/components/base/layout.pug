@@ -50,12 +50,12 @@ html(lang="ru")
     +sprite()
     .wrapper(class=wrapperMods)
       if (hasHeader)
-        +header(headerMods, currentUrl)
+        +header(headerMods, currentUrl, headerActivePage)
 
       block main
 
       if (hasFooter)
-        +footer(footerMods, currentUrl)
+        +footer(footerMods, currentUrl).after-sticky-intro
 
     //- +rotate()
     //- +cookies()

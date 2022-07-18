@@ -1,0 +1,56 @@
+.btn-load-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: max-content;
+
+  @include has-hover {
+    &:hover {
+      .btn-load-more__icon {
+        background-color: $color-mariner;
+        color: $color-default-white;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: size(3px);
+    width: size(48px);
+    height: size(48px);
+    border-radius: 50%;
+    background-color: $color-default-white;
+    color: $color-nero;
+    transition: background-color color $trans-default;
+
+    @include vp-1439 {
+      margin-bottom: 3px;
+      width: 48px;
+      height: 48px;
+    }
+
+    svg {
+      width: size(20px);
+      height: size(20px);
+
+      @include vp-1439 {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__btn {
+
+    width: max-content;
+    min-width: size(275px);
+
+    @include vp-1439 {
+      min-width: 275px;
+    }
+  }
+}

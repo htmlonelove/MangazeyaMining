@@ -1,0 +1,119 @@
+{
+  "markers": [
+    {
+      "id": "1",
+      "name": "ЖК «Интонация»",
+      "type": "Жилой комплекс",
+      "nameMobile": "Интонация",
+      "coords": [55.808403, 37.480416],
+      "table": [
+        {
+          "title": "Категория",
+          "value": "Бизнес-класс"
+        },
+        {
+          "title": "Расположение",
+          "value": "Щукинский район"
+        },
+        {
+          "title": "Ввод в эксплуатацию",
+          "value": "2023"
+        }
+      ],
+      "image": "img/content/development/1",
+      "imageMobile": "img/content/development/1-mobile"
+    },
+    {
+      "id": "2",
+      "name": "ЖК «Ты и я»",
+      "type": "Жилой комплекс",
+      "nameMobile": "Ты и я",
+      "coords": [55.871602, 37.690111],
+      "table": [
+        {
+          "title": "Категория",
+          "value": "Комфорт+"
+        },
+        {
+          "title": "Расположение",
+          "value": "Лосиноостровский район"
+        },
+        {
+          "title": "Введен в эксплуатацию",
+          "value": "2020"
+        }
+      ],
+      "image": "img/content/development/2",
+      "imageMobile": "img/content/development/2-mobile"
+    },
+    {
+      "id": "3",
+      "name": "ЖК «Пикассо»",
+      "type": "Жилой комплекс",
+      "nameMobile": "Пикассо",
+      "coords": [55.669107, 37.448033],
+      "table": [
+        {
+          "title": "Категория",
+          "value": "Комфорт"
+        },
+        {
+          "title": "Расположение",
+          "value": "Район Тропарёво-Никулино"
+        },
+        {
+          "title": "Введен в эксплуатацию",
+          "value": "2018"
+        }
+      ],
+      "image": "img/content/development/3",
+      "imageMobile": "img/content/development/3-mobile"
+    },
+    {
+      "id": "4",
+      "name": "ЖК «Марьина роща»",
+      "type": "Жилой комплекс",
+      "nameMobile": "Марьина роща",
+      "coords": [55.793880, 37.622962],
+      "table": [
+        {
+          "title": "Категория",
+          "value": "Бизнес-класс"
+        },
+        {
+          "title": "Расположение",
+          "value": "Район Марьина Роща"
+        },
+        {
+          "title": "Введен в эксплуатацию",
+          "value": "2017"
+        }
+      ],
+      "image": "img/content/development/4",
+      "imageMobile": "img/content/development/4-mobile"
+    },
+    {
+      "id": "5",
+      "name": "ЖК «Измайлово Lane»",
+      "type": "Жилой комплекс",
+      "nameMobile": "Измайлово Lane",
+      "coords": [55.785508, 37.736958],
+      "table": [
+        {
+          "title": "Категория",
+          "value": "Бизнес-класс"
+        },
+        {
+          "title": "Расположение",
+          "value": "Район Соколиная Гора"
+        },
+        {
+          "title": "Введен в эксплуатацию",
+          "value": "2016"
+        }
+      ],
+      "image": "img/content/development/5",
+      "imageMobile": "img/content/development/5-mobile"
+    }
+  ]
+}

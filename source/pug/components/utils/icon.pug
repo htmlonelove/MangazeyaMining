@@ -1,5 +1,5 @@
-mixin icon(name, width, height)
-  svg(width=width, height=height, aria-hidden="true")&attributes(attributes)
+mixin icon(name, width, height, isImg)
+  svg(width=width, height=height, aria-hidden=isImg ? null : "true")&attributes(attributes)
     use(xlink:href="#" + name)
 
 //- &attributes(attributes) позволяет вызывать миксин с доп классом и аттрибутами

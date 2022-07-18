@@ -4,12 +4,16 @@ import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
 
 import {initHeader} from './modules/header/init-header';
+import {initMenu} from './modules/header/init-menu';
 import {setHeaderHeight} from './modules/header/set-header-height';
 
 import {initFactsSlider} from './modules/sliders/init-facts-slider';
 import {initJobSlider} from './modules/sliders/init-job-slider';
 import {initValuesSlider} from './modules/sliders/init-values-slider';
 import {initHistorySlider} from './modules/sliders/init-history-slider';
+
+import {initMap} from './modules/map/init-map';
+import {initMapBusiness} from './modules/map/init-map-business';
 
 import {initFirstLoad} from './modules/init-first-load';
 import {initScrollBtn} from './modules/init-scroll-btn';
@@ -36,6 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initFirstLoad();
     initHeader();
+    initMenu();
     initTextSplitWordsAnimation();
     loadVideo();
     initScrollBtn();
@@ -47,6 +52,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initValuesSlider();
     initHistorySlider();
     initToggleItems();
+    initMap();
+    initMapBusiness();
     initJobSlider();
 
     window.sal({

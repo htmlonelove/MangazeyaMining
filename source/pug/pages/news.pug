@@ -1,0 +1,276 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Группа «Мангазея» | Новости" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "news.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const introTitle = {
+      title: "Новости",
+      filter: {
+        filterTitle: "Фильтр по дате:",
+        options: [
+          {
+            id: "news-year",
+            placeholder: "Все года",
+            name: "news-year",
+            optionsList: [
+              {
+                text: "2022",
+                value: "2022"
+              },
+              {
+                text: "2021",
+                value: "2021"
+              },
+            ],
+          },
+          {
+            id: "news-month",
+            placeholder: "Все месяцы",
+            name: "news-month",
+            optionsList: [
+              {
+                text: "Январь",
+                value: "01"
+              },
+              {
+                text: "Февраль",
+                value: "02"
+              },
+              {
+                text: "Март",
+                value: "03"
+              },
+              {
+                text: "Апрель",
+                value: "04"
+              },
+              {
+                text: "Май",
+                value: "05"
+              },
+              {
+                text: "Июнь",
+                value: "06"
+              },
+              {
+                text: "Июль",
+                value: "07"
+              },
+              {
+                text: "Август",
+                value: "08"
+              },
+              {
+                text: "Сентябрь",
+                value: "09"
+              },
+              {
+                text: "Октябрь",
+                value: "10"
+              },
+              {
+                text: "Ноябрь",
+                value: "11"
+              },
+              {
+                text: "Декабрь",
+                value: "12"
+              },
+            ],
+          },
+        ],
+      },
+    }
+
+  -
+    const content = {
+      title: "Новости",
+      items: [
+        {
+          link: "new.html",
+          img: {
+            path: "content/news",
+            name: "news-1",
+            format: "jpg",
+            width: 671,
+            height: 377,
+            alt: "фасад дома",
+          },
+          title: "«Мангазея Девелопмент» произвела заливку первого куба бетона в&nbsp;ЖК&nbsp;«Интонация»",
+          dateNumber: "15",
+          dateMonth: "октября",
+          dateYear: "2021",
+        },
+        {
+          link: "#",
+          img: {
+            path: "svg",
+            name: "logo-mangazeya-mining",
+            format: "svg",
+            width: 330,
+            height: 104,
+            alt: "Логотип Мангазея Майнинг",
+          },
+          title: "ГК «Мангазея» увеличила производство золота во II квартале 2021 года на 93%",
+          dateNumber: "27",
+          dateMonth: "сентября",
+          dateYear: "2021",
+        },
+        {
+          link: "#",
+         img: {
+            path: "svg",
+            name: "logo-mangazeya-development",
+            format: "svg",
+            width: 425,
+            height: 104,
+            alt: "Логотип Мангазея Девелопмент",
+          },
+          title: "«Мангазея Девелопмент» объявила о старте продаж нового проекта бизнес-класса «Интонация»",
+          dateNumber: "18",
+          dateMonth: "сентября",
+          dateYear: "2021",
+        },
+        {
+          link: "#",
+          img: {
+            path: "content/news",
+            name: "news-2",
+            format: "jpg",
+            width: 671,
+            height: 377,
+            alt: "Итакинское золоторудное месторождения",
+          },
+          title: "Mangazeya Mining рассчитывает на 60 тонн золота в ходе освоения Итакинского золоторудного месторождения",
+          dateNumber: "25",
+          dateMonth: "августа",
+          dateYear: "2021",
+        },
+        {
+          link: "#",
+          img: {
+            path: "content/news",
+            name: "news-3",
+            format: "jpg",
+            width: 671,
+            height: 377,
+            alt: "микрофон",
+          },
+          title: "Радио «ВЕРА» начало вещание в Чите при поддержке ГК «Мангазея»",
+          dateNumber: "19",
+          dateMonth: "августа",
+          dateYear: "2021",
+        },
+        {
+          link: "#",
+          img: {
+             path: "svg",
+            name: "logo-mangazeya-mining",
+            format: "svg",
+            width: 330,
+            height: 104,
+            alt: "Логотип Мангазея Майнинг",
+          },
+          title: "«Мангазея Майнинг» отпраздновала День металлурга",
+          dateNumber: "10",
+          dateMonth: "августа",
+          dateYear: "2021",
+        },
+        {
+          link: "#",
+          img: {
+             path: "svg",
+            name: "logo-mangazeya-agro",
+            format: "svg",
+            width: 332,
+            height: 104,
+            alt: "Логотип Мангазея Агро",
+          },
+          title: "«Мангазея Агро» открыла комфортное общежитие для сотрудников",
+          dateNumber: "22",
+          dateMonth: "июля",
+          dateYear: "2021",
+        },
+        {
+          link: "#",
+          img: {
+             path: "svg",
+            name: "logo-mangazeya-development",
+            format: "svg",
+            width: 425,
+            height: 104,
+            alt: "Логотип Мангазея Девелопмент",
+          },
+          title: "Группа компаний «Мангазея» ввела в эксплуатацию ГОК «Наседкино»",
+          dateNumber: "15",
+          dateMonth: "июля",
+          dateYear: "2021",
+        },
+        {
+          link: "#",
+          img: {
+             path: "svg",
+            name: "logo-mangazeya-mtech",
+            format: "svg",
+            width: 407,
+            height: 104,
+            alt: "Логотип Мангазея Технолоджи",
+          },
+          title: "«МТех» инвестировала в проект Mind&Machine",
+          dateNumber: "26",
+          dateMonth: "мая",
+          dateYear: "2021",
+        },
+        {
+          link: "#",
+          img: {
+            path: "content/news",
+            name: "news-4",
+            format: "jpg",
+            width: 671,
+            height: 377,
+            alt: "роботизированная кисть",
+          },
+          title: "Группа компаний «Мангазея» запускает технологическую компанию «МТех»",
+          dateNumber: "22",
+          dateMonth: "апреля",
+          dateYear: "2021",
+        },
+      ],
+    }
+
+    const successModal = {
+      title: {
+        header: "Уведомление об отправке",
+        textList: [
+          {
+            text: "спасибо ",
+          },
+          {
+            text: "за интерес к&nbsp;жизни группы компаний мангазея",
+            class: "section-title__blue-word",
+          },
+        ],
+      },
+      text: "Уведомления о свежих новостях будут приходить вам на почту.",
+    }
+
+
+
+block main
+  main
+    +intro-title(introTitle, 'press')
+    +press-content(content, 'news')
+    +subscribe()
+
+block modals
+  +modal("modal--feedback-success")(data-modal="feedback-success")
+    +modal-feedback-success(successModal)
+
