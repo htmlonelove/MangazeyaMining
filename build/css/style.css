@@ -6550,6 +6550,7 @@ button,
 
 .document-card .link-download {
   margin-top: auto;
+  z-index: 50;
 }
 
 .document-card .link-download__icon {
