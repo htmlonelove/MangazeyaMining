@@ -8,6 +8,7 @@ import {initMenu} from './modules/header/init-menu';
 import {setHeaderHeight} from './modules/header/set-header-height';
 
 import {initFactsSlider} from './modules/sliders/init-facts-slider';
+import {initJobSlider} from './modules/sliders/init-job-slider';
 import {initValuesSlider} from './modules/sliders/init-values-slider';
 import {initHistorySlider} from './modules/sliders/init-history-slider';
 
@@ -53,6 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initToggleItems();
     initMap();
     initMapBusiness();
+    initJobSlider();
 
     window.sal({
       once: true,

@@ -1,0 +1,6 @@
+mixin document-card(data)
+  li.document-card
+    p.document-card__title!=data.title
+    +link-download({name: data.name, href: data.href, size: data.size, ext: data.ext})
+    a(href="#" target="_blank" aria-label="ссылка на карточку документа").document-card__link
+
