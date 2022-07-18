@@ -1,0 +1,123 @@
+.img-slider-item {
+  position: relative;
+  min-height: size(764px);
+
+  @include vp-1439 {
+    min-height: 764px;
+  }
+
+  @include vp-1023 {
+    min-height: 640px;
+  }
+
+  @include vp-767 {
+    min-height: auto;
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    @include vp-767 {
+      position: relative;
+      height: 375px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    left: size(48px);
+    bottom: size(48px);
+
+    max-width: size(782px);
+
+    @include vp-1439 {
+      left: 48px;
+      bottom: 48px;
+
+      max-width: 782px;
+    }
+
+    @include vp-1023 {
+      left: 24px;
+      bottom: 24px;
+
+      max-width: 520px;
+    }
+
+    @include vp-767 {
+      position: relative;
+      left: auto;
+      bottom: auto;
+
+      padding-top: 24px;
+      padding-right: 16px;
+      padding-bottom: 31px;
+      padding-left: 16px;
+
+      max-width: 100%;
+
+      background-color: $color-bridal-heath;
+    }
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $color-default-white;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 22px;
+
+      color: $color-nero;
+    }
+  }
+
+  &__user-card {
+    margin-top: size(48px);
+
+    @include vp-1439 {
+      margin-top: 48px;
+    }
+
+    @include vp-767 {
+      margin-top: 60px;
+    }
+
+    .user-card__name {
+      font-weight: 500;
+      font-size: size(16px);
+      line-height: size(22px);
+      color: $color-default-white;
+
+      @include vp-1439 {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      @include vp-767 {
+        color: $color-nero;
+      }
+    }
+
+    .user-card__position {
+      color: $color-default-white-50;
+
+      @include vp-767 {
+        color: $color-nero-50;
+      }
+    }
+  }
+}

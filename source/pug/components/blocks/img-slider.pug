@@ -1,0 +1,46 @@
+-
+  const jobSliderData = {
+    title: 'Работа в компании',
+    slides: [
+      {
+        img: ["content/job-slider", "job-1", "jpg", 1440, 764, "Фото сотрудника"],
+        description: 'Мангазея Майнинг&nbsp;&mdash; это коллектив профессионалов, готовых к&nbsp;решению непростых задач. Благодаря их&nbsp;ежедневному труду мы&nbsp;развиваемся и&nbsp;добиваемся новых впечатляющих показателей.',
+        user: {
+          name: `Константин<br> Константинопольский`,
+          position: 'Должность сотрудника',
+        },
+      },
+      {
+        img: ["content/job-slider", "job-2", "jpg", 1440, 764, "Фото сотрудника"],
+        description: 'Мангазея Майнинг&nbsp;&mdash; это коллектив профессионалов, готовых к&nbsp;решению непростых задач. Благодаря их&nbsp;ежедневному труду мы&nbsp;развиваемся и&nbsp;добиваемся новых впечатляющих показателей.',
+        user: {
+          name: `Иван<br> Иванов`,
+          position: 'Должность сотрудника',
+        },
+      },{
+        img: ["content/job-slider", "job-3", "jpg", 1440, 764, "Фото сотрудника"],
+        description: 'Мангазея Майнинг&nbsp;&mdash; это коллектив профессионалов, готовых к&nbsp;решению непростых задач. Благодаря их&nbsp;ежедневному труду мы&nbsp;развиваемся и&nbsp;добиваемся новых впечатляющих показателей.',
+        user: {
+          name: `Сергей<br> Сергеев`,
+          position: 'Должность сотрудника',
+        },
+      },
+    ],
+  }
+
+mixin img-slider(props)
+  section.img-slider(data-job-slider-container)&attributes(attributes)
+    .overlay-animate(data-sal="scale-right-reverse")
+    h2.img-slider__title.caps-12 !{props.title}
+    .swiper(data-job-slider, data-delay="500", data-speed="5000")
+      .swiper-wrapper
+        each slide in props.slides
+          .swiper-slide.img-slider-item
+            .img-slider-item__image-wrapper(data-slider-img)
+              +picture(...slide.img)
+            .img-slider-item__content
+              p.img-slider-item__description.heading-3 !{slide.description}
+              +user-card(slide.user).img-slider-item__user-card.user-card--light
+
+      .img-pagination(data-pagination)
+

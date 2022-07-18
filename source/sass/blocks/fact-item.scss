@@ -105,6 +105,10 @@
         display: none;
       }
     }
+
+    @include vp-767 {
+      margin-bottom: -7px;
+    }
   }
 
   &__statistic {

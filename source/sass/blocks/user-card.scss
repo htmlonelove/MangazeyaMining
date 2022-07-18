@@ -9,10 +9,12 @@
   }
 
   &__avatar {
+    margin-right: size(16px);
     width: size(72px);
     height: size(72px);
     border-radius: 50%;
     overflow: hidden;
+
 
     img {
       width: 100%;
@@ -22,6 +24,7 @@
     }
 
     @include vp-1439 {
+      margin-right: 16px;
       width: 72px;
       height: 72px;
     }
@@ -29,14 +32,6 @@
     @include vp-767 {
       width: 64px;
       height: 64px;
-    }
-  }
-
-  &__text {
-    margin-left: size(16px);
-
-    @include vp-1439 {
-      margin-left: 16px;
     }
   }
 
@@ -55,6 +50,7 @@
 
   &__position {
     margin-top: size(8px);
+    margin-bottom: 0;
     color: $color-nero-50;
 
     @include vp-1439 {
