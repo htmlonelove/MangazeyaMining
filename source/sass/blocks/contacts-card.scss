@@ -15,8 +15,8 @@
 .contacts-card__inner {
   margin-bottom: size(67px);
   display: grid;
-  grid-template-columns: size(228px) size(339px) size(132px) size(200px);
-  grid-column-gap: size(54px);
+  grid-template-columns: 17.3% 29% 12% 21%;;
+  grid-column-gap: size(20px);
   width: 100%;
 
   @include vp-1023 {
@@ -41,13 +41,6 @@
   }
 }
 
-.contacts-card__position-wrapper {
-  @include vp-1023 {
-    margin-bottom: 40px;
-    padding-right: 38px;
-  }
-}
-
 .contacts-card__city-wrapper {
   @include vp-1023 {
     margin-bottom: 24px;
@@ -63,15 +56,21 @@
 }
 
 .contacts-card__position-wrapper {
-  margin-left: size(54px);
+  margin-left: size(87px);
 
   @include vp-1023 {
     margin-left: 0;
+    margin-bottom: 40px;
+    padding-right: 38px;
   }
 }
 
+.contacts-card__city-wrapper {
+  margin-left: size(20px);
+}
+
 .contacts-card__phone-wrapper {
-  margin-left: size(35px);
+  margin-left: size(63px);
 
   @include vp-1023 {
     margin-left: 0;

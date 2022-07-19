@@ -5959,9 +5959,9 @@ button,
   margin-bottom: 4.1875rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 14.25rem 21.1875rem 8.25rem 12.5rem;
-  grid-template-columns: 14.25rem 21.1875rem 8.25rem 12.5rem;
-  grid-column-gap: 3.375rem;
+  -ms-grid-columns: 17.3% 29% 12% 21%;
+  grid-template-columns: 17.3% 29% 12% 21%;
+  grid-column-gap: 1.25rem;
   width: 100%;
 }
 
@@ -5978,11 +5978,15 @@ button,
 }
 
 .contacts-card__position-wrapper {
-  margin-left: 3.375rem;
+  margin-left: 5.4375rem;
+}
+
+.contacts-card__city-wrapper {
+  margin-left: 1.25rem;
 }
 
 .contacts-card__phone-wrapper {
-  margin-left: 2.1875rem;
+  margin-left: 3.9375rem;
 }
 
 .contacts-card__add {
@@ -6679,6 +6683,11 @@ button,
   margin-top: 0.25rem;
   margin-bottom: 1.75rem;
   padding-left: 0.25rem;
+  max-width: 49rem;
+}
+
+.documents .section-header__title br {
+  display: none;
 }
 
 .documents__inner {
@@ -6704,8 +6713,8 @@ button,
   padding-left: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 22.5rem 22.5rem 22.5rem 22.5rem;
-  grid-template-columns: 22.5rem 22.5rem 22.5rem 22.5rem;
+  -ms-grid-columns: 25.5% 25.2% 25.4% 23.9%;
+  grid-template-columns: 25.5% 25.2% 25.4% 23.9%;
   -ms-grid-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
@@ -8547,17 +8556,14 @@ button,
     margin-bottom: 4px;
   }
 
-  .contacts-card__position-wrapper {
-    margin-bottom: 40px;
-    padding-right: 38px;
-  }
-
   .contacts-card__city-wrapper {
     margin-bottom: 24px;
   }
 
   .contacts-card__position-wrapper {
     margin-left: 0;
+    margin-bottom: 40px;
+    padding-right: 38px;
   }
 
   .contacts-card__phone-wrapper {
@@ -8645,6 +8651,10 @@ button,
   .documents .section-header__title {
     padding-left: 0;
     margin-bottom: 24px;
+  }
+
+  .documents .section-header__title br {
+    display: block;
   }
 
   .documents .section-header__text {
