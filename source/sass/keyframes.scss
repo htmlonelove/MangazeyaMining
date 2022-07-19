@@ -228,3 +228,13 @@
     stroke-dasharray: 265, 269;
   }
 }
+
+@keyframes running-line {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(-50%)
+  }
+}

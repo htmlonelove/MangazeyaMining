@@ -17,10 +17,13 @@ import {initMapBusiness} from './modules/map/init-map-business';
 
 import {initFirstLoad} from './modules/init-first-load';
 import {initScrollBtn} from './modules/init-scroll-btn';
+import {initIntroVideo} from './modules/init-intro-video';
 import {loadVideo} from './modules/lazy-video-load';
 import {setMobIntroHeight} from './modules/set-mob-intro-height';
 import {initTextSplitWordsAnimation} from './modules/text-split-animation-words';
 import {initToggleItems} from './modules/toggle-resources-table';
+import {initRunningLine} from './modules/init-running-line';
+import {controlVideo} from './modules/init-video-control';
 
 // ---------------------------------
 
@@ -31,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   setHeaderHeight();
+  loadVideo();
 
   // Modules
   // ---------------------------------
@@ -42,8 +46,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeader();
     initMenu();
     initTextSplitWordsAnimation();
-    loadVideo();
     initScrollBtn();
+    initIntroVideo();
     setMobIntroHeight();
     initModals();
     initCustomSelect();
@@ -55,6 +59,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initMap();
     initMapBusiness();
     initJobSlider();
+    initRunningLine();
+    controlVideo();
 
     window.sal({
       once: true,
