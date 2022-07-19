@@ -17,6 +17,7 @@ import {initMapBusiness} from './modules/map/init-map-business';
 
 import {initFirstLoad} from './modules/init-first-load';
 import {initScrollBtn} from './modules/init-scroll-btn';
+import {initIntroVideo} from './modules/init-intro-video';
 import {loadVideo} from './modules/lazy-video-load';
 import {setMobIntroHeight} from './modules/set-mob-intro-height';
 import {initTextSplitWordsAnimation} from './modules/text-split-animation-words';
@@ -32,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   setHeaderHeight();
+  loadVideo();
 
   // Modules
   // ---------------------------------
@@ -43,8 +45,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeader();
     initMenu();
     initTextSplitWordsAnimation();
-    loadVideo();
     initScrollBtn();
+    initIntroVideo();
     setMobIntroHeight();
     initModals();
     initCustomSelect();

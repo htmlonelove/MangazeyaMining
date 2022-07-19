@@ -55,8 +55,8 @@
     color: $color-default-white;
     opacity: 0;
     transform: translateY(-50%);
-    transition: opacity $trans-600-smooth,
-      transform $trans-600;
+    transition: opacity $trans-1000-smooth,
+      transform $trans-1000;
 
     @include vp-1439 {
       margin: 0 0 32px;
@@ -119,11 +119,14 @@
   }
 
   &__info {
+    z-index: 1;
     display: flex;
     min-height: 14.3vw;
     margin: 0 size(-48px) size(24px);
-    border-top: size(1px) solid $color-default-white-15;
-    border-bottom: size(1px) solid $color-default-white-15;
+    border-top: size(1px) solid $color-transparent;
+    border-bottom: size(1px) solid $color-transparent;
+    transition: border-top-color $trans-1000-smooth,
+      border-bottom-color $trans-1000-smooth;
 
     @include vp-1439 {
       margin: 0 -48px 24px;
@@ -140,6 +143,28 @@
       margin: 0 -16px 16px;
     }
 
+    .is-loaded & {
+      border-top-color: $color-default-white-15;
+      border-bottom-color: $color-default-white-15;
+    }
+
+    &::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $color-midnight-express;
+      opacity: 0;
+      transition: opacity $trans-1000;
+      pointer-events: none;
+
+      .is-video-open & {
+        opacity: 1;
+      }
+    }
+
     .fact-item {
       padding-right: 5%;
 
@@ -153,7 +178,9 @@
 
       &:nth-child(1) {
         flex-shrink: 0;
+        flex-grow: 0;
         width: 26.7%;
+        min-width: auto;
 
         @include vp-1023 {
           width: 100%;
@@ -164,7 +191,14 @@
         }
 
         &::after {
-          background-color: $color-default-white-15;
+          background-color: $color-transparent;
+          transition: background-color $trans-1000-smooth;
+        }
+
+        .is-loaded & {
+          &::after {
+            background-color: $color-default-white-15;
+          }
         }
       }
 
@@ -187,22 +221,51 @@
           line-height: 32px;
         }
       }
+
+      &__description {
+        opacity: 0;
+        transform: translateY(50%);
+        transition: opacity $trans-1000-smooth,
+          transform $trans-1000;
+
+        .is-loaded & {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
     }
   }
 
   &__scroll-btn {
     align-self: flex-start;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity $trans-1000-smooth,
+      transform $trans-1000;
+
+    .is-loaded & {
+      opacity: 1;
+      transform: translateY(0%);
+    }
   }
 
   &__video-wrp {
     position: relative;
+    z-index: 1;
+    transform: scale(1) translate(0, 0);
+    transform-origin: right bottom;
     flex-shrink: 0;
     width: 26.7%;
     overflow: hidden;
+    transition: transform $trans-1000;
 
     @include vp-1023 {
       display: none;
     }
+
+    // .is-video-open & {
+      // transform: scale(2.9) translate(calc(-50vw / 2.9 + 50%), calc(-50vh / 2.9 + 50%));
+    // }
 
     video {
       position: absolute;
@@ -211,6 +274,12 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      clip-path: polygon(100% 0,100% 0,100% 100%,100% 100%);
+      transition: clip-path $trans-1000;
+
+      .is-loaded & {
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+      }
     }
   }
 
@@ -218,10 +287,22 @@
     position: absolute;
     left: size(24px);
     bottom: size(24px);
+    opacity: 0;
+    transition: opacity $trans-1000;
 
     @include vp-1439 {
       left: 24px;
       bottom: 24px;
+    }
+
+    .is-loaded & {
+      transition: opacity $trans-600 0.9s;
+      opacity: 1;
+    }
+
+    .is-video-open & {
+      transition: opacity $trans-200;
+      opacity: 0;
     }
 
     .video-btn__icon {
