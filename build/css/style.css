@@ -2097,6 +2097,30 @@ body.sal-disabled [data-sal|='cale-right-reverse'] {
   }
 }
 
+@-webkit-keyframes running-line {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes running-line {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
 @font-face {
   font-family: 'Grandis Extended';
   src: url("../fonts/grandis-extended-bold.woff2") format("woff2"), url("../fonts/grandis-extended-bold.woff") format("woff");
@@ -6723,6 +6747,7 @@ button,
 
 .document-card .link-download {
   margin-top: auto;
+  z-index: 50;
 }
 
 .document-card .link-download__icon {
@@ -6748,6 +6773,41 @@ button,
   right: 0;
   left: 0;
   z-index: 10;
+}
+
+.running-line {
+  padding-top: 3.0625rem;
+  padding-bottom: 3.6875rem;
+  background-color: #17214a;
+  overflow: hidden;
+}
+
+.running-line__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.running-line__content svg {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: #335999;
+}
+
+.running-line__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 2.5rem;
+  width: auto;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -7833,6 +7893,15 @@ button,
 
   .document-card {
     padding: 40px 48px;
+  }
+
+  .running-line {
+    padding-top: 49px;
+    padding-bottom: 59px;
+  }
+
+  .running-line__item {
+    margin-right: 40px;
   }
 }
 
@@ -9862,6 +9931,20 @@ button,
   .img-pagination__img {
     width: 48px;
     height: 48px;
+  }
+
+  .running-line {
+    padding-top: 34px;
+    padding-bottom: 42px;
+  }
+
+  .running-line__content svg {
+    height: 36px;
+    width: 555px;
+  }
+
+  .running-line__item {
+    margin-right: 28px;
   }
 }
 
