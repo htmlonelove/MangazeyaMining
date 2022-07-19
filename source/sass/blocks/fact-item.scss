@@ -67,7 +67,7 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: size(1px);
     left: 0;
 
     width: 100%;
@@ -76,6 +76,7 @@
     background-color: $color-nero-10;
 
     @include vp-1439 {
+      bottom: 1px;
       height: 1px;
     }
   }

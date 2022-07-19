@@ -23,6 +23,7 @@ import {setMobIntroHeight} from './modules/set-mob-intro-height';
 import {initTextSplitWordsAnimation} from './modules/text-split-animation-words';
 import {initToggleItems} from './modules/toggle-resources-table';
 import {initRunningLine} from './modules/init-running-line';
+import {controlVideo} from './modules/init-video-control';
 
 // ---------------------------------
 
@@ -59,6 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMapBusiness();
     initJobSlider();
     initRunningLine();
+    controlVideo();
 
     window.sal({
       once: true,
