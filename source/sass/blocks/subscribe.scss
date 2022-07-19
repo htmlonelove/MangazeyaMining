@@ -1,20 +1,27 @@
 .subscribe {
-  padding-top: size(63px);
+  padding-top: size(80px);
   padding-bottom: size(96px);
-  background-color: $color-lucky-point;
+  background-color: $color-spring-wood;
 
   @include vp-1439 {
-    padding-top: 63px;
-    padding-bottom: 96px;
+    padding-top: 80x;
+    padding-bottom: 76px;
   }
 
   @include vp-767 {
     display: none;
   }
 
+  &__inner {
+    width: 100%;
+    display: flex;
+  }
+
   &__column {
+    flex-grow: 1;
+    width: 50%;
     &:not(:last-child) {
-      margin: 0 size(24px) 0 0;
+      margin: 0 size(20px) 0 0;
 
       @include vp-1439 {
         margin: 0 24px 0 0;
@@ -41,18 +48,14 @@
     }
   }
 
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
   &__text {
-    margin-top: size(19px);
+    margin-top: size(16px);
     margin-bottom: 0;
     // width: 75%;
     max-width: size(460px);
     font-size: size(14px);
     line-height: size(22px);
+    color: $color-nero-50;
 
     @include vp-1439 {
       max-width: 460px;
@@ -73,7 +76,8 @@
   }
 
   &__input {
-    width: 100%;
+    width: 103%;
+    padding: 2px 0;
   }
 
   &__input.custom-input {
@@ -99,9 +103,8 @@
         line-height: size(22px);
         background-color: $color-transparent;
         border: none;
-        border-bottom: size(1px) solid rgba($color-default-white, 0.2);
+        border-bottom: size(1px) solid rgba($color-nero, 0.2);
         border-radius: 0%;
-        color: $color-default-white;
         cursor: pointer;
 
         @include vp-1439 {
@@ -109,35 +112,44 @@
           padding-bottom: 25px;
           font-size: 14px;
           line-height: 22px;
-          border-bottom: 1px solid rgba($color-default-white, 0.2);
+          border-bottom: 1px solid rgba($color-nero, 0.2);
         }
 
         &::placeholder {
           transition: color $trans-default;
+          color: $color-nero-50;
         }
       }
 
       &:hover {
         input::placeholder {
-          color: $color-default-white;
+          color: $color-default-white-50;
         }
       }
     }
   }
 
   &__button {
-    margin-top: size(27px);
+    margin-top: size(45px);
     margin-bottom: size(48px);
     padding-top: size(29px);
     padding-bottom: size(25px);
     justify-content: center;
-    width: 100%;
+    width: 103%;
+    background-color: $color-midnight-express;
+    letter-spacing: 0.03em;
+    font-size: size(12px);
+    line-height: size(18px);
+    text-transform: uppercase;
 
     @include vp-1439 {
+      width: 100%;
       margin-top: 27px;
       margin-bottom: 48px;
       padding-top: 29px;
       padding-bottom: 25px;
+      font-size:12px;
+      line-height: 18px;
     }
   }
 
@@ -146,7 +158,7 @@
 
     font-size: size(14px);
     line-height: size(22px);
-    color: $color-default-white-50;
+    color: $color-nero-50;
 
     @include vp-1439 {
       font-size: 14px;
@@ -157,7 +169,7 @@
   &__link {
     font-size: size(14px);
     line-height: size(22px);
-    color: $color-default-white-50;
+    color: $color-nero-50;
     transition: color $trans-default;
 
     @include vp-1439 {
@@ -167,13 +179,13 @@
 
     @include has-hover {
       &:hover {
-        color: $color-default-white;
+        color: $color-default-white-50;
       }
     }
   }
 
   &__title {
-    padding-top: size(29px);
+    padding-top: size(5px);
     // width: 68%;
 
     @include vp-1439 {
@@ -186,4 +198,8 @@
       }
     }
   }
+}
+
+.subscribe .section-title__info {
+  font-weight: 400;
 }

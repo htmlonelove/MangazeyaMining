@@ -1,13 +1,14 @@
 mixin subscribe()
   .subscribe
     .container
-      .subscribe__column
-        +section-title({header: "Подписаться на новости", textList: [{text:"Узнавайте "}, {text:"первым <br>", class:"section-title__blue-word"}, {text:"о<span>&nbsp;</span>событиях "}, {text:"группы", class:"section-title__blue-word"} ]}).subscribe__title
-        p.subscribe__text Оставьте свой e-mail и получайте первым информацию <br>о&nbsp;значимых событиях всей Группы.
-      .subscribe__column
-        .subscribe__form-wrapper(data-validate, data-callback="feedbackFormSubmit")
-          form(method="get", action="#").subscribe__form
-            +custom-input({inputType: "email", inputId: "user-email", inputPlaceholder: "Ваш email", inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email").subscribe__input
-            +btn({tag: "button", type:"submit", text: "подписаться на новости"}).btn--white.subscribe__button
-          p.subscribe__footer Нажимая  «Подписаться на новости», вы принимаете
-          a.subscribe__link(href="conditions.html", target="_blank", aria-label="Ознакомиться с Условиями обработки пользовательских данных") условия обработки пользовательских данных
+      .subscribe__inner
+        .subscribe__column
+          +section-title({header: "Подписаться на новости", textList: [{text:"Узнавайте "}, {text:"первым <br>"}, {text:"о<span>&nbsp;</span>событиях "}, {text:"компании"} ]}).subscribe__title
+          p.subscribe__text Оставьте свой e-mail и&nbsp;узнавайте первыми о&nbsp;значимых событиях в&nbsp;жизни компании и&nbsp;всей Группы.
+        .subscribe__column
+          .subscribe__form-wrapper(data-validate, data-callback="feedbackFormSubmit")
+            form(method="get", action="#").subscribe__form
+              +custom-input({inputType: "email", inputId: "user-email", inputPlaceholder: "Ваш email", inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email").subscribe__input
+              +btn({tag: "button", type:"submit", text: "подписаться на новости"}).btn--white.subscribe__button
+            p.subscribe__footer Нажимая  «Подписаться на новости», вы принимаете
+            a.link.subscribe__link(href="conditions.html", target="_blank", aria-label="Ознакомиться с Условиями обработки пользовательских данных") условия обработки пользовательских данных
