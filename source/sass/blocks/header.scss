@@ -14,8 +14,8 @@
     display: flex;
     align-items: stretch;
     opacity: 0;
-    transition: opacity $trans-600,
-      transform $trans-600;
+    transition: opacity $trans-1000,
+      transform $trans-1000;
 
     // .is-menu-active .header--top & {
     //   transform: translate(#{size(-608px)}, 0);
@@ -197,16 +197,28 @@
     }
 
     &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      background: $color-midnight-express;
+      opacity: 0;
+      transition: opacity $trans-600;
+      pointer-events: none;
+
       @include vp-767 {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: $color-default-white;
+        opacity: 1;
+        z-index: 0;
         transform: translateX(100%);
-        transition: transform $trans-600;
+        transition: transform $trans-1000;
+        background: $color-default-white;
+      }
+
+      .is-video-open & {
+        opacity: 1;
       }
     }
 
