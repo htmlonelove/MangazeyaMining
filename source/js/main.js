@@ -21,6 +21,7 @@ import {loadVideo} from './modules/lazy-video-load';
 import {setMobIntroHeight} from './modules/set-mob-intro-height';
 import {initTextSplitWordsAnimation} from './modules/text-split-animation-words';
 import {initToggleItems} from './modules/toggle-resources-table';
+import {initRunningLine} from './modules/init-running-line';
 
 // ---------------------------------
 
@@ -55,6 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMap();
     initMapBusiness();
     initJobSlider();
+    initRunningLine();
 
     window.sal({
       once: true,

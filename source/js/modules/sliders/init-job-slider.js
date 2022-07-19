@@ -22,7 +22,12 @@ const initSlider = (slider) => {
 
   const getUrlImg = (imgWrappers, index) => {
     const img = imgWrappers[index].querySelector('img');
+    if (!img) {
+      return;
+    }
+
     const getPosition = img.getAttribute('src').lastIndexOf('.');
+    // eslint-disable-next-line consistent-return
     return img.getAttribute('src').slice(0, getPosition);
   };
 
