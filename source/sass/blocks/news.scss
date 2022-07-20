@@ -1,5 +1,9 @@
 .news {
-  margin-bottom: size(128px);
+  margin-bottom: size(110px);
+
+  @include vp-1023 {
+    margin-bottom: 45px;
+  }
 }
 
 .news .container {
@@ -18,4 +22,9 @@
   left: 0;
   right: 0;
   top: 0;
+}
+
+.news__btn-wrapper {
+  display: flex;
+  justify-content: center;
 }
