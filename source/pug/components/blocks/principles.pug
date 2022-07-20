@@ -1,0 +1,29 @@
+-
+  const principlesSectionData = {
+    array: [
+      {
+       text: "Взаимное доверие партнеров, уважение, ответственность"
+      },
+      {
+       text: "Повышение качества продукции, технологий, создание новых видов продукции"
+      },
+      {
+       text: "Постоянное <br>совершенствование <br>процессов"
+      },
+    ]
+  }
+
+mixin principles(data)
+ section.principles
+   +section-header(principlesSection)
+   .principles__slider-container(data-principles-slider-container)
+    .principles__slider.swiper(data-principles-slider)
+      .swiper-wrapper
+       - for (let i = 1; i < data.array.length + 1; i++)
+          .swiper-slide.principles__item
+            p.heading-4.principles__text!=data.array[i - 1].text
+            .slider-tools__pagination.nav-count(class=paginationMod, data-pagination)
+               span.caps-12.nav-count__current!=i
+               span.caps-12.nav-count__del=" / "
+               span.caps-12.nav-count__total!=data.array.length
+    +slider-tools().principles__tools

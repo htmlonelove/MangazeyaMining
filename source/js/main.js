@@ -11,6 +11,7 @@ import {initFactsSlider} from './modules/sliders/init-facts-slider';
 import {initJobSlider} from './modules/sliders/init-job-slider';
 import {initValuesSlider} from './modules/sliders/init-values-slider';
 import {initHistorySlider} from './modules/sliders/init-history-slider';
+import {initPrinciplesSlider} from './modules/sliders/init-principles-slider';
 
 import {initMap} from './modules/map/init-map';
 import {initMapBusiness} from './modules/map/init-map-business';
@@ -59,6 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMap();
     initMapBusiness();
     initJobSlider();
+    initPrinciplesSlider();
     initRunningLine();
     controlVideo();
 

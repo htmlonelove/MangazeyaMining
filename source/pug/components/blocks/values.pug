@@ -32,18 +32,15 @@
 mixin values(data)
  section.values
    +section-header(valuesSection)
-   .border-line
-   .container
-    .values__slider-container(data-values-slider-container)
-      .values__slider.swiper(data-values-slider)
-        .swiper-wrapper
-         - for (let i = 1; i < data.array.length + 1; i++)
-            .swiper-slide.values__item
-              h3.heading-4.values__title!=data.array[i - 1].title
-              p.text-14.values__text!=data.array[i - 1].text
-              .slider-tools__pagination.nav-count(class=paginationMod, data-pagination)
-                 span.caps-12.nav-count__current!=i
-                 span.caps-12.nav-count__del=" / "
-                 span.caps-12.nav-count__total!=data.array.length
-      +slider-tools().values__tools
-   .border-line
+   .values__slider-container(data-values-slider-container)
+    .values__slider.swiper(data-values-slider)
+      .swiper-wrapper
+       - for (let i = 1; i < data.array.length + 1; i++)
+          .swiper-slide.values__item
+            h3.heading-4.values__title!=data.array[i - 1].title
+            p.text-14.values__text!=data.array[i - 1].text
+            .slider-tools__pagination.nav-count(class=paginationMod, data-pagination)
+               span.caps-12.nav-count__current!=i
+               span.caps-12.nav-count__del=" / "
+               span.caps-12.nav-count__total!=data.array.length
+    +slider-tools().values__tools

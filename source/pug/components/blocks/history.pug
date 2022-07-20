@@ -80,9 +80,7 @@
 mixin history(data)
  .history
    +section-header(historySection)
-   .border-line
-   .container
-    .history__slider-container(data-history-slider-container)
+   .history__slider-container(data-history-slider-container)
       .history__slider.swiper(data-history-slider)
         .swiper-wrapper
          - for (let i = 1; i < data.array.length + 1; i++)
@@ -94,4 +92,3 @@ mixin history(data)
                  span.caps-12.nav-count__del=" / "
                  span.caps-12.nav-count__total!=data.array.length
       +slider-tools().history__tools
-   .border-line
