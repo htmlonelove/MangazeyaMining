@@ -18,12 +18,9 @@ mixin new-content (data)
             if item.type === "slider"
               +gallery-slider(item.slides, "new")
             if item.type === "text"
-              .text-content !{ item.content }
+              .text-content
+                p!=item.content
             if item.type === "video"
-              .new-content__video.video(data-yt-video=item.video)
-                .video__iframe(id=item.video)
-                .video__cover(data-yt-video-cover)
-                  img(src=item.videoCover, alt="Обложка")
-
-                  button.video__btn.circle-icon.circle-icon--white(type="button", aria-label="Запустить видео", data-yt-video-play)
-                    +icon("icon-play", 24, 24)
+              .new-content__video.video
+                +video-block({item})
+                  +video-btn({})

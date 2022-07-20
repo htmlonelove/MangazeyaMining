@@ -1,6 +1,5 @@
 mixin gallery-slider (data, mod)
   .slider-gallery(class=`slider-gallery--${mod}`, data-gallery-slider)
-    .slider-gallery__container.swiper-container
       ul.slider-gallery__wrapper.swiper-wrapper
         each it in data
           li.slider-gallery__item.swiper-slide
