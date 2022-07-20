@@ -1,7 +1,7 @@
 .new-content {
   margin-top: size(96px);
   padding-top: size(69px);
-  padding-bottom: size(32px);
+  margin-bottom: size(96px);
 
   @include vp-1439 {
     margin-top: 96px;
@@ -158,30 +158,32 @@
 
     &--text,
     &--video {
-      display: grid;
-      grid-template-columns: 21% 1fr;
-      column-gap: size(54px);
+      display: flex;
+      //grid-template-columns: 21% 1fr;
+      //column-gap: size(54px);
 
       @include vp-1439 {
-        column-gap: 54px;
+        //column-gap: 54px;
       }
 
       @include vp-767 {
-        grid-template-columns: 1fr;
-        column-gap: 0;
+        //grid-template-columns: 1fr;
+        //column-gap: 0;
       }
     }
   }
 
-  &__text,
+
   .text-content {
     grid-column: 2/3;
     margin: 0;
-    width: 65%;
+    max-width: size(671px);
     font-size: size(14px);
     line-height: size(22px);
+    margin: 0 auto;
 
     @include vp-1439 {
+      max-width: 671px;
       font-size: 14px;
       line-height: 22px;
     }
@@ -191,10 +193,10 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: size(20px);
+      margin-bottom: size(96px);
 
       @include vp-1439 {
-        margin-bottom: 20px;
+        margin-bottom: 96px;
       }
     }
   }
@@ -233,6 +235,8 @@
 
   &__video {
     grid-column: 2/3;
+    margin-left: auto;
+    margin-right: auto;
 
     @include vp-767 {
       grid-column: 1/2;

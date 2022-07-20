@@ -1,5 +1,5 @@
-mixin video-block({item})
+mixin video-block(data)
   .video-block
-    video(preload=item.preload, muted, playsinline, loop, src=`video/${item.name}.${item.format}`)
+    video(preload=data.preload, muted, playsinline, loop,   data-src=`video/${data.name}.${data.format}`)
     if block
       block
