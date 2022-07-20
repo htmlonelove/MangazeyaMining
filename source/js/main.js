@@ -35,7 +35,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   setHeaderHeight();
-  loadVideo();
 
   // Modules
   // ---------------------------------
@@ -46,6 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initFirstLoad();
     initHeader();
     initMenu();
+    loadVideo();
     initTextSplitWordsAnimation();
     initScrollBtn();
     initIntroVideo();
