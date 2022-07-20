@@ -118,67 +118,98 @@ mixin resources(data)
              +icon("icon-plus", 20, 20).resources__open
              +icon("icon-minus", 20, 20).resources__close
           table.table.table--desc
-              tr
-                th.heading-5.empty
-                th.heading-5
-                th.heading-5 Тонн, тыс. т
-                th.heading-5 Содержание Au, г/т
-                th.heading-5 Au, т
-                th.heading-5 Au, тыс. унций
-              tr
-                td.heading-5.no-border.text.text--left Ресурсы
-                td.empty
-                td.heading-5!=data.array[i].resources.total.amount
-                td.heading-5!=data.array[i].resources.total.contents
-                td.heading-5!=data.array[i].resources.total.aurum
-                td.heading-5.col-4!=data.array[i].resources.total.ounces
+              tr.tr-flex
+                th.heading-5.empty.col-0
+                th.heading-5.col-1
+                th.heading-5.col-2 Тонн, тыс. т
+                th.heading-5.col-3 Содержание Au, г/т
+                th.heading-5.col-4 Au, т
+                th.heading-5.col-5 Au, тыс. унций
+              tr.tr-flex
+                td.heading-5.no-border.text.text--left.col-0 Ресурсы
+                td.empty.col-1
+                td.heading-5.col-2
+                  span!=data.array[i].resources.total.amount
+                td.heading-5.col-3
+                  span!=data.array[i].resources.total.contents
+                td.heading-5.col-4
+                  span!=data.array[i].resources.total.aurum
+                td.heading-5.col-5
+                  span!=data.array[i].resources.total.ounces
               if data.array[i].resources.expected
-                tr
+                tr.tr-flex
                   if data.array[i].reserves
-                    td.empty(rowspan="3")
+                    td.empty.col-0.no-border(rowspan="3")
                   else
-                    td.no-border.empty(rowspan="3")
-                  td.text-14.text.text--left.text--categories Предполагаемые
-                  td.text-14!=data.array[i].resources.expected.amount
-                  td.text-14!=data.array[i].resources.expected.contents
-                  td.text-14!=data.array[i].resources.expected.aurum
-                  td.text-14.col-4!=data.array[i].resources.expected.ounces
+                    td.col-0.no-border.empty(rowspan="3")
+                  td.text-14.col-1.text.text--left.text--categories Предполагаемые
+                  td.text-14.col-2
+                    span!=data.array[i].resources.expected.amount
+                  td.text-14.col-3
+                    span!=data.array[i].resources.expected.contents
+                  td.text-14.col-4
+                    span!=data.array[i].resources.expected.aurum
+                  td.text-14.col-5
+                    span!=data.array[i].resources.expected.ounces
               if	data.array[i].resources.specified
-                tr
-                  td.text-14.text.text--left.text--categories Указанные
-                  td.text-14!=data.array[i].resources.specified.amount
-                  td.text-14!=data.array[i].resources.specified.contents
-                  td.text-14!=data.array[i].resources.specified.aurum
-                  td.text-14.col-4!=data.array[i].resources.specified.ounces
+                tr.tr-flex
+                  td.empty.col-0.no-border(rowspan="3")
+                  td.text-14.col-1.text.text--left.text--categories Указанные
+                  td.text-14.col-2
+                    span!=data.array[i].resources.specified.amount
+                  td.text-14.col-3
+                    span!=data.array[i].resources.specified.contents
+                  td.text-14.col-4
+                    span!=data.array[i].resources.specified.aurum
+                  td.text-14.col-5
+                    span!=data.array[i].resources.specified.ounces
               if	data.array[i].resources.measured
-                tr
-                  td.text-14.text.text--left.text--categories Измеренные
-                  td.text-14!=data.array[i].resources.measured.amount
-                  td.text-14!=data.array[i].resources.measured.contents
-                  td.text-14!=data.array[i].resources.measured.aurum
-                  td.text-14.col-4!=data.array[i].resources.measured.ounces
+                tr.tr-flex
+                  td.empty.col-0(rowspan="3")
+                  td.text-14.text.text--left.text--categories.col-1 Измеренные
+                  td.text-14.col-2
+                    span!=data.array[i].resources.measured.amount
+                  td.text-14.col-3
+                    span!=data.array[i].resources.measured.contents
+                  td.text-14.col-4
+                    span!=data.array[i].resources.measured.aurum
+                  td.text-14.col-5
+                    span!=data.array[i].resources.measured.ounces
               if data.array[i].reserves
-                tr
-                  td.heading-5.no-border.text.text--left Запасы
-                  td.empty
-                  td.heading-5!=data.array[i].reserves.total.amount
-                  td.heading-5!=data.array[i].reserves.total.contents
-                  td.heading-5!=data.array[i].reserves.total.aurum
-                  td.heading-5.col-4!=data.array[i].reserves.total.ounces
-                tr
-                  td.no-border.empty(rowspan="2")
-                  td.text-14.text.text--left.text--categories Подтвержденные
-                  td.text-14!=data.array[i].reserves.confirmed.amount
-                  td.text-14!=data.array[i].reserves.confirmed.contents
-                  td.text-14!=data.array[i].reserves.confirmed.aurum
-                  td.text-14.col-4!=data.array[i].reserves.confirmed.ounces
+                tr.tr-flex
+                  td.heading-5.no-border.text.text--left.col-0 Запасы
+                  td.empty.col-1
+                  td.heading-5.col-2
+                    span!=data.array[i].reserves.total.amount
+                  td.heading-5.col-3
+                    span!=data.array[i].reserves.total.contents
+                  td.heading-5.col-4
+                    span!=data.array[i].reserves.total.aurum
+                  td.heading-5.col-5
+                    span!=data.array[i].reserves.total.ounces
+                tr.tr-flex
+                  td.no-border.empty.col-0(rowspan="2")
+                  td.text-14.text.text--left.text--categories.col-1 Подтвержденные
+                  td.text-14.col-2
+                    span!=data.array[i].reserves.confirmed.amount
+                  td.text-14.col-3
+                    span!=data.array[i].reserves.confirmed.contents
+                  td.text-14.col-4
+                    span!=data.array[i].reserves.confirmed.aurum
+                  td.text-14.col-5
+                    span!=data.array[i].reserves.confirmed.ounces
                 if data.array[i].reserves.probable
-                  tr
-                    td.text-14.text.text--left.text--categories Вероятные
-                    td.text-14!=data.array[i].reserves.probable.amount
-                    td.text-14!=data.array[i].reserves.probable.contents
-                    td.text-14!=data.array[i].reserves.probable.aurum
-                    td.text-14.col-4!=data.array[i].reserves.probable.ounces
+                  tr.tr-flex
+                    td.empty.col-0(rowspan="3")
+                    td.text-14.text.text--left.text--categories.col-1 Вероятные
+                    td.text-14.col-2
+                      span!=data.array[i].reserves.probable.amount
+                    td.text-14.col-3
+                      span!=data.array[i].reserves.probable.contents
+                    td.text-14.col-4
+                      span!=data.array[i].reserves.probable.aurum
+                    td.text-14.col-5
+                      span!=data.array[i].reserves.probable.ounces
           table.table.table--mob
             tr.category
               th.heading-4 Ресурсы
