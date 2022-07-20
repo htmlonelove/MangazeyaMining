@@ -10,10 +10,19 @@
   margin-top: size(4px);
   margin-bottom: size(28px);
   padding-left: size(4px);
+  max-width: size(784px);
 
   @include vp-1023 {
     padding-left: 0;
     margin-bottom: 24px;
+  }
+}
+
+.documents .section-header__title br {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
   }
 }
 

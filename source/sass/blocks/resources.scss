@@ -144,29 +144,101 @@
   }
 
   & .table--desc {
+    & tbody {
+      display: flex;
+      flex-direction: column;
+      width: inherit;
+    }
+
     & th {
       padding-top: size(20px);
       padding-bottom: size(22px);
       border-bottom: 1px solid $color-nero-10;
       text-align: center;
+      flex-shrink: 0;
 
       &:last-child {
         text-align: right;
       }
     }
 
-    & .text {
-      &--left {
-        text-align: left;
+
+    & .tr-flex {
+      display: flex;
+
+      & span {
+        display: inline-block;
+        text-align: right;
+      }
+    }
+
+    & .col-0 {
+      width: 16.7%;
+      text-align: left;
+
+      @include vp-1023 {
+        width: 20%;
+      }
+    }
+
+    & .col-1 {
+      width: 15%;
+      text-align: left;
+
+      @include vp-1023 {
+        width: 20%;
+      }
+    }
+
+    & .col-2 {
+      width: 17.6%;
+
+      @include vp-1023 {
+        width: 19.5%;
       }
 
-      &--categories {
-        padding-left: 5.2%;
-        width: 25%;
+      & span {
+        min-width: size(150px);
+        padding-right: size(42px);
+      }
+    }
 
-        @include vp-1023 {
-          padding-left: 0;
-        }
+    & .col-3 {
+      width: 23.1%;
+
+      @include vp-1023 {
+        width: 27.5%;
+      }
+
+      & span {
+        min-width: size(100px);
+        padding-right: size(30px);
+      }
+    }
+
+    & .col-4 {
+      width: 12.9%;
+
+      @include vp-1023 {
+        width: 11%;
+      }
+
+      & span {
+        min-width: size(80px);
+        padding-right: size(28px);
+      }
+    }
+
+    & .col-5 {
+      width: 14.7%;
+
+      @include vp-1023 {
+        width: 22%;
+      }
+
+      & span {
+        min-width: size(120px);
+        padding-right: 0;
       }
     }
 
@@ -177,10 +249,10 @@
       text-align: center;
     }
 
-    & .col-4 {
-      text-align: right;
-      padding-right: size(40px);
-    }
+    // & .col-4 {
+    //   text-align: right;
+    //   // padding-right: size(40px);
+    // }
 
     & .no-border {
       border-bottom: none;

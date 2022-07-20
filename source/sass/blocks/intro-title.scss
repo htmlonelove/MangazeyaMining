@@ -28,7 +28,7 @@
       padding-top: 14px;
       padding-bottom: 39px;
       font-size: 24px;
-      line-height: 30px;
+      line-height: 32px;
     }
   }
 
@@ -84,8 +84,13 @@
   }
 
   &--press {
+    margin-top: size(89px);
+
     .intro-title__title {
       font-weight: 500;
+      padding-top: size(72px);
+      padding-bottom: size(64px);
+      color: $color-nero;
     }
   }
 }

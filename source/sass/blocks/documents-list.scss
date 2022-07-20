@@ -3,7 +3,7 @@
   list-style: none;
   padding-left: 0;
   display: grid;
-  grid-template-columns: size(360px) size(360px) size(360px) size(360px);
+  grid-template-columns: 25.5% 25.2% 25.4% 23.9%;
   grid-template-rows: 1fr 1fr;
 
   @include vp-1439 {
