@@ -16,6 +16,24 @@
     border-bottom: 2px solid $color-nero-15;
   }
 
+  &__slide {
+    height: auto;
+    min-height: size(764px);
+    overflow: hidden;
+
+    @include vp-1439 {
+      min-height: 764px;
+    }
+
+    @include vp-1023 {
+      min-height: 640px;
+    }
+
+    @include vp-767 {
+      min-height: auto;
+    }
+  }
+
   &__title {
     position: absolute;
     z-index: 2;
@@ -46,14 +64,24 @@
     position: absolute;
     z-index: 2;
     left: auto;
-    right: size(48px);
-    bottom: size(48px);
+    right: size(42px);
+    bottom: size(44px);
+
+    // justify-content: flex-end;
 
     width: auto;
+    max-width: 40%;
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     @include vp-1439 {
-      right: 48px;
-      bottom: 48px;
+      right: 42px;
+      bottom: 44px;
     }
 
     @include vp-1023 {
@@ -61,9 +89,11 @@
     }
 
     @include vp-767 {
-      right: 16px;
-      top: 311px;
+      right: 10px;
+      top: 305px;
       bottom: auto;
+
+      max-width: 80%;
     }
   }
 }

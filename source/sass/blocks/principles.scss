@@ -1,0 +1,168 @@
+.principles {
+  & .section-header {
+    padding-top: size(128px);
+    padding-bottom: size(40px);
+
+    @include vp-767 {
+      padding-top: 96px;
+      padding-bottom: 27px;
+    }
+  }
+
+  & .nav-count,
+  & .slider-controls {
+    display: none;
+
+    @include vp-767 {
+      display: flex;
+    }
+  }
+
+  & .nav-count {
+    padding: 0;
+    margin-top: auto;
+  }
+
+  &__slider-container {
+    position: relative;
+    border-top: 1px solid $color-nero-10;
+  }
+
+  &__slider {
+    padding-left: size(48px);
+    padding-right: size(48px);
+    border-bottom: 1px solid $color-nero-10;
+
+    @include vp-1023 {
+      padding-left: size(24px);
+      padding-right: 0;
+    }
+
+    @include vp-767 {
+      padding-left: 16px;
+      padding-right: 24px;
+    }
+  }
+
+  & .swiper-wrapper {
+    min-height: size(344px);
+    counter-reset: section;
+
+    @include vp-767 {
+      min-height: 274px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: size(480px);
+    height: auto;
+    flex-shrink: 0;
+    padding-right: 8.5%;
+    padding-bottom: size(40px);
+    counter-increment: section;
+
+    @include vp-1439 {
+      width: 35%;
+    }
+
+    @include vp-1023 {
+      width: 35%;
+      padding-right: 9%;
+    }
+
+    @include vp-767 {
+      width: auto;
+      padding-right: 15%;
+      padding-bottom: 32px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      right: size(46px);
+      background-color: $color-nero-10;
+
+      @include vp-1023 {
+        right: size(40px);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "0"  counter(section);
+      display: block;
+      font-size: 48px;
+      line-height: 64px;
+      color: $color-nero-50;
+      bottom: size(37px);
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    &:last-child::before {
+      display: none;
+    }
+  }
+
+  &__text {
+    margin-top: size(40px);
+    font-weight: 500;
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      margin-top: 30px;
+
+      & br {
+        display: none;
+      }
+    }
+  }
+
+  &__tools {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    flex-shrink: 0;
+    width: size(117px);
+  }
+
+  @include vp-767 {
+    & .slider-controls {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .slider-controls__btn {
+      background: $color-bridal-heath;
+
+      &:disabled {
+        opacity: 1;
+
+        & svg {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

@@ -47,9 +47,29 @@
   }
 
   &__content {
+    position: relative;
     display: flex;
     padding-top: size(64px);
     margin-bottom: size(64px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100vw;
+      height: 1px;
+      background-color: $color-nero-10;
+      top: 0;
+      left: size(-48px);
+
+      @include vp-1023 {
+        left: -24px;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
 
     @include vp-767 {
       padding-top: 0;
