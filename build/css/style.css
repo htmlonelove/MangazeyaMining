@@ -6517,8 +6517,13 @@ button,
 }
 
 .img-slider-item {
+  width: 100%;
+  height: 100%;
   position: relative;
-  min-height: 47.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
 }
 
 .img-slider-item__image-wrapper {
@@ -6537,10 +6542,12 @@ button,
 }
 
 .img-slider-item__content {
-  position: absolute;
-  left: 3rem;
-  bottom: 3rem;
-  max-width: 48.875rem;
+  position: relative;
+  margin-top: auto;
+  padding-top: 5rem;
+  padding-left: 3rem;
+  padding-bottom: 3rem;
+  max-width: 51.875rem;
 }
 
 .img-slider-item__description {
@@ -6578,6 +6585,12 @@ button,
   background-color: #f3ebe3;
 }
 
+.img-slider__slide {
+  height: auto;
+  min-height: 47.75rem;
+  overflow: hidden;
+}
+
 .img-slider__title {
   position: absolute;
   z-index: 2;
@@ -6591,15 +6604,27 @@ button,
   position: absolute;
   z-index: 2;
   left: auto;
-  right: 3rem;
-  bottom: 3rem;
+  right: 2.625rem;
+  bottom: 2.75rem;
   width: auto;
+  max-width: 40%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.img-slider .img-pagination::-webkit-scrollbar {
+  display: none;
 }
 
 .img-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 5.25rem;
+  padding-top: 0.25rem;
+  padding-right: 0.375rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.375rem;
 }
 
 .img-pagination__button {
@@ -6879,17 +6904,7 @@ button,
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
   margin-left: 0.3em;
-}
-
-.interview__time-code::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0.0625rem;
-  background: -o-repeating-linear-gradient(left, rgba(38, 38, 38, 0.5) 0, rgba(38, 38, 38, 0.5) 0.125rem, transparent 0.125rem, transparent 0.1875rem);
-  background: repeating-linear-gradient(to right, rgba(38, 38, 38, 0.5) 0, rgba(38, 38, 38, 0.5) 0.125rem, transparent 0.125rem, transparent 0.1875rem);
+  border-bottom: 0.0625rem dashed rgba(38, 38, 38, 0.5);
 }
 
 .interview__duration {
@@ -7937,14 +7952,11 @@ button,
     margin-top: 8px;
   }
 
-  .img-slider-item {
-    min-height: 764px;
-  }
-
   .img-slider-item__content {
-    left: 48px;
-    bottom: 48px;
-    max-width: 782px;
+    padding-top: 80px;
+    padding-left: 48px;
+    padding-bottom: 48px;
+    max-width: 830px;
   }
 
   .img-slider-item__user-card {
@@ -7956,14 +7968,26 @@ button,
     line-height: 22px;
   }
 
+  .img-slider__slide {
+    min-height: 764px;
+  }
+
   .img-slider__title {
     top: 48px;
     left: 48px;
   }
 
   .img-slider .img-pagination {
-    right: 48px;
-    bottom: 48px;
+    right: 42px;
+    bottom: 44px;
+  }
+
+  .img-pagination {
+    min-height: 84px;
+    padding-top: 4px;
+    padding-right: 6px;
+    padding-bottom: 4px;
+    padding-left: 6px;
   }
 
   .img-pagination__button {
@@ -8021,10 +8045,8 @@ button,
     margin-top: 35px;
   }
 
-  .interview__time-code::after {
-    height: 1px;
-    background: -o-repeating-linear-gradient(left, rgba(38, 38, 38, 0.5) 0, rgba(38, 38, 38, 0.5) 2px, transparent 2px, transparent 4px);
-    background: repeating-linear-gradient(to right, rgba(38, 38, 38, 0.5) 0, rgba(38, 38, 38, 0.5) 2px, transparent 2px, transparent 4px);
+  .interview__time-code {
+    border-bottom: 1px dashed rgba(38, 38, 38, 0.5);
   }
 }
 
@@ -8619,14 +8641,14 @@ button,
     padding-left: 0;
   }
 
-  .img-slider-item {
-    min-height: 640px;
+  .img-slider-item__content {
+    padding-left: 24px;
+    padding-bottom: 24px;
+    max-width: 544px;
   }
 
-  .img-slider-item__content {
-    left: 24px;
-    bottom: 24px;
-    max-width: 520px;
+  .img-slider__slide {
+    min-height: 640px;
   }
 
   .img-slider__title {
@@ -10042,6 +10064,10 @@ button,
   }
 
   .img-slider-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     min-height: auto;
   }
 
@@ -10085,15 +10111,24 @@ button,
     border-bottom: 2px solid rgba(38, 38, 38, 0.15);
   }
 
+  .img-slider__slide {
+    min-height: auto;
+  }
+
   .img-slider__title {
     top: 38px;
     left: 16px;
   }
 
   .img-slider .img-pagination {
-    right: 16px;
-    top: 311px;
+    right: 10px;
+    top: 305px;
     bottom: auto;
+    max-width: 80%;
+  }
+
+  .img-pagination {
+    min-height: 60px;
   }
 
   .img-pagination__button {

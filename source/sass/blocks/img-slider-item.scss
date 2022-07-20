@@ -1,16 +1,14 @@
 .img-slider-item {
+  width: 100%;
+  height: 100%;
+
   position: relative;
-  min-height: size(764px);
+  display: flex;
 
-  @include vp-1439 {
-    min-height: 764px;
-  }
-
-  @include vp-1023 {
-    min-height: 640px;
-  }
+  overflow: hidden;
 
   @include vp-767 {
+    flex-direction: column;
     min-height: auto;
   }
 
@@ -36,24 +34,27 @@
   }
 
   &__content {
-    position: absolute;
-    left: size(48px);
-    bottom: size(48px);
+    position: relative;
+    margin-top: auto;
+    padding-top: size(80px);
+    padding-left: size(48px);
+    padding-bottom: size(48px);
 
-    max-width: size(782px);
+    max-width: size(830px);
 
     @include vp-1439 {
-      left: 48px;
-      bottom: 48px;
+      padding-top: 80px;
+      padding-left: 48px;
+      padding-bottom: 48px;
 
-      max-width: 782px;
+      max-width: 830px;
     }
 
     @include vp-1023 {
-      left: 24px;
-      bottom: 24px;
+      padding-left: 24px;
+      padding-bottom: 24px;
 
-      max-width: 520px;
+      max-width: 544px;
     }
 
     @include vp-767 {
