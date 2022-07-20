@@ -1,5 +1,24 @@
 .img-pagination {
   display: flex;
+  min-height: size(84px);
+
+  padding-top: size(4px);
+  padding-right: size(6px);
+  padding-bottom: size(4px);
+  padding-left: size(6px);
+
+  @include vp-1439 {
+    min-height: 84px;
+
+    padding-top: 4px;
+    padding-right: 6px;
+    padding-bottom: 4px;
+    padding-left: 6px;
+  }
+
+  @include vp-767 {
+    min-height: 60px;
+  }
 
   &__button {
     position: relative;

@@ -121,6 +121,12 @@
     transition: opacity $trans-default;
     margin-left: 0.3em;
 
+    border-bottom: size(1px) dashed $color-nero-50;
+
+    @include vp-1439 {
+      border-bottom: 1px dashed $color-nero-50;
+    }
+
     @include vp-1023 {
       display: none;
     }
@@ -129,22 +135,6 @@
       &:hover:not(.focus-visible),
       &.focus-visible:focus {
         opacity: 0.8;
-      }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-
-      width: 100%;
-      height: size(1px);
-      background: repeating-linear-gradient(to right, $color-nero-50 0, $color-nero-50 size(2px),transparent size(2px),transparent size(3px));
-
-      @include vp-1439 {
-        height: 1px;
-        background: repeating-linear-gradient(to right,$color-nero-50 0,$color-nero-50 2px,transparent 2px,transparent 4px);
       }
     }
   }
