@@ -5601,6 +5601,7 @@ button,
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  margin-left: 0.9375rem;
 }
 
 .btn-load-more__icon {
@@ -5617,11 +5618,14 @@ button,
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: #ffffff;
-  color: #262626;
-  -webkit-transition: background-color color 0.5s ease;
-  -o-transition: background-color color 0.5s ease;
-  transition: background-color color 0.5s ease;
+  background-color: #17214a;
+  color: #ffffff;
+  -webkit-transition: background-color, 0.5s ease;
+  -o-transition: background-color, 0.5s ease;
+  transition: background-color, 0.5s ease;
+  -webkit-transition: color, 0.5s ease;
+  -o-transition: color, 0.5s ease;
+  transition: color, 0.5s ease;
 }
 
 .btn-load-more__icon svg {
@@ -5634,6 +5638,12 @@ button,
   width: -moz-max-content;
   width: max-content;
   min-width: 17.1875rem;
+  color: #262626;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.025rem;
 }
 
 .intro-title {
@@ -5687,8 +5697,8 @@ button,
 
 .intro-title--press .intro-title__title {
   font-weight: 500;
-  padding-top: 4.5rem;
-  padding-bottom: 4rem;
+  padding-top: 4.25rem;
+  padding-bottom: 4.1875rem;
   color: #262626;
 }
 
@@ -7023,7 +7033,7 @@ button,
 }
 
 .news {
-  margin-bottom: 8rem;
+  margin-bottom: 6.875rem;
 }
 
 .news .container {
@@ -7044,23 +7054,32 @@ button,
   top: 0;
 }
 
+.news__btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .news-list {
   margin: 0;
   list-style: none;
   padding-left: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-  grid-template-columns: 50% 50%;
+  -ms-grid-columns: 50.5% 49.5%;
+  grid-template-columns: 50.5% 49.5%;
   margin-bottom: 4rem;
 }
 
 .news-card {
-  padding-top: 2.5rem;
-  padding-bottom: 3.0625rem;
+  padding-top: 2.3125rem;
+  padding-bottom: 3.125rem;
   padding-left: 3rem;
   padding-right: 3rem;
-  min-height: 21.25rem;
+  min-height: 21.1875rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7108,10 +7127,14 @@ button,
   color: #262626;
 }
 
+.news-card__number-wrapper {
+  margin-bottom: 0.3125rem;
+}
+
 .news-card__date {
-  margin-bottom: 0.125rem;
   font-size: 2.125rem;
   line-height: 2.75rem;
+  margin-bottom: 0;
 }
 
 .news-card__year,
@@ -7125,15 +7148,19 @@ button,
   font-size: 0.75rem;
   line-height: 1.125rem;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .news-card__title {
   font-size: 1.125rem;
   line-height: 1.5rem;
+  letter-spacing: 0.0125rem;
 }
 
 .news-card__title-wrapper {
   margin-top: auto;
+  max-width: 32.375rem;
+  padding-right: 2.9375rem;
 }
 
 .news-card__link {
@@ -7433,8 +7460,8 @@ button,
 
   .btn-load-more:hover:not(.focus-visible):hover .btn-load-more__icon,
   .btn-load-more.focus-visible:focus:hover .btn-load-more__icon {
-    background-color: #335999;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #262626;
   }
 
   .link-arrow:hover .link-arrow__icon,
@@ -8844,8 +8871,16 @@ button,
     height: 500px;
   }
 
+  .btn-load-more {
+    margin-left: 0;
+  }
+
   .intro-title__filter {
     display: none;
+  }
+
+  .intro-title--press {
+    margin-top: 43px;
   }
 
   .section-title__header {
@@ -9167,6 +9202,42 @@ button,
     display: none;
   }
 
+  .news {
+    margin-bottom: 45px;
+  }
+
+  .news-list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .news-card {
+    padding: 40px 16px;
+    min-height: 248.2px;
+  }
+
+  .news-card:nth-child(1n) {
+    border-right: unset;
+  }
+
+  .news-card:nth-child(1) {
+    display: none;
+  }
+
+  .news-card__info-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .news-card__number-wrapper {
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+
   .news-card__date {
     font-size: 38px;
     line-height: 38px;
@@ -9181,6 +9252,15 @@ button,
   .news-card__title {
     font-size: 16px;
     line-height: 22px;
+  }
+
+  .news-card__title br {
+    display: none;
+  }
+
+  .news-card__title-wrapper {
+    padding-right: 0;
+    max-width: 100%;
   }
 
   .principles__slider {
