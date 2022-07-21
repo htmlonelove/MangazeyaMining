@@ -14,11 +14,11 @@ mixin section-intro(data)
   section.section-intro
     .container
       if data.header
-        h2.caps-12.section-intro__header(data-sal="slide-up" data-words-animation)!=data.header
+        h1.caps-12.section-intro__header(data-sal="slide-up" data-words-animation)!=data.header
       if (data.title && data.titleMob)
-        h1.heading-1-caps.section-intro__title.section-intro__title--desc(data-sal="slide-up" data-words-animation)!=data.title
-        h1.heading-1-caps.section-intro__title.section-intro__title--mob(data-sal="slide-up" data-words-animation)!=data.titleMob
-      .section-intro__content
+        p.heading-1-caps.section-intro__title.section-intro__title--desc(data-sal="slide-up" data-words-animation)!=data.title
+        p.heading-1-caps.section-intro__title.section-intro__title--mob(data-sal="slide-up" data-words-animation)!=data.titleMob
+    .section-intro__content
          if data.contentLeft[0]
           .section-intro__column
             +link-download({name:"скачать презентацию", href: "./pdf/MangazeyaGroup.pdf", size: "340 kb", ext: "pdf"})
