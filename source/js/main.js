@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
+import {initTabs} from './modules/tabs/init-tabs';
 
 import {initHeader} from './modules/header/init-header';
 import {initMenu} from './modules/header/init-menu';
@@ -25,6 +26,7 @@ import {initTextSplitWordsAnimation} from './modules/text-split-animation-words'
 import {initToggleItems} from './modules/toggle-resources-table';
 import {initRunningLine} from './modules/init-running-line';
 import {controlVideo} from './modules/init-video-control';
+import {initCityMap} from './modules/init-city-map';
 
 // ---------------------------------
 
@@ -63,6 +65,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initPrinciplesSlider();
     initRunningLine();
     controlVideo();
+    // initTabs();
+    initCityMap();
 
     window.sal({
       once: true,
