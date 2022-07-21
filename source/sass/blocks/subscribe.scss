@@ -203,3 +203,17 @@
 .subscribe .section-title__info {
   font-weight: 400;
 }
+
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px $color-spring-wood inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: $color-nero !important;
+  -webkit-text-font-size: 30px !important;
+}
