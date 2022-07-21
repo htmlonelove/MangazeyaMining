@@ -27,7 +27,9 @@ import {initTextSplitWordsAnimation} from './modules/text-split-animation-words'
 import {initToggleItems} from './modules/toggle-resources-table';
 import {initRunningLine} from './modules/init-running-line';
 import {controlVideo} from './modules/init-video-control';
-import {initContactsCity} from './modules/init-city-map';
+import {initContactsCity} from './modules/init-contacts-city';
+import {initMapMoscow} from './modules/map/init-map-moscow';
+import {initMapChita} from './modules/map/init-map-chita';
 
 // ---------------------------------
 
@@ -69,6 +71,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initContactsCity();
     initNewsSlider();
+    initMapMoscow();
+    initMapChita();
+
 
     window.sal({
       once: true,

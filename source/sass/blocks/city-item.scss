@@ -5,11 +5,12 @@
 
   overflow: hidden;
 
+
   @include vp-767 {
     position: static;
     width: 100%;
 
-    opacity: 0;
+    opacity: 1;
     visibility: hidden;
     max-height: 0;
 
@@ -19,6 +20,14 @@
       opacity: 1;
       visibility: visible;
       max-height: 100%;
+
+      .city-item__video-wrapper {
+        opacity: 1;
+      }
+
+      .city-item__content {
+        opacity: 1;
+      }
     }
   }
 
@@ -29,6 +38,22 @@
 
     .city-item__video-wrapper {
       clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+
+    .city-item__map {
+      visibility: visible;
+    }
+
+    .city-item__button-location {
+      svg {
+        &:first-of-type {
+          animation: fade-out 0.5s ease-in 0.2s both;
+        }
+
+        &:last-of-type {
+          animation: fade-in 0.5s ease-in 0.7s both;
+        }
+      }
     }
   }
 
@@ -46,7 +71,7 @@
     min-height: size(403px);
     width: 100%;
 
-    transition: all .6s ease-in-out .2s;
+    transition: clip-path .5s ease .2s, opacity 0.8s ease;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
     @include vp-1439 {
@@ -70,7 +95,7 @@
       padding-left: 16px;
 
       min-height: 258px;
-
+      opacity: 0;
     }
   }
 
@@ -85,8 +110,25 @@
 
     background-color: $color-lucky-point;
 
-    transition: all .6s ease-in-out .2s;
+    transition: clip-path .5s ease .2s;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: $color-midnight-express-70;
+    }
+
+    @include vp-767 {
+      opacity: 0;
+      transition: clip-path .5s ease .2s, opacity 0.8s ease;
+    }
 
     video {
       object-fit: cover;
@@ -181,6 +223,18 @@
 
     cursor: pointer;
 
+    svg {
+      position: absolute;
+
+      &:first-of-type {
+        animation: fade-in 0.5s ease-in 0.2s both;
+      }
+
+      &:last-of-type {
+        opacity: 0;
+      }
+    }
+
     @include vp-1439 {
       bottom: 48px;
       right: 48px;
@@ -223,9 +277,27 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 0;
     width: 100%;
     height: 100%;
-    background-color: $color-mariner;
+
+    opacity: 1;
+
+    overflow: hidden;
+
+    transition: visibility 0.8s ease-in;
+    visibility: hidden;
+
+    .map {
+      height: 100%;
+    }
+
+    .map__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: size(403px);
+      height: 100%;
+    }
   }
 }

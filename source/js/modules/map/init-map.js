@@ -23,7 +23,9 @@ const init = (map) => {
 };
 
 const breakpointChecker = () => {
-  const mapEl = document.querySelector('[data-map]');
+  let mapEl; // удалить после объявления переменной
+
+  // const mapEl = document.querySelector('');
 
   if (!mapEl) {
     return;
@@ -80,13 +82,13 @@ const addMarkers = ({markers, mapInstance, collection, isBalloon}) => {
       balloonOffset: isMobile ? [-102, 0] : [-125, 0],
       balloonMaxWidth: 1000,
       balloonMaxHeight: 1000,
-      hideIconOnBalloonOpen: false
+      hideIconOnBalloonOpen: false,
     });
 
     markerCollection.add(markerObj);
 
     if (marker.factoid) {
-      const group = markerObj.events.group()
+      const group = markerObj.events.group();
 
       const breakpointCheckerInner = () => {
 
@@ -106,7 +108,6 @@ const addMarkers = ({markers, mapInstance, collection, isBalloon}) => {
       breakpointCheckerInner();
       touchMediaPoint.addListener(breakpointCheckerInner);
     }
-
   });
 
   mapInstance.geoObjects.add(markerCollection);
@@ -155,7 +156,7 @@ const initSwiper = (wrapEl, speed = 0) => {
       },
     },
   });
-}
+};
 
 const initMap = () => {
   breakpointChecker();
