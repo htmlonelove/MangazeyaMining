@@ -1,0 +1,26 @@
+.team {
+  padding: size(32px) 0 0;
+  position: relative;
+  z-index: 3;
+  transform: translateZ(0);
+
+  @include vp-1439 {
+    padding: 32px 0 0;
+  }
+
+  @include vp-767 {
+    padding: 48px 0 72px;
+  }
+
+  .section-header {
+    @include vp-767 {
+      padding-bottom: 40px;
+    }
+
+    &__title {
+      @include vp-767 {
+        margin: 0;
+      }
+    }
+  }
+}

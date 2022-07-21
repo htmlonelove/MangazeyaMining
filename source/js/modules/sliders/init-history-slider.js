@@ -1,5 +1,5 @@
 
-const historySlider = document.querySelector('[data-history-slider]');
+const historySlider = document.querySelector('[data-slider="history"]');
 
 
 let prevButton;
@@ -7,8 +7,8 @@ let nextButton;
 
 
 const enableSwiper = (slider) => {
-  prevButton = slider.closest('[data-history-slider-container]').querySelector('[data-btn-prev]');
-  nextButton = slider.closest('[data-history-slider-container]').querySelector('[data-btn-next]');
+  prevButton = slider.closest('[data-slider-container="history"]').querySelector('[data-btn-prev]');
+  nextButton = slider.closest('[data-slider-container="history"]').querySelector('[data-btn-next]');
 
   let mySwiper = new Swiper (slider, {
     speed: 600,

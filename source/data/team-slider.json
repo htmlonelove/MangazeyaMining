@@ -1,0 +1,250 @@
+{
+  "teamSlider": [
+    {
+      "id": "slide-1",
+      "title": {
+        "titleSurname": "Янчуков",
+        "titleName": "Сергей Валентинович"
+      },
+      "desc": "Основатель и&nbsp;владелец ГК&nbsp;&laquo;Мангазея&raquo;, генеральный директор &laquo;Мангазея Девелопмент&raquo;",
+      "imgContentName": "25",
+      "imgContentNameMob": "25m",
+      "imgContentFormat": "jpg",
+      "imgContentWidth": 608,
+      "imgContentHeight": 740,
+      "imgContentAlt": "Фотография человека",
+      "textBlocks": [
+        {
+          "paragraphs": [
+            {
+              "text": "Более 29&nbsp;лет реализует бизнес-проекты в&nbsp;реальном секторе экономики."
+            },
+            {
+              "text": "В&nbsp;2001 году основал группу компаний &laquo;Мангазея&raquo;."
+            },
+            {
+              "text": "С&nbsp;2015 года входит в&nbsp;состав попечительского совета Свято-Троицкой Сергиевой Лавры и&nbsp;Московской Духовной академии."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-2",
+      "title": {
+        "titleSurname": "Кашуба",
+        "titleName": "Роман Сергеевич"
+      },
+      "desc": "Генеральный директор ГК&nbsp;&laquo;Мангазея&raquo; и&nbsp;компании &laquo;Мангазея Агро&raquo;, член&nbsp;совета директоров",
+      "imgContentName": "13",
+      "imgContentNameMob": "13m",
+      "imgContentFormat": "jpg",
+      "imgContentWidth": 608,
+      "imgContentHeight": 740,
+      "imgContentAlt": "Фотография человека",
+      "textBlocks": [
+        {
+          "paragraphs": [
+            {
+              "text": "Работает в&nbsp;компании с&nbsp;2014&nbsp;года."
+            },
+            {
+              "text": "В&nbsp;течение десяти лет занимал различные должности в&nbsp;группе компаний &laquo;Тройка Диалог&raquo;, а&nbsp;позже в&nbsp;Sberbank CIB, где оказывал инвестиционно-банковские услуги компаниям из&nbsp;горнодобывающей отрасли в&nbsp;России и&nbsp;СНГ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-3",
+      "title": {
+        "titleSurname": "Арутюнян",
+        "titleName": "Людмила Оганесовна"
+      },
+      "desc": "Директор по&nbsp;экономике и&nbsp;финансам, член&nbsp;совета директоров ГК&nbsp;&laquo;Мангазея&raquo;",
+      "imgContentName": "1",
+      "imgContentNameMob": "1m",
+      "imgContentFormat": "jpg",
+      "imgContentWidth": 608,
+      "imgContentHeight": 740,
+      "imgContentAlt": "Фотография человека",
+      "textBlocks": [
+        {
+          "header": "Трудовая деятельность",
+          "paragraphs": [
+            {
+              "text": "Работает в&nbsp;компании с&nbsp;2013&nbsp;года."
+            },
+            {
+              "text": "Имеет более 15&nbsp;лет опыта работы в&nbsp;финансах. С&nbsp;2005 по&nbsp;2012 года работала в&nbsp;компании ЗАО &laquo;Криогаз&raquo;, производство сжиженного природного газа."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-4",
+      "title": {
+        "titleSurname": "Гусев",
+        "titleName": "Михаил Михайлович"
+      },
+      "desc": "Генеральный директор компании &laquo;Мангазея Майнинг&raquo;",
+      "imgContentName": "7",
+      "imgContentNameMob": "7m",
+      "imgContentFormat": "jpg",
+      "imgContentWidth": 608,
+      "imgContentHeight": 740,
+      "imgContentAlt": "Фотография человека",
+      "textBlocks": [
+        {
+          "header": "Трудовая деятельность",
+          "paragraphs": [
+            {
+              "text": "Работает в&nbsp;компании с&nbsp;2020&nbsp;года."
+            },
+            {
+              "text": "Имеет более 15&nbsp;лет опыта работы в&nbsp;горнодобывающей отрасли. С 2006 по&nbsp;2014 годы занимал руководящие посты в&nbsp;структурах группы компаний &laquo;Ренова&raquo;, управляющих горнодобывающими активами группы, сосредоточенными на&nbsp;Камчатке, Урале, в&nbsp;Карелии, Киргизии, Монголии и&nbsp;Африке. С&nbsp;2014 по&nbsp;2020 годы возглавлял сервисные организации, предоставляющие услуги компаниям горнодобывающего сектора."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-5",
+      "title": {
+        "titleSurname": "Попов",
+        "titleName": "Александр Павлович"
+      },
+      "desc": "Генеральный директор компании &laquo;Мангазея Газ&raquo;",
+      "imgContentName": "19",
+      "imgContentNameMob": "19m",
+      "imgContentFormat": "jpg",
+      "imgContentWidth": 608,
+      "imgContentHeight": 740,
+      "imgContentAlt": "Фотография человека",
+      "textBlocks": [
+        {
+          "header": "Образование",
+          "paragraphs": [
+            {
+              "text": "Работает в&nbsp;компании с&nbsp;2017&nbsp;года."
+            },
+            {
+              "text": "За&nbsp;25&nbsp;лет трудового стажа прошёл поступательный профессиональный путь от&nbsp;помощника бурильщика в&nbsp;УБП ПАО &laquo;Варьеганнефтегаз&raquo; (г. Радужный) до&nbsp;генерального директора ООО &laquo;НК&nbsp;&laquo;Итера&raquo;. Работал главным технологом подрядных работ по&nbsp;строительству скважин в&nbsp;ОАО &laquo;Запсибгазпром&raquo;, заместителем генерального директора и&nbsp;позднее генеральным директором в&nbsp;ОАО &laquo;Севернефтегазпром&raquo;, помощником заместителя председателя Правительства РФ&nbsp;И.И. Сечина в&nbsp;Аппарате Правительства&nbsp;РФ, руководителем Федерального агентства по&nbsp;недропользованию Министерства природных ресурсов."
+            },
+            {
+              "text": "Награждён почётной грамотой ОАО &laquo;Газпром&raquo; за&nbsp;ввод в&nbsp;эксплуатацию Южно-Русского НГКМ, званием &laquo;Почетный работник топливно-энергетического комплекса&raquo; от&nbsp;Министерства энергетики&nbsp;РФ и&nbsp;медалью ордена &laquo;За&nbsp;заслуги перед Отечеством&raquo; II&nbsp;степени за&nbsp;достигнутые трудовые успехи."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-6",
+      "title": {
+        "titleSurname": "Журко",
+        "titleName": "Андрей Сергеевич"
+      },
+      "desc": "Генеральный директор компании &laquo;Мангазея Технолоджи&raquo;",
+      "imgContentName": "11",
+      "imgContentNameMob": "11m",
+      "imgContentFormat": "jpg",
+      "imgContentWidth": 608,
+      "imgContentHeight": 740,
+      "imgContentAlt": "Фотография человека",
+      "textBlocks": [
+        {
+          "paragraphs": [
+            {
+              "text": "Работает в&nbsp;компании с&nbsp;2022&nbsp;года."
+            },
+            {
+              "text": "С&nbsp;2005 по&nbsp;2013 годы работал на&nbsp;разных, в&nbsp;том числе руководящих, должностях в&nbsp;компаниях &laquo;Аэрофлот&raquo;, &laquo;Россотрудничество&raquo;, &laquo;Yourcharter Solutions&raquo;, издательском доме &laquo;Московский Комсомолец&raquo;. С&nbsp;2013 по&nbsp;2015 был директором по&nbsp;IT инжинирингового блока группы компаний &laquo;Сумма&raquo;. С&nbsp;2015 по&nbsp;2017 работал руководителем программы автоматизации группы компаний &laquo;Сибур&raquo;. С&nbsp;2018 по&nbsp;март 2022 года был директором по&nbsp;цифровизации и&nbsp;IT блока Contech в&nbsp;группе компаний &laquo;ПИК&raquo;."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-7",
+      "title": {
+        "titleSurname": "Григорьев",
+        "titleName": "Антон Павлович"
+      },
+      "desc": "Директор по&nbsp;юридическому сопровождению стратегических проектов и&nbsp;корпоративной деятельности ГК&nbsp;&laquo;Мангазея&raquo;",
+      "imgContentName": "6",
+      "imgContentNameMob": "6m",
+      "imgContentFormat": "jpg",
+      "imgContentWidth": 608,
+      "imgContentHeight": 740,
+      "imgContentAlt": "Фотография человека",
+      "textBlocks": [
+        {
+          "header": "Образование",
+          "paragraphs": [
+            {
+              "text": "Работает в компании с 2014 года."
+            },
+            {
+              "text": "С&nbsp;2011 по&nbsp;2014 год работал в&nbsp;компании &laquo;Техносервис Менеджмент&raquo;."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-8",
+      "title": {
+        "titleSurname": "Поляков",
+        "titleName": "Владимир Павлович"
+      },
+      "desc": "Директор по&nbsp;внешнеэкономическим связям ГК&nbsp;&laquo;Мангазея&raquo;",
+      "imgContentName": "18",
+      "imgContentNameMob": "18m",
+      "imgContentFormat": "jpg",
+      "imgContentWidth": 608,
+      "imgContentHeight": 740,
+      "imgContentAlt": "Фотография человека",
+      "textBlocks": [
+        {
+          "header": "Образование",
+          "paragraphs": [
+            {
+              "text": "Работает в&nbsp;компании с&nbsp;2013&nbsp;года."
+            },
+            {
+              "text": "Имеет более чем 20-летний опыт в&nbsp;сфере внешнеэкономической деятельности предприятий. С&nbsp;1999 по&nbsp;2013 годы работал в&nbsp;штате Торгового представительства Российской Федерации в&nbsp;Китайской Народной Республике."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-9",
+      "title": {
+        "titleSurname": "Думби",
+        "titleName": "Станислав Анатольевич"
+      },
+      "desc": "Заместитель генерального директора по&nbsp;экономической и&nbsp;информационной защите бизнеса",
+      "imgContentName": "10",
+      "imgContentNameMob": "10m",
+      "imgContentFormat": "jpg",
+      "imgContentWidth": 608,
+      "imgContentHeight": 740,
+      "imgContentAlt": "Фотография человека",
+      "textBlocks": [
+        {
+          "header": "Образование",
+          "paragraphs": [
+            {
+              "text": "Работает в&nbsp;компании с&nbsp;2016&nbsp;года."
+            },
+            {
+              "text": "Более 10&nbsp;лет возглавляет структуры, обеспечивающие безопасность предприятий финансового и&nbsp;реального секторов экономики."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

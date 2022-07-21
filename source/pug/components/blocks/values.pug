@@ -1,46 +1,5 @@
--
-  const valuesSectionData = {
-    array: [
-      {
-       title: "Помощь детским <br>учреждениям",
-       text: "Регулярно предоставляем <br>адресную финансовую помощь <br>детским дошкольным и <br>школьным образовательным учреждениям."
-      },
-      {
-       title: "Поддержка социальных <br>программ",
-       text: "Ежегодно предоставляем жителям Забайкальского края рабочие места и увеличиваем выплаты по налогам и сборам в местные бюджеты."
-      },
-      {
-       title: "Защита окружающей <br>среды",
-       text: "Выполняем требования природоохранного законодательства, рационально используем ресурсы и безопасно утилизируем отходы для минимизации воздействия на окружающую среду."
-      },
-      {
-       title: "Помощь детским <br>учреждениям",
-       text: "Регулярно предоставляем <br>адресную финансовую помощь <br>детским дошкольным и <br>школьным образовательным учреждениям."
-      },
-      {
-       title: "Поддержка социальных <br>программ",
-       text: "Ежегодно предоставляем жителям Забайкальского края рабочие места и увеличиваем выплаты по налогам и сборам в местные бюджеты."
-      },
-      {
-       title: "Защита окружающей <br>среды",
-       text: "Выполняем требования природоохранного законодательства, рационально используем ресурсы и безопасно утилизируем отходы для минимизации воздействия на окружающую среду."
-      },
-    ]
-  }
-
 
 mixin values(data)
  section.values
    +section-header(valuesSection)
-   .values__slider-container(data-values-slider-container)
-    .values__slider.swiper(data-values-slider)
-      .swiper-wrapper
-       - for (let i = 1; i < data.array.length + 1; i++)
-          .swiper-slide.values__item
-            h3.heading-4.values__title!=data.array[i - 1].title
-            p.text-14.values__text!=data.array[i - 1].text
-            .slider-tools__pagination.nav-count(class=paginationMod, data-pagination)
-               span.caps-12.nav-count__current!=i
-               span.caps-12.nav-count__del=" / "
-               span.caps-12.nav-count__total!=data.array.length
-    +slider-tools().values__tools
+   +section-slider(valuesSectionData, "values")

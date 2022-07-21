@@ -1,0 +1,61 @@
+.modal-feedback-success {
+  width: 100%;
+
+  .section-title {
+    max-width: size(450px);
+
+    @include vp-1439 {
+      max-width: 450px;
+    }
+
+    @include vp-767 {
+      max-width: 340px;
+    }
+
+    &__header {
+      display: none;
+    }
+
+    h2 ~ .section-title__info {
+      @include vp-767 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  &__text {
+    margin: size(20px) 0 0;
+    font-size: size(14px);
+    line-height: size(22px);
+
+    @include vp-1439 {
+      margin: 20px 0 0;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      margin: 18px 0 0;
+      padding: 0 30% 0 0;
+    }
+  }
+
+  &__btn {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: size(64px);
+    margin: size(50px) 0 0;
+
+    @include vp-1439 {
+      min-height: 64px;
+      margin: 50px 0 0;
+    }
+
+    @include vp-767 {
+      display: inline-flex;
+    }
+  }
+}
