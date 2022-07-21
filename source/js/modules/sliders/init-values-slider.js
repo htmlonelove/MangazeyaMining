@@ -1,5 +1,5 @@
 
-const valuesSlider = document.querySelector('[data-values-slider]');
+const valuesSlider = document.querySelector('[data-slider="values"]');
 
 
 let prevButton;
@@ -7,8 +7,8 @@ let nextButton;
 
 
 const enableSwiper = (slider) => {
-  prevButton = slider.closest('[data-values-slider-container]').querySelector('[data-btn-prev]');
-  nextButton = slider.closest('[data-values-slider-container]').querySelector('[data-btn-next]');
+  prevButton = slider.closest('[data-slider-container="values"]').querySelector('[data-btn-prev]');
+  nextButton = slider.closest('[data-slider-container="values"]').querySelector('[data-btn-next]');
 
   let mySwiper = new Swiper (slider, {
     speed: 600,

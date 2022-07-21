@@ -35,8 +35,10 @@ const enableSwiper = (slider) => {
 };
 
 const initPrinciplesSlider = () => {
-  breakpointMD.addListener(breakpointChecker);
-  breakpointChecker();
+  if (principlesSlider) {
+    breakpointMD.addListener(breakpointChecker);
+    breakpointChecker();
+  }
 };
 
 export {initPrinciplesSlider};
