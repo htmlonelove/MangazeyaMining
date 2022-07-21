@@ -7,12 +7,18 @@ const loadVideo = () => {
       const breakpointChecker = () => {
         if (video.dataset.src) {
           video.src = video.dataset.src;
-          video.play();
+
+          if (video.hasAttribute('data-autoplay')) {
+            video.play();
+          }
         } else {
           if (breakpoint.matches) {
             if (video.dataset.srcDesktop) {
               video.src = video.dataset.srcDesktop;
-              video.play();
+
+              if (video.hasAttribute('data-autoplay')) {
+                video.play();
+              }
             }
           } else {
             if (video.dataset.srcMobile) {

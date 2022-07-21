@@ -1,5 +1,5 @@
 mixin new-content (data)
-  - const {intro, content} = data
+  - const {intro, slider, video, textsTop, textsBottom} = data
 
   section.new-content
     .container
@@ -13,17 +13,15 @@ mixin new-content (data)
           h1.new-content__title!=intro.title
           p.new-content__intro-text!=intro.text
       .new-content__main
-        each item in content
-          .new-content__block(class=`new-content__block--${item.type}`)
-            if item.type === "slider"
-              +gallery-slider(item.slides, "new")
-            if item.type === "text"
-              .text-content !{ item.content }
-            if item.type === "video"
-              .new-content__video.video(data-yt-video=item.video)
-                .video__iframe(id=item.video)
-                .video__cover(data-yt-video-cover)
-                  img(src=item.videoCover, alt="Обложка")
-
-                  button.video__btn.circle-icon.circle-icon--white(type="button", aria-label="Запустить видео", data-yt-video-play)
-                    +icon("icon-play", 24, 24)
+        .new-content__block(class=`new-content__block--slider`)
+          +gallery-slider(slider.slides, "new")
+        .text-content
+          each item in textsTop
+            +text-block(item)
+        .new-content__block(class=`new-content__block--video`)
+          .new-content__video.video
+            +video-block(video)
+              +video-btn({})
+        .text-content
+          each item in textsBottom
+            +text-block(item)

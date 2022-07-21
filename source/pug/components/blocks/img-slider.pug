@@ -31,7 +31,7 @@
 mixin img-slider(props)
   section.img-slider(data-job-slider-container)&attributes(attributes)
     .overlay-animate(data-sal="scale-right-reverse")
-    h2.img-slider__title.caps-12 !{props.title}
+    h2.img-slider__title.caps-12(data-sal="slide-up", data-sal-delay="400") !{props.title}
     .swiper(data-job-slider, data-delay="500", data-speed="5000")
       .swiper-wrapper
         each slide in props.slides
@@ -39,9 +39,9 @@ mixin img-slider(props)
             .img-slider-item(data-swiper-parallax="100%")
               .img-slider-item__image-wrapper(data-slider-img)
                 +picture(...slide.img)
-              .img-slider-item__content
+              .img-slider-item__content(data-sal="slide-up", data-sal-delay="400")
                 p.img-slider-item__description.heading-3 !{slide.description}
                 +user-card(slide.user).img-slider-item__user-card.user-card--light
 
-      .img-pagination(data-pagination)
+      .img-pagination(data-sal="fade", data-sal-delay="400" data-pagination)
 

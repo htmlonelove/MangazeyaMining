@@ -1,0 +1,63 @@
+.city-tabs {
+  &__controls {
+    display: none;
+
+    @include vp-767 {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      width: 100%;
+
+      overflow-x: auto;
+
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      opacity: 1;
+      visibility: visible;
+
+      transition: opacity $trans-default, visibility $trans-default;
+
+      &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  &__nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 21px;
+    padding-bottom: 19px;
+
+    max-width: 50%;
+    min-width: 100px;
+    width: 100%;
+    color: $color-default-white;
+
+    background-color: $color-transparent;
+    border: 1px solid $color-default-white-15;
+    border-left: none;
+
+    transition: color $trans-default;
+
+    cursor: pointer;
+
+    &.is-active {
+      color: $color-default-white-50;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color-lucky-point;
+    background-color: $color-bridal-heath;
+  }
+}

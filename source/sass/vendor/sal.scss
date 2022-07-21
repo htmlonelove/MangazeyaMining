@@ -96,7 +96,7 @@ body.sal-disabled [data-sal|='scale-right'] {
 }
 
 [data-sal|='scale-right-reverse'].sal-animate,
-body.sal-disabled [data-sal|='cale-right-reverse'] {
+body.sal-disabled [data-sal|='scale-right-reverse'] {
   transform: scaleX(0%);
   transform-origin: right;
 }
@@ -105,3 +105,17 @@ body.sal-disabled [data-sal|='cale-right-reverse'] {
   transform: scaleX(100%);
   transform-origin: right;
 }
+
+
+[data-sal|='mask-to-right'].sal-animate,
+body.sal-disabled [data-sal|='mask-to-right'] {
+  animation: maskToRight 0.7s ease 0.2s both;
+  opacity: 1;
+}
+
+
+[data-sal='mask-to-right'] {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+

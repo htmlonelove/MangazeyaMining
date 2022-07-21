@@ -1,0 +1,96 @@
+-
+  const contactsCityData = {
+    header: {
+      headerDesc: "Контакты",
+      headerMob: "Контакты",
+      titleDesc: "Представительства компании<br> находятся в Москве и столице<br> Забайкальского края",
+      titleMob: "Представительства компании<br> находятся в Москве и столице<br> Забайкальского края",
+      textDesc: "Будем рады рассказать вам о&nbsp;деятельности компании больше по&nbsp;телефону или при личной встрече в&nbsp;наших офисах в&nbsp;центре Москвы и&nbsp;Читы.",
+      textMob: "Будем рады рассказать вам о&nbsp;деятельности компании больше по&nbsp;телефону или при личной встрече в&nbsp;наших офисах в&nbsp;центре Москвы и&nbsp;Читы.",
+    },
+    tabs: {
+      controls: [
+        {
+          text: 'Москва',
+          isActive: true,
+        },
+        {
+          text: 'Чита',
+        },
+      ],
+      content: [
+        {
+          isActive: true,
+          video: {
+            name: 'mining',
+            format: 'mp4',
+          },
+          map: {
+            name: 'moscow',
+            latitude: '55.74896956898905',
+            longitude: '37.607592',
+          },
+          name: 'Москва',
+          phone: {
+            text: '+7 495 647 55 55',
+            href: 'tel:+74956475555',
+          },
+          address: '119019, Москва, ул. Знаменка&nbsp;7, стр.&nbsp;3',
+          time: '16:28',
+          temperature: '-10',
+        },
+        {
+          video: {
+            name: 'mining',
+            format: 'mp4',
+          },
+          map: {
+            name: 'chita',
+            latitude: '52.03502607206422',
+            longitude: '113.50310649999992',
+          },
+          name: 'Чита',
+          phone: {
+            text: '+7 495 647 55 55',
+            href: 'tel:+74956475555',
+          },
+          address: '672000, Чита, ул. Костюшко-Григоровича&nbsp;5,<br> помещение&nbsp;13, офис 405',
+          time: '22:28',
+          temperature: '-25',
+        },
+      ],
+    },
+  }
+
+
+mixin contacts-city(props)
+  section.contacts-city&attributes(attributes)
+    .contacts-city__tabs.city-tabs(data-city-tabs)
+      +section-header(props.header)(data-city-header)
+      .city-tabs__controls(data-city-controls)
+        each button in props.tabs.controls
+          button.caps-12.city-tabs__nav-button(class=button.isActive ? "is-active" : null, data-city-nav) !{button.text}
+      .city-tabs__content
+        each city in props.tabs.content
+          .city-item(class=city.isActive ? "is-active" : null, data-sal="mask-to-right", data-city-item)
+            .city-item__video-wrapper
+              video(preload="auto", data-city-video, muted, playsinline, loop, data-src=`video/${city.video.name}.${city.video.format}`)
+            .city-item__content(data-city-content)
+              p.caps-12.city-item__title !{city.name}
+              .city-item__contacts
+                a.heading-2-caps.city-item__phone(href=city.phone.href) !{city.phone.text}
+                p.text-14.city-item__address !{city.address}
+              .city-item__footer
+                span.caps-12.city-item__time(data-city-time) !{city.time}
+                span.caps-12.city-item__temperature(data-city-temperature) !{city.temperature} #[span &deg;C]
+            .city-item__map
+              +map({
+                latitude: city.map.latitude,
+                longitude: city.map.longitude,
+                map: city.map.name,
+              })
+            button.city-item__button-location(type="button", data-city-location)
+              +icon('icon-marker', 20, 20)
+              +icon('icon-close-modal', 20, 20)
+
+

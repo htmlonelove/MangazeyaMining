@@ -1,8 +1,7 @@
 .slider-gallery  {
-  &__container {
     position: relative;
     overflow: hidden;
-  }
+
 
   &__wrapper {
     margin: 0;
@@ -151,10 +150,14 @@
     left: size(65px);
     top: 0;
     color: rgba($color-nero, 0.4);
+    font-size: size(12px);
+    line-height: size(18px);
 
     @include vp-1439 {
       width: 115px;
       left: 65px;
+      font-size: 12px;
+      line-height: 18px;
     }
 
     @include vp-767 {

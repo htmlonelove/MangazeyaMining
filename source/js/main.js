@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
+import {initTabs} from './modules/tabs/init-tabs';
 
 import {initHeader} from './modules/header/init-header';
 import {initMenu} from './modules/header/init-menu';
@@ -13,6 +14,7 @@ import {initValuesSlider} from './modules/sliders/init-values-slider';
 import {initHistorySlider} from './modules/sliders/init-history-slider';
 import {initTeamSlider} from './modules/sliders/init-team-slider';
 import {initPrinciplesSlider} from './modules/sliders/init-principles-slider';
+import {initNewsSlider} from './modules/sliders/init-news-slider';
 
 import {initMap} from './modules/map/init-map';
 import {initMapBusiness} from './modules/map/init-map-business';
@@ -27,6 +29,9 @@ import {initTextSplitWordsAnimation} from './modules/text-split-animation-words'
 import {initToggleItems} from './modules/toggle-resources-table';
 import {initRunningLine} from './modules/init-running-line';
 import {controlVideo} from './modules/init-video-control';
+import {initContactsCity} from './modules/init-contacts-city';
+import {initMapMoscow} from './modules/map/init-map-moscow';
+import {initMapChita} from './modules/map/init-map-chita';
 
 // ---------------------------------
 
@@ -63,10 +68,16 @@ window.addEventListener('DOMContentLoaded', () => {
     initMap();
     initMapBusiness();
     initJobSlider();
-    initPrinciplesSlider();
+    // initPrinciplesSlider();
     initRunningLine();
     showLabel();
     controlVideo();
+    initTabs();
+    initContactsCity();
+    initNewsSlider();
+    initMapMoscow();
+    initMapChita();
+
 
     window.sal({
       once: true,
