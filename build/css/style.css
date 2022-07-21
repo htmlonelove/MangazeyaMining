@@ -7606,7 +7606,6 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background-color: #1d295c;
-  background-color: #f3ebe3;
 }
 
 .contacts-city {
@@ -11212,6 +11211,8 @@ button,
     opacity: 1;
     visibility: hidden;
     max-height: 0;
+    -webkit-animation: none !important;
+    animation: none !important;
     -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
     -o-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
     transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
