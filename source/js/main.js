@@ -12,6 +12,7 @@ import {initFactsSlider} from './modules/sliders/init-facts-slider';
 import {initJobSlider} from './modules/sliders/init-job-slider';
 import {initValuesSlider} from './modules/sliders/init-values-slider';
 import {initHistorySlider} from './modules/sliders/init-history-slider';
+import {initTeamSlider} from './modules/sliders/init-team-slider';
 import {initPrinciplesSlider} from './modules/sliders/init-principles-slider';
 import {initNewsSlider} from './modules/sliders/init-news-slider';
 
@@ -22,12 +23,15 @@ import {initFirstLoad} from './modules/init-first-load';
 import {initScrollBtn} from './modules/init-scroll-btn';
 import {initIntroVideo} from './modules/init-intro-video';
 import {loadVideo} from './modules/lazy-video-load';
+import {showLabel} from './modules/show-label';
 import {setMobIntroHeight} from './modules/set-mob-intro-height';
 import {initTextSplitWordsAnimation} from './modules/text-split-animation-words';
 import {initToggleItems} from './modules/toggle-resources-table';
 import {initRunningLine} from './modules/init-running-line';
 import {controlVideo} from './modules/init-video-control';
-import {initContactsCity} from './modules/init-city-map';
+import {initContactsCity} from './modules/init-contacts-city';
+import {initMapMoscow} from './modules/map/init-map-moscow';
+import {initMapChita} from './modules/map/init-map-chita';
 
 // ---------------------------------
 
@@ -51,6 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
     loadVideo();
     initTextSplitWordsAnimation();
     initScrollBtn();
+    initTeamSlider();
     initIntroVideo();
     setMobIntroHeight();
     initModals();
@@ -65,10 +70,14 @@ window.addEventListener('DOMContentLoaded', () => {
     initJobSlider();
     // initPrinciplesSlider();
     initRunningLine();
+    showLabel();
     controlVideo();
     initTabs();
     initContactsCity();
     initNewsSlider();
+    initMapMoscow();
+    initMapChita();
+
 
     window.sal({
       once: true,

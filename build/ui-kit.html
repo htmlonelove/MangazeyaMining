@@ -52,6 +52,8 @@
 <path d="M7.01957 4.52014C6.82431 4.32488 6.82431 4.00829 7.01957 3.81303L9.1458 1.68681C9.46078 1.37182 9.99935 1.59491 9.99935 2.04036V6.29281C9.99935 6.73827 9.46078 6.96135 9.1458 6.64637L7.01957 4.52014Z" fill="currentColor"/>
 </symbol><symbol id="icon-marker" viewBox="0 0 24 24">
 <path d="M12 12C13.1 12 14 11.1 14 10C14 8.9 13.1 8 12 8C10.9 8 10 8.9 10 10C10 11.1 10.9 12 12 12ZM12 2C16.2 2 20 5.22 20 10.2C20 13.38 17.55 17.12 12.66 21.43C12.28 21.76 11.71 21.76 11.33 21.43C6.45 17.12 4 13.38 4 10.2C4 5.22 7.8 2 12 2Z" fill="currentColor"/>
+</symbol><symbol id="icon-minus-16" viewBox="0 0 16 16">
+<path d="M2.66699 8H13.3337" stroke="currentColor" stroke-linecap="round"/>
 </symbol><symbol id="icon-minus" viewBox="0 0 20 20">
 <path d="M3.33301 10H16.6663" stroke="currentColor" stroke-linecap="round"/>
 </symbol><symbol id="icon-plus" viewBox="0 0 20 20">
@@ -212,21 +214,26 @@
           <section id="modals">
             <h2>Modals</h2>
             <p>
-              <button class="btn" type="button" data-open-modal="feedback">modal-feedback</button>
+              <button class="btn" type="button" data-open-modal="feedback">modal-feedback
+              </button>
             </p>
             <p>
-              <button class="btn" type="button" data-open-modal="success">modal-success</button>
+              <button class="btn" type="button" data-open-modal="success">modal-success
+              </button>
             </p>
           </section>
           <section id="buttons">
             <h2>Buttons</h2>
-            <a class="btn" href="#">Текст</a>
+            <a class="btn" href="#">Текст
+            </a>
             <p>Пример вызова</p><code>
               <pre>+btn({text: "Текст", href: "#"})</pre></code>
-            <a class="btn btn--red" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка">Текст</a>
+            <a class="btn btn--red" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка">Текст
+            </a>
             <p>Пример вызова</p><code>
               <pre>+btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red</pre></code>
-            <button class="btn" type="button" disabled>Текст</button>
+            <button class="btn" type="button" disabled>Текст
+            </button>
             <p>Пример вызова</p><code>
               <pre>+btn({text: "Текст"})(disabled)</pre></code>
           </section>
@@ -235,24 +242,24 @@
             <div data-validate>
               <form method="post">
                 <div class="custom-input" data-validate-type="text" data-limitations="name">
-                  <label><span class="custom-input__label">Введите ваше имя</span>
-                    <input type="text" name="user-name" minlength="2">
+                  <label>
+                    <input type="text" name="user-name" minlength="2"><span class="custom-input__label">Введите ваше имя</span><span class="custom-input__icon"></span>
                   </label>
                   <div class="custom-input__error">Не корректное имя</div>
                 </div>
                 <p>Пример вызова</p><code>
                   <pre>+custom-input({inputLabel: "Введите ваше имя", inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")</pre></code>
                 <div class="custom-input" data-validate-type="phone">
-                  <label><span class="custom-input__label">Введите ваш телефон</span>
-                    <input type="tel" name="user-phone">
+                  <label>
+                    <input type="tel" name="user-phone"><span class="custom-input__label">Введите ваш телефон</span><span class="custom-input__icon"></span>
                   </label>
                   <div class="custom-input__error">Не корректный телефон</div>
                 </div>
                 <p>Пример вызова</p><code>
                   <pre>+custom-input({inputLabel: "Введите ваш телефон", inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")</pre></code>
                 <div class="custom-input" data-validate-type="email">
-                  <label><span class="custom-input__label">Введите ваш email</span>
-                    <input type="email" name="user-email">
+                  <label>
+                    <input type="email" name="user-email"><span class="custom-input__label">Введите ваш email</span><span class="custom-input__icon"></span>
                   </label>
                   <div class="custom-input__error">Не корректный email</div>
                 </div>
@@ -288,15 +295,17 @@
                 </div>
                 <p>Пример вызова</p><code>
                   <pre>+custom-toggle({inputLabel: "Подтвердите своё согласие", inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox</pre></code>
-                <button class="btn" type="reset">Сбросить форму</button>
-                <button class="btn" type="submit">Отправить форму</button>
+                <button class="btn" type="reset">Сбросить форму
+                </button>
+                <button class="btn" type="submit">Отправить форму
+                </button>
               </form>
             </div>
           </section>
           <section>
             <h2>Map</h2>
             <div class="map">
-              <div class="map__inner" data-icon-pin="img/svg/custom-marker.svg" data-map-place-cords="55.737527, 37.505166" data-map></div>
+              <div class="map__inner" data-icon-pin="img/svg/custom-marker.svg" data-map-place-cords="55.74896956898905, 37.607592" data-map="moscow"></div>
             </div>
           </section>
         </div>

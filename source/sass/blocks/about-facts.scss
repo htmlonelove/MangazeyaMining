@@ -17,6 +17,7 @@
     background-color: $color-midnight-express;
     opacity: 0;
     transition: opacity $trans-600;
+    pointer-events: none;
 
     .is-video-open & {
       opacity: 1;
