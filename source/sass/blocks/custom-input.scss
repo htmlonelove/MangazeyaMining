@@ -7,7 +7,7 @@
   padding: size(20px) 0;
 
   @include vp-1439 {
-    width: 500px;
+    width: 100%;
     padding: 20px 0;
   }
 
@@ -84,7 +84,7 @@
   &__error {
     position: absolute;
     right: 0;
-    bottom: size(-5px);
+    bottom: size(-20px);
 
     // color: $color-torch-red;
 
@@ -93,7 +93,7 @@
     transition: opacity $trans-default;
 
     @include vp-1439 {
-      bottom: -5px;
+      bottom: -20px;
     }
   }
 
