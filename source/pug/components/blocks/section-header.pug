@@ -39,28 +39,43 @@
     titleMob: "текст заголовка <br>сейчас в разработке",
   }
 
+  const teamSection = {
+    header: "команда <br>мангазея майнинг",
+    title: "Ежегодно увеличиваем <br>темпы роста золотодобычи",
+    textDesc: "Создаём мощный горноперерабатывающий кластер и&nbsp;ежегодно увеличиваем рост объёмов добычи и&nbsp;производства ценных металлов в&nbsp;действующих месторождениях.",
+  }
+
 mixin section-header(data)
   .section-header&attributes(attributes)
     .container
       .section-header__header-wrp
-        if (data.headerDesc && data.headerMob)
+        if data.headerDesc
           h2.caps-12.section-header__header.section-header__header--desc(data-sal="fade")!=data.headerDesc
+
+        if data.headerMob
           h2.caps-12.section-header__header.section-header__header--mob(data-sal="fade")!=data.headerMob
-        else if data.header
+
+        if data.header
           h2.caps-12.section-header__header(data-sal="fade")!=data.header
 
       .section-header__title-wrp
-        if (data.titleDesc && data.titleMob)
+        if data.titleDesc
           h3.heading-2-caps.section-header__title.section-header__title--desc(data-sal="slide-up" data-words-animation)
             span.section-header__title-text!=data.titleDesc
+
+        if data.titleMob
           h3.heading-2-caps.section-header__title.section-header__title--mob(data-sal="slide-up" data-words-animation)
             span.section-header__title-text!=data.titleMob
-        else if data.title
+
+        if data.title
           h3.heading-2-caps.section-header__title(data-sal="slide-up" data-words-animation)
             span.section-header__title-text!=data.title
 
-        if (data.textDesc && data.textMob)
+        if data.textDesc
           p.text-14.section-header__text.section-header__text--desc(data-sal="fade")!=data.textDesc
+
+        if data.textMob
           p.text-14.section-header__text.section-header__text--mob(data-sal="fade")!=data.textMob
-        else if data.text
+
+        if data.text
           p.text-14.section-header__text(data-sal="fade")!=data.text

@@ -1,0 +1,44 @@
+-
+  const contactsFeedbackTitle = {
+    header: "обратная связь",
+    textList: [
+      {
+        text: "Заполните форму и<span>&nbsp;</span>",
+        class: "section-title__blue-word section-title--mob",
+      },
+      {
+        text: "мы<span>&nbsp;</span>свяжемся с<span>&nbsp;</span>вами ",
+        class: "section-title--mob",
+      },
+      {
+        text: "в<span>&nbsp;</span>ближайшее время",
+        class: "section-title__blue-word section-title--mob",
+      },
+      {
+        text: "Заполните форму и<span>&nbsp;</span>мы свяжемся с<span>&nbsp;</span>вами в<span>&nbsp;</span>ближайшее время и<span>&nbsp;</span>подробно ответим на<span>&nbsp;</span>все вопросы.",
+        class: "section-title--desk",
+      }
+    ],
+  }
+
+mixin contacts-feedback()
+  section.contacts-feedback
+    .container
+      .contacts-feedback__title
+        a.link.contacts-feedback__phone(href=`mailto:trust@mangazeya.ru`) trust@mangazeya.ru
+        .contacts-feedback__text Заявление также можно отправить<br> анонимно по&nbsp;электронной почте и&nbsp;через<br> форму обратной связи.
+      .contacts-feedback__form(data-validate data-callback="feedbackFormSubmit")
+        form(action="#", method="post", enctype="multipart/form-data")
+          .contacts-feedback__inputs-wrp
+            +custom-input({inputLabel: "Ваше имя", inputPlaceholder: "Ваше имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="name")
+            +custom-input({inputLabel: "Email", inputType: "email", inputPlaceholder: "Email", inputName: "user-email"})(data-validate-type="email")
+            +custom-input({inputLabel: "Тема обращения", inputPlaceholder: "Тема обращения", inputName: "user-subject"})(data-validate-type="text").custom-input--topic
+            //- +custom-select({placeholder: "Тема обращения", optionsList: [{text: "Тема 1", value: "subject-1"}, {text: "Тема 2", value: "subject-2"}, {text: "Тема 3", value: "subject-3"}, {text: "Тема 4", value: "subject-4"}]})(data-select, data-validate-type="select", data-name="subject", data-id="subject").custom-select
+            //- +custom-input({inputLabel: "Телефон", inputType: "tel", inputPlaceholder: "Телефон", inputName: "user-phone"})(data-validate-type="simple-phone", data-limitations="simple-phone")
+            +custom-input({inputType: "file", isInputHidden: true, inputLabel: "Прикрепить файл — не более 4&nbsp;mb", inputName: "user-file", fileType: ".jpg, .png, .gif, .pdf, .doc, .docx, .dot, .xlsx, .xlsx, .xlsm, .txt, csv, .mpg, .mpeg, .avi, .3gp, .3g2, .mp3, .wav, .acc, .rar, .zip", iconName: "icon-file", iconWidth: 24, iconHeight: 24, iconNameDelete: "icon-close", iconWidthDelete: 20, iconHeightDelete: 20, iconClassDelete: "custom-input__delete-btn"}).custom-input--file
+            +custom-textarea({inputLabel: "Сообщение", inputPlaceholder: "Сообщение", inputName: "user-message"})(data-validate-type="text").auto-resize-textarea
+          +btn({type: "submit", text: "Отправить сообщение"}).btn--white.contacts-feedback__submit-btn
+          p.contacts-feedback__info Нажимая «Отправить сообщение», вы&nbsp;принимаете&ensp;
+            a.link.contacts-feedback__info-link(href="conditions.html") условия обработки пользовательских данных
+            | . При приеме и&nbsp;рассмотрении обращений гарантируется конфиденциальность и&nbsp;неразглашение персональных данных.
+

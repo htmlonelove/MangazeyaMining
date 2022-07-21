@@ -11,6 +11,7 @@ import {initFactsSlider} from './modules/sliders/init-facts-slider';
 import {initJobSlider} from './modules/sliders/init-job-slider';
 import {initValuesSlider} from './modules/sliders/init-values-slider';
 import {initHistorySlider} from './modules/sliders/init-history-slider';
+import {initTeamSlider} from './modules/sliders/init-team-slider';
 import {initPrinciplesSlider} from './modules/sliders/init-principles-slider';
 
 import {initMap} from './modules/map/init-map';
@@ -20,6 +21,7 @@ import {initFirstLoad} from './modules/init-first-load';
 import {initScrollBtn} from './modules/init-scroll-btn';
 import {initIntroVideo} from './modules/init-intro-video';
 import {loadVideo} from './modules/lazy-video-load';
+import {showLabel} from './modules/show-label';
 import {setMobIntroHeight} from './modules/set-mob-intro-height';
 import {initTextSplitWordsAnimation} from './modules/text-split-animation-words';
 import {initToggleItems} from './modules/toggle-resources-table';
@@ -48,6 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
     loadVideo();
     initTextSplitWordsAnimation();
     initScrollBtn();
+    initTeamSlider();
     initIntroVideo();
     setMobIntroHeight();
     initModals();
@@ -62,6 +65,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initJobSlider();
     initPrinciplesSlider();
     initRunningLine();
+    showLabel();
     controlVideo();
 
     window.sal({
