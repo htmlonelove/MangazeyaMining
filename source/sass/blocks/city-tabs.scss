@@ -1,0 +1,14 @@
+.city-tabs {
+  &__controls {
+    display: none;
+
+    @include vp-767 {
+      display: flex;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

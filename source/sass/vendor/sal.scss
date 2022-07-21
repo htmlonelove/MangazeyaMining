@@ -52,6 +52,17 @@ body.sal-disabled [data-sal|='fade'] {
   opacity: 1;
 }
 
+// [data-sal|='fade-in-bottom'] {
+//   opacity: 0;
+//   transform: translateY(-$sal-slide-offset);
+//   transition-property: opacity, transform;
+// }
+
+// [data-sal|='fade-in-bottom'].sal-animate,
+// body.sal-disabled [data-sal|='fade-in-bottom'] {
+//   opacity: 1;
+// }
+
 // Slide
 [data-sal|='slide'] {
   opacity: 0;

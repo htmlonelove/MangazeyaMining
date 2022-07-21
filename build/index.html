@@ -315,7 +315,7 @@
         </div>
         <section class="img-slider after-sticky-intro job" data-job-slider-container>
           <div class="overlay-animate" data-sal="scale-right-reverse"></div>
-          <h2 class="img-slider__title caps-12">Работа в компании</h2>
+          <h2 class="img-slider__title caps-12" data-sal="slide-up" data-sal-delay="400">Работа в компании</h2>
           <div class="swiper" data-job-slider data-delay="500" data-speed="5000">
             <div class="swiper-wrapper">
               <div class="swiper-slide img-slider__slide">
@@ -325,7 +325,7 @@
                       <source type="image/webp" srcset="img/content/job-slider/job-1.webp, img/content/job-slider/job-1@2x.webp 2x"><img src="img/content/job-slider/job-1.jpg" srcset="img/content/job-slider/job-1@2x.jpg 2x" width="1440" height="764" alt="Фото сотрудника">
                     </picture>
                   </div>
-                  <div class="img-slider-item__content">
+                  <div class="img-slider-item__content" data-sal="slide-up" data-sal-delay="400">
                     <p class="img-slider-item__description heading-3">Мангазея Майнинг&nbsp;&mdash; это коллектив профессионалов, готовых к&nbsp;решению непростых задач. Благодаря их&nbsp;ежедневному труду мы&nbsp;развиваемся и&nbsp;добиваемся новых впечатляющих показателей.</p>
                     <div class="user-card img-slider-item__user-card user-card--light">
                       <div class="user-card__text">
@@ -343,7 +343,7 @@
                       <source type="image/webp" srcset="img/content/job-slider/job-2.webp, img/content/job-slider/job-2@2x.webp 2x"><img src="img/content/job-slider/job-2.jpg" srcset="img/content/job-slider/job-2@2x.jpg 2x" width="1440" height="764" alt="Фото сотрудника">
                     </picture>
                   </div>
-                  <div class="img-slider-item__content">
+                  <div class="img-slider-item__content" data-sal="slide-up" data-sal-delay="400">
                     <p class="img-slider-item__description heading-3">Мангазея Майнинг&nbsp;&mdash; это коллектив профессионалов, готовых к&nbsp;решению непростых задач. Благодаря их&nbsp;ежедневному труду мы&nbsp;развиваемся и&nbsp;добиваемся новых впечатляющих показателей.</p>
                     <div class="user-card img-slider-item__user-card user-card--light">
                       <div class="user-card__text">
@@ -361,7 +361,7 @@
                       <source type="image/webp" srcset="img/content/job-slider/job-1.webp, img/content/job-slider/job-1@2x.webp 2x"><img src="img/content/job-slider/job-1.jpg" srcset="img/content/job-slider/job-1@2x.jpg 2x" width="1440" height="764" alt="Фото сотрудника">
                     </picture>
                   </div>
-                  <div class="img-slider-item__content">
+                  <div class="img-slider-item__content" data-sal="slide-up" data-sal-delay="400">
                     <p class="img-slider-item__description heading-3">Мангазея Майнинг&nbsp;&mdash; это коллектив профессионалов, готовых к&nbsp;решению непростых задач. Благодаря их&nbsp;ежедневному труду мы&nbsp;развиваемся и&nbsp;добиваемся новых впечатляющих показателей.</p>
                     <div class="user-card img-slider-item__user-card user-card--light">
                       <div class="user-card__text">
@@ -373,7 +373,7 @@
                 </div>
               </div>
             </div>
-            <div class="img-pagination" data-pagination></div>
+            <div class="img-pagination" data-sal="fade" data-sal-delay="400" data-pagination></div>
           </div>
         </section>
         <div class="info-block after-sticky-intro info-block--vacancy">
@@ -407,6 +407,66 @@
             </div>
           </div>
         </div>
+        <section class="contacts-city after-sticky-intro">
+          <div class="contacts-city__tabs city-tabs" data-tabs="parent">
+            <div class="city-tabs__content" data-tabs="content">
+              <div class="section-header">
+                <div class="container">
+                  <div class="section-header__header-wrp">
+                    <h2 class="caps-12 section-header__header section-header__header--desc" data-sal="fade">Контакты</h2>
+                    <h2 class="caps-12 section-header__header section-header__header--mob" data-sal="fade">Контакты</h2>
+                  </div>
+                  <div class="section-header__title-wrp">
+                    <h3 class="heading-2-caps section-header__title section-header__title--desc" data-sal="slide-up" data-words-animation><span class="section-header__title-text">Представительства компании<br> находятся в Москве и столице<br> Забайкальского края</span></h3>
+                    <h3 class="heading-2-caps section-header__title section-header__title--mob" data-sal="slide-up" data-words-animation><span class="section-header__title-text">Представительства компании<br> находятся в Москве и столице<br> Забайкальского края</span></h3>
+                    <p class="text-14 section-header__text section-header__text--desc" data-sal="fade">Будем рады рассказать вам о&nbsp;деятельности компании больше по&nbsp;телефону или при личной встрече в&nbsp;наших офисах в&nbsp;центре Москвы и&nbsp;Читы.</p>
+                    <p class="text-14 section-header__text section-header__text--mob" data-sal="fade">Будем рады рассказать вам о&nbsp;деятельности компании больше по&nbsp;телефону или при личной встрече в&nbsp;наших офисах в&nbsp;центре Москвы и&nbsp;Читы.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="city-tabs__controls" data-tabs="controls">
+                <button class="city-tabs__nav-button" data-tabs="control">Москва</button>
+                <button class="city-tabs__nav-button" data-tabs="control">Чита</button>
+              </div>
+              <div class="city-item" data-city data-tabs="element">
+                <div class="city-item__video-wrapper">
+                  <video data-video-autoplay="false" preload="auto" muted playsinline loop data-src="video/mining.mp4"></video>
+                </div>
+                <div class="city-item__content" data-city-content>
+                  <p class="caps-12 city-item__title">Москва</p>
+                  <div class="city-item__contacts"><a class="heading-2-caps city-item__phone" href="tel:+74956475555">+7 495 647 55 55</a>
+                    <p class="text-14 city-item__address">119019, Москва, ул. Знаменка&nbsp;7, стр.&nbsp;3</p>
+                  </div>
+                  <div class="city-item__footer"><span class="caps-12 city-item__time" data-city-time>16:28</span><span class="caps-12 city-item__temperature" data-city-temperature>-10 <span>&deg;C</span></span></div>
+                </div>
+                <div class="city-item__map"></div>
+                <button class="city-item__button-location" type="button" data-city-location>
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-marker"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="city-item" data-city data-tabs="element">
+                <div class="city-item__video-wrapper">
+                  <video data-video-autoplay="false" preload="auto" muted playsinline loop data-src="video/mining.mp4"></video>
+                </div>
+                <div class="city-item__content" data-city-content>
+                  <p class="caps-12 city-item__title">Чита</p>
+                  <div class="city-item__contacts"><a class="heading-2-caps city-item__phone" href="tel:+74956475555">+7 495 647 55 55</a>
+                    <p class="text-14 city-item__address">672000, Чита, ул. Костюшко-Григоровича 5,<br> помещение&nbsp;13, офис 405</p>
+                  </div>
+                  <div class="city-item__footer"><span class="caps-12 city-item__time" data-city-time>22:28</span><span class="caps-12 city-item__temperature" data-city-temperature>-25 <span>&deg;C</span></span></div>
+                </div>
+                <div class="city-item__map"></div>
+                <button class="city-item__button-location" type="button" data-city-location>
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-marker"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <div class="swiper-container running-line" data-running-line>
         <div class="swiper-wrapper running-line__content">
