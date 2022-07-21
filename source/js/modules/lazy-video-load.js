@@ -7,7 +7,7 @@ const loadVideo = () => {
       const breakpointChecker = () => {
         if (video.dataset.src) {
           video.src = video.dataset.src;
-          video.play();
+          // video.play();
         } else {
           if (breakpoint.matches) {
             if (video.dataset.srcDesktop) {
