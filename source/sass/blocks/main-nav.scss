@@ -82,6 +82,8 @@
   }
 
   &__item {
+    overflow: hidden;
+
     @include vp-767 {
       font-size: 16px;
     }
@@ -99,15 +101,28 @@
     }
   }
 
-  &__link {
+  &__link.link {
+    display: block;
+    transform: translateY(100%);
+    transition: transform $trans-600 0.9s,
+      color $trans-default;
+
     &.is-active {
       opacity: 0.6;
       pointer-events: none;
+    }
+
+    .is-menu-active & {
+      transform: translateY(0);
     }
   }
 
   &__download-link {
     margin: auto 0 0;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity $trans-600 0.9s,
+      transform $trans-600 0.9s;
 
     .link-download {
       @include has-hover {
@@ -116,6 +131,11 @@
           color: $color-default-white;
         }
       }
+    }
+
+    .is-menu-active & {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }

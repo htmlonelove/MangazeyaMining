@@ -57,7 +57,7 @@
       justify-content: space-between;
       width: 100%;
       background-color: $color-transparent;
-      border-bottom: 1px solid $color-default-white-15;
+      border-bottom: 1px solid $color-nero-10;
     }
 
     .slider-controls {
@@ -87,12 +87,12 @@
 
       @include vp-767 {
         background-color: inherit;
-        color: $color-default-white;
-        border-color: $color-default-white-15;
+        color: $color-nero;
+        border-color: $color-nero-10;
       }
 
       &[aria-disabled="true"] {
-        color: rgba($color-nero, 0.5);
+        color: $color-nero-50;
 
         @include has-hover {
           &:hover svg {
@@ -101,7 +101,7 @@
         }
 
         @include vp-767 {
-          color: $color-default-white-50;
+          color: $color-nero-50;
         }
       }
 
@@ -116,7 +116,7 @@
 
         @include vp-767 {
           border-bottom: 0;
-          border-color: $color-default-white-15;
+          border-color: $color-nero-10;
         }
       }
 
@@ -129,7 +129,7 @@
 
         @include vp-767 {
           border-right: none;
-          border-left: 1px solid $color-default-white-15;
+          border-left: 1px solid $color-nero-10;
         }
       }
 
@@ -165,7 +165,7 @@
       order: -1;
       justify-content: flex-start;
       padding-left: 20px;
-      color: rgba($color-default-white, 0.4);
+      color: $color-nero-50;
     }
 
     .swiper-pagination-current {
@@ -175,10 +175,6 @@
       @include vp-1439 {
         margin-right: 2px;
       }
-
-      @include vp-767 {
-        color: $color-default-white;
-      }
     }
 
     .swiper-pagination-total {
@@ -186,6 +182,10 @@
 
       @include vp-1439 {
         margin-left: 5px;
+      }
+
+      @include vp-767 {
+
       }
     }
   }
