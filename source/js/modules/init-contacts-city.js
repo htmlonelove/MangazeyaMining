@@ -1,5 +1,6 @@
 const cityItems = document.querySelectorAll('[data-city-item]');
 const citiTabsControl = document.querySelector('[data-city-controls]');
+const cityContactsHeader = document.querySelector('[data-city-tabs] [data-city-header]');
 
 const initMapCity = () => {
   for (let i = 0; i < cityItems.length; i++) {
@@ -11,20 +12,45 @@ const initMapCity = () => {
       if (cityItems[i].classList.contains('is-hidden')) {
         cityItems[i].classList.remove('is-hidden');
 
-        if (!citiTabsControl) {
-          return;
+        if (citiTabsControl) {
+          setTimeout(() => {
+            citiTabsControl.classList.remove('is-hidden');
+          }, 500);
         }
 
-        citiTabsControl.classList.remove('is-hidden');
+        if (cityContactsHeader) {
+          setTimeout(() => {
+            cityContactsHeader.classList.remove('is-hidden');
+          }, 500);
+        }
+
       } else {
         cityItems[i].classList.add('is-hidden');
 
-        if (!citiTabsControl) {
-          return;
+        if (citiTabsControl) {
+          citiTabsControl.classList.add('is-hidden');
         }
 
-        citiTabsControl.classList.add('is-hidden');
+        if (cityContactsHeader) {
+          cityContactsHeader.classList.add('is-hidden');
+        }
       }
+    });
+  }
+};
+
+const initCityVideo = () => {
+  for (let i = 0; i < cityItems.length; i++) {
+    const cityVideo = cityItems[i].querySelector('[data-city-video]');
+
+    cityVideo.addEventListener('loadedmetadata', () => {
+      cityItems[i].addEventListener('mouseenter', () => {
+        cityVideo.play();
+      });
+
+      cityItems[i].addEventListener('mouseleave', () => {
+        cityVideo.pause();
+      });
     });
   }
 };
@@ -60,6 +86,7 @@ const initContactsCity = () => {
     return;
   }
 
+  initCityVideo();
   initMapCity();
   initTabsCity();
 };

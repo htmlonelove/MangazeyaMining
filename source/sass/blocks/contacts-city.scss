@@ -1,6 +1,10 @@
 .contacts-city {
   background-color: $color-bridal-heath;
 
+  @include vp-767 {
+    background-color: $color-lucky-point;
+  }
+
   .section-header {
     width: 100%;
 
@@ -12,6 +16,18 @@
       position: relative;
       z-index: 4;
       background-color: $color-transparent;
+
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+
+      transition: opacity $trans-default, visibility $trans-default;
+
+      &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
 
       .section-header__title-wrp {
         color: $color-default-white;

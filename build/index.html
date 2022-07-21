@@ -164,7 +164,7 @@
                   <p class="text-14 fact-item__description">Вносим вклад в&nbsp;развитие благополучия жителей региона, гарантируя сотрудникам одни из&nbsp;лучших условий труда, финансовую стабильность и&nbsp;карьерный рост.</p>
                 </div>
                 <div class="intro__video-wrp">
-                  <video preload="auto" muted playsinline loop data-src="video/mining.mp4"></video>
+                  <video preload="auto" data-autoplay muted playsinline loop data-src="video/mining.mp4"></video>
                   <button class="caps-12 video-btn intro__video-btn" type="button" data-open-modal="video"><span class="video-btn__icon">
                       <svg width="20" height="20" aria-hidden="true">
                         <use xlink:href="#play-icon"></use>
@@ -278,7 +278,7 @@
         <section class="interview after-sticky-intro" data-video-interview-container>
           <div class="container">
             <div class="interview__video-wrapper">
-              <video preload="auto" data-video-interview muted playsinline loop data-src="video/mining.mp4"></video>
+              <video preload="auto" data-autoplay data-video-interview muted playsinline loop data-src="video/mining.mp4"></video>
               <button class="caps-12 video-btn" type="button"><span class="video-btn__icon">
                   <svg width="20" height="20" aria-hidden="true">
                     <use xlink:href="#play-icon"></use>
@@ -409,7 +409,7 @@
         </div>
         <section class="contacts-city after-sticky-intro">
           <div class="contacts-city__tabs city-tabs" data-city-tabs>
-            <div class="section-header">
+            <div class="section-header" data-city-header>
               <div class="container">
                 <div class="section-header__header-wrp">
                   <h2 class="caps-12 section-header__header section-header__header--desc" data-sal="fade">Контакты</h2>
@@ -428,9 +428,9 @@
               <button class="caps-12 city-tabs__nav-button" data-city-nav>Чита</button>
             </div>
             <div class="city-tabs__content">
-              <div class="city-item is-active" data-city-item>
+              <div class="city-item is-active" data-sal="mask-to-right" data-city-item>
                 <div class="city-item__video-wrapper">
-                  <video data-video-autoplay="false" preload="auto" muted playsinline loop data-src="video/mining.mp4"></video>
+                  <video preload="auto" data-city-video muted playsinline loop data-src="video/mining.mp4"></video>
                 </div>
                 <div class="city-item__content" data-city-content>
                   <p class="caps-12 city-item__title">Москва</p>
@@ -439,16 +439,23 @@
                   </div>
                   <div class="city-item__footer"><span class="caps-12 city-item__time" data-city-time>16:28</span><span class="caps-12 city-item__temperature" data-city-temperature>-10 <span>&deg;C</span></span></div>
                 </div>
-                <div class="city-item__map"></div>
+                <div class="city-item__map">
+                  <div class="map">
+                    <div class="map__inner" data-icon-pin="img/svg/custom-marker.svg" data-map-place-cords="55.74896956898905, 37.607592" data-map="moscow"></div>
+                  </div>
+                </div>
                 <button class="city-item__button-location" type="button" data-city-location>
                   <svg width="20" height="20" aria-hidden="true">
                     <use xlink:href="#icon-marker"></use>
                   </svg>
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-close-modal"></use>
+                  </svg>
                 </button>
               </div>
-              <div class="city-item" data-city-item>
+              <div class="city-item" data-sal="mask-to-right" data-city-item>
                 <div class="city-item__video-wrapper">
-                  <video data-video-autoplay="false" preload="auto" muted playsinline loop data-src="video/mining.mp4"></video>
+                  <video preload="auto" data-city-video muted playsinline loop data-src="video/mining.mp4"></video>
                 </div>
                 <div class="city-item__content" data-city-content>
                   <p class="caps-12 city-item__title">Чита</p>
@@ -457,10 +464,17 @@
                   </div>
                   <div class="city-item__footer"><span class="caps-12 city-item__time" data-city-time>22:28</span><span class="caps-12 city-item__temperature" data-city-temperature>-25 <span>&deg;C</span></span></div>
                 </div>
-                <div class="city-item__map"></div>
+                <div class="city-item__map">
+                  <div class="map">
+                    <div class="map__inner" data-icon-pin="img/svg/custom-marker.svg" data-map-place-cords="52.03502607206422, 113.50310649999992" data-map="chita"></div>
+                  </div>
+                </div>
                 <button class="city-item__button-location" type="button" data-city-location>
                   <svg width="20" height="20" aria-hidden="true">
                     <use xlink:href="#icon-marker"></use>
+                  </svg>
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-close-modal"></use>
                   </svg>
                 </button>
               </div>
@@ -553,6 +567,7 @@
         </div>
       </div>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=a01f8dd2-d0ce-4dd5-a1b6-745f3a207777"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

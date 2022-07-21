@@ -11,7 +11,7 @@ mixin interview(props)
   section.interview&attributes(attributes)(data-video-interview-container)
     .container
       .interview__video-wrapper
-        video(preload="auto", data-video-interview, muted, playsinline, loop, data-src=`video/${props.video.name}.${props.video.format}`)
+        video(preload="auto", data-autoplay, data-video-interview, muted, playsinline, loop, data-src=`video/${props.video.name}.${props.video.format}`)
         +video-btn({})
       h2.caps-12.interview__title !{props.title}
       .interview__content
