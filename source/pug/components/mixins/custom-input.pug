@@ -8,11 +8,26 @@ mixin custom-input(options = {})
   - const inputValue = options.inputValue ? options.inputValue : false
   - const inputMinLength = options.inputMinLength ? options.inputMinLength : false
   - const inputMaxLength = options.inputMaxLength ? options.inputMaxLength : false
+  - const fileType = options.fileType ? options.fileType : false
+  - const isInputHidden = options.isInputHidden ? options.isInputHidden : false
+  - const iconName = options.iconName ? options.iconName : false
+  - const iconWidth = options.iconWidth ? options.iconWidth : false
+  - const iconHeight = options.iconHeight ? options.iconHeight : false
+  - const iconNameDelete = options.iconNameDelete ? options.iconNameDelete : false
+  - const iconWidthDelete = options.iconWidthDelete ? options.iconWidthDelete : false
+  - const iconHeightDelete = options.iconHeightDelete ? options.iconHeightDelete : false
+  - const iconClassDelete = options.iconClassDelete ? options.iconClassDelete : false
 
   .custom-input&attributes(attributes)
     label
+      input(type=inputType, id=inputId, name=inputName, value=inputValue, minlength=inputMinLength, maxlength=inputMaxLength, placeholder=inputPlaceholder, accept=fileType)
       if inputLabel
         span.custom-input__label!=inputLabel
-      input(type=inputType, id=inputId, name=inputName, value=inputValue, minlength=inputMinLength, maxlength=inputMaxLength, placeholder=inputPlaceholder)
+      span.custom-input__icon
+        if iconName
+          +icon(iconName, iconWidth, iconHeight)
+    if iconNameDelete
+      +btn(class=iconClassDelete ? iconClassDelete : null, ariaLabel="Удалить файл")
+        +icon(iconNameDelete, iconWidthDelete, iconHeightDelete)
     if inputError
       .custom-input__error!=inputError

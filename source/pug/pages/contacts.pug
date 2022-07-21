@@ -1,0 +1,36 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Контакты - Мангазея Майнинг" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = "header--invert"
+  - const headerActivePage = "контакты"
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "contacts.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const successModal = {
+      title: {
+        header: "Уведомление об отправке",
+        textList: [
+          {
+            text: "спасибо, ваше<span>&nbsp;</span>",
+            class: "section-title__blue-word",
+          },
+          {
+            text: "Сообщение отправлено",
+          },
+        ],
+      },
+      text: "Мы свяжемся с вами в&nbsp;ближайшее время",
+    }
+
+block main
+  main
+    +contacts-feedback()
+
+block modals
+  +modal("modal--feedback-success")(data-modal="feedback-success")
+      +modal-feedback-success(successModal)
