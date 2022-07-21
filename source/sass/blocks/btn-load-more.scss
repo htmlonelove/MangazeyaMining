@@ -5,12 +5,17 @@
   align-items: center;
   cursor: pointer;
   width: max-content;
+  margin-left: size(15px);
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
 
   @include has-hover {
     &:hover {
       .btn-load-more__icon {
-        background-color: $color-mariner;
-        color: $color-default-white;
+        background-color: $color-default-white;
+        color: $color-nero;
       }
     }
   }
@@ -23,9 +28,10 @@
     width: size(48px);
     height: size(48px);
     border-radius: 50%;
-    background-color: $color-default-white;
-    color: $color-nero;
-    transition: background-color color $trans-default;
+    background-color: $color-midnight-express;
+    color: $color-default-white;
+    transition: background-color, $trans-default;
+    transition: color, $trans-default;
 
     @include vp-1439 {
       margin-bottom: 3px;
@@ -48,6 +54,12 @@
 
     width: max-content;
     min-width: size(275px);
+    color: $color-nero;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: size(12px);
+    line-height: size(18px);
+    letter-spacing: size(0.4px);
 
     @include vp-1439 {
       min-width: 275px;

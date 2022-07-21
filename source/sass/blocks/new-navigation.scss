@@ -1,10 +1,10 @@
 .new-navigation {
-  border-top: size(1px) solid $color-default-white-15;
-  border-bottom: size(1px) solid $color-default-white-15;
+  border-top: size(1px) solid $color-nero-10;
+  border-bottom: size(1px) solid $color-nero-10;
 
   @include vp-1439 {
-    border-top: 1px solid $color-default-white-15;
-    border-bottom: 1px solid $color-default-white-15;
+    border-top: 1px solid $color-nero-10;
+    border-bottom: 1px solid $color-nero-10;
   }
 
   @include vp-767 {
@@ -27,11 +27,16 @@
     align-items: center;
     padding-top: size(21px);
     padding-bottom: size(21px);
-    color: $color-default-white;
+    color: $color-nero;
     opacity: 1;
     transition: opacity $trans-default;
+    text-transform: uppercase;
+    font-size: size(12px);
+    line-height: size(18px);
 
     @include vp-1439 {
+      font-size: 12px;
+      line-height: 18px;
       padding-top: 21px;
       padding-bottom: 21px;
     }

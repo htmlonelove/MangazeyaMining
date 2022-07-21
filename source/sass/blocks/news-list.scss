@@ -3,6 +3,10 @@
   list-style: none;
   padding-left: 0;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns:  50.5% 49.5%;
   margin-bottom: size(64px);
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+  }
 }

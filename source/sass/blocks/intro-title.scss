@@ -86,10 +86,14 @@
   &--press {
     margin-top: size(89px);
 
+    @include vp-1023 {
+      margin-top: 43px;
+    }
+
     .intro-title__title {
       font-weight: 500;
-      padding-top: size(72px);
-      padding-bottom: size(64px);
+      padding-top: size(68px);
+      padding-bottom: size(67px);
       color: $color-nero;
     }
   }

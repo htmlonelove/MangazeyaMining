@@ -1,7 +1,7 @@
 .new-content {
   margin-top: size(96px);
   padding-top: size(69px);
-  padding-bottom: size(32px);
+  margin-bottom: size(96px);
 
   @include vp-1439 {
     margin-top: 96px;
@@ -18,11 +18,11 @@
     display: grid;
     grid-template-columns: 21% 1fr;
     column-gap: size(54px);
-    margin-bottom: size(100px);
+    margin-bottom: size(96px);
 
     @include vp-1439 {
       column-gap: 54px;
-      margin-bottom: 100px;
+      margin-bottom: 96px;
     }
 
     @include vp-767 {
@@ -56,7 +56,7 @@
     margin-bottom: size(7px);
     font-size: size(34px);
     line-height: size(44px);
-    color: $color-default-white;
+    color: $color-nero;
 
     @include vp-1439 {
       margin-bottom: 7px;
@@ -77,6 +77,14 @@
     flex-direction: column;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    color: $color-nero;
+    font-size: size(12px);
+    line-height: size(18px);
+
+    @include vp-1439 {
+      font-size: 12px;
+      line-height: 18px;
+    }
 
     @include vp-767 {
       flex-direction: row;
@@ -92,7 +100,7 @@
   }
 
   &__text-container {
-    width: 64%;
+    width: 67%;
 
     @include vp-767 {
       width: 89%;
@@ -104,13 +112,12 @@
     margin-bottom: size(32px);
     font-weight: 400;
     font-size: size(34px);
-    line-height: size(42px);
-    font-weight: 500;
+    line-height: size(44px);
 
     @include vp-1439 {
       margin-bottom: 32px;
       font-size: 34px;
-      line-height: 42px;
+      line-height: 44px;
     }
 
     @include vp-767 {
@@ -122,7 +129,7 @@
 
   &__intro-text {
     margin: 0;
-    width: 80%;
+    width: 100%;
     font-size: size(16px);
     line-height: size(24px);
 
@@ -139,10 +146,10 @@
   }
 
   &__block {
-    margin-bottom: size(97px);
+    margin-bottom: size(96px);
 
     @include vp-1439 {
-      margin-bottom: 97px;
+      margin-bottom: 96px;
     }
 
     @include vp-767 {
@@ -151,30 +158,32 @@
 
     &--text,
     &--video {
-      display: grid;
-      grid-template-columns: 21% 1fr;
-      column-gap: size(54px);
+      display: flex;
+      //grid-template-columns: 21% 1fr;
+      //column-gap: size(54px);
 
       @include vp-1439 {
-        column-gap: 54px;
+        //column-gap: 54px;
       }
 
       @include vp-767 {
-        grid-template-columns: 1fr;
-        column-gap: 0;
+        //grid-template-columns: 1fr;
+        //column-gap: 0;
       }
     }
   }
 
-  &__text,
+
   .text-content {
     grid-column: 2/3;
     margin: 0;
-    width: 65%;
+    max-width: size(671px);
     font-size: size(14px);
     line-height: size(22px);
+    margin: 0 auto;
 
     @include vp-1439 {
+      max-width: 671px;
       font-size: 14px;
       line-height: 22px;
     }
@@ -184,10 +193,10 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: size(20px);
+      margin-bottom: size(96px);
 
       @include vp-1439 {
-        margin-bottom: 20px;
+        margin-bottom: 96px;
       }
     }
   }
@@ -226,6 +235,8 @@
 
   &__video {
     grid-column: 2/3;
+    margin-left: auto;
+    margin-right: auto;
 
     @include vp-767 {
       grid-column: 1/2;
