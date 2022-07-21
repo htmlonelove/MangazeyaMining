@@ -9,13 +9,22 @@
       textMob: "Будем рады рассказать вам о&nbsp;деятельности компании больше по&nbsp;телефону или при личной встрече в&nbsp;наших офисах в&nbsp;центре Москвы и&nbsp;Читы.",
     },
     tabs: {
-      controls: ['Москва', 'Чита'],
+      controls: [
+        {
+          text: 'Москва',
+          isActive: true,
+        },
+        {
+          text: 'Чита',
+        },
+      ],
       content: [
         {
           video: {
             name: 'mining',
             format: 'mp4',
           },
+          isActive: true,
           name: 'Москва',
           phone: {
             text: '+7 495 647 55 55',
@@ -35,7 +44,7 @@
             text: '+7 495 647 55 55',
             href: 'tel:+74956475555',
           },
-          address: '672000, Чита, ул. Костюшко-Григоровича 5,<br> помещение&nbsp;13, офис 405',
+          address: '672000, Чита, ул. Костюшко-Григоровича&nbsp;5,<br> помещение&nbsp;13, офис 405',
           time: '22:28',
           temperature: '-25',
         },
@@ -46,15 +55,14 @@
 
 mixin contacts-city(props)
   section.contacts-city&attributes(attributes)
-    .contacts-city__tabs.city-tabs(data-tabs="parent")
-      //- +section-header(props.header)
-      .city-tabs__content(data-tabs="content")
-        +section-header(props.header)
-        .city-tabs__controls(data-tabs="controls")
-          each button in props.tabs.controls
-            button.city-tabs__nav-button(data-tabs="control") !{button}
+    .contacts-city__tabs.city-tabs(data-city-tabs)
+      +section-header(props.header)
+      .city-tabs__controls(data-city-controls)
+        each button in props.tabs.controls
+          button.caps-12.city-tabs__nav-button(class=button.isActive ? "is-active" : null, data-city-nav) !{button.text}
+      .city-tabs__content
         each city in props.tabs.content
-          .city-item(data-city, data-tabs="element")
+          .city-item(class=city.isActive ? "is-active" : null, data-city-item)
             .city-item__video-wrapper
               video(data-video-autoplay="false", preload="auto", muted, playsinline, loop, data-src=`video/${city.video.name}.${city.video.format}`)
             .city-item__content(data-city-content)

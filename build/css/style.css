@@ -7303,7 +7303,6 @@ button,
   width: 7.3125rem;
 }
 
-<<<<<<< HEAD
 .city-item {
   position: relative;
   width: 50%;
@@ -7451,6 +7450,34 @@ button,
   display: none;
 }
 
+.city-tabs__nav-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 21px;
+  padding-bottom: 19px;
+  max-width: 50%;
+  min-width: 100px;
+  width: 100%;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: none;
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.city-tabs__nav-button.is-active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .city-tabs__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7469,7 +7496,47 @@ button,
 
 .contacts-city .section-header__text {
   max-width: 38.875rem;
-=======
+}
+
+[data-tabs="parent"] {
+  overflow: hidden;
+}
+
+[data-tabs="parent"].no-transition > [data-tabs="control"],
+[data-tabs="parent"].no-transition > [data-tabs="content"],
+[data-tabs="parent"].no-transition > [data-tabs="element"] {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+[data-tabs="parent"].no-transition-global [data-tabs="control"],
+[data-tabs="parent"].no-transition-global [data-tabs="content"],
+[data-tabs="parent"].no-transition-global [data-tabs="element"] {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+[data-tabs="parent"] [data-tabs="content"] {
+  position: relative;
+}
+
+[data-tabs="element"] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+[data-tabs="element"].is-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
 .video-block {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -7500,7 +7567,6 @@ button,
 
 .text-block:not(:last-child) {
   margin-bottom: 0.9375rem;
->>>>>>> master
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -8667,15 +8733,38 @@ button,
     width: 35%;
   }
 
-<<<<<<< HEAD
+  .city-item__content {
+    padding-top: 40px;
+    padding-right: 48px;
+    padding-bottom: 48px;
+    padding-left: 48px;
+    min-height: 403px;
+  }
+
+  .city-item__contacts {
+    margin-top: 37px;
+    padding-left: 6px;
+  }
+
+  .city-item__phone {
+    margin-bottom: 16px;
+  }
+
+  .city-item__button-location {
+    bottom: 48px;
+    right: 48px;
+    width: 48px;
+    height: 48px;
+  }
+
   .city-item__button-location svg {
     width: 20px;
     height: 20px;
-=======
+  }
+
   .video-block .video-btn {
     left: 48px;
     bottom: 48px;
->>>>>>> master
   }
 }
 
@@ -9506,6 +9595,17 @@ button,
   .principles__text {
     font-size: 16px;
     line-height: 22px;
+  }
+
+  .city-item__content {
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+  }
+
+  .city-item__button-location {
+    bottom: 24px;
+    right: 24px;
   }
 
   .video-block {
@@ -10984,13 +11084,72 @@ button,
   }
 
   .city-item {
+    position: static;
     width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+    -o-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+    transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  }
+
+  .city-item.is-active {
+    opacity: 1;
+    visibility: visible;
+    max-height: 100%;
+  }
+
+  .city-item__content {
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    min-height: 258px;
+  }
+
+  .city-item__title {
+    display: none;
+  }
+
+  .city-item__contacts {
+    margin-top: 0;
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .city-item__phone {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .city-item__button-location {
+    bottom: 16px;
+    right: 16px;
   }
 
   .city-tabs__controls {
+    position: relative;
+    z-index: 3;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
+    -o-transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+
+  .city-tabs__controls::-webkit-scrollbar {
+    display: none;
+  }
+
+  .city-tabs__controls.is-hidden {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .contacts-city .section-header {

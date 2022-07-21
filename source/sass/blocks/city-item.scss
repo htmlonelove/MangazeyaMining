@@ -6,7 +6,20 @@
   overflow: hidden;
 
   @include vp-767 {
+    position: static;
     width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+
+    transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+      max-height: 100%;
+    }
   }
 
   &.is-hidden {
@@ -29,11 +42,36 @@
     padding-right: size(48px);
     padding-bottom: size(48px);
     padding-left: size(48px);
+
     min-height: size(403px);
     width: 100%;
 
     transition: all .6s ease-in-out .2s;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    @include vp-1439 {
+      padding-top: 40px;
+      padding-right: 48px;
+      padding-bottom: 48px;
+      padding-left: 48px;
+
+      min-height: 403px;
+    }
+
+    @include vp-1023 {
+      padding-right: 24px;
+      padding-bottom: 24px;
+      padding-left: 24px;
+    }
+
+    @include vp-767 {
+      padding-right: 16px;
+      padding-bottom: 16px;
+      padding-left: 16px;
+
+      min-height: 258px;
+
+    }
   }
 
   &__video-wrapper {
@@ -62,6 +100,10 @@
     margin-bottom: 0;
 
     color: $color-default-white;
+
+    @include vp-767 {
+      display: none;
+    }
   }
 
   &__contacts {
@@ -69,11 +111,31 @@
     padding-left: size(6px);
 
     max-width: 90%;
+
+    @include vp-1439 {
+      margin-top: 37px;
+      padding-left: 6px;
+    }
+
+    @include vp-767 {
+      margin-top: 0;
+      padding-left: 0;
+      max-width: 100%;
+    }
   }
 
   &__phone {
     margin-bottom: size(16px);
     color: $color-default-white;
+
+    @include vp-1439 {
+      margin-bottom: 16px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   &__address {
@@ -118,6 +180,23 @@
     transition: color $trans-default, background-color $trans-default;
 
     cursor: pointer;
+
+    @include vp-1439 {
+      bottom: 48px;
+      right: 48px;
+      width: 48px;
+      height: 48px;
+    }
+
+    @include vp-1023 {
+      bottom: 24px;
+      right: 24px;
+    }
+
+    @include vp-767 {
+      bottom: 16px;
+      right: 16px;
+    }
 
     svg {
       flex-shrink: 0;

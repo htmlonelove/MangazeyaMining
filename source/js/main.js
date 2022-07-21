@@ -27,7 +27,7 @@ import {initTextSplitWordsAnimation} from './modules/text-split-animation-words'
 import {initToggleItems} from './modules/toggle-resources-table';
 import {initRunningLine} from './modules/init-running-line';
 import {controlVideo} from './modules/init-video-control';
-import {initCityMap} from './modules/init-city-map';
+import {initContactsCity} from './modules/init-city-map';
 
 // ---------------------------------
 
@@ -63,11 +63,11 @@ window.addEventListener('DOMContentLoaded', () => {
     initMap();
     initMapBusiness();
     initJobSlider();
-    initPrinciplesSlider();
+    // initPrinciplesSlider();
     initRunningLine();
     controlVideo();
-    // initTabs();
-    initCityMap();
+    initTabs();
+    initContactsCity();
     initNewsSlider();
 
     window.sal({
