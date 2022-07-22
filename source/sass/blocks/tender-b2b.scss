@@ -1,0 +1,21 @@
+.tender-b2b {
+  &__wrapper {
+    height: size(640px);
+    background-color: $color-default-white;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @include vp-767 {
+      height: 560px;
+    }
+  }
+
+  .b2b-center-market {
+    height: size(640px);
+
+    @include vp-767 {
+      height: 560px;
+    }
+  }
+}
