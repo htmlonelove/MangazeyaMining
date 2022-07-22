@@ -3180,9 +3180,10 @@ button,
 
 .modal__content {
   position: relative;
-  width: 37.5rem;
-  padding: 3.75rem 3rem;
-  background-color: #1d295c;
+  width: 42rem;
+  padding: 4rem 3rem;
+  min-height: 23.375rem;
+  background-color: #ffffff;
 }
 
 .modal__close-btn {
@@ -3202,8 +3203,8 @@ button,
   width: 3rem;
   height: 3rem;
   padding: 0;
-  color: #262626;
-  background: #ffffff;
+  color: #ffffff;
+  background: #17214a;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -3271,6 +3272,10 @@ button,
   background-color: #17214a;
 }
 
+.modal .btn {
+  display: none;
+}
+
 .modal-feedback-success {
   width: 100%;
 }
@@ -3284,9 +3289,10 @@ button,
 }
 
 .modal-feedback-success__text {
-  margin: 1.25rem 0 0;
   font-size: 0.875rem;
   line-height: 1.375rem;
+  color: rgba(38, 38, 38, 0.5);
+  margin: 0;
 }
 
 .modal-feedback-success__btn {
@@ -3299,7 +3305,19 @@ button,
   align-items: center;
   width: 100%;
   min-height: 4rem;
-  margin: 3.125rem 0 0;
+  margin: 3rem 0 0;
+  color: #ffffff;
+  background-color: #17214a;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.modal-feedback-success__title {
+  font-size: 2.125rem;
+  line-height: 2.75rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .contacts-feedback {
@@ -8766,7 +8784,7 @@ input:-webkit-autofill {
 
   .modal__close-btn:hover:not(.focus-visible),
   .modal__close-btn.focus-visible:focus {
-    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.5;
   }
 
   .contacts-feedback__info-link:hover:not(.focus-visible),
@@ -9126,8 +9144,9 @@ input:-webkit-autofill {
   }
 
   .modal__content {
-    width: 600px;
-    padding: 60px 48px;
+    width: 672px;
+    padding: 64px 48px;
+    min-height: 374px;
   }
 
   .modal__close-btn {
@@ -9147,14 +9166,20 @@ input:-webkit-autofill {
   }
 
   .modal-feedback-success__text {
-    margin: 20px 0 0;
     font-size: 14px;
     line-height: 22px;
   }
 
   .modal-feedback-success__btn {
     min-height: 64px;
-    margin: 50px 0 0;
+    margin: 48px 0 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .modal-feedback-success__title {
+    font-size: 34px;
+    line-height: 44px;
   }
 
   .contacts-feedback {
@@ -11501,6 +11526,12 @@ input:-webkit-autofill {
     width: 100%;
   }
 
+  .modal .btn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
   .modal-feedback-success .section-title {
     max-width: 340px;
   }
@@ -11511,7 +11542,6 @@ input:-webkit-autofill {
   }
 
   .modal-feedback-success__text {
-    margin: 18px 0 0;
     padding: 0 30% 0 0;
   }
 
@@ -11519,6 +11549,11 @@ input:-webkit-autofill {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+  }
+
+  .modal-feedback-success__title {
+    font-size: 24px;
+    line-height: 32px;
   }
 
   .contacts-feedback {

@@ -25,18 +25,17 @@
   }
 
   &__text {
-    margin: size(20px) 0 0;
     font-size: size(14px);
     line-height: size(22px);
+    color: $color-nero-50;
+    margin: 0;
 
     @include vp-1439 {
-      margin: 20px 0 0;
       font-size: 14px;
       line-height: 22px;
     }
 
     @include vp-767 {
-      margin: 18px 0 0;
       padding: 0 30% 0 0;
     }
   }
@@ -47,15 +46,39 @@
     align-items: center;
     width: 100%;
     min-height: size(64px);
-    margin: size(50px) 0 0;
+    margin: size(48px) 0 0;
+    color: $color-default-white;
+    background-color: $color-midnight-express;
+    text-transform: uppercase;
+    font-size: size(12px);
+    line-height: size(18px);
 
     @include vp-1439 {
       min-height: 64px;
-      margin: 50px 0 0;
+      margin: 48px 0 0;
+      font-size: 12px;
+      line-height: 18px;
     }
 
     @include vp-767 {
       display: inline-flex;
     }
+  }
+}
+
+.modal-feedback-success__title {
+  font-size: size(34px);
+  line-height: size(44px);
+  margin-bottom: size(16px);
+  margin-top: 0;
+
+  @include vp-1439 {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 32px;
   }
 }
