@@ -14,9 +14,12 @@
     visibility: hidden;
     max-height: 0;
 
-    animation: none !important;
-
     transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+
+    &.sal-animate {
+      animation: none;
+    }
+
 
     &.is-active {
       opacity: 1;
@@ -49,11 +52,11 @@
     .city-item__button-location {
       svg {
         &:first-of-type {
-          animation: fade-out 0.5s ease-in 0.2s both;
+          animation: fade-out 0.3s ease-in 0.2s both;
         }
 
         &:last-of-type {
-          animation: fade-in 0.5s ease-in 0.7s both;
+          animation: fade-in 0.5s ease-in 0.5s both;
         }
       }
     }
@@ -72,7 +75,7 @@
 
     min-height: size(403px);
     width: 100%;
-
+    transform: translateZ(0);
     transition: clip-path .5s ease .2s, opacity 0.8s ease;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 

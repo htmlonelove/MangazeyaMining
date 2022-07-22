@@ -57,6 +57,11 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
-    background-color: $color-lucky-point;
+
+    background-color: $color-bridal-heath;
+
+    @include vp-767 {
+      background-color: $color-lucky-point;
+    }
   }
 }

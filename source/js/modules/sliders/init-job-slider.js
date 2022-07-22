@@ -54,12 +54,12 @@ const initSlider = (slider) => {
     speed: animationDelay,
     watchSlidesProgress: true,
     slidesPerView: 'auto',
-    // loop: true,
+    loop: true,
     parallax: true,
-    // autoplay: {
-    //   delay: animationSpeed,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: animationSpeed,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: pagination,
       bulletClass: `${paginationRoot}__button`,
