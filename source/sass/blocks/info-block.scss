@@ -217,4 +217,21 @@
       padding-top: 31px;
     }
   }
+
+  &--assets {
+    border-bottom: 1px solid $color-nero-10;
+
+    @include vp-767 {
+      border-bottom: none;
+      padding-bottom: 48px;
+
+      & .info-block__footer {
+        min-height: initial;
+
+        & br {
+          display: none;
+        }
+      }
+    }
+  }
 }

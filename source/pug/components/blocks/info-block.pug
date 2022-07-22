@@ -57,6 +57,25 @@
     },
   }
 
+  const assetsData = {
+    title: {
+      text: `Мангазея Майнинг непрерывно работает<br> над увеличением объемов добычи`,
+      secondText: `Мы непрерывно работаем<br> над увеличением объемов добычи`,
+    },
+    accent: {
+      text: '6&nbsp;000&nbsp;000 тонн',
+      secondText: '6&nbsp;млн тонн',
+    },
+    text: "Создаём мощный горноперерабатывающий кластер и&nbsp;ежегодно увеличиваем рост объёмов добычи и&nbsp;производства ценных металлов в&nbsp;действующих месторождениях.",
+    leftBlock: {
+      title: 'руды в год',
+      text: `планируемая производственная мощность<br> предприятий компании к&nbsp;2027 году`,
+    },
+    rightBlock: {
+      text: `Программа развития компании предусматривает<br> развитие четырёх действующих объектов<br> и&nbsp;введение в&nbsp;промышленную.`,
+    },
+  }
+
 mixin info-block(props)
   .info-block&attributes(attributes)
     .container
@@ -88,7 +107,3 @@ mixin info-block(props)
             +user-card(props.rightBlock.user)(data-sal="fade")
           if props.rightBlock.link
             +link-arrow(props.rightBlock.link)(data-sal="fade")
-
-
-
-
