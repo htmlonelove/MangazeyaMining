@@ -3,16 +3,16 @@ extends ../components/base/layout
 block variables
   - const title = "Мангазея Майнинг" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
-  - const hasHeader = false
+  - const hasHeader = true
   - const headerMods = "header--invert"
   - const headerActivePage = "Активы"
-  - const hasFooter = false
+  - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "operations.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
 block main
   main
-    +assets(tableData)
+    +assets(assetsSectionTableData)
     +resources(tableData)
 
 block modals

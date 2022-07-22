@@ -1,5 +1,9 @@
 .resources {
-  margin-bottom: size(96px);
+  margin-bottom: size(49px);
+
+  @include vp-767 {
+    margin-bottom: 0;
+  }
 
   &__places {
     list-style: none;
