@@ -4,6 +4,6 @@ mixin employer(data)
 
     .container
       .employer__video-wrp
-        video(preload="auto", muted, playsinline, loop, data-src=`video/mining.mp4`)
+        video(preload="auto", muted, playsinline, loop, data-src=`video/mining.mp4`, data-autoplay)
         span.caps-12.employer__title 2:25 мин
         +video-btn({}).employer__video-btn
