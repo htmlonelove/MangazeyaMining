@@ -9,18 +9,18 @@
     }
   }
 
-  & .nav-count,
   & .slider-controls {
     display: none;
-
-    @include vp-767 {
-      display: flex;
-    }
   }
 
   & .nav-count {
+    display: none;
     padding: 0;
     margin-top: auto;
+
+    @include vp-767 {
+      display: block;
+    }
   }
 
   &__slider-container {
@@ -158,6 +158,12 @@
 
       &:disabled {
         opacity: 1;
+
+        @include has-hover {
+          &:hover svg {
+            transform: none;
+          }
+        }
 
         & svg {
           opacity: 0.5;

@@ -1,0 +1,8 @@
+mixin textList(textData)
+ .text-list.text-14
+   if textData.text
+    p!=textData.text
+   if textData.list
+    ul.text-list__list
+      each item in textData.list
+        li.text-list__item!=item
