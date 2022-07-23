@@ -73,7 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMap();
     initMapBusiness();
     initJobSlider();
-    // initPrinciplesSlider();
+    initPrinciplesSlider();
     initRunningLine();
     showLabel();
     controlVideo();

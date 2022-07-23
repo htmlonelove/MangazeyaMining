@@ -1,0 +1,75 @@
+.conditions {
+  max-width: size(672px);
+  margin: 0 auto;
+  margin-top: var(--header-height);
+  padding-top: size(69px);
+  padding-bottom: size(120px);
+
+  @include vp-1023 {
+    max-width: 75%;
+  }
+
+  @include vp-767 {
+    max-width: initial;
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+
+  & h1 {
+    display: none;
+    margin-top: 0;
+
+    @include vp-767 {
+      display: block;
+      margin-bottom: 22px;
+    }
+  }
+
+  & h2 {
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: size(44px);
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 25px;
+    }
+  }
+
+  & .br-desc {
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  & .br-mobile {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &__content > p {
+    margin-bottom: size(32px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  & .btn {
+    margin-top: size(72px);
+    margin-bottom: 0;
+
+    @include vp-767 {
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+  }
+}

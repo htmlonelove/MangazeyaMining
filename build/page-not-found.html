@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Список страниц</title>
+    <title>Компания - Мангазея Майнинг</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Мангазея Майнинг">
     <meta name="keywords" content="Мангазея Майнинг">
-    <meta name="og:title" content="Список страниц">
+    <meta name="og:title" content="Компания - Мангазея Майнинг">
     <meta name="og:description" content="Мангазея Майнинг">
     <meta name="og:url" content="">
-    <meta name="og:site_name" content="Список страниц">
+    <meta name="og:site_name" content="Компания - Мангазея Майнинг">
     <meta name="og:locale" content="ru_RU">
     <meta name="og:type" content="website">
-    <meta name="application-name" content="Список страниц">
+    <meta name="application-name" content="Компания - Мангазея Майнинг">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -98,76 +98,56 @@
 </symbol></svg>
     </div>
     <div class="wrapper">
-      <style>
-        .container {
-          padding-top: 50px;
-          padding-bottom: 50px;
-        }
-        
-        h1 {
-          font-size: 24px;
-          line-height: 28px;
-        }
-        
-        li {
-          font-size: 18px;
-          line-height: 22px;
-          margin-bottom: 7px;
-        }
-        
-        .container div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 224px;
-          height: 88px;
-          margin-bottom: 40px;
-          background-color: #17214A;
-          color: #ffffff;
-        }
-        
-        img {
-          max-width: 224px;
-          height: auto;
-          display: block;
-        }
-        
-        @media (max-width: 768px) {
-          .container {
-            padding-top: 20px;
-            padding-bottom: 20px;
-          }
-        
-          ol {
-            padding-left: 20px;
-          }
-        
-          ol li {
-            margin-bottom: 15px;
-          }
-        }
-        
-      </style>
-      <main>
-        <div class="container">
-          <div>
+      <header class="header header--invert">
+        <div class="header__inner"><a class="header__logo" href="index.html" aria-label="Переход на главную">
             <svg width="128" height="40" role="img" aria-label="Логотип Мангазея Майнинг">
               <use xlink:href="#logo"></use>
-            </svg>
+            </svg></a>
+          <div class="header__menu-wrp">
+            <div class="header__quotes-wrp">
+              <button class="header__quotes" type="button" aria-pressed="false"><span class="caps-12 header__quotes-title">Котировки</span></button>
+            </div>
+            <div class="header__lang"><a class="caps-12 header__link link" href="#">En</a></div>
+            <div class="header__menu-toggle-wrp">
+              <button class="header__menu-toggle btn-reset" type="button" aria-pressed="false" data-menu-btn><span class="caps-12 header__toggle-title">Меню</span></button>
+            </div>
           </div>
-          <h1>Список страниц</h1>
-          <ol>
-            <li><a href="ui-kit.html">UI-kit — ui-kit.html</a></li>
-            <li><a href="index.html">Главная — index.html</a></li>
-            <li><a href="company.html">Компания — company.html</a></li>
-            <li><a href="suppliers.html">Поставщикам — suppliers.html</a></li>
-            <li><a href="operations.html">Операции — operations.html</a></li>
-            <li><a href="news.html">Новости — news.html</a></li>
-            <li><a href="new.html">Новость — new.html</a></li>
-            <li><a href="contacts.html">Контакты — contacts.html</a></li>
-            <li><a href="conditions.html">Условия — conditions.html</a></li>
-            <li><a href="page-not-found.html">Страница не найдена — page-not-found.html</a></li>
-          </ol>
+        </div>
+        <nav class="main-nav header__menu">
+          <div class="main-nav__wrapper">
+            <div class="container">
+              <ul class="main-nav__list">
+                <li class="heading-3-caps main-nav__item"><a class="main-nav__link link" href="#">Компания</a>
+                </li>
+                <li class="heading-3-caps main-nav__item"><a class="main-nav__link link" href="#">Активы</a>
+                </li>
+                <li class="heading-3-caps main-nav__item"><a class="main-nav__link link" href="#">Устойчивое развитие</a>
+                </li>
+                <li class="heading-3-caps main-nav__item"><a class="main-nav__link link" href="#">Поставщикам</a>
+                </li>
+                <li class="heading-3-caps main-nav__item"><a class="main-nav__link link" href="#">карьера</a>
+                </li>
+                <li class="heading-3-caps main-nav__item"><a class="main-nav__link link" href="#">Новости</a>
+                </li>
+                <li class="heading-3-caps main-nav__item"><a class="main-nav__link link" href="#">Контакты</a>
+                </li>
+              </ul>
+              <div class="main-nav__download-link"><a class="link-download" href="./pdf/MangazeyaGroup.pdf" download><span class="link-download__icon">
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use xlink:href="#icon-download"></use>
+                    </svg></span><span class="link-download__text"><span class="caps-12 link-download__name">Скачать презентацию</span><span class="text-14 link-download__info">pdf, 340 kb</span></span></a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="page-404">
+          <div class="container">
+            <h1 class="heading-1-caps">ошибка 404 <span>— <br>такой страницы не существует или она была удалена.</span> Воспользуйтесь меню <span>сайта</span> или перейдите на главную <span>страницу</span></h1>
+            <a class="btn caps-12 btn--dark-blue btn--big" href="index.html">перейти на главную
+            </a>
+          </div>
         </div>
       </main>
     </div>
