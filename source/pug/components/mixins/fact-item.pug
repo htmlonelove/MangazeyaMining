@@ -15,4 +15,5 @@ mixin fact-item(props)
           li.statistic-item
             span.caps-12.statistic-item__property !{stat.property}
             span.caps-12.statistic-item__value !{stat.value}
-            span.statistic-item__indication(class=stat.indicator, data-sal="scale-right")
+            span.statistic-item__indication(data-sal="scale-right")
+              span(data-fact-percent=stat.percent)
