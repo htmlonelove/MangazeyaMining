@@ -29,11 +29,21 @@
     flex-shrink: 0;
 
     margin-left: size(16px);
-    padding: size(14px);
+    padding: size(13px);
 
     border: size(1px) solid $color-nero-15;
     border-radius: 50%;
     transition: color $trans-default, background-color $trans-default, border-color $trans-default;
+
+    svg {
+      width: size(20px);
+      height: size(20px);
+
+      @include vp-1439 {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 
   &--big {

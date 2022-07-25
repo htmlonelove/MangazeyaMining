@@ -42,6 +42,10 @@
     width: 100%;
     max-width: size(784px);
 
+    video {
+      width: 100%;
+    }
+
     @include vp-1023 {
       max-width: 100%;
     }
@@ -92,6 +96,14 @@
     display: flex;
     flex-direction: column;
 
+    .is-hidden-desc {
+      display: none;
+
+      @include vp-1023 {
+        display: inline;
+      }
+    }
+
     @include vp-1023 {
       margin-top: 24px;
     }
@@ -106,6 +118,7 @@
 
     @include vp-767 {
       margin-top: 0;
+      margin-bottom: 0;
       font-weight: 400;
       font-size: 14px;
       line-height: 22px;

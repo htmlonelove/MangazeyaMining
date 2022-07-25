@@ -2,6 +2,35 @@ const cityItems = document.querySelectorAll('[data-city-item]');
 const citiTabsControl = document.querySelector('[data-city-controls]');
 const cityContactsHeader = document.querySelector('[data-city-tabs] [data-city-header]');
 
+// const API_KEY = '3af947368395bd318640a7cea988f178';
+
+async function getWeatherData (id, element) {
+  try {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${API_KEY}`);
+    const city = await response.json();
+
+    const temperature = city.main.temp;
+
+    element.textContent = (temperature - 273).toFixed(0);
+
+  } catch (error) {
+    console.warn(error);
+    console.log('Данные о погоде не загрузились');
+    element.textContent = '-';
+    return error;
+  }
+}
+
+const initWeatherCity = () => {
+  for (let i = 0; i < cityItems.length; i++) {
+    let idCity = cityItems[i].dataset.cityId;
+
+    const cityTemperature = cityItems[i].querySelector('[data-city-temperature]');
+
+    getWeatherData(idCity, cityTemperature);
+  }
+};
+
 const initMapCity = () => {
   for (let i = 0; i < cityItems.length; i++) {
     const buttonLocation = cityItems[i].querySelector('[data-city-location]');
@@ -89,6 +118,8 @@ const initContactsCity = () => {
   initCityVideo();
   initMapCity();
   initTabsCity();
+  initWeatherCity();
+  // initTimeCity();
 };
 
 export {initContactsCity};
