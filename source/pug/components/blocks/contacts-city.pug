@@ -31,6 +31,7 @@
             longitude: '37.607592',
           },
           name: 'Москва',
+          id: '524901',
           phone: {
             text: '+7 495 647 55 55',
             href: 'tel:+74956475555',
@@ -50,6 +51,7 @@
             longitude: '113.50310649999992',
           },
           name: 'Чита',
+          id: '2025339',
           phone: {
             text: '+7 495 647 55 55',
             href: 'tel:+74956475555',
@@ -72,7 +74,7 @@ mixin contacts-city(props)
           button.caps-12.city-tabs__nav-button(class=button.isActive ? "is-active" : null, data-city-nav) !{button.text}
       .city-tabs__content
         each city in props.tabs.content
-          .city-item(class=city.isActive ? "is-active" : null, data-sal="mask-to-right", data-city-item)
+          .city-item(class=city.isActive ? "is-active" : null, data-sal="mask-to-right", data-city-item, data-city-id=city.id)
             .city-item__video-wrapper
               video(preload="auto", data-city-video, muted, playsinline, loop, data-src=`video/${city.video.name}.${city.video.format}`)
             .city-item__content(data-city-content)
@@ -82,7 +84,9 @@ mixin contacts-city(props)
                 p.text-14.city-item__address !{city.address}
               .city-item__footer
                 span.caps-12.city-item__time(data-city-time) !{city.time}
-                span.caps-12.city-item__temperature(data-city-temperature) !{city.temperature} #[span &deg;C]
+                span.caps-12.city-item__temperature
+                  span(data-city-temperature) !{city.temperature}
+                  span &deg;C
             .city-item__map
               +map({
                 latitude: city.map.latitude,

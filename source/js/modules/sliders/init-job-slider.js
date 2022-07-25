@@ -37,7 +37,7 @@ const initSlider = (slider) => {
     return (
       `<button class="${className}" type="button" data-bullet="">
         <svg viewBox="0 0 80 80" data-name="slider-progress">
-          <circle data-name="progress" stroke="#ffffff" stroke-width="1" cx="40" cy="40" r="39" fill="transparent"/>
+          <circle data-name="progress" stroke="#ffffff" stroke-width="1" cx="40" cy="40" r="38" fill="transparent"/>
         </svg>
         <span class="${paginationRoot}__img">
           <picture>

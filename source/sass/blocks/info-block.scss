@@ -40,6 +40,7 @@
 
   &__accent {
     display: flex;
+    align-items: center;
 
     .link-arrow {
       .link-arrow__icon {
@@ -57,13 +58,13 @@
   }
 
   &__accent-text {
-    margin-top: size(36px);
+    margin-top: size(37px);
     margin-bottom: size(52px);
 
     color: $color-nero;
 
     @include vp-1439 {
-      margin-top: 36px;
+      margin-top: 37px;
       margin-bottom: 52px;
     }
 
@@ -147,10 +148,10 @@
     }
 
     .link-arrow {
-      margin-top: size(48px);
+      margin-top: size(50px);
 
       @include vp-1439 {
-        margin-top: 48px;
+        margin-top: 50px;
       }
 
       @include vp-767 {
@@ -213,6 +214,12 @@
   }
 
   &--vacancy {
+    padding-top: size(128px);
+
+    @include vp-1439 {
+      padding-top: 128px;
+    }
+
     @include vp-767 {
       padding-top: 31px;
     }

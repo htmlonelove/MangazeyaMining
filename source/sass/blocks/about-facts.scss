@@ -3,6 +3,16 @@
   padding: var(--header-height) 0 0;
   background-color: $color-bridal-heath;
 
+  &__body {
+    padding-bottom: size(2px);
+    border-top: size(1px) solid $color-nero-10;
+
+    @include vp-1439 {
+      padding-bottom: 2px;
+      border-top: 1px solid $color-nero-10;
+    }
+  }
+
   @include vp-767 {
     padding: 0;
   }
