@@ -4,7 +4,8 @@ block variables
   - const title = "Группа «Мангазея» | Новости" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
-  - const headerMods = ""
+  - const headerMods = "header--invert"
+  - const headerActivePage = "Новости"
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "news.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
@@ -98,11 +99,9 @@ block variables
 
 block main
   main
-    +intro-title(introTitle, 'press')
-    +news(newsCardData)
+    +news(introTitle, newsCardData)
     +subscribe()
 
 block modals
   +modal("modal--feedback-success")(data-modal="feedback-success")
     +modal-feedback-success(successModal)
-

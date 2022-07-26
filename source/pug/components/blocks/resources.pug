@@ -141,9 +141,9 @@ mixin resources(data)
               if data[i].resources.expected
                 tr.tr-flex
                   if data[i].reserves
-                    td.empty.col-0.no-border(rowspan="3")
+                    td.empty.col-0.no-border
                   else
-                    td.col-0.no-border.empty(rowspan="3")
+                    td.col-0.no-border.empty
                   td.text-14.col-1.category Предполагаемые
                   td.text-14.col-2
                     span.text-14.hidden Тонн, тыс. т
@@ -159,7 +159,7 @@ mixin resources(data)
                     span!=data[i].resources.expected.ounces
               if	data[i].resources.specified
                 tr.tr-flex
-                  td.empty.col-0.no-border(rowspan="3")
+                  td.empty.col-0.no-border
                   td.text-14.col-1.category Указанные
                   td.text-14.col-2
                     span.text-14.hidden Тонн, тыс. т
@@ -175,7 +175,7 @@ mixin resources(data)
                     span!=data[i].resources.specified.ounces
               if	data[i].resources.measured
                 tr.tr-flex
-                  td.empty.col-0(rowspan="3")
+                  td.empty.col-0
                   td.text-14.col-1.category Измеренные
                   td.text-14.col-2
                     span.text-14.hidden Тонн, тыс. т
@@ -206,7 +206,7 @@ mixin resources(data)
                     span.text-14.hidden Au, тыс. унций
                     span!=data[i].reserves.total.ounces
                 tr.tr-flex
-                  td.no-border.empty.col-0(rowspan="2")
+                  td.no-border.empty.col-0
                   td.text-14.col-1.category Подтвержденные
                   td.text-14.col-2
                     span.text-14.hidden Тонн, тыс. т
@@ -222,7 +222,7 @@ mixin resources(data)
                     span!=data[i].reserves.confirmed.ounces
                 if data[i].reserves.probable
                   tr.tr-flex
-                    td.empty.col-0(rowspan="3")
+                    td.empty.col-0
                     td.text-14.col-1.category Вероятные
                     td.text-14.col-2
                       span.text-14.hidden Тонн, тыс. т

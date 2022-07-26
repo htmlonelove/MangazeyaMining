@@ -168,7 +168,7 @@ mixin assets(data)
             td.heading-5.col-5
               span!=data[i].resources.total.ounces
           tr.tr-flex(class=(data[i].resources.expected && !data[i].resources.specified) ? "tr-flex--last" : null)
-              td.col-0.no-border.empty(rowspan="3")
+              td.col-0.no-border.empty
               td.text-14.col-1.category Предполагаемые
               td.text-14.col-2
                 span!=data[i].resources.expected.amount
@@ -180,7 +180,7 @@ mixin assets(data)
                 span!=data[i].resources.expected.ounces
           if	data[i].resources.specified
             tr.tr-flex(class=(data[i].resources.specified && !data[i].resources.measured) ? "tr-flex--last" : null)
-              td.empty.col-0.no-border(rowspan="3")
+              td.empty.col-0.no-border
               td.text-14.col-1.category Указанные
               td.text-14.col-2
                 span!=data[i].resources.specified.amount
@@ -192,7 +192,7 @@ mixin assets(data)
                 span!=data[i].resources.specified.ounces
           if	data[i].resources.measured
             tr.tr-flex.tr-flex--last
-              td.empty.col-0(rowspan="3")
+              td.empty.col-0
               td.text-14.col-1.category Измеренные
               td.text-14.col-2
                 span!=data[i].resources.measured.amount

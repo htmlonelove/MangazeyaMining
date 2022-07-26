@@ -1,6 +1,7 @@
 .page-404 {
   margin-top: var(--header-height);
   padding-top: size(69px);
+  padding-bottom: size(96px);
 
   @include vp-767 {
     padding-top: 38px;
