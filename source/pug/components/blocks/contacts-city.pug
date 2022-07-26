@@ -74,7 +74,7 @@ mixin contacts-city(props)
           button.caps-12.city-tabs__nav-button(class=button.isActive ? "is-active" : null, data-city-nav) !{button.text}
       .city-tabs__content
         each city in props.tabs.content
-          .city-item(class=city.isActive ? "is-active" : null, data-sal="mask-to-right", data-city-item, data-city-id=city.id)
+          .city-item(class=city.isActive ? "is-active" : null, data-sal="mask-to-right", data-city-item=city.map.name, data-city-id=city.id)
             .city-item__video-wrapper
               video(preload="auto", data-city-video, muted, playsinline, loop, data-src=`video/${city.video.name}.${city.video.format}`)
             .city-item__content(data-city-content)
