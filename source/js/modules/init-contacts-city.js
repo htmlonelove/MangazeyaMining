@@ -2,16 +2,17 @@ const cityItems = document.querySelectorAll('[data-city-item]');
 const citiTabsControl = document.querySelector('[data-city-controls]');
 const cityContactsHeader = document.querySelector('[data-city-tabs] [data-city-header]');
 
-// const API_KEY = '3af947368395bd318640a7cea988f178';
-
-async function getWeatherData (id, element) {
+async function getWeatherData (cityName, temp, time) {
   try {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${API_KEY}`);
+    const response = await fetch(`http://api.weatherstack.com/current?access_key=f7d104723e368facfe6dce0c8c77c6dc&query=${cityName}`);
     const city = await response.json();
 
-    const temperature = city.main.temp;
+    const dateTime = city.location.localtime;
+    const temperature = city.current.temperature;
 
-    element.textContent = (temperature - 273).toFixed(0);
+
+    temp.textContent = temperature;
+    time.textContent = new Date(dateTime).toLocaleTimeString().slice(0,-3);
 
   } catch (error) {
     console.warn(error);
@@ -24,10 +25,11 @@ async function getWeatherData (id, element) {
 const initWeatherCity = () => {
   for (let i = 0; i < cityItems.length; i++) {
     let idCity = cityItems[i].dataset.cityId;
+    let nameCity = cityItems[i].dataset.cityItem;
 
     const cityTemperature = cityItems[i].querySelector('[data-city-temperature]');
-
-    getWeatherData(idCity, cityTemperature);
+    const cityTime = cityItems[i].querySelector('[data-city-time]');
+    getWeatherData(nameCity, cityTemperature, cityTime);
   }
 };
 
@@ -119,7 +121,6 @@ const initContactsCity = () => {
   initMapCity();
   initTabsCity();
   initWeatherCity();
-  // initTimeCity();
 };
 
 export {initContactsCity};
