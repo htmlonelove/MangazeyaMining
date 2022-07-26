@@ -39,7 +39,7 @@
 
   &__control-wrapper {
     position: absolute;
-    right: 0;
+    right: size(-1px);
     bottom: 0;
     width: size(245px);
     height: size(64px);

@@ -8,7 +8,7 @@ mixin subscribe()
         .subscribe__column
           .subscribe__form-wrapper(data-validate, data-callback="feedbackFormSubmit")
             form(method="get", action="#").subscribe__form
-              +custom-input({inputType: "email", inputId: "user-email", inputPlaceholder: "Ваш email", inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email").subscribe__input
+              +custom-input({inputType: "email", inputId: "user-email", inputPlaceholder: "Ваш email", inputError: "Некорректный email", inputName: "user-email"})(data-validate-type="email").subscribe__input
               +btn({tag: "button", type:"submit", text: "подписаться на новости"}).btn--white.subscribe__button
             p.subscribe__footer Нажимая  «Подписаться на новости», вы принимаете
             a.link.subscribe__link(href="conditions.html", target="_blank", aria-label="Ознакомиться с Условиями обработки пользовательских данных") условия обработки пользовательских данных

@@ -4,7 +4,7 @@
   background-color: $color-spring-wood;
 
   @include vp-1439 {
-    padding-top: 80x;
+    padding-top: 80px;
     padding-bottom: 76px;
   }
 
@@ -18,10 +18,8 @@
   }
 
   &__column {
-    flex-grow: 1;
     width: 50%;
     &:not(:last-child) {
-      margin: 0 size(20px) 0 0;
 
       @include vp-1439 {
         margin: 0 24px 0 0;
@@ -76,7 +74,7 @@
   }
 
   &__input {
-    width: 103%;
+    width: 100%;
     padding: 2px 0;
   }
 
@@ -135,7 +133,7 @@
     padding-top: size(29px);
     padding-bottom: size(25px);
     justify-content: center;
-    width: 103%;
+    width: 100%;
     background-color: $color-midnight-express;
     letter-spacing: 0.03em;
     font-size: size(12px);
