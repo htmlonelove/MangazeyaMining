@@ -1,32 +1,25 @@
 .intro-title {
-  margin-top: size(96px);
+  margin-top: var(--header-height);
   color: $color-default-white;
   border-bottom: size(1px) solid $color-default-white-15;
 
   @include vp-1439 {
-    margin-top: 96px;
     border-bottom: 1px solid $color-default-white-15;
   }
 
   &__title {
     margin: 0;
-    padding-top: size(68px);
-    padding-bottom: size(69px);
     font-weight: 400;
     font-size: size(48px);
     line-height: size(64px);
     text-transform: uppercase;
 
     @include vp-1439 {
-      padding-top: 68px;
-      padding-bottom: 69px;
       font-size: 48px;
       line-height: 64px;
     }
 
     @include vp-767 {
-      padding-top: 14px;
-      padding-bottom: 39px;
       font-size: 24px;
       line-height: 32px;
     }
@@ -84,16 +77,17 @@
   }
 
   &--press {
-    margin-top: size(89px);
+    margin-top: var(--header-height);
+    padding-top: size(69px);
+    padding-bottom: size(67px);
 
-    @include vp-1023 {
-      margin-top: 43px;
+    @include vp-767 {
+      padding-top: 38px;
+      padding-bottom: 66px;
     }
 
     .intro-title__title {
       font-weight: 500;
-      padding-top: size(68px);
-      padding-bottom: size(67px);
       color: $color-nero;
     }
   }

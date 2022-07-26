@@ -15,13 +15,14 @@ mixin new-content (data)
       .new-content__main
         .new-content__block(class=`new-content__block--slider`)
           +gallery-slider(slider.slides, "new")
-        .text-content
-          each item in textsTop
-            +text-block(item)
-        .new-content__block(class=`new-content__block--video`)
-          .new-content__video.video
-            +video-block(video)
-              +video-btn({})
-        .text-content
-          each item in textsBottom
-            +text-block(item)
+        .new-content__main-wrp
+          .text-content
+            each item in textsTop
+              +text-block(item)
+          .new-content__block(class=`new-content__block--video`)
+            .new-content__video.video
+              +video-block(video)
+                +video-btn({})
+          .text-content
+            each item in textsBottom
+              +text-block(item)

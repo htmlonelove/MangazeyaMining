@@ -116,7 +116,7 @@ mixin section-slider(data, className)
                span.caps-12.nav-count__current!="0" + i
               else
                span.caps-12.nav-count__current!=i
-              span.caps-12.nav-count__del=" / "
+              span.caps-12.nav-count__del &nbsp;/&nbsp;
               if data.length < 10
                span.caps-12.nav-count__total!="0" + data.length
               else

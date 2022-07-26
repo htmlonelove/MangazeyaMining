@@ -1,5 +1,7 @@
 mixin news-card(data)
   li.news-card(class!=attributes.class)
+    if (data.path && data.image && data.format && data.width && data.height && data.alt)
+     +picture(data.path, data.image, data.format, data.width, data.height, data.alt).news-card__image
     .news-card__info-wrapper
       .news-card__number-wrapper
         p.news-card__date!=data.date
@@ -8,5 +10,4 @@ mixin news-card(data)
         p.news-card__month!=data.month
     .news-card__title-wrapper
       p.news-card__title!=data.title
-    +picture(data.path, data.image, data.format, data.width, data.height, data.alt).news-card__image
     a(href="#" target="_blank" aria-label="ссылка на новость").news-card__link
