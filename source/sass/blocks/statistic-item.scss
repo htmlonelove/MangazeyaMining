@@ -41,9 +41,8 @@
 
     width: 100%;
     height: size(4px);
-    background-color: $color-nero-10;
 
-    // animation: scaleX 2s infinite ease-in-out;
+    background-color: $color-nero-10;
 
     @include vp-1439 {
       height: 4px;
@@ -54,8 +53,8 @@
       bottom: auto;
     }
 
-    &::after {
-      content: "";
+    span {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -63,26 +62,6 @@
       height: 100%;
 
       background-color: $color-mariner;
-    }
-
-    &.width-50 {
-      &::after {
-        max-width: 50%;
-
-        @include vp-767 {
-          max-width: 75.3%;
-        }
-      }
-    }
-
-    &.width-35 {
-      &::after {
-        max-width: 35%;
-
-        @include vp-767 {
-          max-width: 43.2%;
-        }
-      }
     }
   }
 }

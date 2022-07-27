@@ -4,7 +4,8 @@ block variables
   - const title = "Группа «Мангазея» | Новости" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
-  - const headerMods = ""
+  - const headerMods = "header--invert"
+  - const headerActivePage = "Новости"
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "new.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
@@ -15,7 +16,7 @@ block variables
         dateNumber:"19",
         dateMonth: "августа",
         dateYear:"2021",
-        title: "Радио &laquo;Вера&raquo; начало вещание в&nbsp;Чите при поддержке ГК&nbsp;&laquo;Мангазея&raquo;",
+        title: "Радио &laquo;Вера&raquo; начало вещание в&nbsp;Чите при&nbsp;поддержке ГК&nbsp;&laquo;Мангазея&raquo;",
         text: "16&nbsp;августа 2021 года в&nbsp;Чите на&nbsp;частоте 87,6&nbsp;FM запустилось вещание некоммерческой просветительской радиостанции &laquo;ВЕРА&raquo; при помощи Группы компаний &laquo;Мангазея&raquo;.",
       },
 
@@ -23,6 +24,46 @@ block variables
         {
           type: 'slider',
           slides: [
+            {
+              path: "content/slider-news",
+              image: "slider-news",
+              format: "jpg",
+              width: 1344,
+              height: 720,
+              alt: "фото",
+            },
+            {
+              path: "content/slider-news",
+              image: "slider-news",
+              format: "jpg",
+              width: 1344,
+              height: 720,
+              alt: "фото",
+            },
+            {
+              path: "content/slider-news",
+              image: "slider-news",
+              format: "jpg",
+              width: 1344,
+              height: 720,
+              alt: "фото",
+            },
+            {
+              path: "content/slider-news",
+              image: "slider-news",
+              format: "jpg",
+              width: 1344,
+              height: 720,
+              alt: "фото",
+            },
+            {
+              path: "content/slider-news",
+              image: "slider-news",
+              format: "jpg",
+              width: 1344,
+              height: 720,
+              alt: "фото",
+            },
             {
               path: "content/slider-news",
               image: "slider-news",
@@ -73,7 +114,7 @@ block variables
         },
         {
           type: "text",
-          content: "&laquo;Для нас большая честь иметь возможность поддержать такой значимый медиапроект как Радио &bdquo;ВЕРА&ldquo;, помогающий нуждающимся, а&nbsp;также вдохновляющий общество проникнуться верой и&nbsp;ее&nbsp;истинами. Вера&nbsp;&mdash; это&nbsp;то, что помогает в&nbsp;самые трудные минуты жизни. Надеемся, что радиостанция будет полезна каждому своему слушателю&raquo;,&nbsp;&mdash; прокомментировал председатель совета директоров ООО &laquo;Мангазея Золото&raquo; Роман Кашуба."
+          content: "&laquo;Для нас большая честь иметь возможность поддержать такой значимый медиапроект как Радио &laquo;ВЕРА&raquo;, помогающий нуждающимся, а&nbsp;также вдохновляющий общество проникнуться верой и&nbsp;ее&nbsp;истинами. Вера&nbsp;&mdash; это&nbsp;то, что&nbsp;помогает в&nbsp;самые трудные минуты жизни. Надеемся, что радиостанция будет полезна каждому своему слушателю&raquo;,&nbsp;&mdash; прокомментировал председатель совета директоров ООО &laquo;Мангазея Золото&raquo; Роман Кашуба."
         },
         {
           type: "text",
@@ -88,6 +129,3 @@ block main
   main
     +new-content(content)
     +new-navigation
-
-
-

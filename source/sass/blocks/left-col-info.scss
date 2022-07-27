@@ -5,6 +5,16 @@
 
     &[href] {
       font-weight: 500;
+      line-height: 24px;
+
+      transition: opacity $trans-default;
+
+        @media (hover: hover), screen and (min-width: 0\0) {
+          &:hover:not(.focus-visible),
+          &.focus-visible:focus {
+            opacity: 0.8;
+          }
+        }
     }
 
     @include vp-767 {

@@ -2,6 +2,11 @@ extends ../components/base/layout
 
 block variables
   - const title = "UI-kit"
+  -
+   const successModal = {
+      title: "Cпасибо, <br> ваше cообщение <br> отправлено",
+      text: "Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.",
+    }
 
 block main
   style.
@@ -104,6 +109,7 @@ block main
       pointer-events: none;
     }
 
+
   header.header-ui
     nav.header-ui__nav.container
       a.components-backwards(href="sitemap.html")
@@ -127,6 +133,8 @@ block main
           +btn({text: "modal-feedback"})(data-open-modal="feedback")
         p
           +btn({text: "modal-success"})(data-open-modal="success")
+        p
+          +btn({text: "modal-feedback-success"})(data-open-modal="feedback-success")
 
       section(id="buttons")
         h2 Buttons
@@ -188,11 +196,17 @@ block main
   script
     include ../../js/inline/ui-kit.js
 
+
+
 block modals
   +modal("modal--feedback")(data-modal="feedback")
     +modal-feedback()
   +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
     +modal-success()
+  +modal("modal--feedback-success")(data-modal="feedback-success")
+    +modal-feedback-success(successModal)
 
 block scripts
   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a01f8dd2-d0ce-4dd5-a1b6-745f3a207777")
+
+

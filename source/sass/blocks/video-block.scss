@@ -4,13 +4,14 @@
   position: relative;
   flex-shrink: 0;
 
-  margin-left: size(120px);
+  margin-left: size(87px);
 
   width: 100%;
   max-width: size(784px);
 
   @include vp-1023 {
     max-width: 100%;
+    margin-left: 0;
   }
 }
 

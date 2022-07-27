@@ -1,11 +1,153 @@
+-
+ const assetsSectionSlides = [
+     {
+       path: "content/assets",
+       image: "assets-slider",
+       format: "jpg",
+       width: 1344,
+       height: 720,
+       alt: "фото",
+     },
+     {
+       path: "content/assets",
+       image: "assets-slider",
+       format: "jpg",
+       width: 1344,
+       height: 720,
+       alt: "фото",
+     },
+     {
+       path: "content/assets",
+       image: "assets-slider",
+       format: "jpg",
+       width: 1344,
+       height: 720,
+       alt: "фото",
+     },
+     {
+       path: "content/assets",
+       image: "assets-slider",
+       format: "jpg",
+       width: 1344,
+       height: 720,
+       alt: "фото",
+     },
+     {
+       path: "content/assets",
+       image: "assets-slider",
+       format: "jpg",
+       width: 1344,
+       height: 720,
+       alt: "фото",
+     },
+     {
+       path: "content/assets",
+       image: "assets-slider",
+       format: "jpg",
+       width: 1344,
+       height: 720,
+       alt: "фото",
+     },
+     {
+       path: "content/assets",
+       image: "assets-slider",
+       format: "jpg",
+       width: 1344,
+       height: 720,
+       alt: "фото",
+     },
+ ]
 
+ const assetsSectionTableData = [
+   {
+   place: "Наседкино",
+   resources: {
+     total: {
+       amount: 38648,
+       contents: "1,23",
+       aurum: 48,
+       ounces: 1676,
+     },
+     expected: {
+       amount: 16849,
+       contents: "1,11",
+       aurum: 19,
+       ounces: 659,
+     },
+     specified: {
+       amount: 20153,
+       contents: "1,26",
+       aurum: 25,
+       ounces: 899,
+     },
+     measured: {
+       amount: 1646,
+       contents: "2,04",
+       aurum: 3,
+       ounces: 118,
+     },
+   },
+   },
+   {
+   place: "Итакинское",
+   resources: {
+     total: {
+       amount: 59829,
+       contents: "2,45",
+       aurum: 147,
+       ounces: 5168,
+     },
+     expected: {
+       amount: 30167,
+       contents: "2,19",
+       aurum: 66,
+       ounces: 2329,
+     },
+     specified: {
+       amount: 25779,
+       contents: "2,54",
+       aurum: 65,
+       ounces: 2308,
+     },
+     measured: {
+       amount: 3883,
+       contents: "3,88",
+       aurum: 15,
+       ounces: 531,
+     },
+   },
+   },
+   {
+   place: "Кочковское",
+   resources: {
+     total: {
+       amount: 49890,
+       contents: "1,73",
+       aurum: 86,
+       ounces: 3044,
+     },
+     expected: {
+       amount: 29050,
+       contents: "1,79",
+       aurum: 52,
+       ounces: 1836,
+     },
+     specified: {
+       amount: 20840,
+       contents: "1,65",
+       aurum: 34,
+       ounces: 1209,
+     },
+   },
+   },
+ ]
 
 mixin assets(data)
  section.assets
    +section-header(assetsSection)
    .container
     h3.heading-2.assets__resources Ресурсы компании
-    table.table
+   table.table
         tr.tr-flex
           th.heading-5.empty.col-0
           th.heading-5.col-1
@@ -13,50 +155,53 @@ mixin assets(data)
           th.heading-5.col-3 Содержание Au, г/т
           th.heading-5.col-4 Au, т
           th.heading-5.col-5 Au, тыс. унций
-        - for (let i = 0; i < data.array.length; i++)
+        - for (let i = 0; i < data.length; i++)
           tr.tr-flex
-            td.heading-5.no-border.col-0!=data.array[i].place
+            td.heading-5.no-border.col-0!=data[i].place
             td.empty.col-1
             td.heading-5.col-2
-              span!=data.array[i].resources.total.amount
+              span!=data[i].resources.total.amount
             td.heading-5.col-3
-              span!=data.array[i].resources.total.contents
+              span!=data[i].resources.total.contents
             td.heading-5.col-4
-              span!=data.array[i].resources.total.aurum
+              span!=data[i].resources.total.aurum
             td.heading-5.col-5
-              span!=data.array[i].resources.total.ounces
-          tr.tr-flex(class=(data.array[i].resources.expected && !data.array[i].resources.specified) ? "tr-flex--last" : null)
-              td.col-0.no-border.empty(rowspan="3")
+              span!=data[i].resources.total.ounces
+          tr.tr-flex(class=(data[i].resources.expected && !data[i].resources.specified) ? "tr-flex--last" : null)
+              td.col-0.no-border.empty
               td.text-14.col-1.category Предполагаемые
               td.text-14.col-2
-                span!=data.array[i].resources.expected.amount
+                span!=data[i].resources.expected.amount
               td.text-14.col-3
-                span!=data.array[i].resources.expected.contents
+                span!=data[i].resources.expected.contents
               td.text-14.col-4
-                span!=data.array[i].resources.expected.aurum
+                span!=data[i].resources.expected.aurum
               td.text-14.col-5
-                span!=data.array[i].resources.expected.ounces
-          if	data.array[i].resources.specified
-            tr.tr-flex(class=(data.array[i].resources.specified && !data.array[i].resources.measured) ? "tr-flex--last" : null)
-              td.empty.col-0.no-border(rowspan="3")
+                span!=data[i].resources.expected.ounces
+          if	data[i].resources.specified
+            tr.tr-flex(class=(data[i].resources.specified && !data[i].resources.measured) ? "tr-flex--last" : null)
+              td.empty.col-0.no-border
               td.text-14.col-1.category Указанные
               td.text-14.col-2
-                span!=data.array[i].resources.specified.amount
+                span!=data[i].resources.specified.amount
               td.text-14.col-3
-                span!=data.array[i].resources.specified.contents
+                span!=data[i].resources.specified.contents
               td.text-14.col-4
-                span!=data.array[i].resources.specified.aurum
+                span!=data[i].resources.specified.aurum
               td.text-14.col-5
-                span!=data.array[i].resources.specified.ounces
-          if	data.array[i].resources.measured
+                span!=data[i].resources.specified.ounces
+          if	data[i].resources.measured
             tr.tr-flex.tr-flex--last
-              td.empty.col-0(rowspan="3")
+              td.empty.col-0
               td.text-14.col-1.category Измеренные
               td.text-14.col-2
-                span!=data.array[i].resources.measured.amount
+                span!=data[i].resources.measured.amount
               td.text-14.col-3
-                span!=data.array[i].resources.measured.contents
+                span!=data[i].resources.measured.contents
               td.text-14.col-4
-                span!=data.array[i].resources.measured.aurum
+                span!=data[i].resources.measured.aurum
               td.text-14.col-5
-                span!=data.array[i].resources.measured.ounces
+                span!=data[i].resources.measured.ounces
+   .container
+    +gallery-slider(assetsSectionSlides, "assets")
+   +info-block(assetsData).info-block--assets

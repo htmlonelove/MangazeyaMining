@@ -89,6 +89,8 @@
     }
 
     & .section-slider__item {
+      padding-top: size(49px);
+
       @include vp-767 {
         padding-top: 28px;
       }
@@ -96,7 +98,7 @@
 
     & h3 {
       margin-top: 0;
-      margin-bottom: size(58px);
+      margin-bottom: size(48px);
 
       @include vp-767 {
         font-size: 38px;
@@ -164,8 +166,18 @@
       border-bottom: 1px solid $color-nero-10;
     }
 
+    &:first-child {
+      border-bottom: none;
+    }
+
     &:disabled {
       opacity: 1;
+
+      @include has-hover {
+        &:hover svg {
+          transform: none;
+        }
+      }
 
       & svg {
         opacity: 0.5;

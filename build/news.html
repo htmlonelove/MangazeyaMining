@@ -98,11 +98,16 @@
 </symbol></svg>
     </div>
     <div class="wrapper">
-      <header class="header">
+      <header class="header header--invert">
         <div class="header__inner"><a class="header__logo" href="index.html" aria-label="Переход на главную">
             <svg width="128" height="40" role="img" aria-label="Логотип Мангазея Майнинг">
               <use xlink:href="#logo"></use>
             </svg></a>
+          <div class="header__active">
+            <svg width="24" height="24" aria-hidden="true">
+              <use xlink:href="#arrow-right"></use>
+            </svg><span class="caps-12 header__active-title">Новости</span>
+          </div>
           <div class="header__menu-wrp">
             <div class="header__quotes-wrp">
               <button class="header__quotes" type="button" aria-pressed="false"><span class="caps-12 header__quotes-title">Котировки</span></button>
@@ -142,13 +147,13 @@
         </nav>
       </header>
       <main>
-        <section class="intro-title intro-title--press">
-          <div class="container">
-            <h1 class="intro-title__title">Новости</h1>
-          </div>
-        </section>
         <section class="news">
           <div class="container">
+            <div class="intro-title intro-title--press">
+              <div class="container">
+                <h1 class="intro-title__title">Новости</h1>
+              </div>
+            </div>
             <ul class="news-list">
               <li class="news-card">
                 <div class="news-card__info-wrapper">
@@ -162,12 +167,12 @@
                 </div>
                 <div class="news-card__title-wrapper">
                   <p class="news-card__title">Производственные результаты <br> II квартала 2021 года</p>
-                </div>
-                <picture class="news-card__image">
-                  <source type="image/webp" srcset="img//.webp, img//@2x.webp 2x"><img src="img//." srcset="img//@2x. 2x" width="" height="" alt="">
-                </picture><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
+                </div><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
               </li>
               <li class="news-card news-card--picture">
+                <picture class="news-card__image">
+                  <source type="image/webp" srcset="img/content/news/news-1.webp, img/content/news/news-1@2x.webp 2x"><img src="img/content/news/news-1.jpg" srcset="img/content/news/news-1@2x.jpg 2x" width="720" height="338" alt="фото новости">
+                </picture>
                 <div class="news-card__info-wrapper">
                   <div class="news-card__number-wrapper">
                     <p class="news-card__date">8</p>
@@ -179,10 +184,7 @@
                 </div>
                 <div class="news-card__title-wrapper">
                   <p class="news-card__title">ГК&nbsp;&laquo;Мангазея&raquo; увеличила производство золота во&nbsp;II квартале 2021 года на&nbsp;93%</p>
-                </div>
-                <picture class="news-card__image">
-                  <source type="image/webp" srcset="img/content/news/news-1.webp, img/content/news/news-1@2x.webp 2x"><img src="img/content/news/news-1.jpg" srcset="img/content/news/news-1@2x.jpg 2x" width="720" height="338" alt="фото новости">
-                </picture><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
+                </div><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
               </li>
               <li class="news-card">
                 <div class="news-card__info-wrapper">
@@ -196,10 +198,7 @@
                 </div>
                 <div class="news-card__title-wrapper">
                   <p class="news-card__title">&laquo;Мангазея Девелопмент&raquo; объявила о&nbsp;старте продаж нового проекта бизнес-класса &laquo;Интонация&raquo;</p>
-                </div>
-                <picture class="news-card__image">
-                  <source type="image/webp" srcset="img//.webp, img//@2x.webp 2x"><img src="img//." srcset="img//@2x. 2x" width="" height="" alt="">
-                </picture><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
+                </div><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
               </li>
               <li class="news-card">
                 <div class="news-card__info-wrapper">
@@ -213,12 +212,12 @@
                 </div>
                 <div class="news-card__title-wrapper">
                   <p class="news-card__title">Радио &laquo;Вера&raquo; начало вещание в&nbsp;Чите <br> при поддержке ГК&nbsp;&laquo;Мангазея&raquo;</p>
-                </div>
-                <picture class="news-card__image">
-                  <source type="image/webp" srcset="img//.webp, img//@2x.webp 2x"><img src="img//." srcset="img//@2x. 2x" width="" height="" alt="">
-                </picture><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
+                </div><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
               </li>
               <li class="news-card news-card--picture">
+                <picture class="news-card__image">
+                  <source type="image/webp" srcset="img/content/news/news-2.webp, img/content/news/news-2@2x.webp 2x"><img src="img/content/news/news-2.jpg" srcset="img/content/news/news-2@2x.jpg 2x" width="720" height="338" alt="фото новости">
+                </picture>
                 <div class="news-card__info-wrapper">
                   <div class="news-card__number-wrapper">
                     <p class="news-card__date">28</p>
@@ -230,12 +229,12 @@
                 </div>
                 <div class="news-card__title-wrapper">
                   <p class="news-card__title">&laquo;Мангазея Агро&raquo; открыла комфортное общежитие для сотрудников</p>
-                </div>
-                <picture class="news-card__image">
-                  <source type="image/webp" srcset="img/content/news/news-2.webp, img/content/news/news-2@2x.webp 2x"><img src="img/content/news/news-2.jpg" srcset="img/content/news/news-2@2x.jpg 2x" width="720" height="338" alt="фото новости">
-                </picture><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
+                </div><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
               </li>
               <li class="news-card news-card--picture">
+                <picture class="news-card__image">
+                  <source type="image/webp" srcset="img/content/news/news-3.webp, img/content/news/news-3@2x.webp 2x"><img src="img/content/news/news-3.jpg" srcset="img/content/news/news-3@2x.jpg 2x" width="720" height="338" alt="фото новости">
+                </picture>
                 <div class="news-card__info-wrapper">
                   <div class="news-card__number-wrapper">
                     <p class="news-card__date">17</p>
@@ -247,10 +246,7 @@
                 </div>
                 <div class="news-card__title-wrapper">
                   <p class="news-card__title">ГК&nbsp;&laquo;Мангазея&raquo; увеличила производство золота в&nbsp;I квартале на&nbsp;295,7%</p>
-                </div>
-                <picture class="news-card__image">
-                  <source type="image/webp" srcset="img/content/news/news-3.webp, img/content/news/news-3@2x.webp 2x"><img src="img/content/news/news-3.jpg" srcset="img/content/news/news-3@2x.jpg 2x" width="720" height="338" alt="фото новости">
-                </picture><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
+                </div><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
               </li>
               <li class="news-card">
                 <div class="news-card__info-wrapper">
@@ -264,10 +260,7 @@
                 </div>
                 <div class="news-card__title-wrapper">
                   <p class="news-card__title">&laquo;Мангазея Девелопмент&raquo; объявила о&nbsp;старте продаж нового проекта бизнес-класса &laquo;Интонация&raquo;</p>
-                </div>
-                <picture class="news-card__image">
-                  <source type="image/webp" srcset="img//.webp, img//@2x.webp 2x"><img src="img//." srcset="img//@2x. 2x" width="" height="" alt="">
-                </picture><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
+                </div><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
               </li>
               <li class="news-card">
                 <div class="news-card__info-wrapper">
@@ -281,12 +274,12 @@
                 </div>
                 <div class="news-card__title-wrapper">
                   <p class="news-card__title">Радио &laquo;Вера&raquo; начало вещание в&nbsp;Чите <br> при поддержке ГК&nbsp;&laquo;Мангазея&raquo;</p>
-                </div>
-                <picture class="news-card__image">
-                  <source type="image/webp" srcset="img//.webp, img//@2x.webp 2x"><img src="img//." srcset="img//@2x. 2x" width="" height="" alt="">
-                </picture><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
+                </div><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
               </li>
               <li class="news-card news-card--picture">
+                <picture class="news-card__image">
+                  <source type="image/webp" srcset="img/content/news/news-4.webp, img/content/news/news-4@2x.webp 2x"><img src="img/content/news/news-4.jpg" srcset="img/content/news/news-4@2x.jpg 2x" width="720" height="338" alt="фото новости">
+                </picture>
                 <div class="news-card__info-wrapper">
                   <div class="news-card__number-wrapper">
                     <p class="news-card__date">20</p>
@@ -298,10 +291,7 @@
                 </div>
                 <div class="news-card__title-wrapper">
                   <p class="news-card__title">&laquo;Мангазея Агро&raquo; открыла комфортное общежитие для сотрудников</p>
-                </div>
-                <picture class="news-card__image">
-                  <source type="image/webp" srcset="img/content/news/news-4.webp, img/content/news/news-4@2x.webp 2x"><img src="img/content/news/news-4.jpg" srcset="img/content/news/news-4@2x.jpg 2x" width="720" height="338" alt="фото новости">
-                </picture><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
+                </div><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
               </li>
               <li class="news-card">
                 <div class="news-card__info-wrapper">
@@ -315,10 +305,7 @@
                 </div>
                 <div class="news-card__title-wrapper">
                   <p class="news-card__title">ГК&nbsp;&laquo;Мангазея&raquo; увеличила производство золота в&nbsp;I квартале на&nbsp;295,7%</p>
-                </div>
-                <picture class="news-card__image">
-                  <source type="image/webp" srcset="img//.webp, img//@2x.webp 2x"><img src="img//." srcset="img//@2x. 2x" width="" height="" alt="">
-                </picture><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
+                </div><a class="news-card__link" href="#" target="_blank" aria-label="ссылка на новость"></a>
               </li>
             </ul>
             <div class="news__btn-wrapper">
@@ -352,7 +339,7 @@
                       <label>
                         <input type="email" id="user-email" name="user-email" placeholder="Ваш email"><span class="custom-input__icon"></span>
                       </label>
-                      <div class="custom-input__error">Не корректный email</div>
+                      <div class="custom-input__error">Некорректный email</div>
                     </div>
                     <button class="btn btn--white subscribe__button" type="submit">подписаться на новости
                     </button>
@@ -401,7 +388,7 @@
                   </li>
                   <li class="footer__item"><a class="caps-12 link footer__nav-link" href="company.html">Компания</a>
                   </li>
-                  <li class="footer__item"><a class="caps-12 link footer__nav-link" href="#">Активы</a>
+                  <li class="footer__item"><a class="caps-12 link footer__nav-link" href="operations.html">Активы</a>
                   </li>
                   <li class="footer__item"><a class="caps-12 link footer__nav-link" href="#">Устойчивое развитие</a>
                   </li>
@@ -442,17 +429,9 @@
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
           <div class="modal-feedback-success">
-            <div class="section-header">
-              <div class="container">
-                <div class="section-header__header-wrp">
-                  <h2 class="caps-12 section-header__header" data-sal="fade">Уведомление об отправке</h2>
-                </div>
-                <div class="section-header__title-wrp">
-                </div>
-              </div>
-            </div>
-            <p class="modal-feedback-success__text">Уведомления о свежих новостях будут приходить вам на почту.</p>
-            <button class="btn btn--white modal-feedback-success__btn" type="button" data-close-modal>Закрыть окно
+            <p class="modal-feedback-success__title">Cпасибо, <br> ваше cообщение <br> отправлено</p>
+            <p class="modal-feedback-success__text">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.</p>
+            <button class="btn modal-feedback-success__btn" type="button" data-close-modal>Закрыть окно
             </button>
           </div>
           <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>

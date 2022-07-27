@@ -86,7 +86,7 @@ body.sal-disabled [data-sal|='slide'] {
 
 [data-sal|='scale-right'].sal-animate,
 body.sal-disabled [data-sal|='scale-right'] {
-  transform: scaleX(100%);
+  transform: scaleX(100%) !important;
   transform-origin: left;
 }
 
@@ -97,7 +97,7 @@ body.sal-disabled [data-sal|='scale-right'] {
 
 [data-sal|='scale-right-reverse'].sal-animate,
 body.sal-disabled [data-sal|='scale-right-reverse'] {
-  transform: scaleX(0%);
+  transform: scaleX(0%) !important;
   transform-origin: right;
 }
 

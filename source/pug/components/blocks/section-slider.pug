@@ -1,6 +1,5 @@
 -
-  const valuesSectionData = {
-    array: [
+  const valuesSectionData = [
       {
        title: "Помощь детским <br>учреждениям",
        text: "Регулярно предоставляем <br>адресную финансовую помощь <br>детским дошкольным и <br>школьным образовательным учреждениям."
@@ -25,12 +24,10 @@
        title: "Защита окружающей <br>среды",
        text: "Выполняем требования природоохранного законодательства, рационально используем ресурсы и безопасно утилизируем отходы для минимизации воздействия на окружающую среду."
       },
-    ]
-  }
+  ]
 
 -
-  const historySectionData = {
-    array: [
+  const historySectionData = [
       {
        title: "2005",
        text: "Приобретена лицензия на разработку месторождения Наседкино (Забайкальский край)."
@@ -103,20 +100,25 @@
        title: "2022",
        text: "Приобретена лицензия на разработку россыпного и рудного золота на Золинско-Аркиинской площади (Забайкальский край)."
       },
-    ]
-  }
+  ]
 
 
 mixin section-slider(data, className)
   .section-slider(class=`section-slider--${className}` data-slider-container=`${className}`)
    .section-slider__swiper.swiper(data-slider=`${className}`)
      .swiper-wrapper
-      - for (let i = 1; i < data.array.length + 1; i++)
+      - for (let i = 1; i < data.length + 1; i++)
          .swiper-slide.section-slider__item
-           h3(class=className === "history" ? "heading-72" : "heading-4").section-slider__title!=data.array[i - 1].title
-           p.text-14.section-slider__text!=data.array[i - 1].text
+           h3(class=className === "history" ? "heading-72" : "heading-4").section-slider__title!=data[i - 1].title
+           p.text-14.section-slider__text!=data[i - 1].text
            .section-slider__pagination.nav-count(class=paginationMod, data-pagination)
-              span.caps-12.nav-count__current!=i
-              span.caps-12.nav-count__del=" / "
-              span.caps-12.nav-count__total!=data.array.length
+              if i < 10
+               span.caps-12.nav-count__current!="0" + i
+              else
+               span.caps-12.nav-count__current!=i
+              span.caps-12.nav-count__del &nbsp;/&nbsp;
+              if data.length < 10
+               span.caps-12.nav-count__total!="0" + data.length
+              else
+               span.caps-12.nav-count__total!=data.length
    +slider-tools().section-slider__tools

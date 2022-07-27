@@ -1,3 +1,6 @@
+import {renderFraction} from './render-slider-fraction';
+
+
 const sliderBlock = document.querySelector('.slider-gallery');
 
 const initNewsSlider = () => {
@@ -7,6 +10,16 @@ const initNewsSlider = () => {
   } else {
 
     swiper = new Swiper('.slider-gallery', {
+      effect: 'creative',
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ['100%', 0, 1],
+        },
+      },
       grabCursor: true,
       navigation: {
         nextEl: '.slider-controls__btn--next',
@@ -14,15 +27,11 @@ const initNewsSlider = () => {
       },
       pagination: {
         el: ('.slider-gallery__pagination'),
-        type: 'fraction',
-        clickable: true,
+        type: 'custom',
+        renderCustom: renderFraction,
       },
-      breakpoints: {
-        1440: {
-          slidesPerView: 1,
-          spaceBetween: 30,
-        },
-      },
+      slidesPerView: 1,
+      spaceBetween: 30,
     });
   }
 };

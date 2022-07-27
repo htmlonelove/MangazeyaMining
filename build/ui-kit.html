@@ -198,6 +198,7 @@
           pointer-events: none;
         }
         
+        
       </style>
       <header class="header-ui">
         <nav class="header-ui__nav container"><a class="components-backwards" href="sitemap.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
@@ -219,6 +220,10 @@
             </p>
             <p>
               <button class="btn" type="button" data-open-modal="success">modal-success
+              </button>
+            </p>
+            <p>
+              <button class="btn" type="button" data-open-modal="feedback-success">modal-feedback-success
               </button>
             </p>
           </section>
@@ -620,6 +625,24 @@ navigationChanger.init();
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
           <p class="modal__description">Размер этой модалки зависит от ширины контента,<br>отключена анимация-скейл</p>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="20" height="20" aria-hidden="true">
+              <use xlink:href="#icon-close-modal"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--feedback-success" data-modal="feedback-success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-feedback-success">
+            <p class="modal-feedback-success__title">Cпасибо, <br> ваше cообщение <br> отправлено</p>
+            <p class="modal-feedback-success__text">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.</p>
+            <button class="btn modal-feedback-success__btn" type="button" data-close-modal>Закрыть окно
+            </button>
+          </div>
           <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="20" height="20" aria-hidden="true">
               <use xlink:href="#icon-close-modal"></use>

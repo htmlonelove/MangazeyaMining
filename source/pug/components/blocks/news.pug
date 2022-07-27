@@ -127,13 +127,12 @@
 
   ]
 
-mixin news(data)
+mixin news(title, data)
   section.news
     .container
+      +intro-title(introTitle, 'press')
       ul.news-list
         each item, index in data
           +news-card(item)(class=item.isActive ? "news-card--picture" : null)
       .news__btn-wrapper
         +btn-load-more().news__load-btn
-
-

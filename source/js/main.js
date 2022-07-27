@@ -15,11 +15,17 @@ import {initHistorySlider} from './modules/sliders/init-history-slider';
 import {initTeamSlider} from './modules/sliders/init-team-slider';
 import {initPrinciplesSlider} from './modules/sliders/init-principles-slider';
 import {initNewsSlider} from './modules/sliders/init-news-slider';
+import {initAccordions} from './modules/accordion/init-accordion';
+
 
 import {initMap} from './modules/map/init-map';
 import {initMapBusiness} from './modules/map/init-map-business';
 
+import {initTenderB2b} from './modules/init-tender-b2b';
+import {initDescriptionText} from './modules/init-description-text';
+
 import {initFirstLoad} from './modules/init-first-load';
+import {initIndicatorFacts} from './modules/init-indicator-facts';
 import {initScrollBtn} from './modules/init-scroll-btn';
 import {initIntroVideo} from './modules/init-intro-video';
 import {loadVideo} from './modules/lazy-video-load';
@@ -68,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMap();
     initMapBusiness();
     initJobSlider();
-    // initPrinciplesSlider();
+    initPrinciplesSlider();
     initRunningLine();
     showLabel();
     controlVideo();
@@ -77,6 +83,10 @@ window.addEventListener('DOMContentLoaded', () => {
     initNewsSlider();
     initMapMoscow();
     initMapChita();
+    // initTenderB2b();
+    initAccordions();
+    initDescriptionText();
+    initIndicatorFacts();
 
 
     window.sal({

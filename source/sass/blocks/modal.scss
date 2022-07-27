@@ -63,14 +63,16 @@
   &__content {
     position: relative;
 
-    width: size(600px);
-    padding: size(60px) size(48px);
+    width: size(672px);
+    padding: size(64px) size(48px);
+    min-height: size(374px);
 
-    background-color: $color-lucky-point;
+    background-color: $color-default-white;
 
     @include vp-1439 {
-      width: 600px;
-      padding: 60px 48px;
+      width: 672px;
+      padding: 64px 48px;
+      min-height: 374px;
     }
 
     @include vp-767 {
@@ -94,8 +96,8 @@
     width: size(48px);
     height: size(48px);
     padding: 0;
-    color: $color-nero;
-    background: $color-default-white;
+    color: $color-default-white;
+    background: $color-midnight-express;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -117,7 +119,7 @@
     }
 
     @include has-hover {
-      background: $color-default-white-50;
+      opacity: 0.5;
     }
 
     svg {
@@ -180,5 +182,13 @@
       padding: 0;
       background-color: $color-midnight-express;
     }
+  }
+}
+
+.modal .btn {
+  display: none;
+
+  @include vp-767 {
+    display: inline-flex;
   }
 }
