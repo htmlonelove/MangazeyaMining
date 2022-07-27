@@ -47,7 +47,7 @@ mixin intro(data)
             +fact-item(data.factsList[0]).fact-item--white
             +fact-item(data.factsList[1]).fact-item--white
             .intro__video-wrp
-              video(preload="auto", data-autoplay, muted, playsinline, loop, data-src=`video/${data.video}.mp4`)
+              video(preload="auto", autoplay, muted, playsinline, loop, data-src=`video/${data.video}.mp4`)
               +video-btn({title: "видео о компании"})(data-open-modal="video").intro__video-btn
 
         +scroll-btn().intro__scroll-btn(data-target=`#${data.id}`)

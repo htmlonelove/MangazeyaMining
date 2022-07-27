@@ -3,6 +3,7 @@ import './vendor/swiper';
 import './vendor/moveTo';
 import Splitting from './vendor/splitting';
 import sal from './vendor/sal';
+import './vendor/lightweight-charts';
 
 window.Splitting = Splitting;
 window.sal = sal;
