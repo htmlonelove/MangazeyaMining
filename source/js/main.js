@@ -25,6 +25,7 @@ import {initTenderB2b} from './modules/init-tender-b2b';
 import {initDescriptionText} from './modules/init-description-text';
 
 import {initFirstLoad} from './modules/init-first-load';
+import {initQuotations} from './modules/init-quotations';
 import {initIndicatorFacts} from './modules/init-indicator-facts';
 import {initScrollBtn} from './modules/init-scroll-btn';
 import {initIntroVideo} from './modules/init-intro-video';
@@ -86,6 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // initTenderB2b();
     initAccordions();
     initDescriptionText();
+    initQuotations();
     initIndicatorFacts();
 
 

@@ -1,0 +1,320 @@
+.quotations {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  width: 100%;
+  height: size(722px);
+  padding: size(23px) 0 0;
+  color: $color-default-white;
+  background-color: $color-lucky-point;
+  transition: transform $trans-1000;
+
+  .is-quotations-open & {
+    transform: translateY(0);
+  }
+
+  &__chart {
+    position: relative;
+    width: 100%;
+    height: size(360px);
+    margin: size(9px) 0 0;
+    font-size: size(12px);
+    line-height: size(18px);
+    pointer-events: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      transform: translateX(-100%);
+      opacity: 0;
+      width: 100%;
+      height: size(1px);
+      background-color: $color-default-white-15;
+      transition: transform $trans-1000 0.9s,
+        opacity $trans-1000 0.9s;
+
+      .is-quotations-open & {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 26px;
+      left: 0;
+      z-index: 1;
+      transform: translateX(-100%);
+      opacity: 0;
+      width: 100%;
+      height: size(1px);
+      background-color: $color-default-white-15;
+      transition: transform $trans-1000 0.9s;
+
+      .is-quotations-open & {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .is-quotations-open & {
+      animation: activation $trans-1000 both 1s;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+    margin: 0 size(-8px);
+    padding: 0;
+    list-style: none;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: opacity $trans-1000,
+      transform $trans-1000;
+
+    .custom-toggle {
+      width: auto;
+      padding: 0;
+
+      &__label {
+        transition: color $trans-1000;
+
+        @include has-hover {
+          color: $color-default-white-50;
+        }
+      }
+
+      label {
+        padding: size(8px);
+      }
+
+      input {
+        &:checked {
+          & + .custom-toggle__label {
+            color: $color-default-white-50;
+          }
+        }
+      }
+    }
+
+    .is-quotations-open & {
+      animation: fadeUp $trans-1000 both 0.9s;
+    }
+  }
+
+  &__legend {
+    display: flex;
+    flex-direction: column;
+    margin: size(31px) 0 size(32px);
+  }
+
+  &__legend-title-wrp {
+    overflow: hidden;
+  }
+
+  &__legend-title {
+    display: block;
+    transform: translateY(100%);
+    transition: transform $trans-1000;
+
+    .is-quotations-open & {
+      animation: slideUp $trans-1000 both 0.9s;
+    }
+  }
+
+  &__legend-text-wrp {
+    overflow: hidden;
+  }
+
+  &__legend-text {
+    display: block;
+    transform: translateY(100%);
+    transition: transform $trans-1000;
+
+    .is-quotations-open & {
+      animation: slideUp $trans-1000 both 0.9s;
+    }
+  }
+
+  &__legend-time {
+    margin: size(5px) 0 0;
+    font-weight: 400;
+    font-size: size(12px);
+    line-height: size(18px);
+    color: $color-default-white-50;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: opacity $trans-1000,
+      transform $trans-1000;
+
+    .is-quotations-open & {
+      animation: fadeUp $trans-1000 both 0.9s;
+    }
+  }
+
+  &__switcher {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 size(-25px) 0 size(-8px);
+    padding: 0;
+    list-style: none;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: opacity $trans-1000,
+      transform $trans-1000;
+
+    .custom-toggle {
+      width: auto;
+      padding: 0;
+
+      &__label {
+        transition: color $trans-1000;
+
+        @include has-hover {
+          color: $color-default-white-50;
+        }
+      }
+
+      label {
+        padding: size(8px);
+      }
+
+      input {
+        &:checked {
+          & + .custom-toggle__label {
+            color: $color-default-white-50;
+          }
+        }
+      }
+    }
+
+    .is-quotations-open & {
+      animation: fadeUp $trans-1000 both 0.9s;
+    }
+  }
+
+  &__switcher-item {
+    margin: 0 size(17px) 0 0;
+    font-weight: 400;
+    font-size: size(12px);
+    line-height: size(18px);
+  }
+
+  &__tooltip {
+    width: size(151px);
+    height: size(57px);
+    position: absolute;
+    display: none;
+    padding: size(8px);
+    background-color: $color-default-white;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+    border: none;
+  }
+
+  &__tooltip-price {
+    display: block;
+    color: $color-nero;
+  }
+
+  &__tooltip-date {
+    display: block;
+    font-size: size(12px);
+    line-height: size(18px);
+    color: $color-nero-50;
+  }
+}
+
+.tv-lightweight-charts {
+  width: 100%;
+  font-size: size(12px);
+  line-height: size(18px);
+
+  table {
+    border-collapse: collapse;
+
+    tr {
+      &:first-child {
+
+        td {
+          &:nth-child(2) {
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              transform: translateX(0);
+              width: 100%;
+              height: 100%;
+              background-color: $color-lucky-point;
+              transition: transform $trans-1000;
+
+              .is-quotations-open .is-active & {
+                animation: trades 1s both 0.9s;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              transform: translateY(-100%);
+              opacity: 0;
+              width: size(1px);
+              height: 100%;
+              background-color: $color-default-white-15;
+              transition: transform $trans-1000 0.9s,
+                opacity $trans-1000 0.9s;
+
+              .is-quotations-open & {
+                transform: translateY(0);
+                opacity: 1;
+              }
+            }
+
+            canvas {
+              transform: translateY(50%);
+              opacity: 0;
+              transition: opacity $trans-1000,
+                transform $trans-1000;
+            }
+
+            .is-quotations-open & {
+              canvas {
+                animation: fadeUp $trans-1000 both 0.9s;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    tr {
+      &:last-child {
+        transform: translateY(50%);
+        opacity: 0;
+        transition: opacity $trans-1000,
+          transform $trans-1000;
+
+        .is-quotations-open & {
+          animation: fadeUp $trans-1000 both 0.9s;
+        }
+      }
+    }
+  }
+}

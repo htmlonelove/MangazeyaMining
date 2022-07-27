@@ -32,6 +32,8 @@ mixin header(headerMods, currentUrl, headerActivePage)
     ]
 
   header.header(class=headerMods)
+    +quotations()
+
     .header__inner
       if (currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
@@ -50,8 +52,9 @@ mixin header(headerMods, currentUrl, headerActivePage)
 
       .header__menu-wrp
         .header__quotes-wrp
-          button.header__quotes(type="button", aria-pressed="false")
-            span.caps-12.header__quotes-title Котировки
+          button.header__quotes(type="button", aria-pressed="false" data-quotes-btn)
+            span.caps-12.header__quotes-title.header__quotes-title--close Котировки
+            span.caps-12.header__quotes-title.header__quotes-title--open Закрыть
 
         .header__lang
           a.caps-12.header__link.link(href="#") En

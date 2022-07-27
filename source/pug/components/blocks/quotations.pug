@@ -1,0 +1,121 @@
+-
+  const quotationsList = [
+    {
+      title: "USD / RUB",
+      id: "USD-RUB",
+      checked: true,
+      base: 'data1',
+    },
+    {
+      title: "EUR / RUB",
+      id: "EUR-RUB",
+      base: 'data2',
+    },
+    {
+      title: "cny / RUB",
+      id: "cny-RUB",
+      base: 'data1',
+    },
+    {
+      title: "Gold / usd",
+      id: "Gold-usd",
+      base: 'data2',
+    },
+    {
+      title: "Silver / usd",
+      id: "Silver-usd",
+      base: 'data1',
+    },
+    {
+      title: "Cooper / usd",
+      id: "Cooper-usd",
+      base: 'data2',
+    },
+    {
+      title: "Lithium / usd",
+      id: "Lithium-usd",
+      base: 'data1',
+    },
+    {
+      title: "Iron ore / usd",
+      id: "Iron ore-usd",
+      base: 'data2',
+    },
+    {
+      title: "Tin / usd",
+      id: "Tin-usd",
+      base: 'data1',
+    },
+    {
+      title: "Lead / usd",
+      id: "Lead-usd",
+      base: 'data2',
+    },
+    {
+      title: "Zinc / usd",
+      id: "Zinc-usd",
+      base: 'data1',
+    },
+  ]
+
+  const switcherList = [
+    {
+      title: "1 день",
+      id: "1day",
+      checked: true,
+    },
+    {
+      title: "5 дней",
+      id: "5day",
+    },
+    {
+      title: "1 мес",
+      id: "1month",
+    },
+    {
+      title: "3 мес",
+      id: "3month",
+    },
+    {
+      title: "6 мес",
+      id: "6month",
+    },
+    {
+      title: "1 год",
+      id: "1year",
+    },
+    {
+      title: "5 лет",
+      id: "5year",
+    },
+    {
+      title: "Все",
+      id: "all",
+    },
+  ]
+
+mixin quotations()
+  .quotations
+    .container
+      form(action="#", method="get")
+        ul.quotations__list
+          each item in quotationsList
+            li.quotations__item
+              +custom-toggle({inputLabel: item.title, inputType: "radio", inputId: item.id, inputName: "quotationsName", noIcon: true, inputChecked: item.checked ? true : null})(data-quotations-btn data-base=item.base).caps-12.quotations__item-btn
+
+      .quotations__legend(data-quotations-legend)
+        .quotations__legend-title-wrp
+          span.heading-3-caps.quotations__legend-title
+        .quotations__legend-text-wrp
+          span.heading-3-caps.quotations__legend-text
+        span.quotations__legend-time 09:05:30 AM MI Indication
+
+      ul.quotations__switcher
+        each item,index in switcherList
+          li.quotations__switcher-item
+            +custom-toggle({inputLabel: item.title, inputType: "radio", inputId: item.id, inputName: "periodName", noIcon: true, inputChecked: item.checked ? true : null})(data-switcher-btn data-switcher-index=index).quotations__switcher-btn
+
+    .quotations__chart(data-chart)
+      .quotations__tooltip
+        span.caps-12.quotations__tooltip-price
+        span.quotations__tooltip-date
