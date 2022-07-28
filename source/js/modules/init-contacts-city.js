@@ -1,10 +1,12 @@
 const cityItems = document.querySelectorAll('[data-city-item]');
 const citiTabsControl = document.querySelector('[data-city-controls]');
 const cityContactsHeader = document.querySelector('[data-city-tabs] [data-city-header]');
+const key = "8a4e1581d453aea5e9d8aa34f5a6fb50"
 
 async function getWeatherData (cityName, temp, time) {
   try {
-    const response = await fetch(`http://api.weatherstack.com/current?access_key=f7d104723e368facfe6dce0c8c77c6dc&query=${cityName}`);
+    // const response = await fetch(`http://api.weatherstack.com/current?access_key=${key}&query=${cityName}`); // раскоментировать
+    const response = await fetch(`http://api.weatherstack.com/current?access_keyDELETE=${key}&query=${cityName}`); // удалить
     const city = await response.json();
 
     const dateTime = city.location.localtime;
@@ -17,7 +19,7 @@ async function getWeatherData (cityName, temp, time) {
   } catch (error) {
     console.warn(error);
     console.log('Данные о погоде не загрузились');
-    element.textContent = '-';
+    temp.textContent = '-';
     return error;
   }
 }
