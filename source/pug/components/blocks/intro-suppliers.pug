@@ -24,8 +24,9 @@ mixin intro-suppliers()
     .tender-b2b
       .container
         .tender-b2b__wrapper
-          .b2b-center-market(data-iframe="mangazeyamining" data-domain="www.b2b-center.ru", id="b2b-center-market-js")
+          .b2b-center-market(data-iframe="mangazeyamining" data-domain="www.b2b-center.ru")
     .intro-suppliers__footer
       +section-description(introSuppliers.footer)
 
 
+<script>(function () { var id = 'b2b-center-market-js'; if (document.getElementById(id)) { return; } var script = document.createElement('script'); script.src = '//www.b2b-center.ru/js/public/iframe.js'; script.id = id; script.charset = 'utf-8'; script.type = 'text/javascript'; document.getElementsByTagName('head')[0].appendChild(script);}());</script>
