@@ -9,12 +9,12 @@
   }
 
   &__avatar {
+    flex-shrink: 0;
     margin-right: size(16px);
     width: size(72px);
     height: size(72px);
     border-radius: 50%;
     overflow: hidden;
-
 
     img {
       width: 100%;
@@ -56,5 +56,15 @@
     @include vp-1439 {
       margin-top: 8px;
     }
+
+    @include vp-767 {
+      margin-top: 6px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }

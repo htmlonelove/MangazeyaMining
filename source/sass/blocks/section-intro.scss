@@ -10,6 +10,20 @@
     padding-top: 32px;
   }
 
+  &--operations {
+    .section-intro__content {
+      margin: 0 0 size(60px);
+
+      @include vp-767 {
+        margin: 0 0 40px;
+      }
+    }
+
+    .section-intro__interactive {
+      aspect-ratio: unset;
+    }
+  }
+
   &__header {
     display: none;
 
@@ -65,36 +79,37 @@
   }
 
   &__column {
-    width: 41.7%;
 
     @include vp-767 {
       width: 100%;
     }
 
     &:first-child {
+      flex-shrink: 0;
+      width: 41.7%;
       margin-right: 0;
 
       @include vp-767 {
         display: none;
       }
     }
+  }
 
-    & p {
-      margin-top: 0;
-      font-size: size(16px);
-      line-height: size(24px);
+  &__text {
+    margin-top: 0;
+    // font-size: size(16px);
+    // line-height: size(24px);
 
-      &:last-of-type {
-        margin-bottom: 0;
-      }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
 
-      @include vp-767 {
-        font-size: 14px;
-        line-height: 22px;
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 22px;
 
-        & br {
-          display: none;
-        }
+      & br {
+        display: none;
       }
     }
   }
@@ -111,6 +126,65 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__column-header {
+    margin: 0 0 size(40px);
+
+    @include vp-767 {
+      position: relative;
+      margin: 18px 0 24px;
+      padding: 24px 0 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -16px;
+        width: 100vw;
+        height: 1px;
+        background-color: $color-nero-10;
+      }
+    }
+
+    br {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+  }
+
+  &__big-title {
+    margin: 0 size(6px) 0 0;
+    line-height: 100%;
+  }
+
+  &__card-title {
+    margin: 0 0 size(10px);
+  }
+
+  &__card-text {
+    color: $color-nero-50;
+  }
+
+  .user-card {
+    margin: size(64px) 0 0;
+
+    @include vp-767 {
+      margin: 95px 0 0;
+    }
+
+    &__name {
+      font-size: size(16px);
+      line-height: size(22px);
     }
   }
 }
