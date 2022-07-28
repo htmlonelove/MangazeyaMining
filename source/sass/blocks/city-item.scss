@@ -172,8 +172,23 @@
   }
 
   &__phone {
+    position: relative;
+
     margin-bottom: size(16px);
     color: $color-default-white;
+
+    &::before {
+      content: attr(data-name);
+      position: absolute;
+      left: 0;
+      top: -20px;
+
+      font-size: 14px;
+      line-height: 22px;
+
+      opacity: 0.5;
+      pointer-events: none;
+    }
 
     @include vp-1439 {
       margin-bottom: 16px;
@@ -186,9 +201,23 @@
   }
 
   &__address {
+    position: relative;
     margin-top: size(20px);
     margin-bottom: 0;
     color: $color-default-white;
+
+    &::before {
+      content: attr(data-name);
+      position: absolute;
+      left: 0;
+      top: -20px;
+
+      font-size: 14px;
+      line-height: 22px;
+
+      opacity: 0.5;
+      pointer-events: none;
+    }
   }
 
   &__footer {

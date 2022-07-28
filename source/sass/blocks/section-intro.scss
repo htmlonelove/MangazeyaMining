@@ -40,6 +40,42 @@
         display: block;
       }
     }
+
+    span[data-city-time-full] {
+      margin-left: size(15px);
+      color: $color-nero-50;
+
+      @include vp-1439 {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &__title-btn {
+    font-weight: inherit;
+    font-size: inherit;
+    text-transform: uppercase;
+    color: $color-nero;
+
+    padding: 0;
+    border-width: 0;
+    background-color: $color-transparent;
+
+    cursor: pointer;
+
+    transition: color $trans-default, border-color $trans-default;
+
+    &.is-active {
+      border-bottom: size(1px) dashed $color-nero;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover:not(.focus-visible),
+      &.focus-visible:focus {
+        color: $color-nero-50;
+        border-color: $color-nero-50;
+      }
+    }
   }
 
   &__content {

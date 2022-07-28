@@ -1,4 +1,4 @@
-<!DOCTYPE html><script>(function () { var id = 'b2b-center-market-js'; if (document.getElementById(id)) { return; } var script = document.createElement('script'); script.src = '//www.b2b-center.ru/js/public/iframe.js'; script.id = id; script.charset = 'utf-8'; script.type = 'text/javascript'; document.getElementsByTagName('head')[0].appendChild(script);}());</script>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <title>Контакты - Мангазея Майнинг</title>
@@ -297,55 +297,76 @@
         </nav>
       </header>
       <main>
-        <section class="contacts-feedback">
+        <section class="section-intro">
           <div class="container">
-            <div class="contacts-feedback__title"><a class="link contacts-feedback__phone" href="mailto:trust@mangazeya.ru">trust@mangazeya.ru</a>
-              <div class="contacts-feedback__text">Заявление также можно отправить<br> анонимно по&nbsp;электронной почте и&nbsp;через<br> форму обратной связи.</div>
-            </div>
-            <div class="contacts-feedback__form" data-validate data-callback="feedbackFormSubmit">
-              <form action="#" method="post" enctype="multipart/form-data">
-                <div class="contacts-feedback__inputs-wrp">
-                  <div class="custom-input" data-validate-type="text" data-limitations="name">
-                    <label>
-                      <input type="text" name="user-name" minlength="2" placeholder="Ваше имя"><span class="custom-input__label">Ваше имя</span><span class="custom-input__icon"></span>
-                    </label>
-                  </div>
-                  <div class="custom-input" data-validate-type="email">
-                    <label>
-                      <input type="email" name="user-email" placeholder="Email"><span class="custom-input__label">Email</span><span class="custom-input__icon"></span>
-                    </label>
-                  </div>
-                  <div class="custom-input custom-input--topic" data-validate-type="text">
-                    <label>
-                      <input type="text" name="user-subject" placeholder="Тема обращения"><span class="custom-input__label">Тема обращения</span><span class="custom-input__icon"></span>
-                    </label>
-                  </div>
-                  <div class="custom-input custom-input--file">
-                    <label>
-                      <input type="file" name="user-file" accept=".jpg, .png, .gif, .pdf, .doc, .docx, .dot, .xlsx, .xlsx, .xlsm, .txt, csv, .mpg, .mpeg, .avi, .3gp, .3g2, .mp3, .wav, .acc, .rar, .zip"><span class="custom-input__label">Прикрепить файл — не более 4&nbsp;mb</span><span class="custom-input__icon">
-                        <svg width="24" height="24" aria-hidden="true">
-                          <use xlink:href="#icon-file"></use>
-                        </svg></span>
-                    </label>
-                    <button class="btn custom-input__delete-btn" type="button" ariaLabel="Удалить файл">
-                      <svg width="20" height="20" aria-hidden="true">
-                        <use xlink:href="#icon-close"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="custom-textarea auto-resize-textarea" data-validate-type="text">
-                    <label><span class="custom-textarea__label">Сообщение</span>
-                      <textarea name="user-message" placeholder="Сообщение"></textarea>
-                    </label>
-                  </div>
-                </div>
-                <button class="btn btn--white contacts-feedback__submit-btn" type="submit">Отправить сообщение
-                </button>
-                <p class="contacts-feedback__info">Нажимая «Отправить сообщение», вы&nbsp;принимаете&ensp;<a class="link contacts-feedback__info-link" href="conditions.html">условия обработки пользовательских данных</a>. При приеме и&nbsp;рассмотрении обращений гарантируется конфиденциальность и&nbsp;неразглашение персональных данных.</p>
-              </form>
-            </div>
+            <h1 class="caps-12 section-intro__header" data-sal="slide-up" data-words-animation>Контакты</h1>
+            <p class="heading-1-caps section-intro__title" data-sal="slide-up" data-words-animation>Представительства компании<br> находятся <button class="section-intro__title-btn" type="button" data-city-button="chita">в чите</button> <span data-city-time-full>22:28:32</span><br> и <button class="section-intro__title-btn is-active" type="button" data-city-button="moscow">в москве</button> <span data-city-time-full>16:28:32</span></p>
           </div>
         </section>
+        <div class="city-tabs" data-city-tabs>
+          <div class="city-tabs__controls" data-city-controls>
+            <button class="caps-12 city-tabs__nav-button is-active" data-city-nav><span>Москва</span><span data-city-time-full>16:28:23</span>
+            </button>
+            <button class="caps-12 city-tabs__nav-button" data-city-nav><span>Чита</span><span data-city-time-full>16:28:23</span>
+            </button>
+          </div>
+          <div class="city-tabs__content">
+            <div class="city-item is-active" data-sal="mask-to-right" data-city-item="moscow" data-city-id="524901">
+              <div class="city-item__video-wrapper">
+                <video preload="auto" data-city-video muted playsinline loop data-src="video/mining.mp4"></video>
+              </div>
+              <div class="city-item__content" data-city-content>
+                <p class="caps-12 city-item__title">Москва</p>
+                <div class="city-item__contacts"><a class="heading-2-caps city-item__phone" href="tel:+74956475555">+7 495 647 55 55</a>
+                  <p class="text-14 city-item__working-hours">Понедельник&nbsp;&mdash; пятница, 9:00&nbsp;&mdash; 18:00</p><a class="text-14 city-item__email" href="mailto:mining@mangazeya.ru">mining@mangazeya.ru</a>
+                  <p class="text-14 city-item__address">119019, Москва, ул. Знаменка&nbsp;7, стр.&nbsp;3</p>
+                </div>
+                <div class="city-item__footer"><span class="caps-12 city-item__time" data-city-time>16:28:32</span><span class="caps-12 city-item__temperature"><span data-city-temperature>-10</span><span>&deg;C</span></span>
+                </div>
+              </div>
+              <div class="city-item__map">
+                <div class="map">
+                  <div class="map__inner" data-icon-pin="img/svg/custom-marker.svg" data-map-place-cords="55.74896956898905, 37.607592" data-map="moscow"></div>
+                </div>
+              </div>
+              <button class="city-item__button-location" type="button" data-city-location>
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="#icon-marker"></use>
+                </svg>
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="#icon-close-modal"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="city-item" data-sal="mask-to-right" data-city-item="chita" data-city-id="2025339">
+              <div class="city-item__video-wrapper">
+                <video preload="auto" data-city-video muted playsinline loop data-src="video/mining.mp4"></video>
+              </div>
+              <div class="city-item__content" data-city-content>
+                <p class="caps-12 city-item__title">Чита</p>
+                <div class="city-item__contacts"><a class="heading-2-caps city-item__phone" href="tel:+74956475555">+7 495 647 55 55</a>
+                  <p class="text-14 city-item__working-hours">Понедельник&nbsp;&mdash; пятница, 9:00&nbsp;&mdash; 18:00</p><a class="text-14 city-item__email" href="mailto:mining@mangazeya.ru">mining@mangazeya.ru</a>
+                  <p class="text-14 city-item__address">672000, Чита, ул. Костюшко-Григоровича&nbsp;5,<br> помещение&nbsp;13, офис 405</p>
+                </div>
+                <div class="city-item__footer"><span class="caps-12 city-item__time" data-city-time>22:28:32</span><span class="caps-12 city-item__temperature"><span data-city-temperature>-25</span><span>&deg;C</span></span>
+                </div>
+              </div>
+              <div class="city-item__map">
+                <div class="map">
+                  <div class="map__inner" data-icon-pin="img/svg/custom-marker.svg" data-map-place-cords="52.03502607206422, 113.50310649999992" data-map="chita"></div>
+                </div>
+              </div>
+              <button class="city-item__button-location" type="button" data-city-location>
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="#icon-marker"></use>
+                </svg>
+                <svg width="20" height="20" aria-hidden="true">
+                  <use xlink:href="#icon-close-modal"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </main>
       <div class="swiper-container running-line" data-running-line>
         <div class="swiper-wrapper running-line__content">
@@ -438,6 +459,7 @@
         </div>
       </div>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=a01f8dd2-d0ce-4dd5-a1b6-745f3a207777"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

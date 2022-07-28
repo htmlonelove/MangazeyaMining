@@ -4,6 +4,7 @@
     titleMob: "компания, ведущая свою деятельность в Российской Федерации",
     header: "Компания",
     contentHeader: "",
+    content: true,
     contentLeft: [true],
     contentRight: ["Программа развития компании предусматривает <br>рост объемов производства металла на уже действующем производстве и введение в промышленную эксплуатацию новых месторождений."],
     img: ['content/section-intro', 'presentation', 'jpg', 1440, 780, 'Программа развития компании'],
@@ -15,15 +16,21 @@ mixin section-intro(data)
     .container
       if data.header
         h1.caps-12.section-intro__header(data-sal="slide-up" data-words-animation)!=data.header
+
       if (data.title && data.titleMob)
         p.heading-1-caps.section-intro__title.section-intro__title--desc(data-sal="slide-up" data-words-animation)!=data.title
         p.heading-1-caps.section-intro__title.section-intro__title--mob(data-sal="slide-up" data-words-animation)!=data.titleMob
-    .section-intro__content
-         if data.contentLeft[0]
-          .section-intro__column
-            +link-download({name:"скачать презентацию", href: "./pdf/MangazeyaGroup.pdf", size: "340 kb", ext: "pdf"})
-         if data.contentRight[0]
-          .section-intro__column
-           p.text-14!=data.contentRight[0]
-    .section-intro__interactive
-       +picture(...data.img)
+      else
+        p.heading-1-caps.section-intro__title(data-sal="slide-up" data-words-animation)!=data.title
+
+    if data.content
+      .section-intro__content
+           if data.contentLeft[0]
+            .section-intro__column
+              +link-download({name:"скачать презентацию", href: "./pdf/MangazeyaGroup.pdf", size: "340 kb", ext: "pdf"})
+           if data.contentRight[0]
+            .section-intro__column
+             p.text-14!=data.contentRight[0]
+    if data.img
+      .section-intro__interactive
+         +picture(...data.img)
