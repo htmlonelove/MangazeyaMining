@@ -27,10 +27,89 @@ block variables
       text: "Мы свяжемся с вами в&nbsp;ближайшее время",
     }
 
+  -
+    const contactsData = {
+      header: {
+        header: "Контакты",
+        title: `Представительства компании<br> находятся <button class="section-intro__title-btn" type="button" data-city-button="chita">в чите</button> <span data-city-time-full>22:28:32</span><br> и <button class="section-intro__title-btn is-active" type="button" data-city-button="moscow">в москве</button> <span data-city-time-full>16:28:32</span>`,
+      },
+    }
+
+  -
+    const contactsTabs = {
+      controls: [
+        {
+          text: 'Москва',
+          isActive: true,
+          time: '16:28:23',
+        },
+        {
+          text: 'Чита',
+          time: '16:28:23',
+        },
+      ],
+      content: [
+        {
+          isActive: true,
+          video: {
+            name: 'mining',
+            format: 'mp4',
+          },
+          map: {
+            name: 'moscow',
+            latitude: '55.74896956898905',
+            longitude: '37.607592',
+          },
+          name: 'Москва',
+          id: '524901',
+          phone: {
+            text: '+7 495 647 55 55',
+            href: 'tel:+74956475555',
+          },
+          workingHours: 'Понедельник&nbsp;&mdash; пятница, 9:00&nbsp;&mdash; 18:00',
+          email: {
+            text: 'mining@mangazeya.ru',
+            href: 'mailto:mining@mangazeya.ru',
+          },
+          address: '119019, Москва, ул. Знаменка&nbsp;7, стр.&nbsp;3',
+          time: '16:28:32',
+          temperature: '-10',
+        },
+        {
+          video: {
+            name: 'mining',
+            format: 'mp4',
+          },
+          map: {
+            name: 'chita',
+            latitude: '52.03502607206422',
+            longitude: '113.50310649999992',
+          },
+          name: 'Чита',
+          id: '2025339',
+          phone: {
+            text: '+7 495 647 55 55',
+            href: 'tel:+74956475555',
+          },
+          workingHours: 'Понедельник&nbsp;&mdash; пятница, 9:00&nbsp;&mdash; 18:00',
+          email: {
+            text: 'mining@mangazeya.ru',
+            href: 'mailto:mining@mangazeya.ru',
+          },
+          address: '672000, Чита, ул. Костюшко-Григоровича&nbsp;5,<br> помещение&nbsp;13, офис 405',
+          time: '22:28:32',
+          temperature: '-25',
+        },
+      ],
+    }
+
 block main
   main
-    +contacts-feedback()
+    +section-intro(contactsData.header)
+    +city-tabs(contactsTabs)
+    //- +contacts-feedback()
 
 block modals
   +modal("modal--feedback-success")(data-modal="feedback-success")
       +modal-feedback-success(successModal)
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a01f8dd2-d0ce-4dd5-a1b6-745f3a207777")

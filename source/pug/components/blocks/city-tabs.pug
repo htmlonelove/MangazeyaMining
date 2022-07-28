@@ -1,0 +1,41 @@
+mixin city-tabs(props)
+  .city-tabs(data-city-tabs)
+      if props.header
+        +section-header(props.header)(data-city-header)
+      .city-tabs__controls(data-city-controls)
+        each button in props.controls
+          button.caps-12.city-tabs__nav-button(class=button.isActive ? "is-active" : null, data-city-nav)
+            span !{button.text}
+            if button.time
+              span(data-city-time-full) !{button.time}
+      .city-tabs__content
+        each city in props.content
+          .city-item(class=city.isActive ? "is-active" : null, data-sal="mask-to-right", data-city-item=city.map.name, data-city-id=city.id)
+            .city-item__video-wrapper
+              video(preload="auto", data-city-video, muted, playsinline, loop, data-src=`video/${city.video.name}.${city.video.format}`)
+            .city-item__content(data-city-content)
+              p.caps-12.city-item__title !{city.name}
+              .city-item__contacts
+                a.heading-2-caps.city-item__phone(href=city.phone.href) !{city.phone.text}
+                if city.workingHours
+                  p.text-14.city-item__working-hours !{city.workingHours}
+                if city.email
+                  a.text-14.city-item__email(href=city.email.href) !{city.email.text}
+                p.text-14.city-item__address !{city.address}
+
+              .city-item__footer
+                if city.time
+                  span.caps-12.city-item__time(data-city-time) !{city.time}
+                if city.temperature
+                  span.caps-12.city-item__temperature
+                    span(data-city-temperature) !{city.temperature}
+                    span &deg;C
+            .city-item__map
+              +map({
+                latitude: city.map.latitude,
+                longitude: city.map.longitude,
+                map: city.map.name,
+              })
+            button.city-item__button-location(type="button", data-city-location)
+              +icon('icon-marker', 20, 20)
+              +icon('icon-close-modal', 20, 20)
