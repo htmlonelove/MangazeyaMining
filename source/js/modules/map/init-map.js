@@ -76,7 +76,7 @@ const addMarkers = ({markers, mapInstance, collection, isBalloon}) => {
     const markerObj = new window.ymaps.Placemark(marker.coords, balloonOptions, {
       iconLayout: 'default#image',
       iconImageHref: './img/svg/custom-marker.svg',
-      iconImageSize: [44, 66],
+      iconImageSize: isMobile ? [40, 56] : [52, 74],
       iconImageOffset: [-24, -24],
       balloonCloseButton: isMobile,
       balloonOffset: isMobile ? [-102, 0] : [-125, 0],

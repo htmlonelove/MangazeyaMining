@@ -19,7 +19,10 @@ import {initAccordions} from './modules/accordion/init-accordion';
 
 
 import {initMap} from './modules/map/init-map';
+import {initMapGeography} from './modules/map/init-map-geography';
 import {initMapBusiness} from './modules/map/init-map-business';
+import {initMapMoscow} from './modules/map/init-map-moscow';
+import {initMapChita} from './modules/map/init-map-chita';
 
 import {initTenderB2b} from './modules/init-tender-b2b';
 import {initDescriptionText} from './modules/init-description-text';
@@ -37,8 +40,6 @@ import {initToggleItems} from './modules/toggle-resources-table';
 import {initRunningLine} from './modules/init-running-line';
 import {controlVideo} from './modules/init-video-control';
 import {initContactsCity} from './modules/init-contacts-city';
-import {initMapMoscow} from './modules/map/init-map-moscow';
-import {initMapChita} from './modules/map/init-map-chita';
 
 // ---------------------------------
 
@@ -82,6 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initContactsCity();
     initNewsSlider();
+    initMapGeography();
     initMapMoscow();
     initMapChita();
     initTenderB2b();

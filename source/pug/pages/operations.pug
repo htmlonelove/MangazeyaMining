@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Мангазея Майнинг" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Активы - Мангазея Майнинг" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = "header--invert"
@@ -12,7 +12,11 @@ block variables
 
 block main
   main
+    +section-intro(operationsIntroSection).section-intro--operations
     +assets(assetsSectionTableData)
     +resources(tableData)
 
 block modals
+
+block scripts
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a01f8dd2-d0ce-4dd5-a1b6-745f3a207777")
