@@ -1,8 +1,8 @@
 
 const initTenderB2b = () => {
-  const id = 'b2b-center-market-js';
+  const id = document.getElementById('b2b-center-market-js');
 
-  if (document.getElementById(id)) {
+  if (!id) {
     return;
   }
 
