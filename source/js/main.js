@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initNewsSlider();
     initMapMoscow();
     initMapChita();
-    // initTenderB2b();
+    initTenderB2b();
     initAccordions();
     initDescriptionText();
     initQuotations();
