@@ -1,7 +1,7 @@
 mixin news-card(data)
   li.news-card(class!=attributes.class)
     if (data.path && data.image && data.format && data.width && data.height && data.alt)
-     +picture(data.path, data.image, data.format, data.width, data.height, data.alt).news-card__image
+      +picture(data.path, data.image, data.format, data.width, data.height, data.alt).news-card__image
     .news-card__info-wrapper
       .news-card__number-wrapper
         p.news-card__date!=data.date

@@ -1,106 +1,106 @@
 -
   const tableData = [
-      {
-      place: "Наседкино",
-      resources: {
-        total: {
-          amount: 38648,
-          contents: "1,23",
-          aurum: 48,
-          ounces: 1676,
-        },
-        expected: {
-          amount: 16849,
-          contents: "1,11",
-          aurum: 19,
-          ounces: 659,
-        },
-        specified: {
-          amount: 20153,
-          contents: "1,26",
-          aurum: 25,
-          ounces: 899,
-        },
-        measured: {
-          amount: 1646,
-          contents: "2,04",
-          aurum: 3,
-          ounces: 118,
-        },
+    {
+    place: "Наседкино",
+    resources: {
+      total: {
+        amount: 38648,
+        contents: "1,23",
+        aurum: 48,
+        ounces: 1676,
       },
-      reserves: {
-        total: {
-          amount: 16145,
-          contents: "1,36",
-          aurum: 22,
-          ounces: 774,
-        },
-        confirmed: {
-          amount: 1857,
-          contents: "1,83",
-          aurum: 3,
-          ounces: 120,
-        },
-        probable: {
-          amount: 14288,
-          contents: "1,30",
-          aurum: 19,
-          ounces: 655,
-        },
-      }
+      expected: {
+        amount: 16849,
+        contents: "1,11",
+        aurum: 19,
+        ounces: 659,
       },
-      {
-      place: "Кочковское",
-      resources: {
-        total: {
-          amount: 49890,
-          contents: "1,73",
-          aurum: 86,
-          ounces: 3044,
-        },
-        expected: {
-          amount: 29050,
-          contents: "1,79",
-          aurum: 52,
-          ounces: 1836,
-        },
-        specified: {
-          amount: 20840,
-          contents: "1,65",
-          aurum: 34,
-          ounces: 1209,
-        },
+      specified: {
+        amount: 20153,
+        contents: "1,26",
+        aurum: 25,
+        ounces: 899,
       },
+      measured: {
+        amount: 1646,
+        contents: "2,04",
+        aurum: 3,
+        ounces: 118,
       },
-      {
-      place: "Итакинское",
-      resources: {
-        total: {
-          amount: 59829,
-          contents: "2,45",
-          aurum: 147,
-          ounces: 5168,
-        },
-        expected: {
-          amount: 30167,
-          contents: "2,19",
-          aurum: 66,
-          ounces: 2329,
-        },
-        specified: {
-          amount: 25779,
-          contents: "2,54",
-          aurum: 65,
-          ounces: 2308,
-        },
-        measured: {
-          amount: 3883,
-          contents: "3,88",
-          aurum: 15,
-          ounces: 531,
-        },
+    },
+    reserves: {
+      total: {
+        amount: 16145,
+        contents: "1,36",
+        aurum: 22,
+        ounces: 774,
       },
+      confirmed: {
+        amount: 1857,
+        contents: "1,83",
+        aurum: 3,
+        ounces: 120,
       },
+      probable: {
+        amount: 14288,
+        contents: "1,30",
+        aurum: 19,
+        ounces: 655,
+      },
+    }
+    },
+    {
+    place: "Кочковское",
+    resources: {
+      total: {
+        amount: 49890,
+        contents: "1,73",
+        aurum: 86,
+        ounces: 3044,
+      },
+      expected: {
+        amount: 29050,
+        contents: "1,79",
+        aurum: 52,
+        ounces: 1836,
+      },
+      specified: {
+        amount: 20840,
+        contents: "1,65",
+        aurum: 34,
+        ounces: 1209,
+      },
+    },
+    },
+    {
+    place: "Итакинское",
+    resources: {
+      total: {
+        amount: 59829,
+        contents: "2,45",
+        aurum: 147,
+        ounces: 5168,
+      },
+      expected: {
+        amount: 30167,
+        contents: "2,19",
+        aurum: 66,
+        ounces: 2329,
+      },
+      specified: {
+        amount: 25779,
+        contents: "2,54",
+        aurum: 65,
+        ounces: 2308,
+      },
+      measured: {
+        amount: 3883,
+        contents: "3,88",
+        aurum: 15,
+        ounces: 531,
+      },
+    },
+    },
   ]
 
 
@@ -113,126 +113,126 @@ mixin resources(data)
           .resources__place
             h3.heading-2.resources__title!=data[i].place
             button(type="button" data-toggle).resources__toggle
-             +icon("icon-plus", 20, 20).resources__open
-             +icon("icon-minus", 20, 20).resources__close
+              +icon("icon-plus", 20, 20).resources__open
+              +icon("icon-minus", 20, 20).resources__close
           table.table
+            tr.tr-flex
+              th.heading-5.empty.col-0
+              th.heading-5.col-1
+              th.heading-5.col-2 Тонн, тыс. т
+              th.heading-5.col-3 Содержание Au, г/т
+              th.heading-5.col-4 Au, т
+              th.heading-5.col-5 Au, тыс. унций
+            tr.tr-flex
+              td.heading-5.no-border.col-0.category.category--first Ресурсы
+              td.empty.col-1
+              td.heading-5.col-2
+                span.text-14.hidden Тонн, тыс. т
+                span!=data[i].resources.total.amount
+              td.heading-5.col-3
+                span.text-14.hidden Содержание Au, г/т
+                span!=data[i].resources.total.contents
+              td.heading-5.col-4
+                span.text-14.hidden Au, т
+                span!=data[i].resources.total.aurum
+              td.heading-5.col-5
+                span.text-14.hidden Au, тыс. унций
+                span!=data[i].resources.total.ounces
+            if data[i].resources.expected
               tr.tr-flex
-                th.heading-5.empty.col-0
-                th.heading-5.col-1
-                th.heading-5.col-2 Тонн, тыс. т
-                th.heading-5.col-3 Содержание Au, г/т
-                th.heading-5.col-4 Au, т
-                th.heading-5.col-5 Au, тыс. унций
+                if data[i].reserves
+                  td.empty.col-0.no-border
+                else
+                  td.col-0.no-border.empty
+                td.text-14.col-1.category Предполагаемые
+                td.text-14.col-2
+                  span.text-14.hidden Тонн, тыс. т
+                  span!=data[i].resources.expected.amount
+                td.text-14.col-3
+                  span.text-14.hidden Содержание Au, г/т
+                  span!=data[i].resources.expected.contents
+                td.text-14.col-4
+                  span.text-14.hidden Au, т
+                  span!=data[i].resources.expected.aurum
+                td.text-14.col-5
+                  span.text-14.hidden Au, тыс. унций
+                  span!=data[i].resources.expected.ounces
+            if	data[i].resources.specified
               tr.tr-flex
-                td.heading-5.no-border.col-0.category.category--first Ресурсы
+                td.empty.col-0.no-border
+                td.text-14.col-1.category Указанные
+                td.text-14.col-2
+                  span.text-14.hidden Тонн, тыс. т
+                  span!=data[i].resources.specified.amount
+                td.text-14.col-3
+                  span.text-14.hidden Содержание Au, г/т
+                  span!=data[i].resources.specified.contents
+                td.text-14.col-4
+                  span.text-14.hidden Au, т
+                  span!=data[i].resources.specified.aurum
+                td.text-14.col-5
+                  span.text-14.hidden Au, тыс. унций
+                  span!=data[i].resources.specified.ounces
+            if	data[i].resources.measured
+              tr.tr-flex
+                td.empty.col-0
+                td.text-14.col-1.category Измеренные
+                td.text-14.col-2
+                  span.text-14.hidden Тонн, тыс. т
+                  span!=data[i].resources.measured.amount
+                td.text-14.col-3
+                  span.text-14.hidden Содержание Au, г/т
+                  span!=data[i].resources.measured.contents
+                td.text-14.col-4
+                  span.text-14.hidden Au, т
+                  span!=data[i].resources.measured.aurum
+                td.text-14.col-5
+                  span.text-14.hidden Au, тыс. унций
+                  span!=data[i].resources.measured.ounces
+            if data[i].reserves
+              tr.tr-flex
+                td.heading-5.no-border.col-0.category Запасы
                 td.empty.col-1
                 td.heading-5.col-2
                   span.text-14.hidden Тонн, тыс. т
-                  span!=data[i].resources.total.amount
+                  span!=data[i].reserves.total.amount
                 td.heading-5.col-3
                   span.text-14.hidden Содержание Au, г/т
-                  span!=data[i].resources.total.contents
+                  span!=data[i].reserves.total.contents
                 td.heading-5.col-4
                   span.text-14.hidden Au, т
-                  span!=data[i].resources.total.aurum
+                  span!=data[i].reserves.total.aurum
                 td.heading-5.col-5
                   span.text-14.hidden Au, тыс. унций
-                  span!=data[i].resources.total.ounces
-              if data[i].resources.expected
-                tr.tr-flex
-                  if data[i].reserves
-                    td.empty.col-0.no-border
-                  else
-                    td.col-0.no-border.empty
-                  td.text-14.col-1.category Предполагаемые
-                  td.text-14.col-2
-                    span.text-14.hidden Тонн, тыс. т
-                    span!=data[i].resources.expected.amount
-                  td.text-14.col-3
-                    span.text-14.hidden Содержание Au, г/т
-                    span!=data[i].resources.expected.contents
-                  td.text-14.col-4
-                    span.text-14.hidden Au, т
-                    span!=data[i].resources.expected.aurum
-                  td.text-14.col-5
-                    span.text-14.hidden Au, тыс. унций
-                    span!=data[i].resources.expected.ounces
-              if	data[i].resources.specified
-                tr.tr-flex
-                  td.empty.col-0.no-border
-                  td.text-14.col-1.category Указанные
-                  td.text-14.col-2
-                    span.text-14.hidden Тонн, тыс. т
-                    span!=data[i].resources.specified.amount
-                  td.text-14.col-3
-                    span.text-14.hidden Содержание Au, г/т
-                    span!=data[i].resources.specified.contents
-                  td.text-14.col-4
-                    span.text-14.hidden Au, т
-                    span!=data[i].resources.specified.aurum
-                  td.text-14.col-5
-                    span.text-14.hidden Au, тыс. унций
-                    span!=data[i].resources.specified.ounces
-              if	data[i].resources.measured
+                  span!=data[i].reserves.total.ounces
+              tr.tr-flex
+                td.no-border.empty.col-0
+                td.text-14.col-1.category Подтвержденные
+                td.text-14.col-2
+                  span.text-14.hidden Тонн, тыс. т
+                  span!=data[i].reserves.confirmed.amount
+                td.text-14.col-3
+                  span.text-14.hidden Содержание Au, г/т
+                  span!=data[i].reserves.confirmed.contents
+                td.text-14.col-4
+                  span.text-14.hidden Au, т
+                  span!=data[i].reserves.confirmed.aurum
+                td.text-14.col-5
+                  span.text-14.hidden Au, тыс. унций
+                  span!=data[i].reserves.confirmed.ounces
+              if data[i].reserves.probable
                 tr.tr-flex
                   td.empty.col-0
-                  td.text-14.col-1.category Измеренные
+                  td.text-14.col-1.category Вероятные
                   td.text-14.col-2
                     span.text-14.hidden Тонн, тыс. т
-                    span!=data[i].resources.measured.amount
+                    span!=data[i].reserves.probable.amount
                   td.text-14.col-3
                     span.text-14.hidden Содержание Au, г/т
-                    span!=data[i].resources.measured.contents
+                    span!=data[i].reserves.probable.contents
                   td.text-14.col-4
                     span.text-14.hidden Au, т
-                    span!=data[i].resources.measured.aurum
+                    span!=data[i].reserves.probable.aurum
                   td.text-14.col-5
                     span.text-14.hidden Au, тыс. унций
-                    span!=data[i].resources.measured.ounces
-              if data[i].reserves
-                tr.tr-flex
-                  td.heading-5.no-border.col-0.category Запасы
-                  td.empty.col-1
-                  td.heading-5.col-2
-                    span.text-14.hidden Тонн, тыс. т
-                    span!=data[i].reserves.total.amount
-                  td.heading-5.col-3
-                    span.text-14.hidden Содержание Au, г/т
-                    span!=data[i].reserves.total.contents
-                  td.heading-5.col-4
-                    span.text-14.hidden Au, т
-                    span!=data[i].reserves.total.aurum
-                  td.heading-5.col-5
-                    span.text-14.hidden Au, тыс. унций
-                    span!=data[i].reserves.total.ounces
-                tr.tr-flex
-                  td.no-border.empty.col-0
-                  td.text-14.col-1.category Подтвержденные
-                  td.text-14.col-2
-                    span.text-14.hidden Тонн, тыс. т
-                    span!=data[i].reserves.confirmed.amount
-                  td.text-14.col-3
-                    span.text-14.hidden Содержание Au, г/т
-                    span!=data[i].reserves.confirmed.contents
-                  td.text-14.col-4
-                    span.text-14.hidden Au, т
-                    span!=data[i].reserves.confirmed.aurum
-                  td.text-14.col-5
-                    span.text-14.hidden Au, тыс. унций
-                    span!=data[i].reserves.confirmed.ounces
-                if data[i].reserves.probable
-                  tr.tr-flex
-                    td.empty.col-0
-                    td.text-14.col-1.category Вероятные
-                    td.text-14.col-2
-                      span.text-14.hidden Тонн, тыс. т
-                      span!=data[i].reserves.probable.amount
-                    td.text-14.col-3
-                      span.text-14.hidden Содержание Au, г/т
-                      span!=data[i].reserves.probable.contents
-                    td.text-14.col-4
-                      span.text-14.hidden Au, т
-                      span!=data[i].reserves.probable.aurum
-                    td.text-14.col-5
-                      span.text-14.hidden Au, тыс. унций
-                      span!=data[i].reserves.probable.ounces
+                    span!=data[i].reserves.probable.ounces

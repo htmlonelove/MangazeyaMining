@@ -1,9 +1,9 @@
 mixin big-text(data)
-    if (data === bigTextMailData)
-      .big-text
-        .container
-           a.link.big-text__link(href=data.href)!=data.text
-    else
-      .big-text
-        .container
-          p!=data.text
+  if (data === bigTextMailData)
+    .big-text
+      .container
+        a.link.big-text__link(href=data.href)!=data.text
+  else
+    .big-text
+      .container
+        p!=data.text

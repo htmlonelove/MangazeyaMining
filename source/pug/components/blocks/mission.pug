@@ -13,18 +13,18 @@
 mixin mission(data)
   section.mission
     .container
-     .mission__inner
-       if data.img
-        .mission__img-wrapper
-          +picture(...data.img)
-       else if data.video
-         .mission__video-wrapper
-           video
-       if(data.title && data.mission)
-        .mission__info
-          h2.mission__title.caps-12!=data.title
-          .mission__desc-wrp
-            p.mission__desc.text-18!=data.mission
-          p.mission__name.heading-5!=data.name
-          p.mission__position.mission__position--desc.text-14!=data.position
-          p.mission__position.mission__position--mob.text-14!=data.positionMob
+      .mission__inner
+        if data.img
+          .mission__img-wrapper
+            +picture(...data.img)
+        else if data.video
+          .mission__video-wrapper
+            video
+        if(data.title && data.mission)
+          .mission__info
+            h2.mission__title.caps-12!=data.title
+            .mission__desc-wrp
+              p.mission__desc.text-18!=data.mission
+            p.mission__name.heading-5!=data.name
+            p.mission__position.mission__position--desc.text-14!=data.position
+            p.mission__position.mission__position--mob.text-14!=data.positionMob
