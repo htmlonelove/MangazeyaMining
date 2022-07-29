@@ -10,6 +10,16 @@
     padding-top: 32px;
   }
 
+  &--company {
+    .section-intro__column {
+      width: 41.7%;
+
+      @include vp-767 {
+        width: 100%;
+      }
+    }
+  }
+
   &--operations {
     .section-intro__content {
       margin: 0 0 size(60px);
@@ -17,6 +27,12 @@
       @include vp-767 {
         margin: 0 0 40px;
       }
+    }
+
+    .section-intro__column:first-child {
+      flex-shrink: 0;
+      width: 41.7%;
+      margin-right: 0;
     }
 
     .section-intro__interactive {
@@ -115,17 +131,10 @@
   }
 
   &__column {
-
     @include vp-767 {
       width: 100%;
-    }
 
-    &:first-child {
-      flex-shrink: 0;
-      width: 41.7%;
-      margin-right: 0;
-
-      @include vp-767 {
+      &:first-child {
         display: none;
       }
     }

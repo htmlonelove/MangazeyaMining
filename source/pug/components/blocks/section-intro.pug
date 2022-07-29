@@ -4,12 +4,13 @@
     titleMob: "компания, ведущая свою деятельность в Российской Федерации",
     header: "Компания",
     contentHeader: "",
-    content: true,
-    contentLeft: {
-      linkDownload: true,
-    },
-    contentRight: {
-      text16: "Программа развития компании предусматривает <br>рост объемов производства металла на уже действующем производстве и введение в промышленную эксплуатацию новых месторождений.",
+    content: {
+      contentLeft: {
+        linkDownload: true,
+      },
+      contentRight: {
+        text16: "Программа развития компании предусматривает рост&nbsp;объемов производства металла на уже действующем производстве и введение в промышленную эксплуатацию новых месторождений.",
+      },
     },
     img: ['content/section-intro', 'presentation', 'jpg', 1440, 780, 'Программа развития компании'],
   }
@@ -19,19 +20,21 @@
     titleMob: "текст в разработке. этот заголовок может быть даже четыре строки",
     header: "активы",
     contentHeader: "",
-    contentLeft: {
-      card: true,
-      title: "<span class='heading-72 section-intro__big-title'>3</span> актива",
-      text: "действуют на территории <br>Забайкальского края РФ",
-    },
-    contentRight: {
-      text18: "Программа развития компании предусматривает <br>рост объемов производства металла на уже действующем <br>производстве и введение в промышленную эксплуатацию <br>новых месторождений.",
-    },
-    contentRightTitle: "география <br>месторождений",
-    contentRightUser: {
-      name: `Гусев <br>Михаил Михайлович`,
-      position: 'Генеральный директор Мангазея Майнинг',
-      img: ['content', 'avatar', 'jpg', 72, 72, 'Фото человека'],
+    content: {
+      contentLeft: {
+        card: true,
+        title: "<span class='heading-72 section-intro__big-title'>3</span> актива",
+        text: "действуют на территории <br>Забайкальского края РФ",
+      },
+      contentRight: {
+        text18: "Программа развития компании предусматривает <br>рост объемов производства металла на уже действующем <br>производстве и введение в промышленную эксплуатацию <br>новых месторождений.",
+        title: "география <br>месторождений",
+        user: {
+          name: `Гусев <br>Михаил Михайлович`,
+          position: 'Генеральный директор Мангазея Майнинг',
+          img: ['content', 'avatar', 'jpg', 72, 72, 'Фото человека'],
+        },
+      },
     },
     map: 'data/business-mining-2.json',
   }
@@ -50,24 +53,24 @@ mixin section-intro(data)
         p.heading-1-caps.section-intro__title(data-sal="slide-up" data-words-animation)!=data.title
     if data.content
       .section-intro__content
-        if data.contentLeft
+        if data.content.contentLeft
           .section-intro__column
-            if data.contentLeft.linkDownload
+            if data.content.contentLeft.linkDownload
               +link-download({name:"скачать презентацию", href: "./pdf/MangazeyaGroup.pdf", size: "340 kb", ext: "pdf"})
-            if data.contentLeft.card
+            if data.content.contentLeft.card
               .section-intro__card
-                span.heading-2-caps.section-intro__card-title!=data.contentLeft.title
-                span.text-14.section-intro__card-text!=data.contentLeft.text
-        if data.contentRight
+                span.heading-2-caps.section-intro__card-title!=data.content.contentLeft.title
+                span.text-14.section-intro__card-text!=data.content.contentLeft.text
+        if data.content.contentRight
           .section-intro__column
-            if data.contentRightTitle
-              h2.caps-12.section-intro__column-header!=data.contentRightTitle
-            if data.contentRight.text16
-              p.section-intro__text!=data.contentRight.text16
-            if data.contentRight.text18
-              p.text-18.section-intro__text!=data.contentRight.text18
-            if data.contentRightUser
-              +user-card(data.contentRightUser)
+            if data.content.contentRight.title
+              h2.caps-12.section-intro__column-header!=data.content.contentRight.title
+            if data.content.contentRight.text16
+              p.section-intro__text!=data.content.contentRight.text16
+            if data.content.contentRight.text18
+              p.text-18.section-intro__text!=data.content.contentRight.text18
+            if data.content.contentRight.user
+              +user-card(data.content.contentRight.user)
     .section-intro__interactive
       if data.img
         +picture(...data.img)
